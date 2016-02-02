@@ -1,0 +1,29 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/ItemDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemHdrDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemSupDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemSupCtyDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ISCDimDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemUDALOVDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemUDAFFDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemUDADateDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemImageDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemUPCDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemBOMDesc"/>
+	<import namespace="http://www.oracle.com/retail/integration/payload/ItemTcktDesc"/>
+	<property name="ItemDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemHdrDesc" ref="d4p1:ItemHdrDesc"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" ref="d4p1:ItemSupDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupCtyDesc" ref="d4p1:ItemSupCtyDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ISCDimDesc" ref="d4p1:ISCDimDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUDALOVDesc" ref="d4p1:ItemUDALOVDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUDAFFDesc" ref="d4p1:ItemUDAFFDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUDADateDesc" ref="d4p1:ItemUDADateDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemImageDesc" ref="d4p1:ItemImageDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUPCDesc" ref="d4p1:ItemUPCDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemBOMDesc" ref="d4p1:ItemBOMDesc" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemTcktDesc" ref="d4p1:ItemTcktDesc" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+</package>

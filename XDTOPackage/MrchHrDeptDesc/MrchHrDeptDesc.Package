@@ -1,0 +1,30 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc">
+	<property name="MrchHrDeptDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" name="dept" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="dept_name" type="d4p1:varchar2120"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="buyer" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="purchase_type" type="d4p1:varchar26"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="total_market_amt" type="d4p1:number24_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="merch" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="group_no" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="bud_mkup" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="profit_calc_type" type="d4p1:number1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="markup_calc_type" type="d4p1:varchar22"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="otb_calc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="max_avg_counter" type="d4p1:number5"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="avg_tolerance_pct" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="bud_int" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrDeptDesc" lowerBound="0" name="dept_vat_incl_ind" type="d4p1:varchar21"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:int" name="number1" totalDigits="1" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number12_4" totalDigits="12" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number24_4" totalDigits="24" variety="Atomic"/>
+	<valueType base="xs:int" name="number4" totalDigits="4" variety="Atomic"/>
+	<valueType base="xs:int" name="number5" totalDigits="5" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="120" name="varchar2120" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="2" name="varchar22" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="6" name="varchar26" variety="Atomic"/>
+</package>

@@ -1,0 +1,442 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://local/retann">
+	<property name="BGM">
+		<typeDef xsi:type="ObjectType" open="true">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C002"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C106"/>
+			<property name="E1225" fixed="false" default="9">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>5</enumeration>
+					<enumeration>9</enumeration>
+					<enumeration>31</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="CDI">
+		<typeDef xsi:type="ObjectType">
+			<property name="E7001">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>3E</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C564"/>
+		</typeDef>
+	</property>
+	<property name="CNT">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C270"/>
+		</typeDef>
+	</property>
+	<property name="COM">
+		<typeDef xsi:type="ObjectType">
+			<property name="C076">
+				<typeDef xsi:type="ObjectType">
+					<property name="E3155">
+						<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+							<enumeration>EM</enumeration>
+							<enumeration>TE</enumeration>
+						</typeDef>
+					</property>
+					<property name="E3148">
+						<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="252"/>
+					</property>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="CTA">
+		<typeDef xsi:type="ObjectType">
+			<property name="E3139">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>ZZY</enumeration>
+					<enumeration>ZZZ</enumeration>
+					<enumeration>ZZW</enumeration>
+					<enumeration>ZZV</enumeration>
+					<enumeration>ZZU</enumeration>
+					<enumeration>ZZT</enumeration>
+					<enumeration>ZZS</enumeration>
+					<enumeration>IC</enumeration>
+				</typeDef>
+			</property>
+			<property name="C056">
+				<typeDef xsi:type="ObjectType">
+					<property name="E3412">
+						<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="0" maxLength="252"/>
+					</property>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="DTM">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C507"/>
+		</typeDef>
+	</property>
+	<property name="FTX">
+		<typeDef xsi:type="ObjectType">
+			<property name="E4451">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>ZZZ</enumeration>
+				</typeDef>
+			</property>
+			<property name="C108">
+				<typeDef xsi:type="ObjectType">
+					<property name="E4440">
+						<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="512"/>
+					</property>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="IMD">
+		<typeDef xsi:type="ObjectType">
+			<property name="E7077" lowerBound="0" fixed="false" default="F">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>F</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C273"/>
+		</typeDef>
+	</property>
+	<property name="LIN">
+		<typeDef xsi:type="ObjectType">
+			<property name="E1082">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="6">
+					<pattern>([0-9])+</pattern>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C212" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="MOA">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C516"/>
+		</typeDef>
+	</property>
+	<property name="NAD">
+		<typeDef xsi:type="ObjectType">
+			<property name="E3035">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>BY</enumeration>
+					<enumeration>DP</enumeration>
+					<enumeration>SU</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C082"/>
+		</typeDef>
+	</property>
+	<property name="PIA">
+		<typeDef xsi:type="ObjectType">
+			<property name="E4347">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<pattern>1</pattern>
+					<pattern>5</pattern>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C212" upperBound="2"/>
+		</typeDef>
+	</property>
+	<property name="PRI">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C509"/>
+		</typeDef>
+	</property>
+	<property name="QTY">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C186"/>
+		</typeDef>
+	</property>
+	<property name="RETANN">
+		<typeDef xsi:type="ObjectType" open="true">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:UNH"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:BGM"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:DTM" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:SG2" lowerBound="0" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:SG3" upperBound="99"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:SG11" upperBound="5000"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:UNS" lowerBound="0"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:CNT" lowerBound="0" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:MOA" lowerBound="0" upperBound="99"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:UNT"/>
+		</typeDef>
+	</property>
+	<property name="RFF">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:C506"/>
+		</typeDef>
+	</property>
+	<property name="SG11">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:LIN"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:PIA" lowerBound="0" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:IMD" lowerBound="0" upperBound="25"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:DTM" lowerBound="0" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:PRI" lowerBound="0" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:FTX" lowerBound="0" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:MOA" lowerBound="0" upperBound="5"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:SG13" lowerBound="0" upperBound="10"/>
+		</typeDef>
+	</property>
+	<property name="SG13">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:QTY" upperBound="10"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:CDI" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="SG2">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:RFF"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:DTM"/>
+		</typeDef>
+	</property>
+	<property name="SG3">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:NAD"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:SG5" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="SG5">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:CTA" lowerBound="0"/>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:COM" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="UNH">
+		<typeDef xsi:type="ObjectType">
+			<property name="E0062">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="255"/>
+			</property>
+			<property xmlns:d4p1="http://local/retann" ref="d4p1:S009"/>
+		</typeDef>
+	</property>
+	<property name="UNS">
+		<typeDef xsi:type="ObjectType">
+			<property name="E0081" fixed="true" default="S">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="1">
+					<enumeration>S</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="UNT">
+		<typeDef xsi:type="ObjectType">
+			<property name="E0074">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="6">
+					<pattern>([0-9])+</pattern>
+				</typeDef>
+			</property>
+			<property name="E0062">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="255"/>
+			</property>
+		</typeDef>
+	</property>
+	<property name="S009">
+		<typeDef xsi:type="ObjectType">
+			<property name="E0065" type="xs:string" fixed="true" default="RETANN"/>
+			<property name="E0052" type="xs:string" fixed="true" default="D"/>
+			<property name="E0054" type="xs:string" fixed="true" default="01B"/>
+			<property name="E0051" type="xs:string" fixed="true" default="UN"/>
+			<property name="E0057" type="xs:string" fixed="true" default="EAN003"/>
+		</typeDef>
+	</property>
+	<property name="C002">
+		<typeDef xsi:type="ObjectType">
+			<property name="E1001" fixed="false" default="70E">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>70E</enumeration>
+				</typeDef>
+			</property>
+			<property name="E3055" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>9</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C106">
+		<typeDef xsi:type="ObjectType">
+			<property name="E1004">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="35"/>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C507">
+		<typeDef xsi:type="ObjectType">
+			<property name="E2005">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>2</enumeration>
+					<enumeration>11</enumeration>
+					<enumeration>17</enumeration>
+					<enumeration>35</enumeration>
+					<enumeration>36</enumeration>
+					<enumeration>50</enumeration>
+					<enumeration>126</enumeration>
+					<enumeration>137</enumeration>
+					<enumeration>138</enumeration>
+					<enumeration>171</enumeration>
+					<enumeration>358</enumeration>
+					<enumeration>361</enumeration>
+					<enumeration>597</enumeration>
+					<enumeration>40</enumeration>
+					<enumeration>44</enumeration>
+				</typeDef>
+			</property>
+			<property name="E2380" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="0" maxLength="35">
+					<pattern>1</pattern>
+					<pattern>[1-2][0-9][0-9][0-9][0-1][0-9][0-3][0-9]</pattern>
+					<pattern>[1-2][0-9][0-9][0-9][0-1][0-9][0-3][0-9][0-2][0-9][0-5][0-9]</pattern>
+					<pattern>[1-2][0-9][0-9][0-9][0-1][0-9][0-3][0-9][0-2][0-9][0-5][0-9][0-5][0-9]</pattern>
+				</typeDef>
+			</property>
+			<property name="E2379" fixed="false" default="102">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>102</enumeration>
+					<enumeration>203</enumeration>
+					<enumeration>204</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C506">
+		<typeDef xsi:type="ObjectType">
+			<property name="E1153" fixed="false" default="ON">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>AAK</enumeration>
+					<enumeration>ON</enumeration>
+					<enumeration>POR</enumeration>
+				</typeDef>
+			</property>
+			<property name="E1154">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="70"/>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C082">
+		<typeDef xsi:type="ObjectType">
+			<property name="E3039">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="35"/>
+			</property>
+			<property name="E3055" fixed="false" default="9">
+				<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="13">
+					<enumeration>9</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C212">
+		<typeDef xsi:type="ObjectType">
+			<property name="E7140">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="0" maxLength="14"/>
+			</property>
+			<property name="E7143" fixed="false" default="SRV">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>SRV</enumeration>
+					<enumeration xsi:type="xs:string">IN</enumeration>
+					<enumeration xsi:type="xs:string">SA</enumeration>
+				</typeDef>
+			</property>
+			<property name="E3055" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>92</enumeration>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C273">
+		<typeDef xsi:type="ObjectType">
+			<property name="E7008" lowerBound="0" upperBound="2">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="0" maxLength="256"/>
+			</property>
+			<property name="E3453" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3"/>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C509">
+		<typeDef xsi:type="ObjectType">
+			<property name="E5125">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>AAA</enumeration>
+					<enumeration>AAE</enumeration>
+				</typeDef>
+			</property>
+			<property name="E5118">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="15">
+					<pattern>[0-9]*([.,][0-9]+)?</pattern>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C516">
+		<typeDef xsi:type="ObjectType">
+			<property name="E5025">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>79</enumeration>
+					<enumeration>124</enumeration>
+					<enumeration>146</enumeration>
+					<enumeration>203</enumeration>
+					<enumeration>464</enumeration>
+				</typeDef>
+			</property>
+			<property name="E5004">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="512">
+					<pattern>[0-9]*([.,][0-9]+)?</pattern>
+				</typeDef>
+			</property>
+			<property name="E6345" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3"/>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C186">
+		<typeDef xsi:type="ObjectType">
+			<property name="E6063">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>21</enumeration>
+					<enumeration>12</enumeration>
+					<enumeration>61</enumeration>
+					<enumeration>46</enumeration>
+					<enumeration>59</enumeration>
+					<enumeration>66</enumeration>
+					<enumeration>113</enumeration>
+					<enumeration>194</enumeration>
+				</typeDef>
+			</property>
+			<property name="E6060">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="35">
+					<pattern>(-)?[0-9]*([.,][0-9]+)?</pattern>
+				</typeDef>
+			</property>
+			<property name="E6411" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3"/>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C564">
+		<typeDef xsi:type="ObjectType">
+			<property name="E3055">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>9</enumeration>
+				</typeDef>
+			</property>
+			<property name="E7006">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="0" maxLength="70"/>
+			</property>
+		</typeDef>
+	</property>
+	<property name="C270">
+		<typeDef xsi:type="ObjectType">
+			<property name="E6069">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="3">
+					<enumeration>2</enumeration>
+				</typeDef>
+			</property>
+			<property name="E6066">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="18">
+					<pattern>([0-9])+</pattern>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+</package>

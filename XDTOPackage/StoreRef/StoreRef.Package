@@ -1,0 +1,10 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/StoreRef">
+	<import namespace="http://www.oracle.com/retail/integration/payload/AddrRef"/>
+	<property name="StoreRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StoreRef" name="store" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/AddrRef" ref="d4p1:AddrRef" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<valueType name="number10" base="xs:long" variety="Atomic" totalDigits="10"/>
+</package>

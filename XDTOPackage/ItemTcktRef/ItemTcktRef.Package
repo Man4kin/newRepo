@@ -1,0 +1,10 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/ItemTcktRef">
+	<property name="ItemTcktRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemTcktRef" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemTcktRef" name="ticket_type_id" type="d4p1:varchar24"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:string" maxLength="25" name="varchar225" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="4" name="varchar24" variety="Atomic"/>
+</package>

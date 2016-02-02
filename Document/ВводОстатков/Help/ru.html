@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link href="v8help://service_book/service_style" type="text/css" rel="stylesheet"></link><meta content="MSHTML 6.00.6001.18183" name="GENERATOR"></meta></head><body>
+<h1 class=""><font color="#000080">Документ "Ввод остатков"</font></h1>
+<h3 class=""><u>Общее</u></h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="">Торговые остатки вводятся при помощи специального документа: <strong class="ControlElement">«Ввод остатков».</strong> <br>Этот документ, в частности, формирует проводки ввода начальных остатков на нужные счета и субсчета. <br>Проверяйте правильность ввода остатков.</p></blockquote>
+<h3 class="" dir="ltr"><u>Форма шапки документа</u></h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Usual"><font color="#000040"><font color="#000000">При добавлении нового документа открывается окно </font><strong>"Ввод остатков"</strong><font color="#000000"> .<br><strong><font color="#000040">Номер</font></strong>, <strong class="ControlElement">дата</strong> и <strong class="ControlElement">автор </strong>указываются в шапке документа автоматически.<br></font></font><br>В шапке документа необходимо заполнить следующие поля:</p></blockquote>
+<ul dir="ltr"><ul><ul><ul><li><strong>Фирма. </strong><font color="#000000">Элемент справочника </font><a href="Catalog.Организации/Help">"Фирмы".</a> 
+</li><li>
+<div class=""><strong>Тип остатков. </strong> Указывается из выпадающего списка: купленные товары; комиссионные товары; хранимые товары; реализованные товары; денежные средства.</div></li></ul></ul></ul></ul><h3 class="" dir="ltr"><u>Табличная часть документа</u></h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Usual">При заполнении табличной части открывается вспомогательно окно, колонки которого меняются в зависимости от выбранного типа остатков.</p>
+<p class="Usual">Общие колонки для всех типов остатка, кроме <strong class="ControlElement">"денежных средств"</strong>:</p>
+<p class="Usual">При типах остатка <strong class="ControlElement">"купленные товары",</strong> и  <strong class="ControlElement">"хранимые товары"</strong> табличная часть окна содержит следующие колонки:</p></blockquote>
+<ul><ul><ul><ul><ul><li>
+<div class=""><strong class="ControlElement">Номенклатура.</strong> Элемент справочника <a href="Catalog.Номенклатура/Help">"Номенклатура".</a></div>
+</li><li>
+<div class=""><strong class="ControlElement">Характеристика.</strong> Заполняется в случае, если для данного товара ведется учет по дополнительным реквизитам. Элемент справочника <a href="Catalog.Номенклатура/Help">"Номенклатура".</a></div>
+</li><li>
+<div class=""><strong>Контрагент. </strong>Элемент справочника <a href="Catalog.Контрагенты/Help">"Контрагенты"</a>.</div>
+</li><li>
+<div class=""><strong class="ControlElement">Договор.</strong> Элемент справочника <a href="../idb849c86b-0c7d-420f-82a0-db90b2e5b53d/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Договоры"</a>.</div>
+</li><li>
+<div class=""><strong class="ControlElement">Количество.</strong> Заполняется вручную.</div>
+</li><li>
+<div class=""><strong>Склад. </strong>Элемент списка <a href="Catalog.Склады/Help">складов</a>.</div></li></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="">При типе остатка <strong><font color="#000040">"комиссионные товары"</font></strong> добавляются колонки:</p></blockquote>
+<ul><ul><ul><ul><ul><li>
+<div class=""><strong>Всего. </strong>Заполняется вручную.</div>
+</li><li>
+<div class=""><font color="#000040"><strong>Дата оприходования. </strong></font><font color="#000000">Заполняется вручную или с помощью календаря.</font></div></li></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Usual">При типах остатка <strong class="ControlElement">"купленные товары",</strong> и  <strong class="ControlElement">"хранимые товары"</strong> добавляются следующие колонки:</p></blockquote>
+<ul><ul><ul><ul><ul><li>
+<div class=""><strong class="ControlElement">Сумма НДС.</strong> Заполняется вручную.</div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Ставка НДС.</strong> Заполняется автоматически.</div>
+</li><li>
+<div class=""><strong>Всего. </strong>Рассчитывается автоматически.</div>
+</li><li>
+<div class=""><font color="#000040"><strong>Дата оприходования. </strong></font><font color="#000000">Заполняется вручную или с помощью календаря.</font></div></li></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Usual">При типе остатка <strong class="ControlElement">"реализованные товары"</strong> в табличную часть добавляются следующие колонки:</p></blockquote>
+<ul><ul><ul><ul><ul><li><strong class="ControlElement">ГТД.</strong> Номер грузовой таможенной декларации. Элемент справочника <a href="../id2697b87c-fecd-4efa-a559-a76be378471b/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Номера ГТД".</a> 
+</li><li>
+<div class=""><strong class="ControlElement">Сумма.</strong> Заполняется вручную.</div>
+</li><li><strong class="ControlElement">Сумма реализации.</strong> Заполняется вручную. </li></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Usual">При типе остатка <strong class="ControlElement">"денежные средства"</strong> табличная часть окна содержит следующие колонки:</p></blockquote>
+<ul><ul><ul><ul><ul><li>
+<div class=""><strong class="ControlElement">Денежная ячейка.</strong> Элемент одного из справочников:<a href="../idn0"> "Банковские счета"</a> , <a href="Catalog.КассыФирмы/Help">"Кассы фирмы"</a> , <a href="Catalog.ККМ/Help">"ККМ"</a>, <a href="../idn0">"Сотрудники"</a> . </div>
+</li><li>
+<div class=""><strong class="ControlElement">Валюта.</strong> Элемент справочника <a href="../id53609303-2e38-415d-a3ab-ab26e0bd398f/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Валюты"</a>. </div>
+</li><li><strong class="ControlElement">Сумма.</strong> Заполняется вручную. 
+</li><li><strong class="ControlElement">Сумма, руб.</strong> Заполняется вручную.</li></ul></ul></ul></ul></ul><p class="Usual"> </p></body></html>

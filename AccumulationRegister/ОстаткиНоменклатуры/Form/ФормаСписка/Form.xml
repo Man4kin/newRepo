@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="36"/>
+			<SearchStringAddition name="СписокSearchString" id="37">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокSearchStringContextMenu" id="38"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="39"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="40">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокViewStatusContextMenu" id="41"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="42"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="43">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокSearchControlContextMenu" id="44"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="45"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Период" id="4">
+					<DataPath>Список.Period</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПериодExtendedTooltip" id="46"/>
+				</LabelField>
+				<LabelField name="Регистратор" id="6">
+					<DataPath>Список.Recorder</DataPath>
+					<ContextMenu name="РегистраторКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="РегистраторExtendedTooltip" id="47"/>
+				</LabelField>
+				<LabelField name="НомерСтроки" id="8">
+					<DataPath>Список.LineNumber</DataPath>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НомерСтрокиExtendedTooltip" id="48"/>
+				</LabelField>
+				<LabelField name="Номенклатура" id="10">
+					<DataPath>Список.Номенклатура</DataPath>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="НоменклатураExtendedTooltip" id="49"/>
+				</LabelField>
+				<LabelField name="МестоХранения" id="12">
+					<DataPath>Список.МестоХранения</DataPath>
+					<ContextMenu name="МестоХраненияКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="МестоХраненияExtendedTooltip" id="50"/>
+				</LabelField>
+				<LabelField name="Фирма" id="14">
+					<DataPath>Список.Фирма</DataPath>
+					<ContextMenu name="ФирмаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ФирмаExtendedTooltip" id="51"/>
+				</LabelField>
+				<LabelField name="Комитент" id="16">
+					<DataPath>Список.Комитент</DataPath>
+					<ContextMenu name="КомитентКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КомитентExtendedTooltip" id="52"/>
+				</LabelField>
+				<LabelField name="Статус" id="18">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СтатусExtendedTooltip" id="53"/>
+				</LabelField>
+				<LabelField name="Количество" id="20">
+					<DataPath>Список.Количество</DataPath>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КоличествоExtendedTooltip" id="54"/>
+				</LabelField>
+				<LabelField name="Цена" id="34">
+					<DataPath>Список.Цена</DataPath>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ЦенаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ЦенаExtendedTooltip" id="55"/>
+				</LabelField>
+				<LabelField name="Сумма" id="22">
+					<DataPath>Список.Сумма</DataPath>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СуммаExtendedTooltip" id="56"/>
+				</LabelField>
+				<LabelField name="СуммаУпр" id="24">
+					<DataPath>Список.СуммаУпр</DataPath>
+					<ContextMenu name="СуммаУпрКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СуммаУпрExtendedTooltip" id="57"/>
+				</LabelField>
+				<LabelField name="СуммаНДС" id="26">
+					<DataPath>Список.СуммаНДС</DataPath>
+					<ContextMenu name="СуммаНДСКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СуммаНДСExtendedTooltip" id="58"/>
+				</LabelField>
+				<LabelField name="СуммаНДСУпр" id="28">
+					<DataPath>Список.СуммаНДСУпр</DataPath>
+					<ContextMenu name="СуммаНДСУпрКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СуммаНДСУпрExtendedTooltip" id="59"/>
+				</LabelField>
+				<LabelField name="КодОперации" id="30">
+					<DataPath>Список.КодОперации</DataPath>
+					<ContextMenu name="КодОперацииКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="КодОперацииExtendedTooltip" id="60"/>
+				</LabelField>
+				<LabelField name="Продукция" id="32">
+					<DataPath>Список.Продукция</DataPath>
+					<ContextMenu name="ПродукцияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПродукцияExtendedTooltip" id="61"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрНакопленияОстаткиНоменклатуры.Период,
+	РегистрНакопленияОстаткиНоменклатуры.Регистратор,
+	РегистрНакопленияОстаткиНоменклатуры.НомерСтроки,
+	РегистрНакопленияОстаткиНоменклатуры.Активность,
+	РегистрНакопленияОстаткиНоменклатуры.ВидДвижения,
+	РегистрНакопленияОстаткиНоменклатуры.Номенклатура,
+	РегистрНакопленияОстаткиНоменклатуры.МестоХранения,
+	РегистрНакопленияОстаткиНоменклатуры.Фирма,
+	РегистрНакопленияОстаткиНоменклатуры.Комитент,
+	РегистрНакопленияОстаткиНоменклатуры.Статус,
+	РегистрНакопленияОстаткиНоменклатуры.Количество,
+	ВЫБОР
+		КОГДА РегистрНакопленияОстаткиНоменклатуры.Количество = 0
+			ТОГДА 0
+		ИНАЧЕ РегистрНакопленияОстаткиНоменклатуры.Сумма / РегистрНакопленияОстаткиНоменклатуры.Количество
+	КОНЕЦ КАК Цена,
+	РегистрНакопленияОстаткиНоменклатуры.Сумма,
+	РегистрНакопленияОстаткиНоменклатуры.СуммаУпр,
+	РегистрНакопленияОстаткиНоменклатуры.СуммаНДС,
+	РегистрНакопленияОстаткиНоменклатуры.СуммаНДСУпр,
+	РегистрНакопленияОстаткиНоменклатуры.КодОперации,
+	РегистрНакопленияОстаткиНоменклатуры.Продукция,
+	РегистрНакопленияОстаткиНоменклатуры.МоментВремени
+ИЗ
+	РегистрНакопления.ОстаткиНоменклатуры КАК РегистрНакопленияОстаткиНоменклатуры</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

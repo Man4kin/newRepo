@@ -1,0 +1,20 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/PORef">
+	<property name="PODtlRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PORef" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PORef" name="physical_location_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PORef" name="physical_location" type="d4p1:number10"/>
+		</typeDef>
+	</property>
+	<property name="PORef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PORef" name="doc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PORef" name="order_no" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PORef" ref="d4p1:PODtlRef" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<valueType name="number10" base="xs:long" variety="Atomic" totalDigits="10"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar210" base="xs:string" variety="Atomic" maxLength="10"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+</package>

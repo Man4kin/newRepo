@@ -1,0 +1,12 @@
+﻿
+Функция DataExchange(Family, Type, Package, Location = 0)
+	Результат = ОбменДаннымиRIBСервер.ПолучениеДанныхRMS(Family, Type, Package, Location);
+	Возврат Результат; 
+КонецФункции
+
+
+Функция DataExchangeArray(Array)
+	Пакет = ОбменДаннымиRIBСервер.ПолучениеДанныхRMSМассивом(Array);
+	Возврат Пакет; 
+КонецФункции
+

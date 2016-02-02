@@ -1,0 +1,8 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/CountryRef">
+	<property name="CountryRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/CountryRef" name="country_id" type="d4p1:varchar23" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:string" maxLength="3" name="varchar23" variety="Atomic"/>
+</package>

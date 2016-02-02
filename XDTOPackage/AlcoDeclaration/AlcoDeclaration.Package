@@ -1,0 +1,58 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://apm-consult.ru/alco">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<objectType name="АлкогольнаяДекларация">
+		<property name="НачалоПериода" type="xs:dateTime"/>
+		<property name="КонецПериода" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://apm-consult.ru/alco" name="Фирмы" type="d3p1:АлкогольнаяДекларация_Фирмы" lowerBound="0" upperBound="9999" form="Element"/>
+	</objectType>
+	<objectType name="АлкогольнаяДекларация_Фирмы">
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="ИНН" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/alco" name="Подразделения" type="d3p1:АлкогольнаяДекларация_Подразделения" lowerBound="0" upperBound="9999"/>
+	</objectType>
+	<objectType name="АлкогольнаяДекларация_Подразделения">
+		<property name="Подразделение" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/alco" name="Раздел1" type="d3p1:Раздел1_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/alco" name="Раздел2" type="d3p1:Раздел2_Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="Раздел1_Состав">
+		<property name="ЭтоПиво" type="xs:boolean"/>
+		<property name="ВидПродукции" type="xs:string" lowerBound="0"/>
+		<property name="КодВидаПродукции" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеПроизводителя" type="xs:string" lowerBound="0"/>
+		<property name="ИННПроизводителя" type="xs:string" lowerBound="0"/>
+		<property name="КПППроизводителя" type="xs:string" lowerBound="0"/>
+		<property name="НачальныйОстаток" type="xs:decimal" lowerBound="0"/>
+		<property name="ПриходОтОрганизацийПроизводителей" type="xs:decimal" lowerBound="0"/>
+		<property name="ПриходОтОрганизацийОптовойТорговли" type="xs:decimal" lowerBound="0"/>
+		<property name="ПриходПоИмпорту" type="xs:decimal" lowerBound="0"/>
+		<property name="ВозвратыПокупателей" type="xs:decimal" lowerBound="0"/>
+		<property name="ПрочиеПоступления" type="xs:decimal" lowerBound="0"/>
+		<property name="ПеремещенияПриход" type="xs:decimal" lowerBound="0"/>
+		<property name="РасходРозничнаяПродажа" type="xs:decimal" lowerBound="0"/>
+		<property name="РасходПрочий" type="xs:decimal" lowerBound="0"/>
+		<property name="ВозвратыПоставщику" type="xs:decimal" lowerBound="0"/>
+		<property name="ПеремещенияРасход" type="xs:decimal" lowerBound="0"/>
+		<property name="КонечныйОстаток" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Раздел2_Состав">
+		<property name="ЭтоПиво" type="xs:boolean"/>
+		<property name="ВидПродукции" type="xs:string" lowerBound="0"/>
+		<property name="КодВидаПродукции" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеПроизводителя" type="xs:string" lowerBound="0"/>
+		<property name="ИННПроизводителя" type="xs:string" lowerBound="0"/>
+		<property name="КПППроизводителя" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеПоставщика" type="xs:string" lowerBound="0"/>
+		<property name="ИННПоставщика" type="xs:string" lowerBound="0"/>
+		<property name="КПППоставщика" type="xs:string" lowerBound="0"/>
+		<property name="ЛицензияСерия" type="xs:string" lowerBound="0"/>
+		<property name="ЛицензияНомер" type="xs:string" lowerBound="0"/>
+		<property name="ЛицензияДатаВыдачи" type="xs:dateTime"/>
+		<property name="ЛицензияДатаОкончания" type="xs:dateTime"/>
+		<property name="ЛицензияКемВыдана" type="xs:string" lowerBound="0"/>
+		<property name="ДатаЗакупки" type="xs:dateTime"/>
+		<property name="НомерТоварноТранспортнойНакладной" type="xs:string" lowerBound="0"/>
+		<property name="НомерТаможеннойДекларации" type="xs:string" lowerBound="0"/>
+		<property name="ОбъемЗакупленнойПродукции" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+</package>

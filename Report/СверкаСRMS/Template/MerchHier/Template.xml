@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>Item</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>1C</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код1С</dataPath>
+			<field>Код1С</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<dataSource>Item</dataSource>
+		<query>ВЫБРАТЬ
+	Номенклатура.Код КАК Код1С,
+	Номенклатура.Наименование,
+	Номенклатура.Ссылка
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Группа = 1</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>RMS</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>HIER_TYPE</dataPath>
+			<field>HIER_TYPE</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>HIERARCHY_NAME</dataPath>
+			<field>HIERARCHY_NAME</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PARENT_HIERARCHY_ID</dataPath>
+			<field>PARENT_HIERARCHY_ID</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<dataSource>Item</dataSource>
+		<query>ВЫБРАТЬ
+	RMS13_V_MERCH_HIER.HIERARCHY_ID КАК Код,
+	RMS13_V_MERCH_HIER.HIERARCHY_NAME,
+	RMS13_V_MERCH_HIER.PARENT_HIERARCHY_ID,
+	RMS13_V_MERCH_HIER.HIER_TYPE
+ИЗ
+	ВнешнийИсточникДанных.RMS.Таблица.RMS13_V_MERCH_HIER КАК RMS13_V_MERCH_HIER</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>1C</destinationDataSet>
+		<sourceExpression>ПолучитьКодГруппы(HIER_TYPE,Код)</sourceExpression>
+		<destinationExpression>Код1С</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>1C</destinationDataSet>
+		<sourceExpression>HIER_TYPE</sourceExpression>
+		<destinationExpression>ПолучитьУровень(Ссылка)</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>1C</destinationDataSet>
+		<sourceExpression>HIERARCHY_NAME</sourceExpression>
+		<destinationExpression>Наименование</destinationExpression>
+	</dataSetLink>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>HIERARCHY_NAME</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>HIER_TYPE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Код1С</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>3ccffb5f-ab96-4b8b-b4e1-ec7d7587deef</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>вид</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Код</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Код1С</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>FilterOutput</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

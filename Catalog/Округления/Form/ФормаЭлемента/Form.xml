@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="Форма_КоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="Наименование_КонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<Pages name="Группа" id="5">
+			<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="Группа1" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила округления</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<Table name="Правила" id="12">
+							<SkipOnInput>false</SkipOnInput>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>Объект.Правила</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правила</v8:content>
+								</v8:item>
+							</Title>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Правила_КонтекстноеМеню" id="13"/>
+							<AutoCommandBar name="Правила_КоманднаяПанель" id="14"/>
+							<ExtendedTooltip name="ПравилаРасширеннаяПодсказка" id="31"/>
+							<SearchStringAddition name="ПравилаСтрокаПоиска" id="32">
+								<Source>
+									<lf:elementId>12</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ПравилаСтрокаПоискаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="ПравилаСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПравилаСостояниеПросмотра" id="35">
+								<Source>
+									<lf:elementId>12</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ПравилаСостояниеПросмотраКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="ПравилаСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПравилаУправлениеПоиском" id="38">
+								<Source>
+									<lf:elementId>12</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ПравилаУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="ПравилаУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="Группа2" id="27">
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="41"/>
+									<ChildItems>
+										<InputField name="СуммаС" id="21">
+											<DataPath>Объект.Правила.СуммаС</DataPath>
+											<Wrap>false</Wrap>
+											<ContextMenu name="СуммаС_КонтекстноеМеню" id="22"/>
+											<ExtendedTooltip name="СуммаСРасширеннаяПодсказка" id="42"/>
+										</InputField>
+										<InputField name="СуммаПо" id="23">
+											<DataPath>Объект.Правила.СуммаПо</DataPath>
+											<Wrap>false</Wrap>
+											<ContextMenu name="СуммаПо_КонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="СуммаПоРасширеннаяПодсказка" id="43"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ПорядокОкругления" id="17">
+									<DataPath>Объект.Правила.ПорядокОкругления</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ПорядокОкругления_КонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ПорядокОкругленияРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<InputField name="ВидОкругления" id="19">
+									<DataPath>Объект.Правила.ВидОкругления</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ВидОкругления_КонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ВидОкругленияРасширеннаяПодсказка" id="45"/>
+								</InputField>
+								<InputField name="Корректировка" id="25">
+									<DataPath>Объект.Правила.Корректировка</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="Корректировка_КонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="КорректировкаРасширеннаяПодсказка" id="46"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Округления</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>4:bb9587e8-23a8-4f47-a789-3f9630345601</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Subsystem uuid="9e116738-2f00-4385-b4b5-dbc34f79a3ee">
+		<Properties>
+			<Name>Ижтрейдинг</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ижтрейдинг</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.ОбменБаза77</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">BusinessProcess.иж_ПриемкаТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">BusinessProcess.иж_ОбработкаБрака</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Izh_БракПриПриемке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Izh_ОтправленныеОбъекты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Izh_РасхожденияПриПриемке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Izh_НоменклатураAnA</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Izh_ЮрЛицаAnA</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Izh_ККМвAnA</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.Izh_AnA.Table.Группы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.Izh_AnA.Table.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.Izh_AnA.Table.Топики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.Izh_AnA.Table.ОплатаЧеков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.Izh_AnA.Table.СоставЧеков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.Izh_AnA.Table.Ордеры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Izh_ИсторияОбменаAnA</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Izh_ОбменAnA</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Izh_ДокументыEDI</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Izh_СоставDESADV</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Izh_ИсполнениеПоставок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Izh_DESADV</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Izh_МРЦ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаЗаполненияМРЦ</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ОбменДанными77</Subsystem>
+			<Subsystem>Доработки</Subsystem>
+			<Subsystem>EDIОбмен</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

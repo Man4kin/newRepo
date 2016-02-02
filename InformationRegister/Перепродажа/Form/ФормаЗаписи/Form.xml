@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="СтруктурнаяЕдиница" id="3">
+			<DataPath>Запись.СтруктурнаяЕдиница</DataPath>
+			<ContextMenu name="СтруктурнаяЕдиницаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="СтруктурнаяЕдиницаExtendedTooltip" id="20"/>
+		</InputField>
+		<InputField name="ФирмаПокупки" id="5">
+			<DataPath>Запись.ФирмаПокупки</DataPath>
+			<ContextMenu name="ФирмаПокупкиКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ФирмаПокупкиExtendedTooltip" id="21"/>
+		</InputField>
+		<InputField name="ГруппаНоменклатуры" id="15">
+			<DataPath>ГруппаНоменклатуры</DataPath>
+			<ClearButton>true</ClearButton>
+			<ChoiceParameters>
+				<app:item name="Отбор.Группа">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:decimal">1</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ГруппаНоменклатурыКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ГруппаНоменклатурыExtendedTooltip" id="22"/>
+		</InputField>
+		<InputField name="ФирмаПродажи" id="13">
+			<DataPath>Запись.ФирмаПродажи</DataPath>
+			<ContextMenu name="ФирмаПродажиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ФирмаПродажиExtendedTooltip" id="23"/>
+		</InputField>
+		<InputField name="ТипДоговора" id="11">
+			<DataPath>Запись.ТипДоговора</DataPath>
+			<ContextMenu name="ТипДоговораКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ТипДоговораExtendedTooltip" id="24"/>
+		</InputField>
+		<InputField name="ПроцентПрибыли" id="9">
+			<DataPath>Запись.ПроцентПрибыли</DataPath>
+			<ContextMenu name="ПроцентПрибылиКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПроцентПрибылиExtendedTooltip" id="25"/>
+		</InputField>
+		<CheckBoxField name="Izh_НеИспользовать" id="17">
+			<DataPath>Запись.Izh_НеИспользовать</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="Izh_НеИспользоватьКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="Izh_НеИспользоватьExtendedTooltip" id="26"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Перепродажа</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ГруппаНоменклатуры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,31 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/ItemSupDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="ItemSupDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="supplier" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="primary_supp_ind" type="d4p1:varchar23"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="vpn" type="d4p1:varchar230" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="supp_label" type="d4p1:varchar215" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="consignment_rate" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="supp_diff_1" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="supp_diff_2" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="supp_diff_3" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="supp_diff_4" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="pallet_name" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="case_name" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="inner_name" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="supp_discontinue_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemSupDesc" name="direct_ship_ind" type="d4p1:varchar21" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number12_4" base="xs:decimal" variety="Atomic" totalDigits="12" fractionDigits="4"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar210" base="xs:string" variety="Atomic" maxLength="10"/>
+	<valueType name="varchar2120" base="xs:string" variety="Atomic" maxLength="120"/>
+	<valueType name="varchar215" base="xs:string" variety="Atomic" maxLength="15"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+	<valueType name="varchar23" base="xs:string" variety="Atomic" maxLength="3"/>
+	<valueType name="varchar230" base="xs:string" variety="Atomic" maxLength="30"/>
+	<valueType name="varchar26" base="xs:string" variety="Atomic" maxLength="6"/>
+</package>

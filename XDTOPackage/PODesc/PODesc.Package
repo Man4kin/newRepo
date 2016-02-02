@@ -1,0 +1,132 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/PODesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="PODesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="doc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="order_no" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="order_type" type="d4p1:varchar29"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="order_type_desc" type="d4p1:varchar2250"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="dept" type="d4p1:number4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="dept_name" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="buyer" type="d4p1:number4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="buyer_name" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="supplier" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="promotion" type="d4p1:number10" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="prom_desc" type="d4p1:varchar2160" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="qc_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="not_before_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="not_after_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="otb_eow_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="earliest_ship_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="latest_ship_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="close_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="terms" type="d4p1:varchar215"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="terms_code" type="d4p1:varchar250"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="freight_terms" type="d4p1:varchar230" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="cust_order" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="payment_method" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="payment_method_desc" type="d4p1:varchar240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="backhaul_type" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="backhaul_type_desc" type="d4p1:varchar240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="backhaul_allowance" type="d4p1:number20_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="ship_method" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="ship_method_desc" type="d4p1:varchar240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="purchase_type" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="purchase_type_desc" type="d4p1:varchar240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="status" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="ship_pay_method" type="d4p1:varchar22" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="ship_pay_method_desc" type="d4p1:varchar240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="fob_trans_res" type="d4p1:varchar22" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="fob_trans_res_code_desc" type="d4p1:varchar240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="fob_trans_res_desc" type="d4p1:varchar2250" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="fob_title_pass" type="d4p1:varchar22" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="fob_title_pass_code_desc" type="d4p1:varchar240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="fob_title_pass_desc" type="d4p1:varchar2250" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="vendor_order_no" type="d4p1:varchar215" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="exchange_rate" type="d4p1:number20_10" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="factory" type="d4p1:varchar210" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="factory_desc" type="d4p1:varchar2240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="agent" type="d4p1:varchar210" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="agent_desc" type="d4p1:varchar2240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="discharge_port" type="d4p1:varchar25" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="discharge_port_desc" type="d4p1:varchar2150" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="lading_port" type="d4p1:varchar25" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="lading_port_desc" type="d4p1:varchar2150" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="bill_to_id" type="d4p1:varchar25" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="freight_contract_no" type="d4p1:varchar210" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="po_type" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="po_type_desc" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="pre_mark_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="currency_code" type="d4p1:varchar23"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="contract_no" type="d4p1:number6" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="pickup_loc" type="d4p1:varchar2250" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="pickup_no" type="d4p1:varchar225" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="pickup_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="app_datetime" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="comment_desc" type="d4p1:varchar22000" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" ref="d4p1:PODtl" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PODtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="ref_item" type="d4p1:varchar225" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="physical_location_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="physical_location" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="physical_qty_ordered" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="unit_cost" type="d4p1:number20_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="origin_country_id" type="d4p1:varchar23" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="supp_pack_size" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="earliest_ship_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="latest_ship_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="pickup_loc" type="d4p1:varchar2250" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="pickup_no" type="d4p1:varchar225" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="packing_method" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="round_lvl" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="door_ind" type="d4p1:varchar21" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="priority_level" type="d4p1:number1" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="new_item" type="d4p1:varchar21" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="quarantine" type="d4p1:varchar21" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="rcvd_unit_qty" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="tsf_po_link_id" type="d4p1:number10" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" ref="d4p1:POVirtualDtl" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="cost_source" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="est_in_stock_date" type="d4p1:RIBDate" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="POVirtualDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="location_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="location" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PODesc" name="qty_ordered" type="d4p1:number12_4" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number1" base="xs:integer" variety="Atomic" totalDigits="1"/>
+	<valueType name="number10" base="xs:long" variety="Atomic" totalDigits="10"/>
+	<valueType name="number12_4" base="xs:decimal" variety="Atomic" totalDigits="12" fractionDigits="4"/>
+	<valueType name="number20" base="xs:decimal" variety="Atomic" totalDigits="20"/>
+	<valueType name="number20_10" base="xs:decimal" variety="Atomic" totalDigits="20" fractionDigits="10"/>
+	<valueType name="number20_4" base="xs:decimal" variety="Atomic" totalDigits="20" fractionDigits="4"/>
+	<valueType name="number4" base="xs:integer" variety="Atomic" totalDigits="4"/>
+	<valueType name="number6" base="xs:integer" variety="Atomic" totalDigits="6"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar210" base="xs:string" variety="Atomic" maxLength="10"/>
+	<valueType name="varchar2120" base="xs:string" variety="Atomic" maxLength="120"/>
+	<valueType name="varchar215" base="xs:string" variety="Atomic" maxLength="15"/>
+	<valueType name="varchar2150" base="xs:string" variety="Atomic" maxLength="150"/>
+	<valueType name="varchar2160" base="xs:string" variety="Atomic" maxLength="160"/>
+	<valueType name="varchar22" base="xs:string" variety="Atomic" maxLength="2"/>
+	<valueType name="varchar22000" base="xs:string" variety="Atomic" maxLength="2000"/>
+	<valueType name="varchar2240" base="xs:string" variety="Atomic" maxLength="240"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+	<valueType name="varchar2250" base="xs:string" variety="Atomic" maxLength="250"/>
+	<valueType name="varchar23" base="xs:string" variety="Atomic" maxLength="3"/>
+	<valueType name="varchar230" base="xs:string" variety="Atomic" maxLength="30"/>
+	<valueType name="varchar24" base="xs:string" variety="Atomic" maxLength="4"/>
+	<valueType name="varchar240" base="xs:string" variety="Atomic" maxLength="40"/>
+	<valueType name="varchar245" base="xs:string" variety="Atomic" maxLength="45"/>
+	<valueType name="varchar25" base="xs:string" variety="Atomic" maxLength="5"/>
+	<valueType name="varchar250" base="xs:string" variety="Atomic" maxLength="50"/>
+	<valueType name="varchar26" base="xs:string" variety="Atomic" maxLength="6"/>
+	<valueType name="varchar29" base="xs:string" variety="Atomic" maxLength="9"/>
+</package>

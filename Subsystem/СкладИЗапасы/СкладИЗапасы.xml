@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Subsystem uuid="26799efb-011b-4c4b-a447-c2880fdedb87">
+		<Properties>
+			<Name>СкладИЗапасы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад и запасы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаСкладИЗапасы</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотнаяВедомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварныйОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоПоставкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетОбИзлишках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетОНеликвидах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоДефактуре</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СписаниеПоВидам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Оборачиваемость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДинамикаПродажИОстатков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Izh_ПечатьШК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанельОтчетовСкладИЗапасы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыСкладИЗапасы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Izh_ПриемкаТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Izh_ОтчетПоАдресацииТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.izh_РасписаниеЗаказа</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Склад</Subsystem>
+			<Subsystem>Запасы</Subsystem>
+			<Subsystem>Izh_АдресацияТоваров</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

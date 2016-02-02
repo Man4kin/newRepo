@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="36">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="38"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="39"/>
+				</InputField>
+				<InputField name="Оформлено" id="5">
+					<DataPath>Объект.Оформлено</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОформленоКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ОформленоExtendedTooltip" id="40"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="37">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="41"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="42"/>
+				</InputField>
+				<InputField name="Дата" id="7">
+					<DataPath>Объект.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="43"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="РазрешениеНаВвоз" id="9">
+			<DataPath>Объект.РазрешениеНаВвоз</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РазрешениеНаВвозКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="РазрешениеНаВвозExtendedTooltip" id="44"/>
+		</InputField>
+		<InputField name="ВетСправка" id="11">
+			<DataPath>Объект.ВетСправка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВетСправкаКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ВетСправкаExtendedTooltip" id="45"/>
+		</InputField>
+		<InputField name="Вес" id="13">
+			<DataPath>Объект.Вес</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВесКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВесExtendedTooltip" id="46"/>
+		</InputField>
+		<InputField name="Исследования" id="15">
+			<DataPath>Объект.Исследования</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИсследованияКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ИсследованияExtendedTooltip" id="47"/>
+		</InputField>
+		<Table name="Номенклатура" id="17">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Номенклатура</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="НоменклатураКоманднаяПанель" id="19"/>
+			<ExtendedTooltip name="НоменклатураExtendedTooltip" id="48"/>
+			<SearchStringAddition name="НоменклатураSearchString" id="49">
+				<Source>
+					<lf:elementId>17</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="НоменклатураSearchStringContextMenu" id="50"/>
+				<ExtendedTooltip name="НоменклатураSearchStringExtendedTooltip" id="51"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НоменклатураViewStatus" id="52">
+				<Source>
+					<lf:elementId>17</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="НоменклатураViewStatusContextMenu" id="53"/>
+				<ExtendedTooltip name="НоменклатураViewStatusExtendedTooltip" id="54"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НоменклатураSearchControl" id="55">
+				<Source>
+					<lf:elementId>17</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="НоменклатураSearchControlContextMenu" id="56"/>
+				<ExtendedTooltip name="НоменклатураSearchControlExtendedTooltip" id="57"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НоменклатураНомерСтроки" id="20">
+					<DataPath>Объект.Номенклатура.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НоменклатураНомерСтрокиExtendedTooltip" id="58"/>
+				</LabelField>
+				<InputField name="НоменклатураНоменклатура" id="22">
+					<DataPath>Объект.Номенклатура.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураНоменклатураКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НоменклатураНоменклатураExtendedTooltip" id="59"/>
+				</InputField>
+				<InputField name="НоменклатураИзготовитель" id="24">
+					<DataPath>Объект.Номенклатура.Изготовитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураИзготовительКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="НоменклатураИзготовительExtendedTooltip" id="60"/>
+				</InputField>
+				<InputField name="НоменклатураСтрана" id="26">
+					<DataPath>Объект.Номенклатура.Страна</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураСтранаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="НоменклатураСтранаExtendedTooltip" id="61"/>
+				</InputField>
+				<InputField name="НоменклатураМаркировка" id="28">
+					<DataPath>Объект.Номенклатура.Маркировка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураМаркировкаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="НоменклатураМаркировкаExtendedTooltip" id="62"/>
+				</InputField>
+				<InputField name="НоменклатураПоставщик" id="30">
+					<DataPath>Объект.Номенклатура.Поставщик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураПоставщикКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="НоменклатураПоставщикExtendedTooltip" id="63"/>
+				</InputField>
+				<InputField name="НоменклатураНомерНакладной" id="32">
+					<DataPath>Объект.Номенклатура.НомерНакладной</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураНомерНакладнойКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="НоменклатураНомерНакладнойExtendedTooltip" id="64"/>
+				</InputField>
+				<InputField name="НоменклатураВес" id="34">
+					<DataPath>Объект.Номенклатура.Вес</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НоменклатураВесКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НоменклатураВесExtendedTooltip" id="65"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВетеринарныеДокументы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

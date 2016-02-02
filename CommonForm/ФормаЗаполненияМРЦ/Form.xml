@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Width>90</Width>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ДатаУстановки" id="68">
+			<DataPath>ДатаУстановки</DataPath>
+			<ContextMenu name="ДатаУстановкиКонтекстноеМеню" id="69"/>
+			<ExtendedTooltip name="ДатаУстановкиРасширеннаяПодсказка" id="70"/>
+		</InputField>
+		<Table name="тзДанные" id="37">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>тзДанные</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="тзДанныеКонтекстноеМеню" id="38"/>
+			<AutoCommandBar name="тзДанныеКоманднаяПанель" id="39"/>
+			<ExtendedTooltip name="тзДанныеРасширеннаяПодсказка" id="40"/>
+			<SearchStringAddition name="тзДанныеСтрокаПоиска" id="41">
+				<Source>
+					<lf:elementId>37</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="тзДанныеСтрокаПоискаКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="тзДанныеСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="тзДанныеСостояниеПросмотра" id="46">
+				<Source>
+					<lf:elementId>37</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="тзДанныеСостояниеПросмотраКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="тзДанныеСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="тзДанныеУправлениеПоиском" id="51">
+				<Source>
+					<lf:elementId>37</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="тзДанныеУправлениеПоискомКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="тзДанныеУправлениеПоискомРасширеннаяПодсказка" id="55"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="тзДанныеКатегорияАлко" id="56">
+					<DataPath>тзДанные.КатегорияАлко</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="тзДанныеКатегорияАлкоКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="тзДанныеКатегорияАлкоРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="тзДанныеМинимальнаяРозничнаяЦена" id="65">
+					<DataPath>тзДанные.МинимальнаяРозничнаяЦена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="тзДанныеМинимальнаяРозничнаяЦенаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="тзДанныеМинимальнаяРозничнаяЦенаРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="тзДанныеМинимальнаяПриходнаяЦенаПроизводителя" id="59">
+					<DataPath>тзДанные.МинимальнаяПриходнаяЦенаПроизводителя</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мин. прих. цена производителя</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="тзДанныеМинимальнаяПриходнаяЦенаПроизводителяКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="тзДанныеМинимальнаяПриходнаяЦенаПроизводителяРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="тзДанныеМинимальнаяПриходнаяЦенаПоставщика" id="62">
+					<DataPath>тзДанные.МинимальнаяПриходнаяЦенаПоставщика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="тзДанныеМинимальнаяПриходнаяЦенаПоставщикаКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="тзДанныеМинимальнаяПриходнаяЦенаПоставщикаРасширеннаяПодсказка" id="64"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="Группа4" id="77">
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<Button name="Записать" id="35">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Записать</CommandName>
+					<Parameter xsi:nil="true"/>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="36"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="тзДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КатегорияАлко" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория алко</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторАлкогольнойПродукции</v8:Type>
+					</Type>
+				</Column>
+				<Column name="МинимальнаяПриходнаяЦенаПроизводителя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минимальная приходная цена производителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="МинимальнаяПриходнаяЦенаПоставщика" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мин. прих. цена поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="МинимальнаяРозничнаяЦена" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мин. розничная цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДатаУстановки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата установки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+	</Commands>
+</Form>

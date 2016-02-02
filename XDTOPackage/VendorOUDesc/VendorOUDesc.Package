@@ -1,0 +1,10 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/VendorOUDesc">
+	<property name="VendorOUDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorOUDesc" name="org_unit_id" type="d4p1:number15"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorOUDesc" name="primary_pay_site_ind" type="d4p1:varchar210" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number15" base="xs:integer" variety="Atomic" totalDigits="15"/>
+	<valueType name="varchar210" base="xs:string" variety="Atomic" maxLength="10"/>
+</package>

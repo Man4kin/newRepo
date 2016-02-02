@@ -1,0 +1,35 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="RegPrcChgDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="location" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="loc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" ref="d4p1:RegPrcChgDtl" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="RegPrcChgDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="price_change_id" type="d4p1:number15"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="effective_date" type="d4p1:RIBDate"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="selling_retail_changed_ind" type="d4p1:number1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="selling_unit_retail" type="d4p1:number20_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="selling_uom" type="d4p1:varchar24"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="selling_currency" type="d4p1:varchar23"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="multi_unit_changed_ind" type="d4p1:number1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="multi_units" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="multi_unit_retail" type="d4p1:number20_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="multi_unit_retail_currency" type="d4p1:varchar23" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RegPrcChgDesc" name="multi_selling_uom" type="d4p1:varchar24" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number1" base="xs:integer" variety="Atomic" totalDigits="1"/>
+	<valueType name="number10" base="xs:long" variety="Atomic" totalDigits="10"/>
+	<valueType name="number12_4" base="xs:decimal" variety="Atomic" totalDigits="12" fractionDigits="4"/>
+	<valueType name="number15" base="xs:long" variety="Atomic" totalDigits="15"/>
+	<valueType name="number20_4" base="xs:decimal" variety="Atomic" totalDigits="20" fractionDigits="4"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+	<valueType name="varchar23" base="xs:string" variety="Atomic" maxLength="3"/>
+	<valueType name="varchar24" base="xs:string" variety="Atomic" maxLength="4"/>
+</package>

@@ -1,0 +1,85 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/rib/RibMessages">
+	<property name="RibMessages">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:publishetname"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:ribMessage" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="customData" type="xs:string"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="customFlag" type="d2p1:string1"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="description" type="d2p1:string4000"/>
+	<property name="detail">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:dtl_name"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:dtl_value"/>
+		</typeDef>
+	</property>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="dtl_name" type="d2p1:string25"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="dtl_value" type="d2p1:string300"/>
+	<property name="failure">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:time"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:location"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:description"/>
+		</typeDef>
+	</property>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="family" type="d2p1:string25"/>
+	<property name="hospitalID" type="xs:long"/>
+	<property name="hospitalRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:message_num"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:location"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:message_family"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:old_reason_code"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:new_reason_code"/>
+		</typeDef>
+	</property>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="id" type="d2p1:string4000"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="location" type="d2p1:string60"/>
+	<property name="messageData" type="xs:string"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="message_family" type="d2p1:string25"/>
+	<property name="message_num" type="xs:long"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="name" type="d2p1:string25"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="new_reason_code" type="d2p1:string10"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="old_reason_code" type="d2p1:string10"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="publishTime" type="d2p1:ribMessageDateTime"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="publishetname" type="d2p1:string255"/>
+	<property name="ribMessage">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:family"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:type"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:id"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:ribmessageID"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:routingInfo" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:publishTime"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:hospitalID"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:failure" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:messageData"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:customData"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:customFlag"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:hospitalRef" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="ribmessageID" type="d2p1:string255"/>
+	<property name="routingInfo">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:name"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" ref="d4p1:value"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/rib/RibMessages" lowerBound="0" ref="d4p1:detail" upperBound="2"/>
+		</typeDef>
+	</property>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="time" type="d2p1:ribMessageDateTime"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="type" type="d2p1:string300"/>
+	<property xmlns:d2p1="http://www.oracle.com/retail/integration/rib/RibMessages" name="value" type="d2p1:string4000"/>
+	<valueType base="xs:string" name="ribMessageDateTime" variety="Atomic">
+		<pattern>\d{4}-\d\d-\d\d \d\d:\d\d:\d\d.\d{3} [A-Z]{3}</pattern>
+	</valueType>
+	<valueType base="xs:string" maxLength="1" name="string1" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="10" name="string10" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="25" name="string25" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="255" name="string255" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="30" name="string30" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="300" name="string300" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="4000" name="string4000" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="60" name="string60" variety="Atomic"/>
+</package>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 9.00.8112.16448"></meta></head><body>
+<h1><font color="#000080">Справочник "Банковские счета"</font></h1>
+<h3><u>Общее</u></h3>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>В справочнике <strong><font color="#000040">"Банковские счета" </font></strong> хранятся банковские счета всех юридических и физических лиц: собственных и сторонних. Список банковских счетов контрагента или собственной организации определяется теми банковскими счетами, которые подчинены соответствующему элементу справочника <a href="Catalog.Контрагенты/Help">«Контрагенты»</a> или <a href="Catalog.Организации/Help">«Фирмы».</a> <br><br>Данные из этого справочника используются в таких документах, как, <a href="../idcbe6b0a3-7f98-4bf0-b700-0805e3fb1c8d/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">«Зачисление на счет»</a>, <a href="../id0a548efb-fa3a-4c2c-b305-474d3e408913/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">«Списание со счета»</a> , <a href="Document.Счет/Help">"Счет".</a> </p></blockquote>
+<h3 dir="ltr"><u>Форма списка справочника</u></h3>
+<blockquote>
+<p dir="ltr">В форме  списка справочника содержатся следующие данные: </p></blockquote>
+<ul><ul><ul><ul><li>
+<div><strong>Код </strong>(код элемента справочника)</div>
+</li><li>
+<div><strong>Наименование</strong></div>
+</li><li>
+<div><strong>Банк </strong></div>
+</li><li>
+<div><strong>Вид счета </strong></div>
+</li><li>
+<div><strong>Номер счета </strong></div>
+</li><li>
+<div><strong>Валюта счета (</strong>валюта, в которой производятся расчеты)</div></li></ul></ul></ul></ul><h3 dir="ltr"><u>Форма элемента справочника</u></h3>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Редактирование информации о банковском счете производится в отдельном диалоговом окне, открываемом из формы списка справочника банковских счетов. <br>При этом указывается информация, характеризующая банковский счет (банк, номер счета, вид счета, валюта денежных средств, банк – корреспондент для непрямых расчетов), а также дополнительная информация, необходимая для корректного заполнения платежных документов по выбранному счету.<br></p>
+<p></p>
+<p><br>При добавлении нового элемента в форме элемента справочника необходимо заполнить следующие реквизиты: </p></blockquote>
+<ul><ul><ul><ul><li dir="ltr"><strong class="ControlElement">Наименование.</strong>  Наименование банковского счета, заполняется вручную. 
+</li><li>
+<div><strong>Банк. </strong> Банк, в котором открыт расчетный счет, элемент справочника <a href="../id8a45e94d-3019-4b75-b5fc-972aeae4e53d/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Банки".</a></div>
+</li><li>
+<div><strong class="ControlElement">№ счета.</strong>  Счет контрагента в указанном банке, заполняется вручную.</div>
+</li><li>
+<div><strong class="ControlElement">Вид.</strong> Расчетный, депозитный,<strong> </strong>ссудный или иной счет, заполняется из выпадающего списка .</div>
+</li><li>
+<div><strong class="ControlElement">Дата открытия.</strong> Дата открытия счета, заполняется вручную.</div>
+</li><li>
+<div><strong class="ControlElement">Дата закрытия.</strong> Дата закрытия счета, заполняется вручную.</div>
+</li><li>
+<div><strong>Валютный счет. </strong>Реквизит-флажок. Указывает, является ли счет валютным (флаг установлен) или рублевым по умолчанию (флаг снят). Если флажок установлен, необходимо заполнить также поле <strong class="ControlElement">"Номер и дата разрешения ЦБ"</strong>.</div></li></ul></ul></ul></ul><blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Окно содержит следующие <strong class="ControlElement">группы элементов справочника</strong>:</p></blockquote>
+<ul><ul><ul><ul><li>
+<div><strong class="ControlElement">Для непрямых расчетов.</strong> В группе указывается банк, через который производятся расчеты (элемент справочника <a href="../id8a45e94d-3019-4b75-b5fc-972aeae4e53d/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Банки").</a></div>
+</li><li>
+<div><strong>Текст для подстановки в платежные документы для особых условий платежа. </strong>В этой группе  необходимо вручную заполнить следующие поля: </div>
+<ul><ul><li>
+<div><strong>корреспондент -</strong> в это поле можно ввести текст, который будет заполнен в платежном документе при выборе расчетного счета.</div>
+</li><li>
+<div><strong>назначение -</strong> в это поле можно ввести текст назначение платежа, который будет заполнен в платежном документе при выборе расчетного счета.</div></li></ul></ul></li><li>
+<div><strong class="ControlElement">Дополнительно. </strong> В группе содержится три управляющих реквизита-флажка: </div>
+<ul><ul><li>
+<div><strong class="ControlElement">указывать в дате документа месяц прописью</strong></div>
+</li><li>
+<div><strong class="ControlElement">указывать сумму без копеек, если она в целых рублях</strong></div>
+</li><li>
+<div><strong class="ControlElement">всегда указывать КПП в платежных документах</strong></div></li></ul></ul></li></ul></ul></ul></ul><p><strong><font color="#000040"></font></strong> </p></body></html>

@@ -1,0 +1,54 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/ItemLocDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="ItemLocDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" ref="d4p1:ItemLocPhys" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="ItemLocPhys">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" name="physical_loc" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" ref="d4p1:ItemLocVirt" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" ref="d4p1:ItemLocVirtRepl" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="ItemLocVirt">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" name="loc" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" name="loc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="local_item_desc" type="d4p1:varchar2250"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="local_short_desc" type="d4p1:varchar2120"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" name="status" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="primary_supp" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="primary_cntry" type="d4p1:varchar23"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="receive_as_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="taxable_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="source_method" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="source_wh" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="unit_retail" type="d4p1:number20_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="selling_unit_retail" type="d4p1:number20_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="selling_uom" type="d4p1:varchar24"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="store_price_ind" type="d4p1:varchar21"/>
+		</typeDef>
+	</property>
+	<property name="ItemLocVirtRepl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" name="loc" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" name="loc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="primary_repl_supplier" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="repl_method" type="d4p1:varchar26"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemLocDesc" lowerBound="0" name="reject_store_order_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" lowerBound="0" name="next_delivery_date" type="d4p1:RIBDate"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:long" name="number10" totalDigits="10" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number20_4" totalDigits="20" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="120" name="varchar2120" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="25" name="varchar225" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="250" name="varchar2250" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="3" name="varchar23" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="4" name="varchar24" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="6" name="varchar26" variety="Atomic"/>
+</package>

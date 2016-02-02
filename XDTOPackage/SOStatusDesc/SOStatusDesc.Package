@@ -1,0 +1,32 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/SOStatusDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="SOStatusDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="dc_dest_id" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" lowerBound="0" name="distro_nbr" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="distro_document_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" ref="d4p1:SOStatusDtl" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="SOStatusDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="cust_order_nbr" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="dest_id" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="item_id" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="order_line_nbr" type="d4p1:number3"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="unit_qty" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" name="status" type="d4p1:varchar22"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/SOStatusDesc" lowerBound="0" name="user_id" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" lowerBound="0" name="updated_date" type="d4p1:RIBDate"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:decimal" name="number12" totalDigits="12" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number12_4" totalDigits="12" variety="Atomic"/>
+	<valueType base="xs:decimal" name="number3" totalDigits="3" variety="Atomic"/>
+	<valueType base="xs:integer" name="number4" totalDigits="4" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="10" name="varchar210" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="2" name="varchar22" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="25" name="varchar225" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="30" name="varchar230" variety="Atomic"/>
+</package>

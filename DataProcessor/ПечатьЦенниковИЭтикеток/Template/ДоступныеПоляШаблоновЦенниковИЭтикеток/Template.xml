@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Картинка</dataPath>
+			<field>Картинка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЦенниковДляПечати</dataPath>
+			<field>КоличествоЦенниковДляПечати</field>
+			<useRestriction>
+				<field>true</field>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЭтикетокДляПечати</dataPath>
+			<field>КоличествоЭтикетокДляПечати</field>
+			<useRestriction>
+				<field>true</field>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+			<useRestriction>
+				<field>true</field>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница</dataPath>
+			<field>СтруктурнаяЕдиница</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Текст</dataPath>
+			<field>Текст</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущаяДата</dataPath>
+			<field>ТекущаяДата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущееВремя</dataPath>
+			<field>ТекущееВремя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПользователь</dataPath>
+			<field>ТекущийПользователь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фирма</dataPath>
+			<field>Фирма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонЦенникаДляПечати</dataPath>
+			<field>ШаблонЦенникаДляПечати</field>
+			<useRestriction>
+				<field>true</field>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонЭтикеткиДляПечати</dataPath>
+			<field>ШаблонЭтикеткиДляПечати</field>
+			<useRestriction>
+				<field>true</field>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрихКод</dataPath>
+			<field>ШтрихКод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачалаАкции</dataPath>
+			<field>ДатаНачалаАкции</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияАкции</dataPath>
+			<field>ДатаОкончанияАкции</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НазваниеАкции</dataPath>
+			<field>НазваниеАкции</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаПоАкции</dataPath>
+			<field>ЦенаПоАкции</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаПоАкцииТолькоКопейки</dataPath>
+			<field>ЦенаПоАкцииТолькоКопейки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаПоАкцииТолькоРубли</dataPath>
+			<field>ЦенаПоАкцииТолькоРубли</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PLU</dataPath>
+			<field>PLU</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаТолькоКопейки</dataPath>
+			<field>ЦенаТолькоКопейки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаТолькоРубли</dataPath>
+			<field>ЦенаТолькоРубли</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комитент</dataPath>
+			<field>Комитент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВычисляемоеПоле</dataPath>
+			<field>ВычисляемоеПоле</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ИсходныеДанные1.Номенклатура КАК Номенклатура,
+	ИсходныеДанные1.Фирма КАК Фирма,
+	ИсходныеДанные1.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	ИсходныеДанные1.Цена КАК Цена,
+	ИсходныеДанные1.НомерСтроки КАК НомерСтроки,
+	"КоличествоЦенников" КАК КоличествоЦенниковДляПечати,
+	"КоличествоЭтикеток" КАК КоличествоЭтикетокДляПечати,
+	"ШаблонЭтикетки" КАК ШаблонЭтикеткиДляПечати,
+	"ШаблонЦенника" КАК ШаблонЦенникаДляПечати
+ПОМЕСТИТЬ ИсходныеДанные1
+ИЗ
+	(ВЫБРАТЬ
+		ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка) КАК Номенклатура,
+		ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка) КАК Фирма,
+		ЗНАЧЕНИЕ(Справочник.ЕдиницыИзмерения.ПустаяСсылка) КАК ЕдиницаИзмерения,
+		0 КАК Цена,
+		0 КАК НомерСтроки) КАК ИсходныеДанные1
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Фирма,
+	ЕдиницаИзмерения
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсходныеДанные.Номенклатура,	
+	ИсходныеДанные.Фирма,
+	ИсходныеДанные.ЕдиницаИзмерения,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьЦенуМладшейЕдиницыИзмерения = ИСТИНА
+				И (ЕдиницыИзмерения.ЕдиницаПоКлассификатору.МладшаяЕдиница = ЗНАЧЕНИЕ(Справочник.КлассификаторЕдиницИзмерения.ПустаяСсылка)
+					ИЛИ ЕдиницыИзмерения.ЕдиницаПоКлассификатору.Коэффициент = 0)
+			ТОГДА 0
+		ИНАЧЕ ИсходныеДанные.Цена / ВЫБОР
+				КОГДА &amp;ИспользоватьЦенуМладшейЕдиницыИзмерения = ЛОЖЬ
+					ТОГДА 1
+				ИНАЧЕ ЕдиницыИзмерения.ЕдиницаПоКлассификатору.Коэффициент
+			КОНЕЦ
+	КОНЕЦ КАК Цена,
+	ИсходныеДанные.НомерСтроки,
+	ИсходныеДанные.КоличествоЦенниковДляПечати,
+	ИсходныеДанные.КоличествоЭтикетокДляПечати,
+	ИсходныеДанные.ШаблонЭтикеткиДляПечати,
+	ИсходныеДанные.ШаблонЦенникаДляПечати,
+	ЕСТЬNULL(НоменклатураАлко.ИзГруппыАлко, ЛОЖЬ) КАК ИзГруппыАлко
+ПОМЕСТИТЬ ИсходныеДанные
+ИЗ
+	ИсходныеДанные1 КАК ИсходныеДанные
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ЕдиницыИзмерения КАК ЕдиницыИзмерения
+		ПО ИсходныеДанные.ЕдиницаИзмерения = ЕдиницыИзмерения.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ Н.Ссылка КАК Ссылка, ИСТИНА КАК ИзГруппыАлко ИЗ Справочник.Номенклатура КАК Н ГДЕ Н.Ссылка В ИЕРАРХИИ (&amp;ГруппаАлко)) КАК НоменклатураАлко	
+		ПО ИсходныеДанные.Номенклатура = НоменклатураАлко.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсходныеДанные.НомерСтроки КАК НомерСтроки,
+	ИсходныеДанные.Номенклатура КАК Номенклатура,
+	ИсходныеДанные.Фирма КАК Фирма,
+	ИсходныеДанные.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ИсходныеДанные.Цена = 0
+				ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+			ИНАЧЕ ИсходныеДанные.Цена
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК Цена,
+	ЕСТЬNULL(НоменклатураШК.Код, ИсходныеДанные.Номенклатура.Код) КАК ШтрихКод,
+	Валюты.Ссылка КАК Валюта,
+	//ВЫБОР КОГДА ИсходныеДанные.ИзГруппыАлко ТОГДА ФирмыАлко.Ссылка
+	//	ИНАЧЕ Фирмы.Ссылка КОНЕЦ КАК Фирма,
+	СтруктурныеЕдиницы.Ссылка КАК СтруктурнаяЕдиница,
+	Пользователи.Ссылка КАК ТекущийПользователь,
+	&amp;ТекущееВремя КАК ТекущееВремя,
+	&amp;ТекущееВремя КАК ТекущаяДата,
+	ИсходныеДанные.КоличествоЦенниковДляПечати КАК КоличествоЦенниковДляПечати,
+	ИсходныеДанные.КоличествоЭтикетокДляПечати КАК КоличествоЭтикетокДляПечати,
+	ИсходныеДанные.ШаблонЭтикеткиДляПечати КАК ШаблонЭтикеткиДляПечати,
+	ИсходныеДанные.ШаблонЦенникаДляПечати КАК ШаблонЦенникаДляПечати,
+	"" КАК Текст,
+	"" КАК Картинка,
+	"" КАК ВычисляемоеПоле,
+	ВЫБОР
+		КОГДА (ВЫРАЗИТЬ(ВЫБОР
+					КОГДА ИсходныеДанные.Цена = 0
+						ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+					ИНАЧЕ ИсходныеДанные.Цена
+				КОНЕЦ КАК ЧИСЛО(15, 0))) &gt; ВЫБОР
+				КОГДА ИсходныеДанные.Цена = 0
+					ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+				ИНАЧЕ ИсходныеДанные.Цена
+			КОНЕЦ
+			ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+						КОГДА ИсходныеДанные.Цена = 0
+							ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+						ИНАЧЕ ИсходныеДанные.Цена
+					КОНЕЦ КАК ЧИСЛО(15, 0))) - 1
+		ИНАЧЕ ВЫРАЗИТЬ(ВЫБОР
+					КОГДА ИсходныеДанные.Цена = 0
+						ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+					ИНАЧЕ ИсходныеДанные.Цена
+				КОНЕЦ КАК ЧИСЛО(15, 0))
+	КОНЕЦ КАК ЦенаТолькоРубли,
+	(ВЫБОР
+		КОГДА ИсходныеДанные.Цена = 0
+			ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+		ИНАЧЕ ИсходныеДанные.Цена
+	КОНЕЦ - ВЫБОР
+		КОГДА (ВЫРАЗИТЬ(ВЫБОР
+					КОГДА ИсходныеДанные.Цена = 0
+						ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+					ИНАЧЕ ИсходныеДанные.Цена
+				КОНЕЦ КАК ЧИСЛО(15, 0))) &gt; ВЫБОР
+				КОГДА ИсходныеДанные.Цена = 0
+					ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+				ИНАЧЕ ИсходныеДанные.Цена
+			КОНЕЦ
+			ТОГДА (ВЫРАЗИТЬ(ВЫБОР
+						КОГДА ИсходныеДанные.Цена = 0
+							ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+						ИНАЧЕ ИсходныеДанные.Цена
+					КОНЕЦ КАК ЧИСЛО(15, 0))) - 1
+		ИНАЧЕ ВЫРАЗИТЬ(ВЫБОР
+					КОГДА ИсходныеДанные.Цена = 0
+						ТОГДА ЕСТЬNULL(ЦеныНоменклатуры.Цена, 0)
+					ИНАЧЕ ИсходныеДанные.Цена
+				КОНЕЦ КАК ЧИСЛО(15, 0))
+	КОНЕЦ) * 100 КАК ЦенаТолькоКопейки,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) КАК ЧИСЛО(15, 2)) КАК ЦенаПоАкции,
+	ЦеныПоАкции.ДатаНачалаАкции КАК ДатаНачалаАкции,
+	ЦеныПоАкции.ДатаОкончанияАкции КАК ДатаОкончанияАкции,
+	ЦеныПоАкции.НазваниеАкции КАК НазваниеАкции,
+	ВЫБОР
+		КОГДА (ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) КАК ЧИСЛО(15, 0))) &gt; ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0)
+			ТОГДА (ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) КАК ЧИСЛО(15, 0))) - 1
+		ИНАЧЕ ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) КАК ЧИСЛО(15, 0))
+	КОНЕЦ КАК ЦенаПоАкцииТолькоРубли,
+	(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) - ВЫБОР
+		КОГДА (ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) КАК ЧИСЛО(15, 0))) &gt; ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0)
+			ТОГДА (ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) КАК ЧИСЛО(15, 0))) - 1
+		ИНАЧЕ ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПоАкции.ЦенаПоАкции, 0) КАК ЧИСЛО(15, 0))
+	КОНЕЦ) * 100 КАК ЦенаПоАкцииТолькоКопейки,
+	ВесовойТовар.Код КАК PLU
+{ВЫБРАТЬ
+	Номенклатура.*,
+	ЕдиницаИзмерения.*,
+	Цена,
+	ШтрихКод,
+	Валюта.*,
+	Фирма.*,
+	СтруктурнаяЕдиница.*,
+	ТекущийПользователь.*,
+	ТекущееВремя,
+	ТекущаяДата,
+	Текст,
+	Картинка,
+	ЦенаТолькоРубли,
+	ЦенаТолькоКопейки,
+	ЦенаПоАкции,
+	ДатаНачалаАкции,
+	ДатаОкончанияАкции,
+	НазваниеАкции,
+	ЦенаПоАкцииТолькоРубли,
+	ЦенаПоАкцииТолькоКопейки,
+	PLU}
+ИЗ
+	ИсходныеДанные КАК ИсходныеДанные
+		{ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВложенныйЗапрос.Номенклатура КАК Номенклатура,
+			ВложенныйЗапрос.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+			ВЫБОР
+				КОГДА &amp;ИспользоватьЦенуМладшейЕдиницыИзмерения = ИСТИНА
+						И (ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.МладшаяЕдиница = ЗНАЧЕНИЕ(Справочник.КлассификаторЕдиницИзмерения.ПустаяСсылка)
+							ИЛИ ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Коэффициент = 0)
+					ТОГДА 0
+				ИНАЧЕ ЦеныНоменклатурыСрезПоследних.Цена / ВЫБОР
+						КОГДА &amp;ИспользоватьЦенуМладшейЕдиницыИзмерения = ЛОЖЬ
+							ТОГДА 1
+						ИНАЧЕ ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Коэффициент
+					КОНЕЦ
+			КОНЕЦ КАК Цена
+		ИЗ
+			РегистрСведений.ЦеныНоменклатуры.СрезПоследних(&amp;ТекущееВремя, СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница) КАК ЦеныНоменклатурыСрезПоследних
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+					ЦеныНоменклатурыСрезПоследних.Номенклатура КАК Номенклатура,
+					ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+					МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.ID) КАК ID
+				ИЗ
+					РегистрСведений.ЦеныНоменклатуры.СрезПоследних(&amp;ТекущееВремя, СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница) КАК ЦеныНоменклатурыСрезПоследних
+						ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+							ЦеныНоменклатурыСрезПоследних.Номенклатура КАК Номенклатура,
+							ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+							МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.Период) КАК Период
+						ИЗ
+							РегистрСведений.ЦеныНоменклатуры.СрезПоследних(&amp;ТекущееВремя, СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница) КАК ЦеныНоменклатурыСрезПоследних
+						ГДЕ
+							ЦеныНоменклатурыСрезПоследних.АктивностьЗаписи
+						
+						СГРУППИРОВАТЬ ПО
+							ЦеныНоменклатурыСрезПоследних.Номенклатура,
+							ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения) КАК ВложенныйЗапрос
+						ПО ЦеныНоменклатурыСрезПоследних.Период = ВложенныйЗапрос.Период
+							И ЦеныНоменклатурыСрезПоследних.Номенклатура = ВложенныйЗапрос.Номенклатура
+							И ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения = ВложенныйЗапрос.ЕдиницаИзмерения
+				ГДЕ
+					ЦеныНоменклатурыСрезПоследних.АктивностьЗаписи
+				
+				СГРУППИРОВАТЬ ПО
+					ЦеныНоменклатурыСрезПоследних.Номенклатура,
+					ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения) КАК ВложенныйЗапрос
+				ПО ЦеныНоменклатурыСрезПоследних.Номенклатура = ВложенныйЗапрос.Номенклатура
+					И ЦеныНоменклатурыСрезПоследних.ЕдиницаИзмерения = ВложенныйЗапрос.ЕдиницаИзмерения
+					И ЦеныНоменклатурыСрезПоследних.ID = ВложенныйЗапрос.ID) КАК ЦеныНоменклатуры
+		ПО ИсходныеДанные.Номенклатура = ЦеныНоменклатуры.Номенклатура
+			И ИсходныеДанные.ЕдиницаИзмерения = ЦеныНоменклатуры.ЕдиницаИзмерения
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Номенклатура КАК НоменклатураШК
+			{ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				МАКСИМУМ(ВесовойТовар.Код) КАК Код,
+				ВесовойТовар.Номенклатура КАК Номенклатура
+			ИЗ
+				Справочник.ВесовойТовар КАК ВесовойТовар
+			ГДЕ
+				ВесовойТовар.ПометкаУдаления = ЛОЖЬ
+			
+			СГРУППИРОВАТЬ ПО
+				ВесовойТовар.Номенклатура) КАК ВесовойТовар
+			ПО НоменклатураШК.Ссылка = ВесовойТовар.Номенклатура}
+		ПО (НоменклатураШК.ФлагОсновногоШК = ИСТИНА)
+			И (ИсходныеДанные.Номенклатура = НоменклатураШК.Родитель
+				ИЛИ ИсходныеДанные.Номенклатура = НоменклатураШК.Ссылка)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Валюты КАК Валюты
+		ПО (Валюты.Ссылка = &amp;Валюта)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Фирмы
+		ПО (Фирмы.Ссылка = &amp;Фирма)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК ФирмыАлко
+		ПО (ФирмыАлко.Ссылка = &amp;ФирмаАлко)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.СтруктурныеЕдиницы КАК СтруктурныеЕдиницы
+		ПО (СтруктурныеЕдиницы.Ссылка = &amp;СтруктурнаяЕдиница)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК Пользователи
+		ПО (Пользователи.Ссылка = &amp;ТекущийПользователь)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ (
+ВЫБРАТЬ
+		ВложенныйЗАпрос2.Номенклатура КАК Номенклатура,
+		ВложенныйЗАпрос2.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+		ВложенныйЗАпрос2.Цена КАК ЦенаПоАкции,
+		ВложенныйЗАпрос2.ДатаНачала КАК ДатаНачалаАкции,
+		ВложенныйЗАпрос2.ДатаОкончания КАК ДатаОкончанияАкции,
+		ВложенныйЗАпрос2.Название КАК НазваниеАкции
+	ИЗ
+		(ВЫБРАТЬ
+			ПромоАкцииНоменклатура.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+			ПромоАкцииНоменклатура.Номенклатура КАК Номенклатура,
+			МИНИМУМ(ПромоАкцииНоменклатура.Цена) КАК Цена
+		ИЗ
+			РегистрСведений.ПромоАкции КАК ПромоАкции
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПромоАкцииНоменклатура КАК ПромоАкцииНоменклатура
+				ПО ПромоАкции.СтруктурнаяЕдиница = ПромоАкцииНоменклатура.СтруктурнаяЕдиница
+					И ПромоАкции.IDПромо = ПромоАкцииНоменклатура.IDПромо
+					И ПромоАкции.IDКомпоненты = ПромоАкцииНоменклатура.IDКомпоненты
+					И ПромоАкции.IDГруппы = ПромоАкцииНоменклатура.IDГруппы
+					И ПромоАкции.IDДеталей = ПромоАкцииНоменклатура.IDДеталей
+					И (НАЧАЛОПЕРИОДА(ПромоАкции.ДатаНачала, ДЕНЬ) &lt;= &amp;ДатаАкции)
+					И (КОНЕЦПЕРИОДА(ПромоАкции.ДатаОкончания, ДЕНЬ) &gt;= &amp;ДатаАкции)
+					И (ПромоАкции.ФлагОкончания = ЛОЖЬ)
+					И (ПромоАкции.СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница)
+		ГДЕ
+			ПромоАкцииНоменклатура.Цена &lt;&gt; 0
+		СГРУППИРОВАТЬ ПО
+			ПромоАкцииНоменклатура.СтруктурнаяЕдиница,
+			ПромоАкцииНоменклатура.Номенклатура) КАК ВложенныйЗАпрос
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				ПромоАкции.ДатаНачала КАК ДатаНачала,
+				ПромоАкции.ДатаОкончания КАК ДатаОкончания,
+				ПромоАкции.Название КАК Название,
+				ПромоАкцииНоменклатура.Номенклатура КАК Номенклатура,
+				ПромоАкцииНоменклатура.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+				ПромоАкцииНоменклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+				ПромоАкцииНоменклатура.Цена КАК Цена
+			ИЗ
+				РегистрСведений.ПромоАкции КАК ПромоАкции
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПромоАкцииНоменклатура КАК ПромоАкцииНоменклатура
+					ПО ПромоАкции.СтруктурнаяЕдиница = ПромоАкцииНоменклатура.СтруктурнаяЕдиница
+						И ПромоАкции.IDПромо = ПромоАкцииНоменклатура.IDПромо
+						И ПромоАкции.IDКомпоненты = ПромоАкцииНоменклатура.IDКомпоненты
+						И ПромоАкции.IDГруппы = ПромоАкцииНоменклатура.IDГруппы
+						И ПромоАкции.IDДеталей = ПромоАкцииНоменклатура.IDДеталей
+						И (НАЧАЛОПЕРИОДА(ПромоАкции.ДатаНачала, ДЕНЬ) &lt;= &amp;ДатаАкции)
+						И (КОНЕЦПЕРИОДА(ПромоАкции.ДатаОкончания, ДЕНЬ) &gt;= &amp;ДатаАкции)
+						И (ПромоАкции.ФлагОкончания = ЛОЖЬ)
+						И (ПромоАкции.СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница)
+			ГДЕ
+				ПромоАкцииНоменклатура.Цена &lt;&gt; 0
+				) КАК ВложенныйЗАпрос2
+			ПО ВложенныйЗАпрос.Номенклатура = ВложенныйЗАпрос2.Номенклатура
+				И ВложенныйЗАпрос.СтруктурнаяЕдиница = ВложенныйЗАпрос2.СтруктурнаяЕдиница
+				И ВложенныйЗАпрос.Цена = ВложенныйЗАпрос2.Цена	
+		//ВЫБРАТЬ
+		//	ПромоАкцииНоменклатура.Номенклатура КАК Номенклатура,
+		//	ПромоАкцииНоменклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+		//	ВЫБОР
+		//		КОГДА &amp;ИспользоватьЦенуМладшейЕдиницыИзмерения = ИСТИНА
+		//				И (ПромоАкцииНоменклатура.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.МладшаяЕдиница = ЗНАЧЕНИЕ(Справочник.КлассификаторЕдиницИзмерения.ПустаяСсылка)
+		//					ИЛИ ПромоАкцииНоменклатура.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Коэффициент = 0)
+		//			ТОГДА 0
+		//		ИНАЧЕ ПромоАкцииНоменклатура.Цена / ВЫБОР
+		//				КОГДА &amp;ИспользоватьЦенуМладшейЕдиницыИзмерения = ЛОЖЬ
+		//					ТОГДА 1
+		//				ИНАЧЕ ПромоАкцииНоменклатура.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Коэффициент
+		//			КОНЕЦ
+		//	КОНЕЦ КАК ЦенаПоАкции,
+		//	ПромоАкции.ДатаНачала КАК ДатаНачалаАкции,
+		//	ПромоАкции.ДатаОкончания КАК ДатаОкончанияАкции,
+		//	ПромоАкции.Название КАК НазваниеАкции
+		//ИЗ
+		//	РегистрСведений.ПромоАкцииНоменклатура КАК ПромоАкцииНоменклатура
+		//		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПромоАкции КАК ПромоАкции
+		//		ПО ПромоАкцииНоменклатура.IDПромо = ПромоАкции.IDПромо
+		//			И ПромоАкцииНоменклатура.IDКомпоненты = ПромоАкции.IDКомпоненты
+		//			И ПромоАкцииНоменклатура.IDГруппы = ПромоАкции.IDГруппы
+		//			И ПромоАкцииНоменклатура.IDДеталей = ПромоАкции.IDДеталей
+		//ГДЕ
+		//	НАЧАЛОПЕРИОДА(ПромоАкции.ДатаНачала, ДЕНЬ) &lt;= &amp;ДатаАкции
+		//	И КОНЕЦПЕРИОДА(ПромоАкции.ДатаОкончания, ДЕНЬ) &gt;= &amp;ДатаАкции
+		//	И ПромоАкции.ФлагОкончания = ЛОЖЬ
+		//	И ПромоАкции.СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница
+			
+			) КАК ЦеныПоАкции
+		ПО ИсходныеДанные.Номенклатура = ЦеныПоАкции.Номенклатура
+			И ИсходныеДанные.ЕдиницаИзмерения = ЦеныПоАкции.ЕдиницаИзмерения}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиНоменклатуры.Остатки(
+				,
+				Фирма = &amp;Фирма
+					ИЛИ &amp;Фирма = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)) КАК ОстаткиНоменклатурыОстатки
+		ПО ИсходныеДанные.Номенклатура = ОстаткиНоменклатурыОстатки.Номенклатура}
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ТолькоСОстатками
+				ТОГДА ОстаткиНоменклатурыОстатки.КоличествоОстаток &gt; 0
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+УПОРЯДОЧИТЬ ПО
+	ИсходныеДанные.НомерСтроки</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Валюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СтруктурнаяЕдиница</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Структурная единица</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтруктурныеЕдиницы.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекущееВремя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущее время</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекущийПользователь</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущий пользователь</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Фирма</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Фирма</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользоватьЦенуМладшейЕдиницыИзмерения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Использовать цену младшей единицы измерения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТолькоСОстатками</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Только с остатками</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаАкции</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата акции</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ГруппаАлко</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Группа алко</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ФирмаАлко</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Фирма алко</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШтрихКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>PLU</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Валюта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНачалаАкции</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончанияАкции</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НазваниеАкции</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтруктурнаяЕдиница</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТекущаяДата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТекущееВремя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТекущийПользователь</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Фирма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаПоАкцииТолькоКопейки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаПоАкцииТолькоРубли</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаТолькоКопейки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаТолькоРубли</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШтрихКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаПоАкции</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

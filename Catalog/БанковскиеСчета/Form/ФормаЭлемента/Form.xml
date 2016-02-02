@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСчет" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа счет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСчетExtendedTooltip" id="39"/>
+			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование счета:</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="40"/>
+				</InputField>
+				<InputField name="НомерСчета" id="7">
+					<DataPath>Объект.НомерСчета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерСчетаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НомерСчетаExtendedTooltip" id="41"/>
+				</InputField>
+				<InputField name="СчетУчета" id="25">
+					<DataPath>1/0:0046d152-c0d1-4d03-ad33-e6c55cbc7480</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СчетУчетаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СчетУчетаExtendedTooltip" id="42"/>
+				</InputField>
+				<InputField name="ВидСчета" id="9">
+					<DataPath>Объект.ВидСчета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Расчетный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Расчетный</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Депозитный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Депозитный</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ссудный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Ссудный</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иной</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Иной</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидСчетаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ВидСчетаExtendedTooltip" id="43"/>
+				</InputField>
+				<InputField name="ДатаОткрытия" id="11">
+					<DataPath>Объект.ДатаОткрытия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаОткрытияКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДатаОткрытияExtendedTooltip" id="44"/>
+				</InputField>
+				<InputField name="ДатаЗакрытия" id="13">
+					<DataPath>Объект.ДатаЗакрытия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаЗакрытияКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДатаЗакрытияExtendedTooltip" id="45"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаБанк" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты банка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа счет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаБанкExtendedTooltip" id="46"/>
+			<ChildItems>
+				<InputField name="Банк" id="5">
+					<DataPath>Объект.НаименованиеБанка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БанкКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="БанкExtendedTooltip" id="47"/>
+				</InputField>
+				<InputField name="КоррСчетБанка" id="27">
+					<DataPath>Объект.КоррСчетБанка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоррСчетБанкаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="КоррСчетБанкаExtendedTooltip" id="48"/>
+				</InputField>
+				<InputField name="БИКБанка" id="35">
+					<DataPath>Объект.БИКБанка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БИКБанкаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="БИКБанкаExtendedTooltip" id="49"/>
+				</InputField>
+				<InputField name="ГородБанка" id="31">
+					<DataPath>Объект.ГородБанка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ГородБанкаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ГородБанкаExtendedTooltip" id="50"/>
+				</InputField>
+				<InputField name="АдресБанка" id="29">
+					<DataPath>Объект.АдресБанка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АдресБанкаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="АдресБанкаExtendedTooltip" id="51"/>
+				</InputField>
+				<InputField name="ТелефоныБанка" id="33">
+					<DataPath>Объект.ТелефоныБанка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТелефоныБанкаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ТелефоныБанкаExtendedTooltip" id="52"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.БанковскиеСчета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

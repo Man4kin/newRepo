@@ -1,0 +1,35 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/VendorAddrDesc">
+	<property name="VendorAddrDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="module" type="d4p1:varchar24"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="key_value_1" type="d4p1:varchar220"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="key_value_2" type="d4p1:varchar220" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="seq_no" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="addr_type" type="d4p1:varchar22"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="primary_addr_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="add_1" type="d4p1:varchar2240"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="add_2" type="d4p1:varchar2240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="add_3" type="d4p1:varchar2240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="city" type="d4p1:varchar2120"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="state" type="d4p1:varchar23" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="country_id" type="d4p1:varchar23"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="post" type="d4p1:varchar230" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="contact_name" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="contact_phone" type="d4p1:varchar220" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="contact_telex" type="d4p1:varchar220" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="contact_fax" type="d4p1:varchar220" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrDesc" name="contact_email" type="d4p1:varchar2100" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number15" base="xs:long" variety="Atomic" totalDigits="15"/>
+	<valueType name="number4" base="xs:integer" variety="Atomic" totalDigits="4"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar2100" base="xs:string" variety="Atomic" maxLength="100"/>
+	<valueType name="varchar2120" base="xs:string" variety="Atomic" maxLength="120"/>
+	<valueType name="varchar22" base="xs:string" variety="Atomic" maxLength="2"/>
+	<valueType name="varchar220" base="xs:string" variety="Atomic" maxLength="20"/>
+	<valueType name="varchar2240" base="xs:string" variety="Atomic" maxLength="240"/>
+	<valueType name="varchar23" base="xs:string" variety="Atomic" maxLength="3"/>
+	<valueType name="varchar230" base="xs:string" variety="Atomic" maxLength="30"/>
+	<valueType name="varchar24" base="xs:string" variety="Atomic" maxLength="4"/>
+</package>

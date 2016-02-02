@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 8.00.6001.18702"></meta></head><body>
+<h1><font color="#000080">Обработка "Калькуляция производства"</font></h1>
+<h3><u>Общее</u></h3>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Обработка <strong class="ControlElement">"Калькуляция производства"</strong> предназначена для определения целесообразности производства готовой продукции путем проведения предварительного расчета ее себестоимости на основе данных о стоимости входящих в состав ингредиентов.</p></blockquote>
+<h3 dir="ltr"><u>Основные реквизиты формы обработки</u></h3><font color="#000040"><font color="#000000">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Форма обработки <strong class="ControlElement">"Калькуляция производства"</strong> содержит следующие группы реквизитов:</p></blockquote>
+<blockquote>
+<ul><li>
+<div><strong class="ControlElement">Продукция. </strong>Данная группа реквизитов предназначена для определения вида продукции и способа расчета себестоимости входящих в ее состав товаров и ингредиентов.</div>
+<ul><ul><li>
+<div><strong class="ControlElement">Продукция.</strong> Готовая продукция, для которой будет производиться расчет себестоимости. Элемент справочника <a href="Catalog.Номенклатура/Help">"Номенклатура"</a>.</div>
+<ul><ul><li>
+<div><strong class="ControlElement">Технологическая карта. </strong>Документ <strong class="ControlElement">"Технологическая карта"</strong>, по которому будет производиться калькуляция. Элемент справочника <a href="Document.ТехнологическаяКарта/Help">"Технологическая карта"</a>.</div>
+</li><li>
+<div><strong class="ControlElement">Ед.изм.</strong> Единица измерения готовой продукции. Значение выбирается из справочника <a href="Catalog.ЕдиницыИзмерения/Help">"Единицы измерения"</a>.</div>
+</li><li>
+<div><strong class="ControlElement">Коэффициент.</strong> Коэффициент пересчета единицы измерения продукции в базовую. Реквизит заполняется автоматически.</div>
+</li><li>
+<div><strong class="ControlElement">Количество.</strong> Количество продукции для производства.</div></li></ul></ul></li><li>
+<div><strong class="ControlElement">Способ расчета.</strong> Способ расчета себестоимости ингредиентов, входящих в состав продукции:</div>
+<ul><ul><li>
+<div><strong class="ControlElement">По последним закупочным ценам</strong></div>
+</li><li>
+<div><strong class="ControlElement">По текущим остаткам</strong></div></li></ul><li>
+<div><strong class="ControlElement">Фирма.</strong> Фирма, по которой будет производиться расчет себестоимости в соответствии с выбранным способом расчета. Значение является элементом справочника <a href="Catalog.Организации/Help">"Фирмы"</a>.</div>
+</li><li>
+<div><strong class="ControlElement">Склад.</strong> Склад хранения товарных остатков. Значение является элементом справочника <a href="Catalog.Склады/Help">"Склады"</a>.</div></li></ul></li><li>
+<div><strong class="ControlElement">Категория розн. цены.</strong> Розничная категория цен, для которой осуществляется расчет себестоимости.</div>
+</li><li>
+<div><strong class="ControlElement">Розничная цена.</strong> Розничная цена продукции. Определяется пользователем или заполняется автоматически при указании в соответствующем реквизите наценки на себестоимость.</div>
+</li><li>
+<div><strong class="ControlElement">Наценка.</strong> Наценка на себестоимость продукции. Определяется пользователем или заполняется автоматически при задании розничной цены продукции.</div></li></ul></ul></li><li>
+<div><strong class="ControlElement">Ингредиенты.</strong> Группа реквизитов предназначена для отображения списка товаров и ингредиентов, входящих в состав продукции. Список может быть сформирован как автоматически (при указании технологической карты), так и вручную – подбором товаров из справочника <a href="Catalog.Номенклатура/Help">"Номенклатура"</a>.</div>
+<ul><ul><li>
+<div><strong class="ControlElement">Пересчитать себестоимость.</strong> Расчет себестоимости товаров в соответствии с выбранным способом расчета.</div>
+</li><li>
+<div><strong class="ControlElement">Создать ТК.</strong> Создание технологической карты по результатам проведенной калькуляции. В состав продукции будут входить ингредиенты, указанные в табличной части обработки.</div></li></ul></ul></li></ul></blockquote></font></font></body></html>

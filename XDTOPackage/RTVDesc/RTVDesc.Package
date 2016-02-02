@@ -1,0 +1,62 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/RTVDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="RTVDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="dc_dest_id" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="rtv_id" type="d4p1:varchar214"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="item_id" type="d4p1:varchar225" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="rtn_auth_nbr" type="d4p1:varchar212"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="unit_qty" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="container_qty" type="d4p1:number6" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="vendor_nbr" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="ship_address1" type="d4p1:varchar2240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="ship_address2" type="d4p1:varchar2240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="ship_address3" type="d4p1:varchar2240" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="state" type="d4p1:varchar23" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="city" type="d4p1:varchar2120" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="shipto_zip" type="d4p1:varchar230" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="country" type="d4p1:varchar23" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="from_disposition" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="to_disposition" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="creation_ts" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="unit_cost" type="d4p1:number20_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="reason" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="comments" type="d4p1:varchar22000" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="rtv_order_no" type="d4p1:number10" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="weight" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="weight_uom" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" ref="d4p1:RTVDtl" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="status_ind" type="d4p1:varchar21" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="RTVDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="item_id" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="unit_qty" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="container_qty" type="d4p1:number6" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="from_disposition" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="to_disposition" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="unit_cost" type="d4p1:number20_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="reason" type="d4p1:varchar26" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="weight" type="d4p1:number12_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RTVDesc" name="weight_uom" type="d4p1:varchar24" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number10" base="xs:long" variety="Atomic" totalDigits="10"/>
+	<valueType name="number12_4" base="xs:decimal" variety="Atomic" totalDigits="12" fractionDigits="4"/>
+	<valueType name="number20_4" base="xs:decimal" variety="Atomic" totalDigits="20" fractionDigits="4"/>
+	<valueType name="number6" base="xs:int" variety="Atomic" totalDigits="6"/>
+	<valueType name="number7" base="xs:int" variety="Atomic" totalDigits="7"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar210" base="xs:string" variety="Atomic" maxLength="10"/>
+	<valueType name="varchar212" base="xs:string" variety="Atomic" maxLength="12"/>
+	<valueType name="varchar2120" base="xs:string" variety="Atomic" maxLength="120"/>
+	<valueType name="varchar214" base="xs:string" variety="Atomic" maxLength="14"/>
+	<valueType name="varchar22000" base="xs:string" variety="Atomic" maxLength="2000"/>
+	<valueType name="varchar2240" base="xs:string" variety="Atomic" maxLength="240"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+	<valueType name="varchar23" base="xs:string" variety="Atomic" maxLength="3"/>
+	<valueType name="varchar230" base="xs:string" variety="Atomic" maxLength="30"/>
+	<valueType name="varchar24" base="xs:string" variety="Atomic" maxLength="4"/>
+	<valueType name="varchar26" base="xs:string" variety="Atomic" maxLength="6"/>
+</package>

@@ -1,0 +1,15 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/RIBDate">
+	<valueType name="FourDigitInt" base="xs:int" variety="Atomic" totalDigits="4"/>
+	<valueType name="TwoDigitInt" base="xs:int" variety="Atomic" totalDigits="2"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+	<objectType name="RIBDate">
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="year" type="d3p1:FourDigitInt"/>
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="month" type="d3p1:TwoDigitInt"/>
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="day" type="d3p1:TwoDigitInt"/>
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="hour" type="d3p1:TwoDigitInt" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="minute" type="d3p1:TwoDigitInt" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="second" type="d3p1:TwoDigitInt" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="timeZone" type="d3p1:varchar225" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="format" type="d3p1:varchar225" lowerBound="0"/>
+	</objectType>
+</package>

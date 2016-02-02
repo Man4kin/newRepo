@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Report uuid="a80da24d-b5cd-461a-a8e8-dd77f234133b">
+		<InternalInfo>
+			<xr:GeneratedType name="ReportObject.ОтчетПоДвижениямДокумента" category="Object">
+				<xr:TypeId>bf93bb92-8ff1-46d9-9616-4ded7a224440</xr:TypeId>
+				<xr:ValueId>07c8e1a1-d7fa-4295-b46d-a2cdc37ecc11</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ReportManager.ОтчетПоДвижениямДокумента" category="Manager">
+				<xr:TypeId>f0f523ed-6ff0-4696-b973-ec109ac338e0</xr:TypeId>
+				<xr:ValueId>26960fec-d38c-48a6-aa24-e8bd24efd5ed</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОтчетПоДвижениямДокумента</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по движениям документа</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Отчет по движениям документа</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>Report.ОтчетПоДвижениямДокумента.Form.ФормаОтчетПоДвижениямДокумента</DefaultForm>
+			<AuxiliaryForm/>
+			<MainDataCompositionSchema/>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<VariantsStorage/>
+			<SettingsStorage/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="19b2cb0e-2d9f-4b22-a438-d7d5e6d75d8a">
+				<Properties>
+					<Name>Документ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, для которого формируется отчет.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<Form>ФормаОтчетПоДвижениямДокумента</Form>
+			<Template>Макет</Template>
+			<Command uuid="88248566-ea72-440b-a3e0-8236db4bde96">
+				<Properties>
+					<Name>ОтчетПоДвижениям</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Движения документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Отчет по движениям документа</Comment>
+					<Group>FormNavigationPanelGoTo</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.РаспоряжениеНаОтгрузку</v8:Type>
+						<v8:Type>cfg:DocumentRef.Доверенность</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВводОстатков</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЗаказВнешний</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПриложениеПоАлкоголю</v8:Type>
+						<v8:Type>cfg:DocumentRef.КорректировкаРеализации</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЗакрытиеЗаказа</v8:Type>
+						<v8:Type>cfg:DocumentRef.РасходныйКассовыйОрдер</v8:Type>
+						<v8:Type>cfg:DocumentRef.КоррекцияЗапасов</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЗапросНаПополнение</v8:Type>
+						<v8:Type>cfg:DocumentRef.КорректировкаПоступления</v8:Type>
+						<v8:Type>cfg:DocumentRef.ГотоваяПродукция</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПриходнаяНакладная</v8:Type>
+						<v8:Type>cfg:DocumentRef.Счет</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВозвратнаяНакладнаяОтПокупателя</v8:Type>
+						<v8:Type>cfg:DocumentRef.ИнвентаризационнаяОпись</v8:Type>
+						<v8:Type>cfg:DocumentRef.ГрафикИнвентаризаций</v8:Type>
+						<v8:Type>cfg:DocumentRef.КалькуляционнаяКарта</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПередачаТоваровМеждуФирмами</v8:Type>
+						<v8:Type>cfg:DocumentRef.РасходнаяНакладная</v8:Type>
+						<v8:Type>cfg:DocumentRef.Zотчет</v8:Type>
+						<v8:Type>cfg:DocumentRef.СчетФактура</v8:Type>
+						<v8:Type>cfg:DocumentRef.ИнвентаризацияПоАлкоголю</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОтчетРеализатораМеждуФирмами</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОтчетРеализатора</v8:Type>
+						<v8:Type>cfg:DocumentRef.Комплектация</v8:Type>
+						<v8:Type>cfg:DocumentRef.Перемещение</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланируемаяПоставка</v8:Type>
+						<v8:Type>cfg:DocumentRef.Инвентаризация</v8:Type>
+						<v8:Type>cfg:DocumentRef.АвансовыйОтчет</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Picture</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</Report>
+</MetaDataObject>

@@ -1,0 +1,14 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/RMS">
+	<objectType name="dataExchangeRequest">
+		<property name="family" type="xs:string"/>
+		<property name="type" type="xs:string"/>
+		<property name="package" type="xs:string"/>
+		<property name="Location" type="xs:string"/>
+	</objectType>
+	<objectType name="packetDataExchangeRequest">
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/RMS" name="request" type="d3p1:dataExchangeRequest" upperBound="-1"/>
+	</objectType>
+	<objectType name="packetDataExchangeResponse">
+		<property name="response" type="xs:string" upperBound="-1"/>
+	</objectType>
+</package>

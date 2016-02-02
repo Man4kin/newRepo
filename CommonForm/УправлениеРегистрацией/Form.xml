@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаУзловИМетаданных" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа узлов и метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа узлов и метаданных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУзловИМетаданныхРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУзлов" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа узлов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа узлов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУзловРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<InputField name="ПланОбмена" id="30">
+							<DataPath>ПланОбмена</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="ПланОбменаКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПланОбменаРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">ПланОбменаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Table name="СписокУзлов" id="3">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>СписокУзлов</DataPath>
+							<RowPictureDataPath>СписокУзлов.Picture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Pickup</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="СписокУзловКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокУзловКоманднаяПанель" id="5">
+								<ChildItems>
+									<Button name="СписокУзловОтменитьРегистрациюВсехОбъектов" id="49">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтменитьРегистрациюВсехОбъектов</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="СписокУзловОтменитьРегистрациюВсехОбъектовРасширеннаяПодсказка" id="55"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокУзловРасширеннаяПодсказка" id="56"/>
+							<SearchStringAddition name="СписокУзловСтрокаПоиска" id="57">
+								<Source>
+									<lf:elementId>3</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="СписокУзловСтрокаПоискаКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="СписокУзловСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокУзловСостояниеПросмотра" id="60">
+								<Source>
+									<lf:elementId>3</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="СписокУзловСостояниеПросмотраКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="СписокУзловСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУзловУправлениеПоиском" id="63">
+								<Source>
+									<lf:elementId>3</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="СписокУзловУправлениеПоискомКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="СписокУзловУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">СписокУзловПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="СписокУзловПометка" id="8">
+									<DataPath>СписокУзлов.Check</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокУзловПометкаКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="СписокУзловПометкаРасширеннаяПодсказка" id="66"/>
+								</CheckBoxField>
+								<InputField name="СписокУзловЗначение" id="6">
+									<DataPath>СписокУзлов.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="СписокУзловЗначениеКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="СписокУзловЗначениеРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="ДеревоОбъектовМетаданных" id="11">
+					<Representation>Tree</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Header>false</Header>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ДеревоОбъектовМетаданных</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Change</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="ДеревоОбъектовМетаданныхКонтекстноеМеню" id="12"/>
+					<AutoCommandBar name="ДеревоОбъектовМетаданныхКоманднаяПанель" id="13">
+						<ChildItems>
+							<Button name="ДеревоОбъектовМетаданныхРазвернутьСвернутьДеревоМетаданных" id="41">
+								<Type>CommandBarButton</Type>
+								<Check>true</Check>
+								<CommandName>Form.Command.РазвернутьСвернутьДеревоМетаданных</CommandName>
+								<Parameter xsi:nil="true"/>
+								<ExtendedTooltip name="ДеревоОбъектовМетаданныхРазвернутьСвернутьДеревоМетаданныхРасширеннаяПодсказка" id="68"/>
+							</Button>
+							<Button name="ДеревоОбъектовМетаданныхУстановитьПометки" id="40">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьПометки</CommandName>
+								<Parameter xsi:nil="true"/>
+								<ExtendedTooltip name="ДеревоОбъектовМетаданныхУстановитьПометкиРасширеннаяПодсказка" id="69"/>
+							</Button>
+							<Button name="ДеревоОбъектовМетаданныхСнятьПометки" id="39">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СнятьПометки</CommandName>
+								<Parameter xsi:nil="true"/>
+								<ExtendedTooltip name="ДеревоОбъектовМетаданныхСнятьПометкиРасширеннаяПодсказка" id="70"/>
+							</Button>
+							<ButtonGroup name="ДеревоОбъектовМетаданныхГруппаРегистрации" id="45">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дерево объектов метаданных группа регистрации</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дерево объектов метаданных группа регистрации</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ДеревоОбъектовМетаданныхГруппаРегистрацииРасширеннаяПодсказка" id="71"/>
+								<ChildItems>
+									<Button name="ДеревоОбъектовМетаданныхЗарегистрироватьИзменения" id="37">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗарегистрироватьИзменения</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ДеревоОбъектовМетаданныхЗарегистрироватьИзмененияРасширеннаяПодсказка" id="72"/>
+									</Button>
+									<Button name="ДеревоОбъектовМетаданныхОтменитьРегистацию" id="38">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтменитьРегистрацию</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ДеревоОбъектовМетаданныхОтменитьРегистациюРасширеннаяПодсказка" id="73"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="ДеревоОбъектовМетаданныхВыборПериода" id="51">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыборПериода</CommandName>
+								<Parameter xsi:nil="true"/>
+								<ExtendedTooltip name="ДеревоОбъектовМетаданныхВыборПериодаРасширеннаяПодсказка" id="74"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДеревоОбъектовМетаданныхРасширеннаяПодсказка" id="75"/>
+					<SearchStringAddition name="ДеревоОбъектовМетаданныхСтрокаПоиска" id="76">
+						<Source>
+							<lf:elementId>11</lf:elementId>
+							<lf:additionId>0</lf:additionId>
+						</Source>
+						<ContextMenu name="ДеревоОбъектовМетаданныхСтрокаПоискаКонтекстноеМеню" id="77"/>
+						<ExtendedTooltip name="ДеревоОбъектовМетаданныхСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоОбъектовМетаданныхСостояниеПросмотра" id="79">
+						<Source>
+							<lf:elementId>11</lf:elementId>
+							<lf:additionId>1</lf:additionId>
+						</Source>
+						<ContextMenu name="ДеревоОбъектовМетаданныхСостояниеПросмотраКонтекстноеМеню" id="80"/>
+						<ExtendedTooltip name="ДеревоОбъектовМетаданныхСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоОбъектовМетаданныхУправлениеПоиском" id="82">
+						<Source>
+							<lf:elementId>11</lf:elementId>
+							<lf:additionId>2</lf:additionId>
+						</Source>
+						<ContextMenu name="ДеревоОбъектовМетаданныхУправлениеПоискомКонтекстноеМеню" id="83"/>
+						<ExtendedTooltip name="ДеревоОбъектовМетаданныхУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ДеревоОбъектовМетаданныхВыбор</Event>
+						<Event name="ChoiceProcessing">ДеревоОбъектовМетаданныхОбработкаВыбора</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="ГруппаКолонокМетаданных" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонок метаданных</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонок метаданных</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаКолонокМетаданныхРасширеннаяПодсказка" id="85"/>
+							<ChildItems>
+								<CheckBoxField name="ДеревоОбъектовМетаданныхПометка" id="18">
+									<DataPath>ДеревоОбъектовМетаданных.Пометка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ThreeState>true</ThreeState>
+									<ContextMenu name="ДеревоОбъектовМетаданныхПометкаКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ДеревоОбъектовМетаданныхПометкаРасширеннаяПодсказка" id="86"/>
+									<Events>
+										<Event name="OnChange">ДеревоОбъектовМетаданныхПометкаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureField name="ДеревоОбъектовМетаданныхКартинка" id="20">
+									<DataPath>ДеревоОбъектовМетаданных.Картинка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоОбъектовМетаданныхКартинкаКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДеревоОбъектовМетаданныхКартинкаРасширеннаяПодсказка" id="87"/>
+								</PictureField>
+								<InputField name="ДеревоОбъектовМетаданныхПредставление" id="16">
+									<DataPath>ДеревоОбъектовМетаданных.Представление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоОбъектовМетаданныхПредставлениеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ДеревоОбъектовМетаданныхПредставлениеРасширеннаяПодсказка" id="88"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<PictureField name="ДеревоОбъектовМетаданныхАвтоРегистрация" id="47">
+							<DataPath>ДеревоОбъектовМетаданных.АвтоРегистрация</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ValuesPicture>
+								<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ДеревоОбъектовМетаданныхАвтоРегистрацияКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ДеревоОбъектовМетаданныхАвтоРегистрацияРасширеннаяПодсказка" id="89"/>
+						</PictureField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ДеревоОбъектов" id="25">
+			<Representation>Tree</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Header>false</Header>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДеревоОбъектов</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Change</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ДеревоОбъектовКонтекстноеМеню" id="26">
+				<ChildItems>
+					<Button name="ДеревоОбъектовКонтекстноеМенюОтменитьРегистрациюТекущегоОбъекта" id="108">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтменитьРегистрациюТекущегоОбъекта</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоОбъектовКонтекстноеМенюОтменитьРегистрациюТекущегоОбъектаРасширеннаяПодсказка" id="109"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ДеревоОбъектовКоманднаяПанель" id="27">
+				<ChildItems>
+					<Button name="ДеревоОбъектовРазвернутьСвернутьДеревоОбъектов" id="42">
+						<Type>CommandBarButton</Type>
+						<Check>true</Check>
+						<CommandName>Form.Command.РазвернутьСвернутьДеревоОбъектов</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоОбъектовРазвернутьСвернутьДеревоОбъектовРасширеннаяПодсказка" id="90"/>
+					</Button>
+					<Button name="ДеревоОбъектовПоказатьИзменения" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоказатьИзменения</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоОбъектовПоказатьИзмененияРасширеннаяПодсказка" id="91"/>
+					</Button>
+					<Button name="ДеревоОбъектовОтменитьРегистрациюОбъектов" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтменитьРегистрациюОбъектов</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоОбъектовОтменитьРегистрациюОбъектовРасширеннаяПодсказка" id="92"/>
+					</Button>
+					<Button name="ДеревоОбъектовПодробно" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подробно</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоОбъектовПодробноРасширеннаяПодсказка" id="93"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоОбъектовРасширеннаяПодсказка" id="94"/>
+			<SearchStringAddition name="ДеревоОбъектовСтрокаПоиска" id="95">
+				<Source>
+					<lf:elementId>25</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="ДеревоОбъектовСтрокаПоискаКонтекстноеМеню" id="96"/>
+				<ExtendedTooltip name="ДеревоОбъектовСтрокаПоискаРасширеннаяПодсказка" id="97"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоОбъектовСостояниеПросмотра" id="98">
+				<Source>
+					<lf:elementId>25</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="ДеревоОбъектовСостояниеПросмотраКонтекстноеМеню" id="99"/>
+				<ExtendedTooltip name="ДеревоОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="100"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоОбъектовУправлениеПоиском" id="101">
+				<Source>
+					<lf:elementId>25</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="ДеревоОбъектовУправлениеПоискомКонтекстноеМеню" id="102"/>
+				<ExtendedTooltip name="ДеревоОбъектовУправлениеПоискомРасширеннаяПодсказка" id="103"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeRowChange">ДеревоОбъектовПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="ДеревоОбъектовГруппа" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево объектов группа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево объектов группа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ДеревоОбъектовГруппаРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<PictureField name="ДеревоОбъектовКартинка" id="35">
+							<DataPath>ДеревоОбъектов.Картинка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоОбъектовКартинкаКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ДеревоОбъектовКартинкаРасширеннаяПодсказка" id="105"/>
+						</PictureField>
+						<InputField name="ДеревоОбъектовОбъект" id="28">
+							<DataPath>ДеревоОбъектов.Объект</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="ДеревоОбъектовОбъектКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДеревоОбъектовОбъектРасширеннаяПодсказка" id="106"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ДеревоОбъектовИтог" id="43">
+					<DataPath>ДеревоОбъектов.Итог</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоОбъектовИтогКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДеревоОбъектовИтогРасширеннаяПодсказка" id="107"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокУзлов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список узлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДеревоОбъектов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Класс" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Класс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПодКласс" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Под класс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Итог" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итог</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоОбъектовМетаданных" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево объектов метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПолноеИмя" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АвтоРегистрация" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Авто регистрация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПланОбмена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СписокМетаданныхПервогоУровня" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список метаданных первого уровня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокМетаданныхВторогоУровня" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список метаданных первого уровня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьИзменения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьИзменения</Action>
+		</Command>
+		<Command name="ЗарегистрироватьИзменения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗарегистрироватьИзменения</Action>
+		</Command>
+		<Command name="ОтменитьРегистрацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменитьРегистрацию</Action>
+		</Command>
+		<Command name="УстановитьПометки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометки</Action>
+		</Command>
+		<Command name="СнятьПометки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьПометки</Action>
+		</Command>
+		<Command name="РазвернутьСвернутьДеревоМетаданных" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть свернуть дерево метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть свернуть дерево метаданных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeHierarchicalList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РазвернутьСвернутьДеревоМетаданных</Action>
+		</Command>
+		<Command name="РазвернутьСвернутьДеревоОбъектов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть свернуть дерево метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть свернуть дерево метаданных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeHierarchicalList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РазвернутьСвернутьДеревоОбъектов</Action>
+		</Command>
+		<Command name="ОтменитьРегистрациюОбъектов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию объектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию объектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменитьРегистрациюОбъектов</Action>
+		</Command>
+		<Command name="ОтменитьРегистрациюВсехОбъектов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию всех объектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию всех объектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменитьРегистрациюВсехОбъектов</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Подробно" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подробно</Action>
+		</Command>
+		<Command name="ВыборПериода" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор периода</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор периода</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыборПериода</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОтменитьРегистрациюТекущегоОбъекта" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию текущего объекта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию текущего объекта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьРегистрациюТекущегоОбъекта</Action>
+		</Command>
+	</Commands>
+</Form>

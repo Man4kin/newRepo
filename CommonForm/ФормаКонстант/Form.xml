@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбмен" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбменExtendedTooltip" id="53"/>
+			<ChildItems>
+				<InputField name="FTPRMS" id="1">
+					<DataPath>НаборКонстант.FTPRMS</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FTP RMS</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="FTPRMSКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="FTPRMSExtendedTooltip" id="54"/>
+				</InputField>
+				<InputField name="FTPAlcoDeclaration" id="45">
+					<DataPath>НаборКонстант.FTPAlcoDeclaration</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FTP алкогольной декларации</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="FTPAlcoDeclarationКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="FTPAlcoDeclarationExtendedTooltip" id="55"/>
+				</InputField>
+				<UsualGroup name="ГруппаВерсии" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версии</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВерсииExtendedTooltip" id="56"/>
+					<ChildItems>
+						<InputField name="ВерсияОбменаФинансы" id="23">
+							<DataPath>НаборКонстант.ВерсияОбменаФинансы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВерсияОбменаФинансыКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ВерсияОбменаФинансыExtendedTooltip" id="57"/>
+						</InputField>
+						<InputField name="ВерсияRMS" id="43">
+							<DataPath>НаборКонстант.ВерсияRMS</DataPath>
+							<ContextMenu name="ВерсияRMSКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ВерсияRMSExtendedTooltip" id="58"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОграничений" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ограничений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ограничений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОграниченийExtendedTooltip" id="59"/>
+			<ChildItems>
+				<UsualGroup name="ОграниченияЛевая" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ограничения левая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ограничения левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОграниченияЛеваяExtendedTooltip" id="60"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьПодразделенияПоставщиков" id="21">
+							<DataPath>НаборКонстант.ИспользоватьПодразделенияПоставщиков</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПодразделенияПоставщиковКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ИспользоватьПодразделенияПоставщиковExtendedTooltip" id="61"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОграничиватьДоступНаУровнеЗаписей" id="15">
+							<DataPath>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОграничиватьДоступНаУровнеЗаписейКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ОграничиватьДоступНаУровнеЗаписейExtendedTooltip" id="62"/>
+						</CheckBoxField>
+						<CheckBoxField name="Отладка" id="19">
+							<DataPath>НаборКонстант.Отладка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтладкаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ОтладкаExtendedTooltip" id="63"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ОграниченияПравая" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ограничения правая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ограничения правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОграниченияПраваяExtendedTooltip" id="64"/>
+					<ChildItems>
+						<CheckBoxField name="НеИспользоватьТоварнуюМаршрутизацию" id="30">
+							<DataPath>НаборКонстант.НеИспользоватьТоварнуюМаршрутизацию</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеИспользоватьТоварнуюМаршрутизациюКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="НеИспользоватьТоварнуюМаршрутизациюExtendedTooltip" id="65"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьДенежныеЯчейкиИзВнешнейСистемы" id="34">
+							<DataPath>НаборКонстант.ИспользоватьДенежныеЯчейкиИзВнешнейСистемы</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьДенежныеЯчейкиИзВнешнейСистемыКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ИспользоватьДенежныеЯчейкиИзВнешнейСистемыExtendedTooltip" id="66"/>
+						</CheckBoxField>
+						<CheckBoxField name="ФлагЗапретаТовародвижения" id="36">
+							<DataPath>НаборКонстант.ФлагЗапретаТовародвижения</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФлагЗапретаТовародвиженияКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ФлагЗапретаТовародвиженияExtendedTooltip" id="67"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНДС" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа НДС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа НДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНДСExtendedTooltip" id="68"/>
+			<ChildItems>
+				<InputField name="ОсновнаяСтавкаНДС" id="17">
+					<DataPath>НаборКонстант.ОсновнаяСтавкаНДС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОсновнаяСтавкаНДСКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ОсновнаяСтавкаНДСExtendedTooltip" id="69"/>
+				</InputField>
+				<CheckBoxField name="ЦеныНоменклатурыЗакупочныеВключаютНДС" id="50">
+					<DataPath>НаборКонстант.ВключатьНДСВЦеныКонтрагентов</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЦеныНоменклатурыЗакупочныеВключаютНДСКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ЦеныНоменклатурыЗакупочныеВключаютНДСExtendedTooltip" id="70"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРазное" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа разное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа разное</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРазноеExtendedTooltip" id="71"/>
+			<ChildItems>
+				<InputField name="КоличествоДнейРедактированияДокументов" id="40">
+					<DataPath>НаборКонстант.КоличествоДнейРедактированияДокументов</DataPath>
+					<ContextMenu name="КоличествоДнейРедактированияДокументовКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="КоличествоДнейРедактированияДокументовExtendedTooltip" id="72"/>
+				</InputField>
+				<InputField name="ПрефиксШтучногоТовара" id="48">
+					<DataPath>НаборКонстант.ПрефиксШтучногоТовара</DataPath>
+					<ContextMenu name="ПрефиксШтучногоТовараКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ПрефиксШтучногоТовараExtendedTooltip" id="73"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.НеВключатьНДСВЦеныКонтрагентов</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

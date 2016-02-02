@@ -1,0 +1,13 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/MrchHrGrpDesc">
+	<property name="MrchHrGrpDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrGrpDesc" name="group_no" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrGrpDesc" name="group_name" type="d4p1:varchar2120"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrGrpDesc" lowerBound="0" name="buyer" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrGrpDesc" lowerBound="0" name="merch" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/MrchHrGrpDesc" name="division" type="d4p1:number4"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:int" name="number4" totalDigits="4" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="120" name="varchar2120" variety="Atomic"/>
+</package>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОткрытьПакет" id="38">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаОткрытьПакетExtendedTooltip" id="39"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="40"/>
+			<SearchStringAddition name="СписокSearchString" id="41">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокSearchStringContextMenu" id="42"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="43"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="44">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокViewStatusContextMenu" id="45"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="46"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="47">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокSearchControlContextMenu" id="48"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="49"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Период" id="4">
+					<DataPath>1/5</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПериодExtendedTooltip" id="50"/>
+				</LabelField>
+				<LabelField name="IDПромо" id="6">
+					<DataPath>Список.IDПромо</DataPath>
+					<ContextMenu name="IDПромоКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="IDПромоExtendedTooltip" id="51"/>
+				</LabelField>
+				<LabelField name="IDКомпоненты" id="8">
+					<DataPath>Список.IDКомпоненты</DataPath>
+					<ContextMenu name="IDКомпонентыКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="IDКомпонентыExtendedTooltip" id="52"/>
+				</LabelField>
+				<LabelField name="IDГруппы" id="10">
+					<DataPath>Список.IDГруппы</DataPath>
+					<ContextMenu name="IDГруппыКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="IDГруппыExtendedTooltip" id="53"/>
+				</LabelField>
+				<LabelField name="IDДеталей" id="12">
+					<DataPath>Список.IDДеталей</DataPath>
+					<ContextMenu name="IDДеталейКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="IDДеталейExtendedTooltip" id="54"/>
+				</LabelField>
+				<LabelField name="Номенклатура" id="14">
+					<DataPath>1/12</DataPath>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="НоменклатураExtendedTooltip" id="55"/>
+				</LabelField>
+				<LabelField name="Цена" id="16">
+					<DataPath>1/18</DataPath>
+					<ContextMenu name="ЦенаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ЦенаExtendedTooltip" id="56"/>
+				</LabelField>
+				<LabelField name="ЕдиницаИзмерения" id="18">
+					<DataPath>1/8</DataPath>
+					<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ЕдиницаИзмеренияExtendedTooltip" id="57"/>
+				</LabelField>
+				<LabelField name="Валюта" id="20">
+					<DataPath>Список.Валюта</DataPath>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ВалютаExtendedTooltip" id="58"/>
+				</LabelField>
+				<LabelField name="Название" id="22">
+					<DataPath>1/11</DataPath>
+					<ContextMenu name="НазваниеКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НазваниеExtendedTooltip" id="59"/>
+				</LabelField>
+				<LabelField name="Описание" id="24">
+					<DataPath>1/13</DataPath>
+					<ContextMenu name="ОписаниеКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ОписаниеExtendedTooltip" id="60"/>
+				</LabelField>
+				<LabelField name="ДатаОкончания" id="26">
+					<DataPath>1/7</DataPath>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДатаОкончанияExtendedTooltip" id="61"/>
+				</LabelField>
+				<LabelField name="ТипПромо" id="28">
+					<DataPath>Список.ТипПромо</DataPath>
+					<ContextMenu name="ТипПромоКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТипПромоExtendedTooltip" id="62"/>
+				</LabelField>
+				<LabelField name="Значение" id="30">
+					<DataPath>Список.Значение</DataPath>
+					<ContextMenu name="ЗначениеКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ЗначениеExtendedTooltip" id="63"/>
+				</LabelField>
+				<LabelField name="ЗначениеПорога" id="32">
+					<DataPath>Список.ЗначениеПорога</DataPath>
+					<ContextMenu name="ЗначениеПорогаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЗначениеПорогаExtendedTooltip" id="64"/>
+				</LabelField>
+				<LabelField name="ТипПорога" id="34">
+					<DataPath>Список.ТипПорога</DataPath>
+					<ContextMenu name="ТипПорогаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТипПорогаExtendedTooltip" id="65"/>
+				</LabelField>
+				<LabelField name="ТипКомпонента" id="36">
+					<DataPath>1/15</DataPath>
+					<ContextMenu name="ТипКомпонентаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ТипКомпонентаExtendedTooltip" id="66"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ПромоАкцииПороги</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link href="v8help://service_book/service_style" type="text/css" rel="stylesheet"></link><meta content="MSHTML 6.00.6001.18183" name="GENERATOR"></meta></head><body>
+<h1 class=""><font color="#000080">Документ "ПКО"</font></h1>
+<h3 class=""><u>Общее</u></h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="">Документ <strong class="ControlElement">«Приходный кассовый ордер»</strong> предназначен для отражения факта прихода наличных денежных средств в кассу фирмы.<br>Приходный кассовый ордер можно ввести на основании <a href="Document.РасходнаяНакладная/Help">расходной накладной</a>.</p></blockquote>
+<h3 class="" dir="ltr" style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><u>Форма шапки документа</u></h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="" dir="ltr" style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify">При добавлении нового документа открывается окно <font color="#000040"><strong>"ПКО"</strong></font><font color="#000000">.<br><strong><font color="#000040">Номер</font></strong>, <strong class="ControlElement">дата</strong> и <strong class="ControlElement">автор </strong>указываются в шапке документа автоматически.<br></font></p>
+<p><br>В <strong>шапке</strong> документа содержатся следующие реквизиты:</p></blockquote>
+<ul><ul><ul><ul><li>
+<div class=""><strong>Фирма</strong>, от лица которой проводятся взаиморасчеты. Элемент справочника <a href="Catalog.Организации/Help">"Фирмы"</a>.</div>
+</li><li>
+<div class=""><strong class="ControlElement">Касса</strong>, по которой осуществляется движение наличных денежных средств. Элемент справочника <a href="Catalog.КассыФирмы/Help">"Кассы фирмы".</a></div>
+</li><li>
+<div class=""><strong class="ControlElement">Сумма, валюта.</strong> Численное значение суммы ПКО вводится вручную. Валюту необходимо выбрать из выпадающего списка.</div></li></ul></ul></ul></ul><h3 class="" dir="ltr"><u>Табличная часть документа</u> </h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class=""><font color="#000000">Табличная часть документа содежит вкладки:</font></p></blockquote>
+<ul><ul><ul><ul><li>
+<div class=""><strong class="ControlElement">Аналитика.</strong> </div>
+</li><li>
+<div class=""><strong class="ControlElement">Расчеты по договору</strong></div>
+</li><li>
+<div class=""><strong class="ControlElement">Закрытие обязательств</strong></div>
+</li><li>
+<div class=""><strong class="ControlElement">Финансовые операции</strong></div></li></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class=""><br><strong class="ControlElement">Вкладка</strong> "<strong class="ControlElement">Аналитика"</strong></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="">На вкладке "<strong class="ControlElement">Аналитика"</strong> необходимо заполнить следующие реквизиты:</p></blockquote>
+<ul><ul><ul><li>
+<div class=""><strong class="ControlElement">классификация операции.</strong> Выбирается из выпадающего списка: </div>
+<div class="">
+<ul><ul><li>расчеты с покупателями 
+</li><li>расчеты с подотчетниками 
+</li><li>перемещение  Банк -&gt; Касса 
+</li><li>перемещение Касса -&gt; Касса 
+</li><li>прочие выплаты и поступления<br></li></ul></ul></div>
+</li><li><strong class="ControlElement">корреспондирующий счет.</strong> Заполняется из выпадающего списка. 
+<div></div></li></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Important"><strong>ВАЖНО!</strong> Поле <strong class="ControlElement">"Корреспондирующий счет"</strong> заполняется только для прочих выплат и поступлений. Для всех остальных классификаций операции заполняется табличная часть документа.</p>
+<p class=""><br>При выборе классификации операции (кроме прочих выплат и поступлений) автоматически заполняется колонка <strong class="ControlElement">"Вид субконто". </strong><br>Колонка "<strong>Значение субконто" </strong>заполняется из соответствующих справочников в зависимости от классификации операции:</p></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><li>
+<div class="">"<a href="Catalog.Контрагенты/Help">Контрагенты</a>", "<a href="../idb849c86b-0c7d-420f-82a0-db90b2e5b53d/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">Договоры" </a>- для классификации "расчеты с покупателями"</div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><a href="../idb849c86b-0c7d-420f-82a0-db90b2e5b53d/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Сотрудники"</a> - для классификации "расчеты с подотчетниками "</div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><a href="../idn0">"Банковские счета"</a> - для классификации "перемещение  Банк -&gt; Касса "</div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><a href="Catalog.КассыФирмы/Help">"Кассы фирмы"</a> - для классификации "перемещение  Банк -&gt; Касса "</div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><a href="Catalog.ККМ/Help">"ККМ "</a>- для классификации "перемещение Касса -&gt; Касса "</div></li></ul></ul></ul></ul></ul><p class=""><strong><font color="#000040"></font></strong> </p>
+<p> <strong class="ControlElement">Вкладка</strong> <strong><font color="#000040">"Расчеты по договору"</font></strong></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Important" dir="ltr" style="MARGIN-RIGHT: 0px"><strong>ВАЖНО!</strong> Данная вкладка доступна только в том случае,  если на вкладке <strong class="ControlElement">"Аналитика"</strong> в поле <strong class="ControlElement">"Классификация операции"</strong> выбраны <strong class="ControlElement">"Расчеты с поставщиками"</strong> или <strong class="ControlElement">"Расчеты с покупателями"</strong>.</p>
+<p dir="ltr" style="MARGIN-RIGHT: 0px">На вкладке  необходимо заполнить следующие реквизиты:</p>
+<p dir="ltr" style="MARGIN-RIGHT: 0px">
+</p><ul><ul><ul><li><strong>Правило расчета сумм. </strong>Заполняется <strong> </strong>из выпадающего списка: 
+<ul><ul><li><strong class="ControlElement">Сумма -&gt; Сумма по договору.</strong> При изменении суммы документа производится изменение реквизита «Сумма по договору» в соответствии с формулой:  «сумма по договору»= «сумма документа»/«курс валюты договора».При изменении реквизита «Сумма по договору» не производится изменение суммы документа, а производится только изменение  «Курса валюты договора». 
+</li><li><strong class="ControlElement">Сумма &lt;- Сумма по договору.</strong> При изменении реквизита «Сумма по договору» производится изменение суммы документа в соответствии с формулой:  «сумма документа»= «сумма по договору»*«курс валюты договора»<br>При изменении суммы документа не производится изменение реквизита «Сумма по договору», а производится только изменение  «Курса валюты договора». 
+</li><li><strong class="ControlElement">Суммы не расчитываются.</strong> Сумма документа и «Сумма по договору» не изменяются в зависимости от того, какую сумму вы изменяете, а рассчитывается только реквизит «Курс валюты договора».</li></ul></ul></li><li><strong>Сумма по договору.  </strong>Заполняется вручную. 
+</li><li><strong>Курс валюты договора. </strong>
+</li><li><strong>Ставка НДС. </strong>Процент ставки НДС указывается из справочника <a href="Catalog.СтавкиНДС/Help">"Ставки НДС".</a> 
+</li><li><strong>Сумма НДС. </strong>Рассчитывается автоматически.</li></ul></ul></ul></blockquote>
+<p dir="ltr"><strong class="ControlElement">Вкладка</strong> <strong class="ControlElement">"З<font color="#000040">акрытие обязательств" </font></strong></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="Important" dir="ltr" style="MARGIN-RIGHT: 0px"><strong>Важно!</strong> Данная вкладка доступна только в том случае,  если на вкладке <strong class="ControlElement">"Аналитика"</strong> в поле <strong class="ControlElement">"Классификация операции"</strong> выбраны <strong class="ControlElement">"Расчеты с поставщиками"</strong> или <strong class="ControlElement">"Расчеты с покупателями"</strong>.</p>
+<p dir="ltr" style="MARGIN-RIGHT: 0px">Кнопка <strong class="ControlElement">«FIFO»</strong> осуществляет автоматический отбор обязательств для погашения по одноименному методу  (first in – first out (первый пришел – первый ушел). <br>Кнопка <strong class="ControlElement">«Очистить» </strong>служит для удаления уже подобранных обязательств в табличную часть вкладки (возможно для повторного отбора).<br>При помощи кнопки <strong class="ControlElement">«Подбор»</strong> вы можете выбрать нужные обязательства для закрытия. Обязательства можно подбирать с учетом ограничения суммы документа (соответствующий флаг, по умолчанию установлен). В этом случае подобрать обязательства на сумму большую, чем в документе невозможно.<br>Графа «Погашение обязательства в валюте» вы можете редактировать (в меньшую сторону) для частичного закрытия обязательства.<br>Если сумма документа превышает сумму подобранных обязательств, то система выдает запрос на изменение суммы документа.<br><font color="#000000"><br>После выбора документов на вкладке автоматически заполнятся следующие реквизиты:</font></p></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><li><strong class="ControlElement">По документу</strong> 
+</li><li><strong class="ControlElement">Валюта</strong> 
+</li><li><strong class="ControlElement">Ставка НДС</strong> 
+</li><li><strong class="ControlElement">Сумма валютная</strong> 
+</li><li><strong class="ControlElement">Сумма</strong> 
+</li><li><strong class="ControlElement">Сумма НДС</strong></li></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px"><font style="BACKGROUND-COLOR: #ccffff" color="#000040"><strong>
+<p> </p></strong></font></blockquote></blockquote></blockquote></body></html>

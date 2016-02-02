@@ -1,0 +1,665 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://1c-astor.ru/ExtSystem">
+	<objectType name="CatalogObject.Сертификаты">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="ДатаС" type="xs:dateTime"/>
+		<property name="ДатаПо" type="xs:dateTime"/>
+		<property name="ОрганСертификации" type="xs:string"/>
+		<property name="Содержание" type="xs:string"/>
+		<property name="Производитель" type="xs:string"/>
+		<property name="Страна" type="xs:string"/>
+		<property name="Комментарий" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentObject.Zотчет">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="ИдентификаторSMSБазы" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ЗапретМодификацииSMS" type="xs:boolean"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property name="СуммаНДСИтого" type="xs:decimal"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Выручка" type="d3p1:DocumentTabularSectionRow.Zотчет.Выручка" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Карты" type="d3p1:DocumentTabularSectionRow.Zотчет.Карты" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.Zотчет.Состав" lowerBound="0" upperBound="99999"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject.АвансовыйОтчет">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="Валюта" type="xs:string"/>
+		<property name="КоличествоПриложенныхДокументов" type="xs:decimal"/>
+		<property name="КоличествоПриложенныхЛистов" type="xs:decimal"/>
+		<property name="НазначениеАванса" type="xs:string"/>
+		<property name="ПредыдущийАванс" type="xs:decimal"/>
+		<property name="ПерерасходПоПредыдущемуАвансу" type="xs:boolean"/>
+		<property name="Сотрудник" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="ИтогоСумма" type="xs:decimal"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Авансы" type="d3p1:DocumentTabularSectionRow.АвансовыйОтчет.Авансы" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.АвансовыйОтчет.Состав" lowerBound="0" upperBound="99999"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject.ВозвратнаяНакладнаяОтПокупателя">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="Контрагент" type="xs:string"/>
+		<property name="ТипДоговора" type="xs:string"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Грузополучатель" type="xs:string"/>
+		<property name="АдресДоставки" type="xs:string"/>
+		<property name="Грузоотправитель" type="xs:string" nillable="true"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="Основание" type="xs:string"/>
+		<property name="Валюта" type="xs:string"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property name="СуммаНДСИтого" type="xs:decimal"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.ВозвратнаяНакладнаяОтПокупателя.Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentObject.ЗапросНаПополнение">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.ЗапросНаПополнение.Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentObject.Инвентаризация">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Основание" type="xs:string"/>
+		<property name="ТолькоТаблица" type="xs:boolean"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.Инвентаризация.Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Пересортица" type="d3p1:DocumentTabularSectionRow.Инвентаризация.Пересортица" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="СоставПоФирмам" type="d3p1:DocumentTabularSectionRow.Инвентаризация.СоставПоФирмам" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="ПересортицаПоФирмам" type="d3p1:DocumentTabularSectionRow.Инвентаризация.ПересортицаПоФирмам" lowerBound="0" upperBound="99999"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject.Комплектация">
+		<property name="Ref" type="xs:anyType"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="Основание" type="xs:string"/>
+		<property name="ВидСписания" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="Разукомплектация" type="xs:boolean"/>
+		<property name="Комплект" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.Комплектация.Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentObject.КоррекцияЗапасов">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="Основание" type="xs:string"/>
+		<property name="ВиновноеЛицо" type="xs:string"/>
+		<property name="ВидСписания" type="xs:string"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="Оприходование" type="xs:boolean"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.КоррекцияЗапасов.Состав" lowerBound="0" upperBound="99999"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject.ПередачаТоваровМеждуФирмами">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="БонуснаяПоставка" type="xs:boolean"/>
+		<property name="Валюта" type="xs:string"/>
+		<property name="Грузоотправитель" type="xs:string"/>
+		<property name="ГрузополучательТип" type="xs:string" nillable="true"/>
+		<property name="Грузополучатель" type="xs:string" nillable="true"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="ФирмаПолучатель" type="xs:string"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="ТипДоговора" type="xs:string"/>
+		<property name="Возврат" type="xs:boolean"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.ПередачаТоваровМеждуФирмами.Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentObject.ПланируемаяПоставка">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="ДатаПоставкиОт" type="xs:dateTime"/>
+		<property name="ДатаПоставкиДо" type="xs:dateTime"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Контрагент" type="xs:string"/>
+		<property name="ПромоАкция" type="xs:string"/>
+		<property name="КонтрольКачества" type="xs:boolean"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="Валюта" type="xs:string"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property name="СуммаНДСИтого" type="xs:decimal"/>
+		<property name="ЗаказМагазина" type="xs:boolean"/>
+		<property name="НомерRMS" type="xs:string"/>
+		<property name="Статус" type="xs:string"/>
+		<property name="АдресДоставки" type="xs:string"/>
+		<property name="Фирма" type="xs:string"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.ПланируемаяПоставка.Состав" lowerBound="0" upperBound="99999"/>
+		<property name="Протокол" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentObject.ПриходнаяНакладная">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="БонуснаяПоставка" type="xs:boolean"/>
+		<property name="Валюта" type="xs:string"/>
+		<property name="Грузоотправитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ГрузополучательТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Грузополучатель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДатаДокумента" type="xs:dateTime"/>
+		<property name="ДатаСФ" type="xs:dateTime"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property name="КонтрагентТип" type="xs:string"/>
+		<property name="Контрагент" type="xs:string"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="НомерДокумента" type="xs:string"/>
+		<property name="НомерСФ" type="xs:string"/>
+		<property name="Приемщик" type="xs:string"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property name="СуммаНДСИтого" type="xs:decimal"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.ПриходнаяНакладная.Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow.ПриходнаяНакладная.ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property name="ОбработанЦВД" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Контролер" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject.ПриходныйКассовыйОрдер">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="Касса" type="xs:string"/>
+		<property name="Основание" type="xs:string"/>
+		<property name="Приложение" type="xs:string"/>
+		<property name="ПринятоОт" type="xs:string"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="ДокументОснование" type="xs:string"/>
+		<property name="Валюта" type="xs:string"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="ТипДоговора" type="xs:string"/>
+		<property name="КлассификаторДДС" type="xs:string"/>
+		<property name="Аналитика" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject.РасходнаяНакладная">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="Валюта" type="xs:string"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="КонтрагентТип" type="xs:string"/>
+		<property name="Контрагент" type="xs:string"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="Основание" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Грузополучатель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="АдресДоставки" type="xs:string"/>
+		<property name="Грузоотправитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="Возврат" type="xs:boolean"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property name="СуммаНДСИтого" type="xs:decimal"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.РасходнаяНакладная.Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentObject.РасходныйКассовыйОрдер">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="Выдать" type="xs:string"/>
+		<property name="Касса" type="xs:string"/>
+		<property name="Основание" type="xs:string"/>
+		<property name="ПоДокументу" type="xs:string"/>
+		<property name="Приложение" type="xs:string"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="Валюта" type="xs:anyType"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="ТипДоговора" type="xs:string"/>
+		<property name="КлассификаторДДС" type="xs:string"/>
+		<property name="Аналитика" type="xs:string" nillable="true"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject.СчетФактура">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="Контрагент" type="xs:string"/>
+		<property name="Автор" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Грузоотправитель" type="xs:string" nillable="true"/>
+		<property name="Грузополучатель" type="xs:string" nillable="true"/>
+		<property name="НомерПлатежноРасчетногоДокумента" type="xs:string"/>
+		<property name="ДатаПлатежноРасчетногоДокумента" type="xs:dateTime"/>
+		<property name="АдресГрузоотправителя" type="xs:string"/>
+		<property name="АдресГрузополучателя" type="xs:string"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property name="СуммаНДСИтого" type="xs:decimal"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.СчетФактура.Состав" lowerBound="0" upperBound="99999"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject_ОтчетПроизводстваЗаСмену">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="СкладПроизводства" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Продукция" type="d3p1:DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Продукция" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentObject_ПриложениеПоАлкоголю">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow_ПриложениеПоАлкоголю_Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Zотчет.Выручка">
+		<property name="ПОС" type="xs:string"/>
+		<property name="Смена" type="xs:decimal"/>
+		<property name="ДатаСмены" type="xs:dateTime"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="НомерСменыSMS" type="xs:decimal" nillable="true"/>
+		<property name="СуммаНал" type="xs:decimal" nillable="true"/>
+		<property name="СвободнаяСумма" type="xs:decimal" nillable="true"/>
+		<property name="ИдентификаторСменыSMS" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Zотчет.Карты">
+		<property name="ТипКарты" type="xs:string"/>
+		<property name="Сумма" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Zотчет.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.АвансовыйОтчет.Авансы">
+		<property name="РКО" type="xs:string"/>
+		<property name="Сумма" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.АвансовыйОтчет.Состав">
+		<property name="ДатаДокументаРасхода" type="xs:dateTime"/>
+		<property name="НомерДокументаРасхода" type="xs:string"/>
+		<property name="НаименованиеДокументаРасхода" type="xs:string"/>
+		<property name="СуммаПоОтчету" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="КлассификаторДДС" type="xs:string"/>
+		<property name="Аналитика" type="xs:string" nillable="true"/>
+		<property name="Комментарий" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ВозвратнаяНакладнаяОтПокупателя.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="ДокОснованиеТип" type="xs:string" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" nillable="true"/>
+		<property name="СебестоимостьЦена" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьСумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьЦенаУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьСуммаУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ЗапросНаПополнение.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="ДатаПоставки" type="xs:dateTime"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Инвентаризация.Пересортица">
+		<property name="Номенклатура1" type="xs:string"/>
+		<property name="Номенклатура2" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Склад" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Инвентаризация.ПересортицаПоФирмам">
+		<property name="Номенклатура1" type="xs:string"/>
+		<property name="Номенклатура2" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="Фирма" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Инвентаризация.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Вес" type="xs:decimal" lowerBound="0"/>
+		<property name="ЕдиницаВеса" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Инвентаризация.СоставПоФирмам">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="ЦенаИзлишка" type="xs:decimal"/>
+		<property name="КоличествоУчет" type="xs:decimal"/>
+		<property name="Вес" type="xs:decimal" lowerBound="0"/>
+		<property name="ЕдиницаВеса" type="xs:string" lowerBound="0"/>
+		<property name="ЦенаИзлишкаУпр" type="xs:decimal"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="Фирма" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Комплектация.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="ЦенаУпр" type="xs:decimal"/>
+		<property name="СуммаУпр" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.КоррекцияЗапасов.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ПередачаТоваровМеждуФирмами.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ПланируемаяПоставка.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:string"/>
+		<property name="Артикул" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ПриходнаяНакладная.ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="Комитент" type="xs:string"/>
+		<property name="СуммаУпр" type="xs:decimal"/>
+		<property name="СуммаНДСУпр" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ПриходнаяНакладная.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="КоличествоПоДокументу" type="xs:decimal"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+		<property name="Вес" type="xs:decimal" lowerBound="0"/>
+		<property name="ЕдиницаВеса" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.РасходнаяНакладная.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="Вес" type="xs:decimal" lowerBound="0"/>
+		<property name="ЕдиницаВеса" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.СчетФактура.Состав">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="ЕдиницаИзмерения" type="xs:string"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:decimal"/>
+		<property name="СуммаНДС" type="xs:decimal"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="НомерГТД" type="xs:string"/>
+		<property name="Страна" type="xs:string"/>
+		<property name="Сумма" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Продукция">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ПриложениеПоАлкоголю_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="ВидАлкогольнойПродукции" type="xs:string" lowerBound="0"/>
+		<property name="Производитель" type="xs:string" lowerBound="0"/>
+		<property name="ДатаПроизводства" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.ДанныеСертификатов">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ВидСертификата" type="xs:string" lowerBound="0"/>
+		<property name="Сертификат" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentObject.ПриходОтСЕ">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="БонуснаяПоставка" type="xs:boolean" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="Грузоотправитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ГрузоотправительТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДатаДокумента" type="xs:dateTime" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="НомерДокумента" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Идентификатор77" type="xs:string"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Кратность" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаИтого" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСИтого" type="xs:decimal" lowerBound="0"/>
+		<property name="ОбработанЦВД" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.ПриходОтСЕ.Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow.ПриходОтСЕ.ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ПриходОтСЕ.Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="НоменклатураRMS" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоПоДокументу" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property name="Цена" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentObject.ПланируемаяПоставка77">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="ДатаПоставкиОт" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаПоставкиДо" type="xs:dateTime" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Кратность" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаИтого" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСИтого" type="xs:decimal" lowerBound="0"/>
+		<property name="ЗаказМагазина" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://1c-astor.ru/ExtSystem" name="Состав" type="d3p1:DocumentTabularSectionRow.ПланируемаяПоставка77.Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ПланируемаяПоставка77.Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="НоменклатураRMS" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоПоДокументу" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property name="Цена" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ПриходОтСЕ.ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="НоменклатураRMS" type="xs:string"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Себестоимость" type="xs:decimal"/>
+		<property name="СебестоимостьНДС" type="xs:decimal"/>
+		<property name="СебестоимостьУпр" type="xs:decimal"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal"/>
+		<property name="СуммаПродажи" type="xs:decimal"/>
+		<property name="СуммаНДСПродажи" type="xs:decimal"/>
+	</objectType>
+</package>

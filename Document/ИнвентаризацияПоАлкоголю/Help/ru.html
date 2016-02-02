@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link href="v8help://service_book/service_style" type="text/css" rel="stylesheet"></link><meta content="MSHTML 6.00.2900.5512" name="GENERATOR"></meta></head><body>
+<h1><font color="#000080">Документ "Инвентаризация"</font></h1>
+<h3><u>Общее</u></h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p>Документ <strong class="ControlElement">"Инвентаризация"</strong> предназначен для проведения инвентаризации на оптовых, розничных складах и в неавтоматизированных торговых точках. Инвентаризация в неавтоматизированной торговой точке ведется в отпускных (розничных) ценах. <br>Инвентаризация производится отдельно по каждому складу. Проведение документа позволяет привести в соответствие остатки товаров в системе с реальными остатками на складе.<br>Документ <strong class="ControlElement">"Инвентаризация"</strong> формирует сличительную ведомость и инвентаризационную опись при проведении инвентаризации на <a href="Catalog.Склады/Help">складах</a> фирмы, а также выписки актов списания и оприходования излишков на основании данного документа при наличии расхождений между фактическими и документально подтвержденными остатками номенклатурных позиций. <br>Данным документом не только отражается факт проведения плановой инвентаризации товаров, но так же и осуществляется текущая корректировка товарных остатков. Например, с целью коррекции отрицательных остатков по партиям прихода. </p></blockquote>
+<h3 dir="ltr" style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify"><u>Форма шапки документа</u></h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p dir="ltr" style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: justify">При добавлении нового документа открывается окно <font color="#000040"><strong>"Инвентаризация"</strong></font><font color="#000000">.<br><strong><font color="#000040">Номер</font></strong>, <strong class="ControlElement">дата</strong> и <strong class="ControlElement">автор </strong>указываются в шапке документа автоматически.<br></font></p></blockquote>
+<blockquote>
+<p>В <strong class="ControlElement">шапке</strong> документа вручную необходимо заполнить с следующие поля:</p>
+<ul><ul><ul><li><strong>Фирма</strong>, в которой проводится инвентаризация. <strong> </strong>Элемент справочника <a href="Catalog.Организации/Help">"Фирмы".</a> 
+</li><li><strong>Склад</strong>, на котором проводится инвентаризация <strong>. </strong>Заполняется из выпадающего списка: главный склад, торговый зал. 
+</li><li><strong>Основание. </strong>Основание проведения инвентаризации - заполняется вручную.</li></ul></ul></ul></blockquote>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p>Флаг <strong class="ControlElement">"Инвентаризация в разрезе фирм"</strong> . Инвентаризация может проводиться как по складу (флаг должен быть снят), так и в разрезе фирм (флаг  должен быть установлен). </p>
+<p>Флаг <strong><font color="#000040">"Использовать только табличную часть"</font></strong>  указывает на то, что инвентаризация проводится только по тем товарам, которые указаны в табличной части документа. </p></blockquote>
+<blockquote>
+<p class="Important"><strong>ВАЖНО!</strong> При снятиии флага <strong class="ControlElement">"Использовать только табличную часть"</strong>  остатки товаров, которых нет в таличной части документа будут удалены после проведения документа.</p></blockquote>
+<h3 dir="ltr"><u>Табличная часть документа</u> </h3>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p>Табличная часть документа содержит вкладки: </p></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><li>
+<div><strong class="ControlElement">Состав</strong></div>
+</li><li>
+<div><strong class="ControlElement">Пересортица</strong></div></li></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p><font color="#000040"><strong>Вкладка "Состав".</strong></font></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p><font color="#000040">На данной вкладке  заполняются следующие реквизиты: </font></p></blockquote></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><ul><ul><li><strong class="ControlElement">Номенклатура.</strong> Элемент справочника <a href="Catalog.Номенклатура/Help">"Номенклатура".</a> 
+</li><li><strong class="ControlElement">Характеристика.</strong> Заполняется из справочника <a href="Catalog.Номенклатура/Help">"Номенклатура",</a> если для данного товара ведется учет по дополнительным реквизитам. 
+</li><li><font color="#000040"><strong>Цена </strong><font color="#000000">товара </font><strong>.</strong></font> 
+</li><li><strong class="ControlElement">Кол. факт.</strong>  Фактическое количество товара на складе. Заполняется вручную. 
+</li><li><strong class="ControlElement">Сумма факт.</strong> Сумма, в которую оценивается фактическое количество товара на складе. 
+</li><li>
+<div style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Кол. учет.</strong>  Количество товара на складе по данным бухгалтерского учета. </div>
+</li><li>
+<div style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Сумма учет.</strong> Сумма, в которую оценивается количество товара на складе по данным бухгалтерского учета.</div></li></ul></ul></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p>При нажатии кнопки <strong class="ControlElement">"Заполнить" </strong>табличная часть документа заполняется товарными  остатками данного склада (остатки при этом не равны нулю) либо всеми товарными позициями, которые хранятся в справочнике <a href="Catalog.Номенклатура/Help">"Номенклатура"</a>.<br>Остатки вводятся по цене: последней закупочной либо средневзвешенной (себестоимость остатка товаров,  деленная на остаток товара). В том случае, если  заполняете табличную часть остатками по последней цене закупки, то отбор закупочных цен осуществляется по той фирме, которая указана в шапке документа в реквизите <strong>«Фирма»</strong>. </p>
+<p class="Important" dir="ltr"><strong>Важно!</strong> При заполнении документа  с использованием кнопки <strong class="ControlElement">"Заполнить"</strong> все данные, ранее введенные в табличной части вручную, будут удалены!</p>
+<p dir="ltr"><font style="BACKGROUND-COLOR: #ccffff"><font style="BACKGROUND-COLOR: #ffffff">С помощью кнопки <strong>"Обновить док. данные"   </strong>можно обновить данные уже заполненного документа по остаткам товаров и ценам в том случае, если  документ еще не проведен, а данные по остаткам уже изменились. <br></font></font></p>
+<p dir="ltr">В случае, если флаг <strong class="ControlElement">"Инвентаризация в разрезе фирм"</strong>  установлен, в документе появляется вторая табличная часть, в которой необходимо заполнить следующие колонки:</p></blockquote>
+<ul dir="ltr"><ul><ul><ul><li>
+<div><strong class="ControlElement">Фирма</strong>, по которой проводится инвентаризация. Элемент справочника <a href="Catalog.Организации/Help">"Фирмы".</a> </div>
+</li><li><font color="#000040"><strong>Цена </strong><font color="#000000">товара</font><strong>.</strong></font> Заполняется вручную. 
+</li><li><strong class="ControlElement">Кол. факт.</strong> Фактическое количество товара на складе. Заполняется вручную. 
+</li><li><strong class="ControlElement">Сумма факт.</strong> Сумма, в которую оценивается фактическое количество товара на складе. 
+<div></div>
+</li><li>
+<div><strong class="ControlElement">Кол. учет.</strong>  Количество товара на складе по данным бухгалтерского учета. </div>
+</li><li>
+<div><strong class="ControlElement">Сумма учет.</strong> Сумма, в которую оценивается количество товара на складе по данным бухгалтерского учета.</div></li></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p>С помощью кнопки <strong>"Очистить" </strong>можно удалить даные из всех такбличных частей.</p>
+<p dir="ltr"><strong><font color="#000040">Вкладка "Пересортица".</font></strong></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p dir="ltr">Вкладка предназначена для исправления в системе пересортицы, возникшей по товару. Документ фиксирует факт переноса некоторого количества товара из одного реквизита  дополнительного учета в другой.</p>
+<p class="Important" dir="ltr"><font style="BACKGROUND-COLOR: #ccffff"><font style="BACKGROUND-COLOR: #ffffff"><strong>ВАЖНО!</strong> Пересортица составляется только для тех товаров, по которым ведется дополнительный учет.</font> </font></p>
+<p dir="ltr">Данную вкладку можно заполнить как автоматически, используя кнопку <strong>"Заполнить"</strong>, так и вручную<br><br>В табличной части вкладки необходимо заполнить следующие реквизиты: </p></blockquote></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><ul><li>
+<div><strong class="ControlElement">Номенклатура (излишек).</strong> Товар, по которому обнаружен излишек. Заполняется подбором из справочника <a href="Catalog.Номенклатура/Help">"Номенклатура".</a> </div>
+</li><li>
+<div><strong class="ControlElement">Характеристика.</strong> Группа дополнительного  учета товара, по которому обнаружен излишек. Заполняется из справочника <a href="Catalog.Номенклатура/Help">"Номенклатура",</a> </div>
+</li><li>
+<div><strong class="ControlElement">Номенклатура (недостача).</strong> Товар, по которому обнаружена недостача. </div>
+</li><li>
+<div><strong class="ControlElement">Характеристика.</strong> Новая группа дополнительного  учета товара, по которому обнаружена недостача. Заполняется из справочника <a href="Catalog.Номенклатура/Help">"Номенклатура",</a></div>
+</li><li>
+<div><strong>Количество </strong> товара.<strong> </strong></div></li></ul></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p dir="ltr"><font color="#000040"><font color="#000000">В случае, если флаг </font><strong class="ControlElement">"Инвентаризация в разрезе фирм"</strong></font><font color="#000000">  установлен,  на вкладке появляется вторая табличная часть, содержащая те же колонки, что и первая табличная часть, при этом добавляется колонка <strong>"Фирма" </strong><font color="#000000">(элемент справочника </font><a href="Catalog.Организации/Help">"Фирмы".</a>  )</font></p></blockquote></blockquote></body></html>

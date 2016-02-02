@@ -1,0 +1,10 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/ItemImageRef">
+	<property name="ItemImageRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemImageRef" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemImageRef" name="image_name" type="d4p1:varchar2120"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:string" maxLength="120" name="varchar2120" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="25" name="varchar225" variety="Atomic"/>
+</package>

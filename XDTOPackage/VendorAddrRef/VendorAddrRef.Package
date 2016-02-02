@@ -1,0 +1,12 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/VendorAddrRef">
+	<property name="VendorAddrRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrRef" name="supplier" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrRef" name="seq_no" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorAddrRef" name="addr_type" type="d4p1:varchar22"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:int" name="number4" totalDigits="4" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="10" name="varchar210" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="2" name="varchar22" variety="Atomic"/>
+</package>

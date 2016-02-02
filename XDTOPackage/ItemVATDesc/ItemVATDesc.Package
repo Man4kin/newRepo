@@ -1,0 +1,10 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/ItemVATDesc">
+	<objectType name="vat_item_type">
+		<property name="item" type="xs:string"/>
+		<property lowerBound="0" name="activeDate" type="xs:dateTime"/>
+		<property name="vatRate" type="xs:decimal"/>
+	</objectType>
+	<objectType name="ItemVATDesc">
+		<property xmlns:d3p1="http://www.oracle.com/retail/integration/payload/ItemVATDesc" lowerBound="0" name="vat_item" type="d3p1:vat_item_type" upperBound="99999"/>
+	</objectType>
+</package>

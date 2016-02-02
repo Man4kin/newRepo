@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Контрагент" id="1">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КонтрагентExtendedTooltip" id="22"/>
+		</InputField>
+		<InputField name="EDIПровайдер" id="3">
+			<DataPath>Запись.EDIПровайдер</DataPath>
+			<ContextMenu name="EDIПровайдерКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="EDIПровайдерExtendedTooltip" id="23"/>
+		</InputField>
+		<InputField name="GLN" id="5">
+			<DataPath>Запись.GLN</DataPath>
+			<ContextMenu name="GLNКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="GLNExtendedTooltip" id="24"/>
+		</InputField>
+		<CheckBoxField name="ТребуетсяПодтверждениеЗаказа" id="9">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТребуетсяПодтверждениеЗаказаКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ТребуетсяПодтверждениеЗаказаExtendedTooltip" id="25"/>
+		</CheckBoxField>
+		<CheckBoxField name="Основной" id="7">
+			<DataPath>Запись.Основной</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОсновнойКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОсновнойExtendedTooltip" id="26"/>
+		</CheckBoxField>
+		<UsualGroup name="Условия" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не используются:</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="УсловияExtendedTooltip" id="27"/>
+			<ChildItems>
+				<CheckBoxField name="ORDERS" id="12">
+					<DataPath>Запись.ORDERS</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ORDERSКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ORDERSExtendedTooltip" id="28"/>
+				</CheckBoxField>
+				<CheckBoxField name="DESADV" id="14">
+					<DataPath>Запись.DESADV</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="DESADVКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="DESADVExtendedTooltip" id="29"/>
+				</CheckBoxField>
+				<CheckBoxField name="RECADV" id="16">
+					<DataPath>Запись.RECADV</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="RECADVКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="RECADVExtendedTooltip" id="30"/>
+				</CheckBoxField>
+				<CheckBoxField name="RETANN" id="18">
+					<DataPath>Запись.RETANN</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="RETANNКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="RETANNExtendedTooltip" id="31"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Izh_РазрешитьПовторнуюОтправкуORDERS" id="20">
+			<DataPath>Запись.Izh_РазрешитьПовторнуюОтправкуORDERS</DataPath>
+			<ContextMenu name="Izh_РазрешитьПовторнуюОтправкуORDERSКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="Izh_РазрешитьПовторнуюОтправкуORDERSExtendedTooltip" id="32"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.EDIПровайдерыПоставщиков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

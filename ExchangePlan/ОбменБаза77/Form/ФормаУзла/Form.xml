@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименованиеКод" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодExtendedTooltip" id="33"/>
+			<ChildItems>
+				<InputField name="Наименование" id="13">
+					<DataPath>Объект.Description</DataPath>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="34"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="35"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="21">
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="36"/>
+			<ChildItems>
+				<InputField name="НомерОтправленного" id="17">
+					<DataPath>Объект.SentNo</DataPath>
+					<ContextMenu name="НомерОтправленногоКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НомерОтправленногоExtendedTooltip" id="37"/>
+				</InputField>
+				<InputField name="НомерПринятого" id="19">
+					<DataPath>Объект.ReceivedNo</DataPath>
+					<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НомерПринятогоExtendedTooltip" id="38"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Каталог" id="15">
+			<DataPath>Объект.Каталог</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ClearButton>false</ClearButton>
+			<SpinButton>false</SpinButton>
+			<OpenButton>false</OpenButton>
+			<ChoiceListButton>false</ChoiceListButton>
+			<ContextMenu name="КаталогКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="КаталогExtendedTooltip" id="39"/>
+			<Events>
+				<Event name="StartChoice">КаталогНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="ТипыДокументов" id="22">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>Объект.ТипыДокументов</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТипыДокументовКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="ТипыДокументовКоманднаяПанель" id="24">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТипыДокументовExtendedTooltip" id="40"/>
+			<SearchStringAddition name="ТипыДокументовSearchString" id="41">
+				<Source>
+					<lf:elementId>22</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="ТипыДокументовSearchStringContextMenu" id="42"/>
+				<ExtendedTooltip name="ТипыДокументовSearchStringExtendedTooltip" id="43"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТипыДокументовViewStatus" id="44">
+				<Source>
+					<lf:elementId>22</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="ТипыДокументовViewStatusContextMenu" id="45"/>
+				<ExtendedTooltip name="ТипыДокументовViewStatusExtendedTooltip" id="46"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТипыДокументовSearchControl" id="47">
+				<Source>
+					<lf:elementId>22</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="ТипыДокументовSearchControlContextMenu" id="48"/>
+				<ExtendedTooltip name="ТипыДокументовSearchControlExtendedTooltip" id="49"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ТипыДокументовИспользовать" id="29">
+					<DataPath>Объект.ТипыДокументов.Использовать</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТипыДокументовИспользоватьКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТипыДокументовИспользоватьExtendedTooltip" id="50"/>
+				</CheckBoxField>
+				<InputField name="ТипыДокументовСиноним" id="31">
+					<DataPath>Объект.ТипыДокументов.Синоним</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТипыДокументовСинонимКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТипыДокументовСинонимExtendedTooltip" id="51"/>
+				</InputField>
+				<InputField name="ТипыДокументовТипДокумента" id="27">
+					<DataPath>Объект.ТипыДокументов.ТипДокумента</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<TypeLink>
+						<xr:DataPath>2</xr:DataPath>
+						<xr:LinkItem>0</xr:LinkItem>
+					</TypeLink>
+					<ContextMenu name="ТипыДокументовТипДокументаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ТипыДокументовТипДокументаExtendedTooltip" id="52"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject.ОбменБаза77</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0:1b9d922a-e407-48f9-beb2-d5df79955ed7</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>ExchangePlan.ОбменБаза77.Command.ОткрытьРегламентноеЗадание</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,145 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://exite.com.ua/recadv">
+	<property name="HEAD">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="SUPPLIER" type="d4p1:gln"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="BUYER" type="d4p1:gln"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DELIVERYPLACE" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="FINALRECIPIENT" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="LOGISTICPARTNER" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="SENDER" type="d4p1:mailbox"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="RECIPIENT" type="d4p1:mailbox"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="EDIINTERCHANGEID" type="d4p1:edi-interchange-id"/>
+			<property name="EDIMESSAGE" type="xs:string" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" ref="d4p1:PACKINGSEQUENCE" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PACKAGES">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="PACKAGETYPE" type="d4p1:package-type"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DELTAQUANTITYTYPE" type="d4p1:deltaquantity-type" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DELTAQUANTITY" type="d4p1:deltaquantity" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="SSCC" type="d4p1:sscc" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="PACKINGSEQUENCE">
+		<typeDef xsi:type="ObjectType">
+			<property name="HIERARCHICALID" type="xs:positiveInteger"/>
+			<property name="HIERARCHICALPARENTID" type="xs:positiveInteger" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" ref="d4p1:PACKAGES" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" ref="d4p1:POSITION" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="POSITION">
+		<typeDef xsi:type="ObjectType">
+			<property name="POSITIONNUMBER" type="xs:positiveInteger"/>
+			<property name="PRODUCT" type="xs:string"/>
+			<property name="PRODUCTIDSUPPLIER" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="16"/>
+			</property>
+			<property name="PRODUCTIDBUYER" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="16"/>
+			</property>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="ACCEPTEDQUANTITY" type="d4p1:amount"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DELTAQUANTITYTYPE" type="d4p1:deltaquantity-type" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DELTAQUANTITY" type="d4p1:deltaquantity" lowerBound="0"/>
+			<property name="ACCEPTEDUNIT" type="xs:anyType" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DELIVERQUANTITY" type="d4p1:amount"/>
+			<property name="DELIVERUNIT" type="xs:anyType" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="ORDERQUANTITY" type="d4p1:amount"/>
+			<property name="ORDERUNIT" type="xs:anyType" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="PRICE" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="AMOUNT" type="d4p1:amount" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="RECADV">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="NUMBER" type="d4p1:number"/>
+			<property name="DATE" type="xs:date"/>
+			<property name="RECEPTIONDATE" type="xs:date"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="ORDERNUMBER" type="d4p1:number" lowerBound="0"/>
+			<property name="ORDERDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DESADVNUMBER" type="d4p1:number"/>
+			<property name="DESADVDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="DELIVERYNOTENUMBER" type="d4p1:number" lowerBound="0"/>
+			<property name="DELIVERYNOTEDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="CAMPAIGNNUMBER" type="d4p1:number" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" name="SUPPLIERORDENUMBER" type="d4p1:number" lowerBound="0"/>
+			<property name="SUPPLIERORDERDATE" type="xs:date" lowerBound="0"/>
+			<property name="INFO" type="xs:string" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/recadv" ref="d4p1:HEAD"/>
+		</typeDef>
+	</property>
+	<valueType name="amount" base="xs:decimal" variety="Atomic" minInclusive="0" totalDigits="10" fractionDigits="3"/>
+	<valueType name="deltaquantity" base="xs:decimal" variety="Atomic" totalDigits="17" fractionDigits="3"/>
+	<valueType name="deltaquantity-type" base="xs:string" variety="Atomic">
+		<enumeration>11</enumeration>
+		<enumeration>113</enumeration>
+		<enumeration>119</enumeration>
+		<enumeration>12</enumeration>
+		<enumeration>121</enumeration>
+		<enumeration>124</enumeration>
+		<enumeration>145</enumeration>
+		<enumeration>191</enumeration>
+		<enumeration>192</enumeration>
+		<enumeration>194</enumeration>
+		<enumeration>195</enumeration>
+		<enumeration>196</enumeration>
+		<enumeration>198</enumeration>
+		<enumeration>21</enumeration>
+		<enumeration>40E</enumeration>
+		<enumeration>42E</enumeration>
+		<enumeration>46</enumeration>
+		<enumeration>47</enumeration>
+		<enumeration>65</enumeration>
+		<enumeration>73</enumeration>
+		<enumeration>83</enumeration>
+		<enumeration>89</enumeration>
+		<enumeration>96</enumeration>
+	</valueType>
+	<valueType name="edi-interchange-id" base="xs:string" variety="Atomic" maxLength="14"/>
+	<valueType name="gln" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{8}([0-9]{3}([0-9]{0,3}))?</pattern>
+	</valueType>
+	<valueType name="length" base="xs:positiveInteger" variety="Atomic" totalDigits="13"/>
+	<valueType name="mailbox" base="xs:string" variety="Atomic" maxLength="13"/>
+	<valueType name="measurement-unit" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">PTN</enumeration>
+		<enumeration>GRM</enumeration>
+		<enumeration>KGM</enumeration>
+		<enumeration>LTR</enumeration>
+		<enumeration>MMT</enumeration>
+		<enumeration>MTK</enumeration>
+		<enumeration>MTQ</enumeration>
+		<enumeration>MTR</enumeration>
+		<enumeration xsi:type="xs:string">MGM</enumeration>
+		<enumeration xsi:type="xs:string">MLT</enumeration>
+		<enumeration xsi:type="xs:string">MMQ</enumeration>
+		<enumeration>PCE</enumeration>
+		<enumeration xsi:type="xs:string">CT</enumeration>
+		<enumeration xsi:type="xs:string">BH</enumeration>
+		<enumeration xsi:type="xs:string">PF</enumeration>
+		<enumeration xsi:type="xs:string">PK</enumeration>
+	</valueType>
+	<valueType name="number" base="xs:string" variety="Atomic" maxLength="16"/>
+	<valueType name="package-type" base="xs:string" variety="Atomic">
+		<enumeration>200</enumeration>
+		<enumeration>201</enumeration>
+		<enumeration>203</enumeration>
+		<enumeration>204</enumeration>
+		<enumeration>8</enumeration>
+		<enumeration>9</enumeration>
+		<enumeration>BC</enumeration>
+		<enumeration>CHB</enumeration>
+		<enumeration>CHC</enumeration>
+		<enumeration>CR</enumeration>
+		<enumeration>PK</enumeration>
+		<enumeration>PMA</enumeration>
+		<enumeration>PMB</enumeration>
+		<enumeration>RCA</enumeration>
+		<enumeration>ZZ1</enumeration>
+		<enumeration>ZZ2</enumeration>
+	</valueType>
+	<valueType name="sscc" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{18}</pattern>
+	</valueType>
+</package>

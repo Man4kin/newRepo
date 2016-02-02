@@ -1,0 +1,33 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/StkCountSchDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="StkCountSchDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" name="cycle_count" type="d4p1:number8"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" name="cycle_count_desc" type="d4p1:varchar2250"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" name="location_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="stocktake_date" type="d4p1:RIBDate"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" name="stocktake_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" lowerBound="0" ref="d4p1:StkCountSchProd" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" lowerBound="0" ref="d4p1:StkCountSchLoc" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="StkCountSchLoc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" name="location" type="d4p1:number10"/>
+		</typeDef>
+	</property>
+	<property name="StkCountSchProd">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" name="dept" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" lowerBound="0" name="class" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/StkCountSchDesc" lowerBound="0" name="subclass" type="d4p1:number4"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:long" name="number10" totalDigits="10" variety="Atomic"/>
+	<valueType base="xs:int" name="number4" totalDigits="4" variety="Atomic"/>
+	<valueType base="xs:int" name="number8" totalDigits="8" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="250" name="varchar2250" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="4" name="varchar24" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="7" name="varchar27" variety="Atomic"/>
+</package>

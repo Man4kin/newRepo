@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems">
+	<Item id="3a5ffa5b-4b80-4a5d-bdbd-cf76663e707c">
+		<Name>SMTP</Name>
+		<Code>2  </Code>
+		<Description>SMTP</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="e32b7100-6857-4ef4-a32e-37584169c7a1">
+				<Name>ПарольSMTP</Name>
+				<Code>5  </Code>
+				<Description>Пароль</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0f6dfa07-61ca-4790-962d-df4ff8493c17">
+				<Name>ПользовательSMTP</Name>
+				<Code>4  </Code>
+				<Description>Пользователь</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="52ff4d29-7605-48d7-ba5c-b19876790648">
+				<Name>ПортSMTP</Name>
+				<Code>2  </Code>
+				<Description>Порт</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>3</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="fb361ee6-f910-4609-9727-bd28140e35f5">
+				<Name>СерверSMTP</Name>
+				<Code>1  </Code>
+				<Description>Сервер</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0f88bf4e-3dd0-4285-844c-fbd7c031d599">
+				<Name>СпособSMTPАутентификации</Name>
+				<Code>3  </Code>
+				<Description>Способ SMTP аутентификации</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.СпособыSMTPАутентификации</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="54b4a004-1e60-4d13-8ce0-10215d0c441d">
+		<Name>Izh_БизнесПроцессы</Name>
+		<Code>20 </Code>
+		<Description>Бизнес-процессы</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="2c3e05c8-c92b-46d3-8a37-a13075770e6f">
+				<Name>СрокВыполненияПриемки</Name>
+				<Code>1  </Code>
+				<Description>Срок выполнения приемки (в днях)</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>10</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="ee88bb3c-58e2-4e02-b301-344c7ffdc161">
+		<Name>ЖурналРегистраций</Name>
+		<Code>3  </Code>
+		<Description>Журнал регистраций</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="6d0f8168-c181-4469-9717-1b00c861c312">
+				<Name>АдресатыПолученияОтчета</Name>
+				<Code>1  </Code>
+				<Description>Адресаты получения отчета</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>250</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7c879b6c-2b53-4d4b-bf17-a012d0c07128">
+				<Name>РасписаниеОтправкиОтчета</Name>
+				<Code>2  </Code>
+				<Description>Расписание отправки отчета</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>250</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="eda076ba-0c5a-4f5e-9e72-9a645b721334">
+		<Name>ЗагрузкаЗаказовИзМагазинов</Name>
+		<Code>8  </Code>
+		<Description>Загрузка заказов из магазинов</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="148bdf26-888a-462d-b8eb-64cab9921cc2">
+				<Name>КаталогЗагрузкиЗаказов</Name>
+				<Code>1  </Code>
+				<Description>Каталог загрузки заказов</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>250</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="98238f37-dfe8-41d9-9162-c8d9e1cb8ebc">
+		<Name>ОбменДанными</Name>
+		<Code>1  </Code>
+		<Description>Обмен данными</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="5caa871f-4928-4d07-88fa-5423756301bb">
+				<Name>ЛокальныеВебСервисы</Name>
+				<Code>5  </Code>
+				<Description>Локальные веб сервисы</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="b4406406-f21c-4752-b2ba-bab0846a9a2a">
+						<Name>ПарольВебСервисов</Name>
+						<Code>3  </Code>
+						<Description>Пароль </Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>50</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="0e629d49-e13b-4c23-a114-94c62525944b">
+						<Name>ПользовательВебСервисов</Name>
+						<Code>2  </Code>
+						<Description>Пользователь</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>50</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="d477390e-2998-4e9c-bfe4-0063c0d5c119">
+						<Name>ПутьПубликацииВебСервисов</Name>
+						<Code>1  </Code>
+						<Description>Путь публикации веб сервисов</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="b033455c-787b-4b36-a2ad-ae808d5cd898">
+				<Name>Izh_ОбменEDI</Name>
+				<Code>31 </Code>
+				<Description>Обмен EDI</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="5cb4a754-9e76-4733-abf9-828c31f09d09">
+						<Name>КаталогОбменаEDI</Name>
+						<Code>1  </Code>
+						<Description>Каталог обмена</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="c8bdee3d-c254-47d8-bff3-c39dbdea5849">
+				<Name>ОбменORDM</Name>
+				<Code>7  </Code>
+				<Description>Обмен ORDM</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="d2b677ef-0106-4930-9d77-3106a0243a59">
+						<Name>РасписаниеОбменаORDM</Name>
+						<Code>1  </Code>
+						<Description>Расписание обмена ORDM</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>40</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="22e70a3c-e6ee-4483-94db-11ed0100b1ab">
+				<Name>ОбменRests</Name>
+				<Code>11 </Code>
+				<Description>Обмен rests</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="bb720ac2-8be8-42ff-af9b-7b859433f6a6">
+						<Name>ВебСервисRests</Name>
+						<Code>1  </Code>
+						<Description>Веб сервис rests</Description>
+						<Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.РеестрВебСервисов</v8:Type>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="eeb74ebe-b2fb-4e4b-a9e4-4fd1b4f50276">
+				<Name>ОбменRMS</Name>
+				<Code>1  </Code>
+				<Description>Обмен RMS</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="d54b152a-c772-449b-b045-f2d6f534cca3">
+						<Name>ВебСервисRMS</Name>
+						<Code>1  </Code>
+						<Description>Веб сервис RMS</Description>
+						<Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.РеестрВебСервисов</v8:Type>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="3760d2e4-4528-45c0-8f18-914bd87ee237">
+						<Name>РазмерПолучаемогоПакета</Name>
+						<Code>4  </Code>
+						<Description>Размер получаемого пакета (байт)</Description>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="33d2770c-6423-4497-9059-80e4d75da7b4">
+						<Name>РасписаниеОбменаRMSОтправка</Name>
+						<Code>2  </Code>
+						<Description>Расписание отправки данных RMS</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="b478ea8e-ef1d-49f7-95b5-1683c4f526e9">
+						<Name>РасписаниеОбменаRMSПолучение</Name>
+						<Code>3  </Code>
+						<Description>Расписание получения данных RMS</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="fd05abd4-ec56-49e0-a416-bf9d64f8a31f">
+				<Name>ОбменSMS</Name>
+				<Code>3  </Code>
+				<Description>Обмен SIS</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="2f7d88e4-e8f9-4627-a01b-e027ff68a81a">
+						<Name>ВебСервисSMS</Name>
+						<Code>1  </Code>
+						<Description>Веб сервис SIS</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.РеестрВебСервисов</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="455b7faa-49b8-403d-a39b-84b1a2dca9c8">
+						<Name>ПарольВебСервисSMS</Name>
+						<Code>5  </Code>
+						<Description>Пароль</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>50</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="cba6480b-ae8a-48e1-8875-acaa2c39c1a4">
+						<Name>ПользовательВебСервисSMS</Name>
+						<Code>4  </Code>
+						<Description>Пользователь</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>50</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="27113b75-520b-4aed-a2e6-e2ba03b0c69b">
+						<Name>РасписаниеОбменаSMSОтправка</Name>
+						<Code>2  </Code>
+						<Description>Расписание отправки данных SIS</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>40</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="98c343dc-4407-4200-8cfc-c7a7086b44f1">
+						<Name>РасписаниеОбменаSMSПолучение</Name>
+						<Code>3  </Code>
+						<Description>Расписание получения данных SIS</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>40</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="27974736-5fc1-4bb4-a8e5-ab7f0945d3f6">
+				<Name>ОбменExtSystem</Name>
+				<Code>6  </Code>
+				<Description>Обмен внешние системы</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="a1851d5c-64bf-424b-97c5-0f0e36c2af8b">
+						<Name>ПутьКаталогаExtSystem</Name>
+						<Code>1  </Code>
+						<Description>Путь каталога внешних систем</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="8ea2dbbb-682d-4691-9ce4-2c855e001da9">
+						<Name>РасписаниеОбменаExtSystem</Name>
+						<Code>2  </Code>
+						<Description>Расписание обмена внешние системы</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>40</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="b2a8ed8f-3541-482b-9132-e70d21911c32">
+				<Name>ОбменЗУП</Name>
+				<Code>40 </Code>
+				<Description>Обмен ЗУП</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="f43f3f65-b099-491a-b16e-0442de7e0a79">
+						<Name>ВебСервисЗУП</Name>
+						<Code>41 </Code>
+						<Description>Веб сервис ЗУП</Description>
+						<Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.РеестрВебСервисов</v8:Type>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="a7e302b9-ea41-4b9e-9f6c-1f692e144072">
+						<Name>ПарольВебСервисЗУП</Name>
+						<Code>43 </Code>
+						<Description>Пароль веб сервис ЗУП</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="276e40b3-4cfd-41ba-a0f2-854008323558">
+						<Name>ПользовательВебСервисЗУП</Name>
+						<Code>42 </Code>
+						<Description>Пользователь веб сервис ЗУП</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="e7a39c6f-9779-4eb6-8564-d6d8d16a082d">
+				<Name>Izh_ОбменAnA</Name>
+				<Code>30 </Code>
+				<Description>Обмен с A&amp;A</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="e6782771-3d5b-4d0b-90f2-27a0dc514f02">
+						<Name>ПарольAnA</Name>
+						<Code>3  </Code>
+						<Description>Пароль</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="589e7612-31d1-4aba-a7c8-214d989c7ddc">
+						<Name>ПользовательAnA</Name>
+						<Code>2  </Code>
+						<Description>Пользователь</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="a0beb2c7-7674-4971-943e-28ccf6b0a505">
+						<Name>СтрокаПодключенияAnA</Name>
+						<Code>1  </Code>
+						<Description>Строка подключения</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="b8e70565-8394-4e4f-bba5-301aeefbac81">
+				<Name>ОбменPOS</Name>
+				<Code>12 </Code>
+				<Description>Обмен с POS</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="f64c7196-029f-4224-9bd8-dd8cd03a50a4">
+						<Name>ПутьКаталогаВыгрузкиВPOS</Name>
+						<Code>13 </Code>
+						<Description>Путь каталога выгрузки в POS</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="c290ea65-e200-43cd-bf7e-a04404b71a71">
+						<Name>ПутьКаталогаЗагрузкиИзPOS</Name>
+						<Code>14 </Code>
+						<Description>Путь каталога загрузки из POS</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="cc70633c-8aaa-4cbd-8a17-76ab65400296">
+				<Name>ОбменУРВ</Name>
+				<Code>50 </Code>
+				<Description>Обмен УРВ</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="73289f99-5d2f-40a3-8faf-afba17083523">
+						<Name>ВебСервисУРВ</Name>
+						<Code>51 </Code>
+						<Description>Веб сервис УРВ</Description>
+						<Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.РеестрВебСервисов</v8:Type>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="3889975a-5407-4cbe-8f06-c4ea8e7b94b6">
+						<Name>ПарольВебСервисУРВ</Name>
+						<Code>52 </Code>
+						<Description>Пароль веб сервис УРВ</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="9099c5a4-9388-4914-a376-60b989f25f86">
+						<Name>ПользовательВебСервисУРВ</Name>
+						<Code>53 </Code>
+						<Description>Пользователь веб сервис УРВ</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="8413ae90-6436-4b59-bbe6-329a8ead8a44">
+				<Name>ОбменФинансы</Name>
+				<Code>2  </Code>
+				<Description>Обмен финансы</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="8f447fa2-90df-4b9f-83b3-87ad9651701a">
+						<Name>ВебСервисФинансы</Name>
+						<Code>1  </Code>
+						<Description>Веб сервис финансы</Description>
+						<Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.РеестрВебСервисов</v8:Type>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="2e183760-cb85-4535-96e3-e8ac7bbe5eeb">
+						<Name>ВерсияОбменаФинансы</Name>
+						<Code>3  </Code>
+						<Description>Версия обмена финансы</Description>
+						<Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:EnumRef.ВерсииОбменаФинансы</v8:Type>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+					<Item id="7873bc5c-0972-43b1-a055-a6676589d8a9">
+						<Name>РасписаниеОбменаФинансы</Name>
+						<Code>2  </Code>
+						<Description>Расписание обмена финансы</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>40</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="5bb09b3f-f44f-4119-910c-9187017b4f1a">
+				<Name>ОбменЦВД</Name>
+				<Code>4  </Code>
+				<Description>Обмен ЦВД</Description>
+				<Type/>
+				<IsFolder>true</IsFolder>
+				<ChildItems>
+					<Item id="97475b7f-6b2f-41a2-a99d-b9db79b44459">
+						<Name>РасписаниеОбменаЦВД</Name>
+						<Code>1  </Code>
+						<Description>Расписание обмена ЦВД</Description>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>40</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+						<IsFolder>false</IsFolder>
+					</Item>
+				</ChildItems>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="394913ec-5cb9-41cc-9cdf-fcba25f3c0b7">
+		<Name>ПрочиеПараметры</Name>
+		<Code>10 </Code>
+		<Description>Прочие параметры</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="aab93f34-99fe-4381-8bb3-4c80fc495d32">
+				<Name>ИспользоватьРозничныеСкладыВПроизводстве</Name>
+				<Code>1  </Code>
+				<Description>Использовать розничные склады в производстве</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="81c96c2a-a3c4-41de-88ea-24ae6e9a659c">
+		<Name>УчетАлкогольнойПродукции</Name>
+		<Code>5  </Code>
+		<Description>Учет алкогольной продукции</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="344b3e77-8c49-452c-9528-be9f8c5229a6">
+				<Name>РучнойРасходАлкогольнойПродукции</Name>
+				<Code>4  </Code>
+				<Description>Ручной расход алкогольной продукции</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ea9b9ced-6861-4607-ab73-9e35eb166d7c">
+				<Name>ВестиУчетАлкоголяВРазрезеПроизводителей</Name>
+				<Code>3  </Code>
+				<Description>Учет алкоголя в разрезе производителей</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="b79f9c1c-6419-458c-b1bb-2e37d3599d2f">
+		<Name>ФункциональныеОпции</Name>
+		<Code>4  </Code>
+		<Description>Функциональные опции</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="4c39d289-9ce8-4c4b-a2a5-9b0212b91e4e">
+				<Name>ЗапретВводаДробногоКоличества</Name>
+				<Code>3  </Code>
+				<Description>Запрет ввода дробного количества</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7c16fc27-f148-430e-b00f-5f99eb01e8e0">
+				<Name>ЗапретРедактированияЦенПродажи</Name>
+				<Code>4  </Code>
+				<Description>Запрет редактирования цен продажи</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="db3ac957-bd59-4df8-9899-a5ab861441c8">
+				<Name>ЗапретРедактированияЦенПродажи</Name>
+				<Code>4  </Code>
+				<Description>Запрет редактирования цен продажи</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8ff506f8-d009-435e-83e1-4e1af336930b">
+				<Name>ИспользованиеВалюты</Name>
+				<Code>1  </Code>
+				<Description>Использование валюты</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b6513f30-6fbf-4cc2-ad94-0b476d20bbf5">
+				<Name>ИспользованиеРеквизитовВеса</Name>
+				<Code>2  </Code>
+				<Description>Использование реквизитов веса</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="608da6a6-f2a8-4ef7-9f50-f437a04e0b51">
+		<Name>ЭлектроннаяПочта</Name>
+		<Code>6  </Code>
+		<Description>Электронная почта</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="97adfe47-9c99-4de8-b8cb-fc596b159da4">
+				<Name>УчетнаяЗаписьЭлектроннойПочты</Name>
+				<Code>1  </Code>
+				<Description>Учетная запись электронной почты</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

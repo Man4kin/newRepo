@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="РедактироватьСоставСвойств" id="66">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.РедактироватьСоставСвойств</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="РедактироватьСоставСвойствExtendedTooltip" id="83"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Wrap>false</Wrap>
+			<BorderColor>style:BorderColor</BorderColor>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="84"/>
+		</InputField>
+		<UsualGroup name="ГруппаПолИДатаРождения" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пол и дата рождения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пол и дата рождения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПолИДатаРожденияExtendedTooltip" id="85"/>
+			<ChildItems>
+				<InputField name="Пол" id="44">
+					<DataPath>Объект.Пол</DataPath>
+					<Width>15</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ПолКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПолExtendedTooltip" id="86"/>
+				</InputField>
+				<InputField name="ДатаРождения" id="42">
+					<DataPath>Объект.ДатаРождения</DataPath>
+					<Width>15</Width>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ДатаРожденияExtendedTooltip" id="87"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="46">
+			<DataPath>Объект.Parent</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Wrap>false</Wrap>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="РодительКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="88"/>
+		</InputField>
+		<Pages name="Страницы" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыExtendedTooltip" id="89"/>
+			<ChildItems>
+				<Page name="СтраницаКонтактнаяИнформация" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адреса, телефоны</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница контактная информация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаКонтактнаяИнформацияExtendedTooltip" id="90"/>
+					<ChildItems>
+						<Table name="ТаблицаКонтактнойИнформации" id="53">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<Header>false</Header>
+							<DataPath>ТаблицаКонтактнойИнформации</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаКонтактнойИнформацииКонтекстноеМеню" id="54"/>
+							<AutoCommandBar name="ТаблицаКонтактнойИнформацииКоманднаяПанель" id="55"/>
+							<ExtendedTooltip name="ТаблицаКонтактнойИнформацииExtendedTooltip" id="91"/>
+							<SearchStringAddition name="ТаблицаКонтактнойИнформацииSearchString" id="92">
+								<Source>
+									<lf:elementId>53</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ТаблицаКонтактнойИнформацииSearchStringContextMenu" id="93"/>
+								<ExtendedTooltip name="ТаблицаКонтактнойИнформацииSearchStringExtendedTooltip" id="94"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаКонтактнойИнформацииViewStatus" id="95">
+								<Source>
+									<lf:elementId>53</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ТаблицаКонтактнойИнформацииViewStatusContextMenu" id="96"/>
+								<ExtendedTooltip name="ТаблицаКонтактнойИнформацииViewStatusExtendedTooltip" id="97"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаКонтактнойИнформацииSearchControl" id="98">
+								<Source>
+									<lf:elementId>53</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ТаблицаКонтактнойИнформацииSearchControlContextMenu" id="99"/>
+								<ExtendedTooltip name="ТаблицаКонтактнойИнформацииSearchControlExtendedTooltip" id="100"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ТаблицаКонтактнойИнформацииПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ТаблицаКонтактнойИнформацииПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ТаблицаКонтактнойИнформацииКартинкаИВид" id="67">
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТаблицаКонтактнойИнформацииКартинкаИВидExtendedTooltip" id="101"/>
+									<ChildItems>
+										<PictureField name="ТаблицаКонтактнойИнформацииНомерКартинки" id="68">
+											<DataPath>ТаблицаКонтактнойИнформации.НомерКартинки</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleLocation>None</TitleLocation>
+											<Width>2</Width>
+											<Height>1</Height>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КонтактнаяИнформация</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="119" y="12"/>
+											</ValuesPicture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<ContextMenu name="ТаблицаКонтактнойИнформацииНомерКартинкиКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ТаблицаКонтактнойИнформацииНомерКартинкиExtendedTooltip" id="102"/>
+										</PictureField>
+										<LabelField name="ТаблицаКонтактнойИнформацииВид" id="70">
+											<DataPath>ТаблицаКонтактнойИнформации.Вид</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
+											<BackColor>web:Cream</BackColor>
+											<ContextMenu name="ТаблицаКонтактнойИнформацииВидКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="ТаблицаКонтактнойИнформацииВидExtendedTooltip" id="103"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ТаблицаКонтактнойИнформацииПредставление" id="72">
+									<DataPath>ТаблицаКонтактнойИнформации.Представление</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<AutoCellHeight>true</AutoCellHeight>
+									<Height>5</Height>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ТаблицаКонтактнойИнформацииПредставлениеКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ТаблицаКонтактнойИнформацииПредставлениеExtendedTooltip" id="104"/>
+									<Events>
+										<Event name="OnChange">ТаблицаКонтактнойИнформацииПредставлениеПриИзменении</Event>
+										<Event name="Clearing">ТаблицаКонтактнойИнформацииПредставлениеОчистка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДополнительныеРеквизиты" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дополнительные реквизиты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДополнительныеРеквизитыExtendedTooltip" id="105"/>
+					<ChildItems>
+						<Table name="ДеревоСвойств" id="74">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<DataPath>ДеревоСвойств</DataPath>
+							<RowPictureDataPath>ДеревоСвойств.Картинка</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.ЭлементыИГруппы</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+								<xr:TransparentPixel x="33" y="2"/>
+							</RowsPicture>
+							<CommandSet>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоСвойствКонтекстноеМеню" id="75"/>
+							<AutoCommandBar name="ДеревоСвойствКоманднаяПанель" id="76"/>
+							<ExtendedTooltip name="ДеревоСвойствExtendedTooltip" id="106"/>
+							<SearchStringAddition name="ДеревоСвойствSearchString" id="107">
+								<Source>
+									<lf:elementId>74</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ДеревоСвойствSearchStringContextMenu" id="108"/>
+								<ExtendedTooltip name="ДеревоСвойствSearchStringExtendedTooltip" id="109"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоСвойствViewStatus" id="110">
+								<Source>
+									<lf:elementId>74</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ДеревоСвойствViewStatusContextMenu" id="111"/>
+								<ExtendedTooltip name="ДеревоСвойствViewStatusExtendedTooltip" id="112"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоСвойствSearchControl" id="113">
+								<Source>
+									<lf:elementId>74</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ДеревоСвойствSearchControlContextMenu" id="114"/>
+								<ExtendedTooltip name="ДеревоСвойствSearchControlExtendedTooltip" id="115"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeRowChange">ДеревоСвойствПередНачаломИзменения</Event>
+								<Event name="OnStartEdit">ДеревоСвойствПриНачалеРедактирования</Event>
+								<Event name="OnChange">ДеревоСвойствПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="Свойство" id="77">
+									<DataPath>ДеревоСвойств.Свойство</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<SkipOnInput>true</SkipOnInput>
+									<BackColor>web:Lavender</BackColor>
+									<ContextMenu name="СвойствоКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="СвойствоExtendedTooltip" id="116"/>
+								</LabelField>
+								<InputField name="Значение" id="79">
+									<DataPath>ДеревоСвойств.Значение</DataPath>
+									<Wrap>false</Wrap>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ДеревоСвойств.CurrentData.Свойство</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ЗначениеКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ЗначениеExtendedTooltip" id="117"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Поле1" id="81">
+			<DataPath>Объект.Code</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="Поле1КонтекстноеМеню" id="82"/>
+			<ExtendedTooltip name="Поле1ExtendedTooltip" id="118"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФизическиеЛица</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаКонтактнойИнформации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица контактной информации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Тип" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыКонтактнойИнформации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вид" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоСвойств" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево свойств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Свойство" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыФизическихЛиц</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыФизическихЛиц</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипЗначенияСвойства" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип значения свойства</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РедактироватьСоставСвойств" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить дополнительные реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать состав дополнительных реквизитов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РедактироватьСоставСвойствВыполнить</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0:98311dc4-598b-4413-a3b7-bb516e677817</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:c124cfe7-61d8-4a48-99f8-9f6b2e642f3a</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:8f165f78-0f7c-4e22-852f-83e76243ea27</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>0:84aada14-1a22-46de-b6dc-67e663d3a9f7</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:becf53b6-3fbc-4c70-822f-4a70b0434353</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>0:33f8cd94-71e7-4703-92c3-22690fbd871a</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

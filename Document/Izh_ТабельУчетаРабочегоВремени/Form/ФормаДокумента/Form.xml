@@ -1,0 +1,3131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="794">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="795"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаУр1" id="798">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка ур1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка ур1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаУр1РасширеннаяПодсказка" id="799"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="796">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номер дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номер дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="797"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<InputField name="Дата" id="4">
+									<DataPath>Объект.Date</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="СтруктурнаяЕдиница" id="10">
+							<DataPath>Объект.СтруктурнаяЕдиница</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="СтруктурнаяЕдиницаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СтруктурнаяЕдиницаРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПериодРасчета" id="804">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период расчета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа период расчета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаПериодРасчетаРасширеннаяПодсказка" id="805"/>
+					<ChildItems>
+						<InputField name="Период" id="1283">
+							<DataPath>Период</DataPath>
+							<Width>30</Width>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="1284"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="1285"/>
+							<Events>
+								<Event name="OnChange">ПериодПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтладка" id="1290">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отладка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отладка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтладкаРасширеннаяПодсказка" id="1291"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="1008">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="1009"/>
+			<ChildItems>
+				<Page name="ГруппаТабличнаяЧасть" id="802">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отработанное время</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа табличная часть</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТабличнаяЧастьРасширеннаяПодсказка" id="803"/>
+					<ChildItems>
+						<Table name="ОтработанноеВремя" id="22">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОтработанноеВремя</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОтработанноеВремяКонтекстноеМеню" id="23"/>
+							<AutoCommandBar name="ОтработанноеВремяКоманднаяПанель" id="24">
+								<ChildItems>
+									<Popup name="ОтработанноеВремяГруппаДобавить" id="1294">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отработанное время группа добавить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Picture>
+											<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОтработанноеВремяГруппаДобавитьРасширеннаяПодсказка" id="1295"/>
+										<ChildItems>
+											<Button name="ОтработанноеВремяДобавитьНестандартнуюСтроку" id="1292">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьКадровоеАгентство</CommandName>
+												<Parameter xsi:nil="true"/>
+												<ExtendedTooltip name="ОтработанноеВремяДобавитьНестандартнуюСтрокуРасширеннаяПодсказка" id="1293"/>
+											</Button>
+											<Button name="ОтработанноеВремяДобавитьОплатаНаличными" id="1296">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьОплатаНаличными</CommandName>
+												<Parameter xsi:nil="true"/>
+												<ExtendedTooltip name="ОтработанноеВремяДобавитьОплатаНаличнымиРасширеннаяПодсказка" id="1297"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="ОтработанноеВремяСкопироватьСтроку" id="1286">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СкопироватьСтроку</CommandName>
+										<Parameter xsi:nil="true"/>
+										<Picture>
+											<xr:Ref>StdPicture.CloneListItem</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОтработанноеВремяСкопироватьСтрокуРасширеннаяПодсказка" id="1287"/>
+									</Button>
+									<Button name="ОтработанноеВремяУдалитьСтрокуТабличнойЧасти" id="1183">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьСтрокуТабличнойЧасти</CommandName>
+										<Parameter xsi:nil="true"/>
+										<Picture>
+											<xr:Ref>StdPicture.Delete</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОтработанноеВремяУдалитьСтрокуТабличнойЧастиРасширеннаяПодсказка" id="1184"/>
+									</Button>
+									<Button name="ОтработанноеВремяОбновитьИтоги" id="1288">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ОбновитьИтоги</CommandName>
+										<Parameter xsi:nil="true"/>
+										<Picture>
+											<xr:Ref>StdPicture.Refresh</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОтработанноеВремяОбновитьИтогиРасширеннаяПодсказка" id="1289"/>
+									</Button>
+									<Button name="ОтработанноеВремяДобавитьСотрудниковПодразделения" id="1015">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавитьСотрудниковПодразделения</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ОтработанноеВремяДобавитьСотрудниковПодразделенияРасширеннаяПодсказка" id="1016"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОтработанноеВремяРасширеннаяПодсказка" id="25"/>
+							<SearchStringAddition name="ОтработанноеВремяСтрокаПоиска" id="26">
+								<Source>
+									<lf:elementId>22</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ОтработанноеВремяСтрокаПоискаКонтекстноеМеню" id="29"/>
+								<ExtendedTooltip name="ОтработанноеВремяСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтработанноеВремяСостояниеПросмотра" id="31">
+								<Source>
+									<lf:elementId>22</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ОтработанноеВремяСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ОтработанноеВремяСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтработанноеВремяУправлениеПоиском" id="36">
+								<Source>
+									<lf:elementId>22</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ОтработанноеВремяУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="ОтработанноеВремяУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ОтработанноеВремяПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ОтработанноеВремяНомерСтроки" id="41">
+									<DataPath>Объект.ОтработанноеВремя.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>5</Width>
+									<ContextMenu name="ОтработанноеВремяНомерСтрокиКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ОтработанноеВремяНомерСтрокиРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<ColumnGroup name="ОтработанноеВремяГруппаКоды" id="1188">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отработанное время группа коды</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отработанное время группа коды</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтработанноеВремяГруппаКодыРасширеннаяПодсказка" id="1189"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяКодСотрудника" id="44">
+											<DataPath>Объект.ОтработанноеВремя.КодСотрудника</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<ContextMenu name="ОтработанноеВремяКодСотрудникаКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="ОтработанноеВремяКодСотрудникаРасширеннаяПодсказка" id="46"/>
+										</InputField>
+										<InputField name="ОтработанноеВремяКодПодразделения" id="1185">
+											<DataPath>Объект.ОтработанноеВремя.КодПодразделения</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтработанноеВремяКодПодразделенияКонтекстноеМеню" id="1186"/>
+											<ExtendedTooltip name="ОтработанноеВремяКодПодразделенияРасширеннаяПодсказка" id="1187"/>
+										</InputField>
+										<ColumnGroup name="ОтработанноеВремяГруппаДатыРаботы" id="1301">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Даты работы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработанное время группа даты работы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОтработанноеВремяГруппаДатыРаботыРасширеннаяПодсказка" id="1302"/>
+											<ChildItems>
+												<InputField name="ОтработанноеВремяДатаПриема" id="1298">
+													<DataPath>Объект.ОтработанноеВремя.ДатаПриема</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дата приема</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="ОтработанноеВремяДатаПриемаКонтекстноеМеню" id="1299"/>
+													<ExtendedTooltip name="ОтработанноеВремяДатаПриемаРасширеннаяПодсказка" id="1300"/>
+												</InputField>
+												<InputField name="ОтработанноеВремяДатаУвольнения" id="1303">
+													<DataPath>Объект.ОтработанноеВремя.ДатаУвольнения</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="ОтработанноеВремяДатаУвольненияКонтекстноеМеню" id="1304"/>
+													<ExtendedTooltip name="ОтработанноеВремяДатаУвольненияРасширеннаяПодсказка" id="1305"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ОтработанноеВремяФИОСотрудника" id="47">
+									<DataPath>Объект.ОтработанноеВремя.ФИОСотрудника</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>30</Width>
+									<ContextMenu name="ОтработанноеВремяФИОСотрудникаКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ОтработанноеВремяФИОСотрудникаРасширеннаяПодсказка" id="49"/>
+								</InputField>
+								<ColumnGroup name="ОтработанноеВремяГруппаДолжностьВидЗанятости" id="1023">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отработанное время группа должность вид занятости</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отработанное время группа должность вид занятости</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтработанноеВремяГруппаДолжностьВидЗанятостиРасширеннаяПодсказка" id="1024"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяПодразделение" id="1180">
+											<DataPath>Объект.ОтработанноеВремя.Подразделение</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>40</Width>
+											<ContextMenu name="ОтработанноеВремяПодразделениеКонтекстноеМеню" id="1181"/>
+											<ExtendedTooltip name="ОтработанноеВремяПодразделениеРасширеннаяПодсказка" id="1182"/>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжность" id="1017">
+											<DataPath>Объект.ОтработанноеВремя.Должность</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>40</Width>
+											<ChoiceButton>true</ChoiceButton>
+											<ContextMenu name="ОтработанноеВремяДолжностьКонтекстноеМеню" id="1018"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьРасширеннаяПодсказка" id="1019"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьСтрокиПриИзменении</Event>
+												<Event name="StartChoice">ОтработанноеВремяДолжностьНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятости" id="1020">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятости</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>40</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиКонтекстноеМеню" id="1021"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиРасширеннаяПодсказка" id="1022"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ОтработанноеВремяИтого" id="995">
+									<DataPath>Объект.ОтработанноеВремя.Итого</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>ИтогПоВсем</FooterDataPath>
+									<Width>10</Width>
+									<MultiLine>true</MultiLine>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>true</OpenButton>
+									<CreateButton>false</CreateButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceListButton>false</ChoiceListButton>
+									<ContextMenu name="ОтработанноеВремяИтогоКонтекстноеМеню" id="996"/>
+									<ExtendedTooltip name="ОтработанноеВремяИтогоРасширеннаяПодсказка" id="997"/>
+								</InputField>
+								<ColumnGroup name="ОтработанноеВремяГруппа1" id="1028">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа1РасширеннаяПодсказка" id="1029"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень1" id="902">
+											<DataPath>Объект.ОтработанноеВремя.День1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChooseType>false</ChooseType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Я</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Я</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Б</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Б</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень1КонтекстноеМеню" id="903"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень1РасширеннаяПодсказка" id="904"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень1" id="1025">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень1КонтекстноеМеню" id="1026"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень1РасширеннаяПодсказка" id="1027"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень1" id="1190">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень1КонтекстноеМеню" id="1191"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень1РасширеннаяПодсказка" id="1192"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа2" id="1120">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа2РасширеннаяПодсказка" id="1121"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень2" id="905">
+											<DataPath>Объект.ОтработанноеВремя.День2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень2КонтекстноеМеню" id="906"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень2РасширеннаяПодсказка" id="907"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень2" id="1030">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень2КонтекстноеМеню" id="1031"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень2РасширеннаяПодсказка" id="1032"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень2" id="1193">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень2КонтекстноеМеню" id="1194"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень2РасширеннаяПодсказка" id="1195"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа3" id="1122">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа3РасширеннаяПодсказка" id="1123"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень3" id="908">
+											<DataPath>Объект.ОтработанноеВремя.День3</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень3КонтекстноеМеню" id="909"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень3РасширеннаяПодсказка" id="910"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень3" id="1033">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень3</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень3КонтекстноеМеню" id="1034"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень3РасширеннаяПодсказка" id="1035"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень3" id="1196">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень3</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень3КонтекстноеМеню" id="1197"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень3РасширеннаяПодсказка" id="1198"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа4" id="1124">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа4РасширеннаяПодсказка" id="1125"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень4" id="911">
+											<DataPath>Объект.ОтработанноеВремя.День4</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень4КонтекстноеМеню" id="912"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень4РасширеннаяПодсказка" id="913"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень4" id="1036">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень4</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень4КонтекстноеМеню" id="1037"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень4РасширеннаяПодсказка" id="1038"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень4" id="1199">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень4</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень4КонтекстноеМеню" id="1200"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень4РасширеннаяПодсказка" id="1201"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа5" id="1126">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа5РасширеннаяПодсказка" id="1127"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень5" id="914">
+											<DataPath>Объект.ОтработанноеВремя.День5</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень5КонтекстноеМеню" id="915"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень5РасширеннаяПодсказка" id="916"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень5" id="1039">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень5</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень5КонтекстноеМеню" id="1040"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень5РасширеннаяПодсказка" id="1041"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень5" id="1202">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень5</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень5КонтекстноеМеню" id="1203"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень5РасширеннаяПодсказка" id="1204"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа6" id="1128">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа6РасширеннаяПодсказка" id="1129"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень6" id="917">
+											<DataPath>Объект.ОтработанноеВремя.День6</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень6КонтекстноеМеню" id="918"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень6РасширеннаяПодсказка" id="919"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень6" id="1042">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень6</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень6КонтекстноеМеню" id="1043"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень6РасширеннаяПодсказка" id="1044"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень6" id="1205">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень6</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень6КонтекстноеМеню" id="1206"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень6РасширеннаяПодсказка" id="1207"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа7" id="1130">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа7РасширеннаяПодсказка" id="1131"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень7" id="920">
+											<DataPath>Объект.ОтработанноеВремя.День7</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень7КонтекстноеМеню" id="921"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень7РасширеннаяПодсказка" id="922"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень7" id="1045">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень7</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень7КонтекстноеМеню" id="1046"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень7РасширеннаяПодсказка" id="1047"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень7" id="1208">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень7</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень7КонтекстноеМеню" id="1209"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень7РасширеннаяПодсказка" id="1210"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа8" id="1132">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа8РасширеннаяПодсказка" id="1133"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень8" id="923">
+											<DataPath>Объект.ОтработанноеВремя.День8</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень8КонтекстноеМеню" id="924"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень8РасширеннаяПодсказка" id="925"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень8" id="1048">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень8</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень8КонтекстноеМеню" id="1049"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень8РасширеннаяПодсказка" id="1050"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень8" id="1211">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень8</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень8КонтекстноеМеню" id="1212"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень8РасширеннаяПодсказка" id="1213"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа9" id="1134">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа9РасширеннаяПодсказка" id="1135"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень9" id="926">
+											<DataPath>Объект.ОтработанноеВремя.День9</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень9КонтекстноеМеню" id="927"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень9РасширеннаяПодсказка" id="928"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень9" id="1051">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень9</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень9КонтекстноеМеню" id="1052"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень9РасширеннаяПодсказка" id="1053"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень9" id="1214">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень9</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень9КонтекстноеМеню" id="1215"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень9РасширеннаяПодсказка" id="1216"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа10" id="1136">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа10РасширеннаяПодсказка" id="1137"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень10" id="929">
+											<DataPath>Объект.ОтработанноеВремя.День10</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень10КонтекстноеМеню" id="930"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень10РасширеннаяПодсказка" id="931"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень10" id="1054">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень10</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень10КонтекстноеМеню" id="1055"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень10РасширеннаяПодсказка" id="1056"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень10" id="1217">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень10</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень10КонтекстноеМеню" id="1218"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень10РасширеннаяПодсказка" id="1219"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа11" id="1138">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа11РасширеннаяПодсказка" id="1139"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень11" id="932">
+											<DataPath>Объект.ОтработанноеВремя.День11</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень11КонтекстноеМеню" id="933"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень11РасширеннаяПодсказка" id="934"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень11" id="1057">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень11</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень11КонтекстноеМеню" id="1058"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень11РасширеннаяПодсказка" id="1059"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень11" id="1220">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень11</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень11КонтекстноеМеню" id="1221"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень11РасширеннаяПодсказка" id="1222"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа12" id="1140">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа12РасширеннаяПодсказка" id="1141"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень12" id="935">
+											<DataPath>Объект.ОтработанноеВремя.День12</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень12КонтекстноеМеню" id="936"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень12РасширеннаяПодсказка" id="937"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень12" id="1060">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень12</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень12КонтекстноеМеню" id="1061"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень12РасширеннаяПодсказка" id="1062"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень12" id="1223">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень12</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень12КонтекстноеМеню" id="1224"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень12РасширеннаяПодсказка" id="1225"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа13" id="1142">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа13РасширеннаяПодсказка" id="1143"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень13" id="938">
+											<DataPath>Объект.ОтработанноеВремя.День13</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень13КонтекстноеМеню" id="939"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень13РасширеннаяПодсказка" id="940"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень13" id="1063">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень13</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень13КонтекстноеМеню" id="1064"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень13РасширеннаяПодсказка" id="1065"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень13" id="1226">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень13</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень13КонтекстноеМеню" id="1227"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень13РасширеннаяПодсказка" id="1228"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа14" id="1144">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа14РасширеннаяПодсказка" id="1145"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень14" id="941">
+											<DataPath>Объект.ОтработанноеВремя.День14</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень14КонтекстноеМеню" id="942"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень14РасширеннаяПодсказка" id="943"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень14" id="1066">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень14</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень14КонтекстноеМеню" id="1067"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень14РасширеннаяПодсказка" id="1068"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень14" id="1229">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень14</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень14КонтекстноеМеню" id="1230"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень14РасширеннаяПодсказка" id="1231"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа15" id="1146">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа15РасширеннаяПодсказка" id="1147"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень15" id="944">
+											<DataPath>Объект.ОтработанноеВремя.День15</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень15КонтекстноеМеню" id="945"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень15РасширеннаяПодсказка" id="946"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень15" id="1069">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень15</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень15КонтекстноеМеню" id="1070"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень15РасширеннаяПодсказка" id="1071"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень15" id="1232">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень15</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень15КонтекстноеМеню" id="1233"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень15РасширеннаяПодсказка" id="1234"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа16" id="1148">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа16РасширеннаяПодсказка" id="1149"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень16" id="947">
+											<DataPath>Объект.ОтработанноеВремя.День16</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень16КонтекстноеМеню" id="948"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень16РасширеннаяПодсказка" id="949"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень16" id="1072">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень16</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень16КонтекстноеМеню" id="1073"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень16РасширеннаяПодсказка" id="1074"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень16" id="1235">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень16</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень16КонтекстноеМеню" id="1236"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень16РасширеннаяПодсказка" id="1237"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа17" id="1150">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа17РасширеннаяПодсказка" id="1151"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень17" id="950">
+											<DataPath>Объект.ОтработанноеВремя.День17</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень17КонтекстноеМеню" id="951"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень17РасширеннаяПодсказка" id="952"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень17" id="1075">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень17</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень17КонтекстноеМеню" id="1076"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень17РасширеннаяПодсказка" id="1077"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень17" id="1238">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень17</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень17КонтекстноеМеню" id="1239"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень17РасширеннаяПодсказка" id="1240"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа18" id="1152">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа18РасширеннаяПодсказка" id="1153"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень18" id="953">
+											<DataPath>Объект.ОтработанноеВремя.День18</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень18КонтекстноеМеню" id="954"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень18РасширеннаяПодсказка" id="955"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень18" id="1078">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень18</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень18КонтекстноеМеню" id="1079"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень18РасширеннаяПодсказка" id="1080"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень18" id="1241">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень18</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень18КонтекстноеМеню" id="1242"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень18РасширеннаяПодсказка" id="1243"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа19" id="1154">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа19РасширеннаяПодсказка" id="1155"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень19" id="956">
+											<DataPath>Объект.ОтработанноеВремя.День19</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень19КонтекстноеМеню" id="957"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень19РасширеннаяПодсказка" id="958"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень19" id="1081">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень19</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень19КонтекстноеМеню" id="1082"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень19РасширеннаяПодсказка" id="1083"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень19" id="1244">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень19</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень19КонтекстноеМеню" id="1245"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень19РасширеннаяПодсказка" id="1246"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа20" id="1156">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа20РасширеннаяПодсказка" id="1157"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень20" id="959">
+											<DataPath>Объект.ОтработанноеВремя.День20</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень20КонтекстноеМеню" id="960"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень20РасширеннаяПодсказка" id="961"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень20" id="1084">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень20</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень20КонтекстноеМеню" id="1085"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень20РасширеннаяПодсказка" id="1086"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень20" id="1247">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень20</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень20КонтекстноеМеню" id="1248"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень20РасширеннаяПодсказка" id="1249"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа21" id="1158">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа21РасширеннаяПодсказка" id="1159"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень21" id="962">
+											<DataPath>Объект.ОтработанноеВремя.День21</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень21КонтекстноеМеню" id="963"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень21РасширеннаяПодсказка" id="964"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень21" id="1087">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень21</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень21КонтекстноеМеню" id="1088"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень21РасширеннаяПодсказка" id="1089"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень21" id="1250">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень21</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень21КонтекстноеМеню" id="1251"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень21РасширеннаяПодсказка" id="1252"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа22" id="1160">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа22РасширеннаяПодсказка" id="1161"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень22" id="965">
+											<DataPath>Объект.ОтработанноеВремя.День22</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень22КонтекстноеМеню" id="966"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень22РасширеннаяПодсказка" id="967"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень22" id="1090">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень22</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень22КонтекстноеМеню" id="1091"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень22РасширеннаяПодсказка" id="1092"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень22" id="1253">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень22</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень22КонтекстноеМеню" id="1254"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень22РасширеннаяПодсказка" id="1255"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа23" id="1162">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа23РасширеннаяПодсказка" id="1163"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень23" id="968">
+											<DataPath>Объект.ОтработанноеВремя.День23</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень23КонтекстноеМеню" id="969"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень23РасширеннаяПодсказка" id="970"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень23" id="1093">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень23</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень23КонтекстноеМеню" id="1094"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень23РасширеннаяПодсказка" id="1095"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень23" id="1256">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень23</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень23КонтекстноеМеню" id="1257"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень23РасширеннаяПодсказка" id="1258"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа24" id="1164">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа24РасширеннаяПодсказка" id="1165"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень24" id="971">
+											<DataPath>Объект.ОтработанноеВремя.День24</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень24КонтекстноеМеню" id="972"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень24РасширеннаяПодсказка" id="973"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень24" id="1096">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень24</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень24КонтекстноеМеню" id="1097"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень24РасширеннаяПодсказка" id="1098"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень24" id="1259">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень24</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень24КонтекстноеМеню" id="1260"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень24РасширеннаяПодсказка" id="1261"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа25" id="1166">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа25РасширеннаяПодсказка" id="1167"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень25" id="974">
+											<DataPath>Объект.ОтработанноеВремя.День25</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень25КонтекстноеМеню" id="975"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень25РасширеннаяПодсказка" id="976"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень25" id="1099">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень25</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень25КонтекстноеМеню" id="1100"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень25РасширеннаяПодсказка" id="1101"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень25" id="1262">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень25</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень25КонтекстноеМеню" id="1263"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень25РасширеннаяПодсказка" id="1264"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа26" id="1168">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа26РасширеннаяПодсказка" id="1169"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень26" id="977">
+											<DataPath>Объект.ОтработанноеВремя.День26</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень26КонтекстноеМеню" id="978"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень26РасширеннаяПодсказка" id="979"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень26" id="1102">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень26</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень26КонтекстноеМеню" id="1103"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень26РасширеннаяПодсказка" id="1104"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень26" id="1265">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень26</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень26КонтекстноеМеню" id="1266"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень26РасширеннаяПодсказка" id="1267"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа27" id="1170">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа27РасширеннаяПодсказка" id="1171"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень27" id="980">
+											<DataPath>Объект.ОтработанноеВремя.День27</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень27КонтекстноеМеню" id="981"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень27РасширеннаяПодсказка" id="982"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень27" id="1105">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень27</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень27КонтекстноеМеню" id="1106"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень27РасширеннаяПодсказка" id="1107"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень27" id="1268">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень27</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень27КонтекстноеМеню" id="1269"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень27РасширеннаяПодсказка" id="1270"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа28" id="1172">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа28РасширеннаяПодсказка" id="1173"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень28" id="983">
+											<DataPath>Объект.ОтработанноеВремя.День28</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень28КонтекстноеМеню" id="984"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень28РасширеннаяПодсказка" id="985"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень28" id="1108">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень28</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень28КонтекстноеМеню" id="1109"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень28РасширеннаяПодсказка" id="1110"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень28" id="1271">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень28</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень28КонтекстноеМеню" id="1272"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень28РасширеннаяПодсказка" id="1273"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа29" id="1174">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа29РасширеннаяПодсказка" id="1175"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень29" id="986">
+											<DataPath>Объект.ОтработанноеВремя.День29</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень29КонтекстноеМеню" id="987"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень29РасширеннаяПодсказка" id="988"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень29" id="1111">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень29</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень29КонтекстноеМеню" id="1112"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень29РасширеннаяПодсказка" id="1113"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень29" id="1274">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень29</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень29КонтекстноеМеню" id="1275"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень29РасширеннаяПодсказка" id="1276"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа30" id="1176">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа30РасширеннаяПодсказка" id="1177"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень30" id="989">
+											<DataPath>Объект.ОтработанноеВремя.День30</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень30КонтекстноеМеню" id="990"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень30РасширеннаяПодсказка" id="991"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень30" id="1114">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень30</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень30КонтекстноеМеню" id="1115"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень30РасширеннаяПодсказка" id="1116"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень30" id="1277">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень30</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень30КонтекстноеМеню" id="1278"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень30РасширеннаяПодсказка" id="1279"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтработанноеВремяГруппа31" id="1178">
+									<Width>5</Width>
+									<ExtendedTooltip name="ОтработанноеВремяГруппа31РасширеннаяПодсказка" id="1179"/>
+									<ChildItems>
+										<InputField name="ОтработанноеВремяДень31" id="992">
+											<DataPath>Объект.ОтработанноеВремя.День31</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<MultiLine>true</MultiLine>
+											<DropListButton>true</DropListButton>
+											<SpinButton>false</SpinButton>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ОтработанноеВремяДень31КонтекстноеМеню" id="993"/>
+											<ExtendedTooltip name="ОтработанноеВремяДень31РасширеннаяПодсказка" id="994"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДеньПриИзменении</Event>
+												<Event name="TextEditEnd">ОтработанноеВремяДеньОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяВидЗанятостиДень31" id="1117">
+											<DataPath>Объект.ОтработанноеВремя.ВидЗанятостиДень31</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяВидЗанятостиДень31КонтекстноеМеню" id="1118"/>
+											<ExtendedTooltip name="ОтработанноеВремяВидЗанятостиДень31РасширеннаяПодсказка" id="1119"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяВидЗанятостиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОтработанноеВремяДолжностьДень31" id="1280">
+											<DataPath>Объект.ОтработанноеВремя.ДолжностьДень31</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>5</Width>
+											<ContextMenu name="ОтработанноеВремяДолжностьДень31КонтекстноеМеню" id="1281"/>
+											<ExtendedTooltip name="ОтработанноеВремяДолжностьДень31РасширеннаяПодсказка" id="1282"/>
+											<Events>
+												<Event name="OnChange">ОтработанноеВремяДолжностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеСведения" id="1010">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные сведения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные сведения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДополнительныеСведенияРасширеннаяПодсказка" id="1011"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПодвал" id="998">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="999"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="1012">
+					<DataPath>Объект.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="1013"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="1014"/>
+				</InputField>
+				<UsualGroup name="ГруппаАвтор" id="1000">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа автор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа автор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаАвторРасширеннаяПодсказка" id="1001"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаАвтор" id="1002">
+							<Width>2</Width>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<SkipOnInput>true</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автор документа</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>StdPicture.User</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаАвторКонтекстноеМеню" id="1003"/>
+							<ExtendedTooltip name="КартинкаАвторРасширеннаяПодсказка" id="1004"/>
+						</PictureDecoration>
+						<LabelField name="Автор" id="1005">
+							<DataPath>Объект.Автор</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="АвторКонтекстноеМеню" id="1006"/>
+							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="1007"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Izh_ТабельУчетаРабочегоВремени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.ОтработанноеВремя"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="Период" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогПоВсем" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог по всем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень1</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень1</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень1</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень2</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень2</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень2</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень3</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень3</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень3</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень4</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень4</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень4</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень5</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень5</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень5</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень6</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень6</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень6</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень7</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень7</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень7</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень8</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень8</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень8</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень9</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень9</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень9</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень10</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень10</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень10</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень12</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень12</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень12</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень13</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень13</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень13</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень11</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень11</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень11</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень14</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень14</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень14</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень15</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень15</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень15</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень16</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень16</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень16</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень17</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень17</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень17</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень18</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень18</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень18</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень19</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень19</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень19</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень20</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень20</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень20</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень21</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень21</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень21</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень22</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень22</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень22</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень23</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень23</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень23</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень24</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень24</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень24</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень25</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень25</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень25</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень26</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень26</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень26</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень27</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень27</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень27</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень28</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень28</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень28</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень29</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень29</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень29</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень30</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень30</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень30</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень31</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень31</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОсновноеМестоРаботы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиДень31</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.БольничныйОтпуск</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень2</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень3</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень4</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень5</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень6</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень7</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень8</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень9</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень10</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень11</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень12</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень13</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень14</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень15</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень16</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень17</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень18</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень19</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень20</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень21</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень22</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень23</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень24</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень25</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень26</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень27</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень28</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень29</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень30</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяВидЗанятостиДень31</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень2</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень3</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень4</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень5</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень6</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень7</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень8</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень9</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень10</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень11</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень12</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень13</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень14</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень15</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень16</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень17</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень18</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень19</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень20</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень21</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень22</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень23</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень24</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень25</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень26</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень27</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень28</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень29</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень30</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОтработанноеВремяДолжностьДень31</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиСтроки</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.КадровоеАгентство</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ОтработанноеВремя.ВидЗанятостиСтроки</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Izh_ВидыЗанятостиНаТекущемМестеРаботы.ОплатаНаличными</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Enabled</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьСотрудниковПодразделения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить сотрудников из ЗУП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить сотрудников подразделения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьСотрудниковПодразделения</Action>
+		</Command>
+		<Command name="УдалитьСтрокуТабличнойЧасти" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строку табличной части</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строку табличной части</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьСтрокуТабличнойЧасти</Action>
+		</Command>
+		<Command name="ВыборПериода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор периода</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор периода</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="СкопироватьСтроку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать строку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкопироватьСтроку</Action>
+		</Command>
+		<Command name="ОбновитьИтоги" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить итоги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить итоги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьИтоги</Action>
+		</Command>
+		<Command name="ДобавитьКадровоеАгентство" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровое агентство</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить кадровое агентство</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьКадровоеАгентство</Action>
+		</Command>
+		<Command name="ДобавитьОплатаНаличными" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата наличными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить оплата наличными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьОплатаНаличными</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.Izh_РабочееВремяСотрудников.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.Izh_ОтработанноеВремяСотрудников.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

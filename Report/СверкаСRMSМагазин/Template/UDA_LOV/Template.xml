@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>Item</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>1C</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодUDA1С</dataPath>
+			<field>КодUDA1С</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код UDA 1С</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодТовара1С</dataPath>
+			<field>КодТовара1С</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код товара 1С</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеКодUDA1С</dataPath>
+			<field>ЗначениеКодUDA1С</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение код UDA 1С</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеНаименованиеUDA1С</dataPath>
+			<field>ЗначениеНаименованиеUDA1С</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение наименование UDA 1С</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидСвойства</dataPath>
+			<field>ВидСвойства</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<dataSource>Item</dataSource>
+		<query>ВЫБРАТЬ
+	1 КАК ВидСвойства,
+	НоменклатураДополнительныеРеквизиты.Ссылка.Код КАК КодТовара1С,
+	НоменклатураДополнительныеРеквизиты.Свойство.Код КАК КодUDA1С,
+	НоменклатураДополнительныеРеквизиты.Значение.Код КАК ЗначениеКодUDA1С,
+	НоменклатураДополнительныеРеквизиты.Значение.Наименование КАК ЗначениеНаименованиеUDA1С
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СлужебныеЗначения КАК СлужебныеЗначения
+		ПО НоменклатураДополнительныеРеквизиты.Свойство.Код = СлужебныеЗначения.Значение
+ГДЕ
+	СлужебныеЗначения.Свойство = ЗНАЧЕНИЕ(ПланВидовХарактеристик.СлужебныеЗначения.КодРеквизитаПроизводитель)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	2,
+	НоменклатураДополнительныеРеквизиты.Ссылка.Код,
+	НоменклатураДополнительныеРеквизиты.Свойство.Код,
+	НоменклатураДополнительныеРеквизиты.Значение.Код,
+	НоменклатураДополнительныеРеквизиты.Значение.Наименование
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СлужебныеЗначения КАК СлужебныеЗначения
+		ПО НоменклатураДополнительныеРеквизиты.Свойство.Код = СлужебныеЗначения.Значение
+ГДЕ
+	СлужебныеЗначения.Свойство = ЗНАЧЕНИЕ(ПланВидовХарактеристик.СлужебныеЗначения.КодРеквизитаВидАлкогольнойПродукции)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	3,
+	НоменклатураДополнительныеРеквизиты.Ссылка.Код,
+	НоменклатураДополнительныеРеквизиты.Свойство.Код,
+	НоменклатураДополнительныеРеквизиты.Значение.Код,
+	НоменклатураДополнительныеРеквизиты.Значение.Наименование
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	ТИПЗНАЧЕНИЯ(НоменклатураДополнительныеРеквизиты.Значение) = ТИП(Справочник.ЗначенияСвойствОбъектов)</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>RMS</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодUDA</dataPath>
+			<field>КодUDA</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код UDA RMS</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодТовара</dataPath>
+			<field>КодТовара</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код товара RMS</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>LOC</dataPath>
+			<field>LOC</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>LOC_TYPE</dataPath>
+			<field>LOC_TYPE</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Магазин</dataPath>
+			<field>Магазин</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидUDA</dataPath>
+			<field>ВидUDA</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеКодUDA</dataPath>
+			<field>ЗначениеКодUDA</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеНаименованиеUDA</dataPath>
+			<field>ЗначениеНаименованиеUDA</field>
+		</field>
+		<dataSource>Item</dataSource>
+		<query>ВЫБРАТЬ
+	ТоварыПоЛокации.ITEM КАК КодТовара,
+	ТоварыПоЛокации.LOC,
+	ТоварыПоЛокации.LOC_TYPE,
+	ТоварыПоЛокации.Магазин,
+	RMS13_UDA_ITEM_LOV.UDA_ID.UDA_ID КАК КодUDA,
+	RMS13_UDA_ITEM_LOV.UDA_ID КАК ВидUDA,
+	RMS13_UDA_ITEM_LOV.UDA_VALUE КАК ЗначениеКодUDA,
+	RMS13_UDA_VALUES.UDA_VALUE_DESC КАК ЗначениеНаименованиеUDA
+ИЗ
+	(ВЫБРАТЬ
+		ТоварыПоЛокации.ITEM КАК ITEM,
+		ТоварыПоЛокации.LOC КАК LOC,
+		ТоварыПоЛокации.LOC_TYPE КАК LOC_TYPE,
+		ВЫБОР
+			КОГДА RMS13_STORE.STORE ЕСТЬ НЕ NULL 
+				ТОГДА RMS13_STORE.STORE
+			КОГДА RMS13_WH.WH ЕСТЬ НЕ NULL 
+				ТОГДА ВЫБОР
+						КОГДА RMS13_WH.WH = RMS13_WH.PHYSICAL_WH
+							ТОГДА RMS13_WH.WH
+						ИНАЧЕ RMS13_WH.PHYSICAL_WH
+					КОНЕЦ
+			ИНАЧЕ NULL
+		КОНЕЦ КАК Магазин
+	ИЗ
+		(ВЫБРАТЬ
+			RMS13_V_ITEM_LOC.ITEM КАК ITEM,
+			RMS13_V_ITEM_LOC.LOC КАК LOC,
+			RMS13_V_ITEM_LOC.LOC_TYPE КАК LOC_TYPE
+		ИЗ
+			ВнешнийИсточникДанных.RMS.Таблица.RMS13_V_ITEM_LOC КАК RMS13_V_ITEM_LOC
+		ГДЕ
+			RMS13_V_ITEM_LOC.LOC В(&amp;LOC)) КАК ТоварыПоЛокации
+			ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.RMS.Таблица.RMS13_STORE КАК RMS13_STORE
+			ПО ТоварыПоЛокации.LOC = RMS13_STORE.STORE
+				И (ТоварыПоЛокации.LOC_TYPE = "S")
+			ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.RMS.Таблица.RMS13_WH КАК RMS13_WH
+			ПО ТоварыПоЛокации.LOC = RMS13_WH.WH
+				И (ТоварыПоЛокации.LOC_TYPE = "W")
+	ГДЕ
+		ВЫБОР
+				КОГДА RMS13_STORE.STORE ЕСТЬ НЕ NULL 
+					ТОГДА RMS13_STORE.STORE
+				КОГДА RMS13_WH.WH ЕСТЬ НЕ NULL 
+					ТОГДА ВЫБОР
+							КОГДА RMS13_WH.WH = RMS13_WH.PHYSICAL_WH
+								ТОГДА RMS13_WH.WH
+							ИНАЧЕ RMS13_WH.PHYSICAL_WH
+						КОНЕЦ
+				ИНАЧЕ NULL
+			КОНЕЦ ЕСТЬ НЕ NULL ) КАК ТоварыПоЛокации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.RMS.Таблица.RMS13_UDA_ITEM_LOV КАК RMS13_UDA_ITEM_LOV
+		ПО ТоварыПоЛокации.ITEM = RMS13_UDA_ITEM_LOV.ITEM
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.RMS.Таблица.RMS13_UDA_VALUES КАК RMS13_UDA_VALUES
+		ПО (RMS13_UDA_ITEM_LOV.UDA_ID = RMS13_UDA_VALUES.UDA_ID)
+			И (RMS13_UDA_ITEM_LOV.UDA_VALUE = RMS13_UDA_VALUES.UDA_VALUE)</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Свойства</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеUDA</dataPath>
+			<field>НаименованиеUDA</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодUDA_</dataPath>
+			<field>КодUDA_</field>
+		</field>
+		<dataSource>Item</dataSource>
+		<query>ВЫБРАТЬ
+	ДополнительныеРеквизитыНоменклатуры.Наименование КАК НаименованиеUDA,
+	ДополнительныеРеквизитыНоменклатуры.Код КАК КодUDA_
+ИЗ
+	ПланВидовХарактеристик.ДополнительныеРеквизитыНоменклатуры КАК ДополнительныеРеквизитыНоменклатуры</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>1C</destinationDataSet>
+		<sourceExpression>КодТовара</sourceExpression>
+		<destinationExpression>КодТовара1С</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>1C</destinationDataSet>
+		<sourceExpression>Формат(КодUDA,"ЧГ=")</sourceExpression>
+		<destinationExpression>КодUDA1С</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>Свойства</destinationDataSet>
+		<sourceExpression>Формат(КодUDA,"ЧГ=")</sourceExpression>
+		<destinationExpression>КодUDA_</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>Код</dataPath>
+		<expression>ПолучитьКодUDA(КодТовара,КодUDA,Формат(ЗначениеКодUDA,"ЧГ="))</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Код</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодЗначенияUDA_RMS</dataPath>
+		<expression> выбор когда ВидСвойства is not  null тогда выбор когда ВидСвойства = 1 тогда ПолучитьКодКонтрагентаИзНаименованияUDA(ЗначениеНаименованиеUDA) иначе Формат(ЗначениеКодUDA,"ЧГ=") конец иначе NULL конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Код значения UDA RMS</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодЗначенияUDA_1C</dataPath>
+		<expression> выбор когда ВидСвойства is not  null тогда выбор когда ВидСвойства = 1 тогда Формат(ЗначениеКодUDA1С,"ЧГ=") иначе ЗначениеКодUDA1С конец иначе NULL конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Код значения UDA 1 C</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>LOC</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>LOC</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>10</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодТовара</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеКодUDA</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодЗначенияUDA_1C</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеНаименованиеUDA</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеНаименованиеUDA1С</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>КодТовара1С</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>КодUDA1С</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>7d093385-f826-4fcb-8d97-092540046301</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Код</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КодUDA</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВидUDA</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">КодТовара1С</dcsset:left>
+								<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ЗначениеКодUDA1С</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">КодЗначенияUDA_RMS</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>TotalsPlacement</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>FilterOutput</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

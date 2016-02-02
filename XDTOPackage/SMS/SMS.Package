@@ -1,0 +1,641 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://1c-astor.ru/SMS">
+	<objectType name="DatabaseInfo">
+		<property name="ServerVersion" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="DatabaseVersion" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="DatabaseVersionNumber" type="xs:int" lowerBound="1" form="Attribute"/>
+		<property name="DatabaseName" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="SizeMB" type="xs:decimal" lowerBound="1" form="Attribute"/>
+		<property name="BaseUID" type="xs:string" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType name="Event">
+		<property name="EventUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="EventTime" type="xs:dateTime" lowerBound="0" form="Attribute"/>
+		<property name="Type" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Source" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Message" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="PacketUID" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType name="Events">
+		<property name="MaxEventTime" type="xs:dateTime" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://1c-astor.ru/SMS" name="Event" type="d3p1:Event" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Packet">
+		<property name="Source" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Version" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ObjectName" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Command" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Section" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Payment" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="IsCash" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="Type" type="xs:string" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Tax" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="TaxRate" type="xs:decimal" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="TaxGroup" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="TaxSchema" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="TaxUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="TaxGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Level" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="EmployerRole" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Employer" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="PosCode" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="IsCashier" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="IsSalesPerson" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="Password" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PasswordType" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="EmployerRole" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="LegalPerson" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Unit" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:unsignedShort" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="POS" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="0" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Section" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+				<property name="Employer" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+				<property name="Menu" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="DiscountCard" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="DiscountCardGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Number" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="DiscountCardGroup" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="ItemGroup" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="ParentItemGroupUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="MaxDiscount" type="xs:decimal" lowerBound="0" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="ShiftFilter" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ShiftUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="LegalPersonUID" type="xs:string" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Params" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="TypeOfSelect" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="PosUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="FromNo" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="ToNo" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="ShiftUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="FromDate" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="ToDate" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Status" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="IsConsolidated" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="PropertyScale" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Property" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Value" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="PriceList" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ItemUnitSchemaUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="SaleItemUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="SectionUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="FromDate" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ToDate" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Value" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Property1" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Property2" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Property3" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Property4" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="PriceListCategoryUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsAdvertising" type="xs:boolean" lowerBound="0" form="Attribute"/>
+				<property name="IsActive" type="xs:boolean" lowerBound="0" form="Attribute"/>
+				<property name="AdverType" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="DocumentUID" type="xs:string" lowerBound="0" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Item" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Articul" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Type" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="BaseUnitUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="ParentItemGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="TaxGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PeriodOfStorage" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="TareWeight" type="xs:decimal" lowerBound="1" form="Attribute"/>
+				<property name="AlcoholPercentage" type="xs:decimal" lowerBound="1" form="Attribute"/>
+				<property name="ItemUnitSchema" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="UnitUID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="ConvertRatioToBase" type="xs:decimal" lowerBound="1" form="Attribute"/>
+						<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+						<property name="SaleItem" upperBound="-1">
+							<typeDef xsi:type="ObjectType">
+								<property name="Property1" type="xs:string" lowerBound="0" form="Attribute"/>
+								<property name="Property2" type="xs:string" lowerBound="0" form="Attribute"/>
+								<property name="Property3" type="xs:string" lowerBound="0" form="Attribute"/>
+								<property name="Property4" type="xs:string" lowerBound="0" form="Attribute"/>
+								<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+								<property name="ReturnUID" type="xs:string" lowerBound="1" form="Attribute"/>
+								<property name="PriceList" lowerBound="0" upperBound="-1">
+									<typeDef xsi:type="ObjectType">
+										<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="SectionUID" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="FromDate" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="Value" type="xs:decimal" lowerBound="1" form="Attribute"/>
+									</typeDef>
+								</property>
+								<property name="LegalPersonTaxGroup" lowerBound="0" upperBound="-1">
+									<typeDef xsi:type="ObjectType">
+										<property name="SectionUID" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="LegalPersonUID" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="TaxGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+									</typeDef>
+								</property>
+								<property name="Section" upperBound="-1">
+									<typeDef xsi:type="ObjectType">
+										<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+									</typeDef>
+								</property>
+								<property name="Barcode" lowerBound="0" upperBound="-1">
+									<typeDef xsi:type="ObjectType">
+										<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="ReturnUID" type="xs:string" lowerBound="1" form="Attribute"/>
+									</typeDef>
+								</property>
+								<property name="Scale" lowerBound="0" upperBound="-1">
+									<typeDef xsi:type="ObjectType">
+										<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+										<property name="PLU" type="xs:int" lowerBound="1" form="Attribute"/>
+									</typeDef>
+								</property>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+				<property name="ItemRestriction" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="PriceListCategoryUID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="MinPrice" type="xs:decimal" lowerBound="1" form="Attribute"/>
+						<property name="MaxDiscountPercent" type="xs:decimal" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Store" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="ParentStoreUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="PriceListCategory" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Param" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="GetLastEvent" type="xs:int" lowerBound="0" form="Attribute"/>
+				<property name="FromDate" type="xs:string" lowerBound="0" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Document" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="DiscountSchema" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Type" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="DiscountElement" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Type" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="StartDate" type="xs:string" lowerBound="0" form="Attribute"/>
+						<property name="StopDate" type="xs:string" lowerBound="0" form="Attribute"/>
+						<property name="StartTime" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="StopTime" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="DaysOfWeek" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="DiscountCardUID" type="xs:string" lowerBound="0" form="Attribute"/>
+						<property name="Edge" upperBound="-1">
+							<typeDef xsi:type="ObjectType">
+								<property name="Value" type="xs:decimal" lowerBound="1" form="Attribute"/>
+								<property name="Discount" type="xs:decimal" lowerBound="1" form="Attribute"/>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="ApplyDiscountSchema" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="DiscountSchemaUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="DisableDS" type="xs:boolean" lowerBound="0" form="Attribute"/>
+				<property name="DocumentUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Store" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+				<property name="Item" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+				<property name="POS" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Ingredients" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ItemUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Ingredient" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="No" type="xs:integer" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Menu" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="ParentMenuUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PrinterGroup1UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PrinterGroup2UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PrinterGroup3UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Period" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="PeriodUID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+				<property name="ModifierGroup" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="ModifierGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="MenuItem" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="MenuUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="ItemUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="ItemUnitSchemaUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="InheritBarcode" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="Barcode" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PrinterGroup1UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PrinterGroup2UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PrinterGroup3UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ModifierGroup" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="ModifierGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Period" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="UseFromDate" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="UseToDate" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="UseFromTime" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="UseToTime" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="FromDate" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ToDate" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="FromTime" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ToTime" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="DateControlType" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="WeekDays" type="xs:string" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="ModifierGroup" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="Modifier" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="ModifierUID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Modifier" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="ItemUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="ItemUnitSchemaUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Quantity" type="xs:decimal" lowerBound="0" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Comment" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Scale" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Item" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+						<property name="ItemUID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="UnitUID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Property1" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Property2" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Property3" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="Property4" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="PLU" type="xs:int" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="DiscountCardStopList" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="StartCardNumber" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="EndCardNumber" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="ItemRestriction" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PriceListCategoryUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ItemUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="MinPrice" type="xs:decimal" lowerBound="1" form="Attribute"/>
+				<property name="MaxDiscountPercent" type="xs:decimal" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="ItemCategory" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="ItemCategory2Pos2LegalPerson" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="PosUID" type="xs:string" lowerBound="1" form="Attribute"/>
+						<property name="LegalPersonUID" type="xs:string" lowerBound="1" form="Attribute"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="ItemCategory2Item" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ItemCategoryUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ItemUID" type="xs:string" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="PrintService" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="TableGroup" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ParentUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Type" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="Seats" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="TableCodeFF" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Table" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="TableGroupUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="Type" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="Seats" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="TableCodeFF" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="PromotionDesc" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="promo_id" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="promo_comp_id" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="promo_dtl_id" type="xs:int" lowerBound="1" form="Attribute"/>
+				<property name="Packet" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="IsActive" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="IsDeleted" type="xs:boolean" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="0" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="Constant">
+			<typeDef xsi:type="ObjectType">
+				<property name="ConstantName" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="ConstantValue" type="xs:string" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Payment">
+		<property name="Type" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="LegalPersonUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Amount" type="xs:decimal" lowerBound="1" form="Attribute"/>
+		<property name="IsCash" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="DiscountCardUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="DiscountCardNumber" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType name="Sale">
+		<property name="LegalPersonUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="SaleItemUID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ItemUID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="UnitUID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Quantity" type="xs:decimal" lowerBound="1" form="Attribute"/>
+		<property name="Amount" type="xs:decimal" lowerBound="1" form="Attribute"/>
+		<property name="ItemUnitSchemaUID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Property1" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Property2" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Property3" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Property4" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="MenuItemUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ModifierUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="DiscountCardUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="DiscountCardNumber" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="CommentUID" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType name="Shift">
+		<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="PosUID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="LegalPersonUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="No" type="xs:integer" lowerBound="1" form="Attribute"/>
+		<property name="OpenTime" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+		<property name="CloseTime" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+		<property name="Amount" type="xs:decimal" lowerBound="0" form="Attribute"/>
+		<property name="AmountCash" type="xs:decimal" lowerBound="0" form="Attribute"/>
+		<property name="FreeAmount" type="xs:decimal" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType name="Shifts">
+		<property name="Shift" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="StoreUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="PosUID" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="LegalPersonUID" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="ShiftNo" type="xs:integer" lowerBound="1" form="Attribute"/>
+				<property name="OpenDate" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+				<property name="CloseDate" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="ZReport">
+		<property xmlns:d3p1="http://1c-astor.ru/SMS" name="Shift" type="d3p1:Shift" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://1c-astor.ru/SMS" name="Payment" type="d3p1:Payment" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://1c-astor.ru/SMS" name="Sale" type="d3p1:Sale" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+</package>

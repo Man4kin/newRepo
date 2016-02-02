@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>Item</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>1C</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код1С</dataPath>
+			<field>Код1С</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Магазин1С</dataPath>
+			<field>Магазин1С</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус1С</dataPath>
+			<field>Статус1С</field>
+		</field>
+		<dataSource>Item</dataSource>
+		<query>ВЫБРАТЬ
+	СтатусыНоменклатуры.Номенклатура.Код КАК Код1С,
+	СтатусыНоменклатуры.СтруктурнаяЕдиница.Код КАК Магазин1С,
+	ВЫБОР
+		КОГДА СтатусыНоменклатуры.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыТоваров.Активный)
+			ТОГДА "A"
+		КОГДА СтатусыНоменклатуры.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыТоваров.НеАктивный)
+			ТОГДА "I"
+		КОГДА СтатусыНоменклатуры.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыТоваров.СнятыйСпроизводства)
+			ТОГДА "C"
+		ИНАЧЕ "D"
+	КОНЕЦ КАК Статус1С
+ИЗ
+	РегистрСведений.СтатусыНоменклатуры КАК СтатусыНоменклатуры</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>RMS</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодТовара</dataPath>
+			<field>КодТовара</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодМагазина</dataPath>
+			<field>КодМагазина</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+		</field>
+		<dataSource>Item</dataSource>
+		<query>ВЫБРАТЬ
+	RMS13_V_ITEM_LOC.ITEM КАК КодТовара,
+	RMS13_V_ITEM_LOC.LOC КАК КодМагазина,
+	RMS13_V_ITEM_LOC.STATUS КАК Статус
+ИЗ
+	ВнешнийИсточникДанных.RMS.Таблица.RMS13_V_ITEM_LOC КАК RMS13_V_ITEM_LOC
+ГДЕ
+	RMS13_V_ITEM_LOC.LOC = &amp;LOC</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>1C</destinationDataSet>
+		<sourceExpression>КодТовара</sourceExpression>
+		<destinationExpression>Код1С</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>RMS</sourceDataSet>
+		<destinationDataSet>1C</destinationDataSet>
+		<sourceExpression>КодМагазина</sourceExpression>
+		<destinationExpression>Магазин1С</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>Код</dataPath>
+		<expression>КодТовара+"-"+Строка(КодМагазина)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Код</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>LOC</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>LOC</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>10</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодТовара</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодМагазина</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Статус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Статус1С</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>c8227188-497b-4be3-86aa-85921e846612</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Код</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Код1С</dcsset:left>
+								<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Магазин1С</dcsset:left>
+								<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+							</dcsset:item>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Код1С</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">КодТовара</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Магазин1С</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">КодМагазина</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Статус1С</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">Статус</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>FilterOutput</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

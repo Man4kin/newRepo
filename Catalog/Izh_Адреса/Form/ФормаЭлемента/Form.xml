@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="5"/>
+		</InputField>
+		<InputField name="ПорядокОбхода" id="3">
+			<DataPath>Объект.ПорядокОбхода</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПорядокОбходаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ПорядокОбходаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Izh_Адреса</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.Izh_АдресаНоменклатуры.StandardCommand.OpenByValue.Адрес</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>true</xr:Common>
+					<xr:Value name="Role.АдминистрированиеБД">false</xr:Value>
+					<xr:Value name="Role.АдминистрированиеСети">false</xr:Value>
+					<xr:Value name="Role.ВыводНаПринтерФайлБуферОбмена">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеБазовойНСИ">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеZОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВариантовОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВозвратовОтПокупателя">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеИнвентаризаций">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеКассовыхДокументов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОтчетовРеализатора">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПерепродажиМеждуФирмами">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПланируемыхПоставок">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПриходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПроизводственныхДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРасходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеСкладскихДокументов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРассылокОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЗапускAutomation">false</xr:Value>
+					<xr:Value name="Role.ЗапускВебКлиента">false</xr:Value>
+					<xr:Value name="Role.ЗапускВнешнегоСоединения">false</xr:Value>
+					<xr:Value name="Role.ЗапускТолстогоКлиента">false</xr:Value>
+					<xr:Value name="Role.ЗапускТонкогоКлиента">false</xr:Value>
+					<xr:Value name="Role.ИзменениеМакетовПечатныхФорм">false</xr:Value>
+					<xr:Value name="Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеВариантовОтчетов">false</xr:Value>
+					<xr:Value name="Role.БазовыеПрава">false</xr:Value>
+					<xr:Value name="Role.ПросмотрДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеУчетныхЗаписейЭлектроннойПочты">false</xr:Value>
+					<xr:Value name="Role.ПросмотрСебестоимости">false</xr:Value>
+					<xr:Value name="Role.РаботаСТорговымОборудованием">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВозвратныхНакладныхОтПокупателя">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДенежныхДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗетОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИВыполнениеЗаданий">false</xr:Value>
+					<xr:Value name="Role.НеОперативноеПроведение">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИнвентаризаций">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПодключаемогоОборудования">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПриходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПроизводственныхДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеРасходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ЦВД">false</xr:Value>
+					<xr:Value name="Role.ОператорПриходаВыписки">false</xr:Value>
+					<xr:Value name="Role.ОператорПриходаВыписки_Алко">false</xr:Value>
+					<xr:Value name="Role.МенеджерРЦ">true</xr:Value>
+					<xr:Value name="Role.Экономист">false</xr:Value>
+					<xr:Value name="Role.Бухгалтер">false</xr:Value>
+					<xr:Value name="Role.СпециалистМОП">false</xr:Value>
+					<xr:Value name="Role.КатегорийныйМенеджер">false</xr:Value>
+					<xr:Value name="Role.КонтроллерРевизор">false</xr:Value>
+					<xr:Value name="Role.Сертификатчик">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСкладскихДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ОбновлениеКонфигурацииБазыДанных">false</xr:Value>
+					<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+					<xr:Value name="Role.ПросмотрЖурналаРегистрации">false</xr:Value>
+					<xr:Value name="Role.СохранениеДанныхПользователя">false</xr:Value>
+					<xr:Value name="Role.ПросмотрБазовойНСИ">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеВебСервисов">false</xr:Value>
+					<xr:Value name="Role.ЗапускРегламентныхЗаданий">false</xr:Value>
+					<xr:Value name="Role.Izh_ЧтениеБазовойНСИ">false</xr:Value>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

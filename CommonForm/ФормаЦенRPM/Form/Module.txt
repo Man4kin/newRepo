@@ -1,0 +1,78 @@
+﻿//++Минин
+&НаСервере
+Перем OraSession;
+
+&НаСервере
+Перем OraDatabase;
+
+&НаСервере
+Процедура ПодключениеКRPM()
+	//Соединение с RPM		
+	login= "VIATCHINNIN";
+	password= "VIATCHINNIN32";
+	
+	Попытка
+		
+		OraSession = Новый COMObject("OracleInProcServer.XOraSession");
+		OraDatabase = OraSession.OpenDatabase("RMS_PROD",login+"/"+password, 0);
+		OraDatabase.ExecuteSQL("ALTER SESSION SET NLS_NUMERIC_CHARACTERS = '.,'");	
+		OraDatabase.Parameters.Add ("p_item", "", 1,1);
+		OraDatabase.Parameters.Add("p_Loc","", 1,2);
+		OraDatabase.Parameters.Add("p_Type","", 1,1);
+		OraDatabase.Parameters.Add("p_Type_cost","", 1,1);
+		OraDatabase.Parameters.Add("p_ammount",1,1,2);
+		OraDatabase.Parameters.Add ("result",0, 2,2);    
+	Исключение
+		Сообщить (ОписаниеОшибки());
+	КонецПопытки;    
+КонецПроцедуры
+
+&НаСервере
+Процедура ПриСозданииНаСервере(Отказ, СтандартнаяОбработка)
+	ПодключениеКRPM();
+	АдресХранилища = Параметры.АдресТаблицы;
+	тзТовары = ПолучитьИзВременногоХранилища(АдресХранилища);
+	Для Каждого СтрокаТЗ из тзТовары Цикл
+		НоваяСтрока = тз.Добавить();
+		ЗаполнитьЗначенияСвойств(НоваяСтрока,СтрокаТЗ);
+		НоваяСтрока.Код = СтрокаТЗ.Номенклатура.Код;
+		НоваяСтрока.ЦенаRPM = СтоимостьИзРМС(СокрЛП(НоваяСтрока.Код),Параметры.Контрагент.Код,"S",1,"RETAIL");
+	КонецЦикла;
+КонецПроцедуры
+
+&НаСервере
+Функция СтоимостьИзРМС (КодТовара, Номер_Магазина, Магазин_Склад,Количество,Розница_Приход)
+	
+	//Магазин_Склад - "S" - магазин, "W" - склад т.к. один номер может быть для склада и магазина
+	//Розница_Приход - "RETAIL" - розничные цены, "COST" - приходные цены
+	
+	OraDatabase.Parameters("p_item").Value=КодТовара;	
+	OraDatabase.Parameters("p_Loc").Value=Номер_Магазина;	
+	OraDatabase.Parameters("p_Type").Value=Магазин_Склад;	
+	OraDatabase.Parameters("p_Type_cost").Value=Розница_Приход;	
+	OraDatabase.Parameters("p_ammount").Value=Количество;	
+	OraDatabase.Parameters("result").Value="0";
+	
+	//Пример: rms13.reports_sql.get_cost_and_retails('0141183', 14, 'S', 1, 'RETAIL')
+	
+	sql_p ="begin  :result := rms13.reports_sql.get_cost_and_retails(:p_item,:p_Loc, :p_Type, :p_ammount,:p_Type_cost); end;";
+	
+	OraDatabase.ExecuteSQL (sql_p);
+	
+	Если OraDatabase.Parameters("result").value = Null Тогда 
+		OraDatabase.Parameters("result").value = 0;
+	КонецЕсли;
+	
+	Возврат Число(OraDatabase.Parameters("result").value); 
+	
+КонецФункции
+
+&НаКлиенте
+Процедура Принять(Команда)
+	Ответ = Вопрос("Заполнить документ ценами из RPM?",РежимДиалогаВопрос.ДаНет);
+	Если Ответ = КодВозвратаДиалога.Да Тогда
+		//Таблица = Элементы.ТЗ.ТекущиеДанные; 
+		ЭтаФорма.Закрыть(ТЗ);
+	КонецЕсли;
+КонецПроцедуры
+//--Минин	

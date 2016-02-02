@@ -1,0 +1,10 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/CodeHdrRef">
+	<property name="CodeHdrRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/CodeHdrRef" name="code_type" type="d4p1:varchar24"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/CodeHdrRef" name="code" type="d4p1:varchar26"/>
+		</typeDef>
+	</property>
+	<valueType name="varchar24" base="xs:string" variety="Atomic" maxLength="4"/>
+	<valueType name="varchar26" base="xs:string" variety="Atomic" maxLength="6"/>
+</package>

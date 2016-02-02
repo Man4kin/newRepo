@@ -1,0 +1,35 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://1c-astor.ru/Rests">
+	<objectType name="Состав_ЗаказНаРЦ">
+		<property name="Склад" type="xs:decimal"/>
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="ВПутиРЦ" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="ЗаказНаРЦ">
+		<property xmlns:d3p1="http://1c-astor.ru/Rests" name="Состав" type="d3p1:Состав_ЗаказНаРЦ" upperBound="-1"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="ПараметрыОтчета">
+		<property name="Фирма" type="xs:decimal"/>
+		<property name="Склад" type="xs:decimal"/>
+		<property name="СтруктурнаяЕдиница" type="xs:decimal"/>
+		<property name="ДатаНачала" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="ДатаОкончания" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://1c-astor.ru/Rests" name="Состав" type="d3p1:ПараметрыОтчета_Состав" upperBound="-1"/>
+	</objectType>
+	<objectType name="ПараметрыОтчета_Состав">
+		<property name="Номенклатура" type="xs:string"/>
+	</objectType>
+	<objectType name="РезультатОтчета">
+		<property xmlns:d3p1="http://1c-astor.ru/Rests" name="Состав" type="d3p1:РезультатОтчета_Состав" upperBound="-1"/>
+	</objectType>
+	<objectType name="РезультатОтчета_Состав">
+		<property name="Фирма" type="xs:string"/>
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="Регистратор" type="xs:string"/>
+		<property name="НачальныйОстаток" type="xs:decimal"/>
+		<property name="Приход" type="xs:decimal"/>
+		<property name="Расход" type="xs:decimal"/>
+		<property name="КонечныйОстаток" type="xs:decimal"/>
+	</objectType>
+</package>

@@ -1,0 +1,877 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://apm-consult.ru/rsfinancials/rs">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<objectType name="CatalogObject_БанковскиеСчета">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Owner" type="xs:string" lowerBound="0"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="НомерСчета" type="xs:string"/>
+		<property name="ВидСчета" type="xs:string"/>
+		<property name="ДатаОткрытия" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаЗакрытия" type="xs:dateTime" lowerBound="0"/>
+		<property name="НаименованиеБанка" type="xs:string"/>
+		<property name="КоррСчетБанка" type="xs:string"/>
+		<property name="АдресБанка" type="xs:string"/>
+		<property name="ГородБанка" type="xs:string"/>
+		<property name="ТелефоныБанка" type="xs:string"/>
+		<property name="БИКБанка" type="xs:string"/>
+	</objectType>
+	<objectType name="CatalogObject_ВидыСписания">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Code" type="xs:decimal"/>
+		<property name="ТипСписания" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="CatalogObject_ЗначенияСвойств">
+		<property name="Description" type="xs:string"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="TypeOwner" type="xs:string"/>
+		<property name="Owner" type="xs:string"/>
+	</objectType>
+	<objectType name="CatalogObject_КассыФирмы">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Owner" type="xs:string" lowerBound="0"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Фирма" type="xs:string"/>
+	</objectType>
+	<objectType name="CatalogObject_Контрагенты">
+		<property name="IsFolder" type="xs:boolean"/>
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Parent" type="xs:string"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="ИНН" type="xs:string" lowerBound="0"/>
+		<property name="КПП" type="xs:string" lowerBound="0"/>
+		<property name="ПолноеНаименование" type="xs:string" lowerBound="0"/>
+		<property name="КодПоОКПО" type="xs:string" lowerBound="0"/>
+		<property name="ОсновнойБанковскийСчет" type="xs:string" lowerBound="0"/>
+		<property name="ДоговорПоУмолчанию" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="Покупатель" type="xs:boolean" lowerBound="0"/>
+		<property name="Поставщик" type="xs:boolean" lowerBound="0"/>
+		<property name="ЭтоПодразделение" type="xs:boolean" lowerBound="0"/>
+		<property name="GLN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ОператорEDI" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="СпособСинхронизацииТоваров" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Местный" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ДатаДопСогАПП" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Активен" type="xs:boolean" nillable="true"/>
+		<property name="Производитель" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="НеФормироватьСчетаФактурыАвтоматически" type="xs:boolean" lowerBound="0"/>
+		<property name="ВремяЗаказа" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="МинКолДнейДоставки" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ЗаказВРазрезеПротоколов" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ИнфоОТоваре" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="БезЗаказа" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="WWW" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DESADV" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="RECADV" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="RETANN" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ФактическийАдрес" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ЮридическийАдрес" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Телефон" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПротоколРЦ" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ТипыДоговора" type="d3p1:InformationRegisterRecord_ОсновныеДоговоры" lowerBound="0" upperBound="99999" nillable="true"/>
+		<property name="ГоловнойКонтрагент" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Izh_ЮЗЭДО_ПриходнаяНакладная" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Izh_ЮЗЭДО_СчетФактура" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ИнойГрузоотправитель" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Агент" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="CatalogObject_КредитныеКарты">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="ТипОплаты" type="xs:string"/>
+	</objectType>
+	<objectType name="CatalogObject_Организации">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Code" type="xs:decimal"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Префикс" type="xs:string"/>
+		<property name="ИНН" type="xs:string" nillable="true"/>
+		<property name="КПП" type="xs:string"/>
+		<property name="ПолноеНаименование" type="xs:string"/>
+		<property name="КодПоОКПО" type="xs:string" nillable="true"/>
+		<property name="ОсновнойБанковскийСчет" type="xs:string" lowerBound="0"/>
+		<property name="ЮридическийАдрес" type="xs:string" lowerBound="0"/>
+		<property name="ФактическийАдрес" type="xs:string" lowerBound="0"/>
+		<property name="ПочтовыйАдрес" type="xs:string" lowerBound="0"/>
+		<property name="Телефон" type="xs:string" lowerBound="0"/>
+		<property name="Руководитель" type="xs:string" lowerBound="0"/>
+		<property name="ГлавныйБухгалтер" type="xs:string" lowerBound="0"/>
+		<property name="Кассир" type="xs:string" lowerBound="0"/>
+		<property name="ЮрФизЛицо" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ОГРН" type="xs:string" nillable="true"/>
+		<property name="СвидетельствоСерияНомер" type="xs:string" nillable="true"/>
+		<property name="СвидетельствоДатаВыдачи" type="xs:date" nillable="true"/>
+	</objectType>
+	<objectType name="CatalogObject_СтатьиДвиженияДенежныхСредств">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="СчетУчета" type="xs:string"/>
+		<property name="КлассификаторДенежныхОпераций" type="xs:string"/>
+	</objectType>
+	<objectType name="CatalogObject_ФизическиеЛица">
+		<property name="IsFolder" type="xs:boolean"/>
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Parent" type="xs:string"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Пол" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentObject_ZОтчет">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Возврат" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_ZОтчет_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Карты" type="d3p1:DocumentTabularSectionRow_ZОтчет_Карты" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_ZОтчет_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Выручка" type="d3p1:DocumentTabularSectionRow_ZОтчет_Выручка" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_АвансовыйОтчет">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="КоличествоПриложенныхДокументов" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоПриложенныхЛистов" type="xs:decimal" lowerBound="0"/>
+		<property name="НазначениеАванса" type="xs:string" lowerBound="0"/>
+		<property name="ПредыдущийАванс" type="xs:decimal" lowerBound="0"/>
+		<property name="ПерерасходПоПредыдущемуАвансу" type="xs:boolean" lowerBound="0"/>
+		<property name="Сотрудник" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Авансы" type="d3p1:DocumentTabularSectionRow_АвансовыйОтчет_Авансы" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_АвансовыйОтчет_Состав" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentObject_ВозвратнаяНакладнаяОтПокупателя">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="Договор" type="xs:string" lowerBound="0"/>
+		<property name="ТипВозврата" type="xs:string" lowerBound="0"/>
+		<property name="ТипВозвратаПоставщику" type="xs:string" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="КурсВалютыДоговора" type="xs:decimal" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Грузополучатель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="АдресДоставки" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Грузоотправитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ГрузоотправительТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ВариантРасчетаНДС" type="xs:string" lowerBound="0"/>
+		<property name="ПричинаВозвратаТоваров" type="xs:string" lowerBound="0"/>
+		<property name="АдресГрузоотправителя" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокументОснование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокументОснованиеТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property name="Алко" type="xs:boolean" lowerBound="0"/>
+		<property name="Корректировка" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_ВозвратнаяНакладнаяОтПокупателя_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_ВозвратнаяНакладнаяОтПокупателя_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property name="НомерВходящегоСчетаФактуры" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДатаВходящегоСчетаФактуры" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_Инвентаризация">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Основание" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="ЧастичнаяИнвентаризация" type="xs:boolean" lowerBound="0"/>
+		<property name="ВидКоррекцииСписание" type="xs:string" lowerBound="0"/>
+		<property name="ВидКоррекцииОприходование" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Документы" type="d3p1:DocumentTabularSectionRow_Инвентаризация_Документы" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_КорректировкаПоступления">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="РежимКорректировки" type="xs:string" lowerBound="0"/>
+		<property name="ДокументПоступления" type="xs:string" lowerBound="0"/>
+		<property name="ДокументПоступленияТип" type="xs:string" lowerBound="0"/>
+		<property name="ИсправляемыйДокумент" type="xs:string" lowerBound="0"/>
+		<property name="ИсправляемыйДокументТип" type="xs:string" lowerBound="0"/>
+		<property name="АдресГрузоотправителя" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="ДатаДокумента" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаСФ" type="xs:dateTime" lowerBound="0"/>
+		<property name="НомерДокумента" type="xs:string" lowerBound="0"/>
+		<property name="НомерСФ" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_КорректировкаПоступления_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_КорректировкаРеализации">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Грузополучатель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Грузоотправитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ГрузоотправительТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="РежимКорректировки" type="xs:string" lowerBound="0"/>
+		<property name="ДокументРеализации" type="xs:string" lowerBound="0"/>
+		<property name="ДокументРеализацииТип" type="xs:string" lowerBound="0"/>
+		<property name="ИсправляемыйДокумент" type="xs:string" lowerBound="0"/>
+		<property name="ИсправляемыйДокументТип" type="xs:string" lowerBound="0"/>
+		<property name="АдресГрузоотправителя" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_КорректировкаРеализации_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_КорректировкаРеализации_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_КоррекцияЗапасов">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Основание" type="xs:string" lowerBound="0"/>
+		<property name="ВиновноеЛицо" type="xs:string" lowerBound="0"/>
+		<property name="ВидСписания" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Оприходование" type="xs:boolean" lowerBound="0"/>
+		<property name="СчетУчета" type="xs:string" lowerBound="0"/>
+		<property name="Субконто1" type="xs:string" lowerBound="0"/>
+		<property name="Субконто2" type="xs:string" lowerBound="0"/>
+		<property name="Субконто3" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property name="Алко" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_КоррекцияЗапасов_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_КоррекцияЗапасов_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_ОтчетПроизводстваЗаСмену">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="СкладПроизводства" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Продукция" type="d3p1:DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Продукция" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма1" type="d3p1:ValueStorage"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма2" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_ОтчетРеализатора">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="Договор" type="xs:string" lowerBound="0"/>
+		<property name="ТипОтчета" type="xs:string" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="КурсВалютыДоговора" type="xs:decimal" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СчетУчета" type="xs:string" lowerBound="0"/>
+		<property name="Субконто1" type="xs:string" lowerBound="0"/>
+		<property name="Субконто2" type="xs:string" lowerBound="0"/>
+		<property name="Субконто3" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_ОтчетРеализатора_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+		<property name="ДокументОснование" type="xs:string" lowerBound="0"/>
+		<property name="ТипДокументаОснования" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentObject_Перемещение">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Склад" type="xs:string"/>
+		<property name="СкладПолучатель" type="xs:string"/>
+		<property name="Основание" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="ДокОснование" type="xs:string" lowerBound="0"/>
+		<property name="ДокОснованиеТип" type="xs:string" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_Перемещение_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_Перемещение_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_ПриходнаяНакладная">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0"/>
+		<property name="Договор" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="НомерДокумента" type="xs:string" lowerBound="0"/>
+		<property name="ДатаДокумента" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДокОснование" type="xs:string" lowerBound="0"/>
+		<property name="ДокОснованиеТип" type="xs:string" lowerBound="0"/>
+		<property name="ВариантРасчетаНДС" type="xs:string" lowerBound="0"/>
+		<property name="КурсВалютыДоговора" type="xs:decimal" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Таможня" type="xs:string" lowerBound="0"/>
+		<property name="ДоговорТаможня" type="xs:string" lowerBound="0"/>
+		<property name="ТаможенныйСбор" type="xs:decimal" lowerBound="0"/>
+		<property name="БонуснаяПоставка" type="xs:boolean" lowerBound="0"/>
+		<property name="Грузоотправитель" type="xs:string" lowerBound="0"/>
+		<property name="Грузополучатель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ГрузополучательТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="НомерСФ" type="xs:string" lowerBound="0"/>
+		<property name="ДатаСФ" type="xs:dateTime" lowerBound="0"/>
+		<property name="Приемщик" type="xs:string" lowerBound="0"/>
+		<property name="ВключатьУслугиВСтоимостьТМЦ" type="xs:boolean" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property name="Алко" type="xs:boolean" lowerBound="0"/>
+		<property name="Возврат" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_ПриходнаяНакладная_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_ПриходнаяНакладная_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+		<property name="ДатаПредоставленияДокумента" type="xs:dateTime" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject_ПриходныйКассовыйОрдер">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="ДенежнаяЯчейка" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КлассификацияОперации" type="xs:string" lowerBound="0"/>
+		<property name="КоррСчет" type="xs:string" lowerBound="0"/>
+		<property name="КурсВалютыДоговора" type="xs:decimal" lowerBound="0"/>
+		<property name="Основание" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПравилоРасчетаСумм" type="xs:string" lowerBound="0"/>
+		<property name="Приложение" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПринятоОт" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПоДоговору" type="xs:decimal" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СтатьяДвиженияДенежныхСредств" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокументОснованиеТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокументОснование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ВТомЧисле" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Касса" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КлассификаторДДС" type="xs:string" lowerBound="0"/>
+		<property name="Аналитика" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ТипАналитики" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentObject_РасходнаяНакладная">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0"/>
+		<property name="Договор" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Основание" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ВариантРасчетаНДС" type="xs:string" lowerBound="0"/>
+		<property name="КурсВалютыДоговора" type="xs:decimal" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Грузополучатель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="АдресДоставки" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Грузоотправитель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ГрузоотправительТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокОснование" type="xs:string" lowerBound="0"/>
+		<property name="ДокОснованиеТип" type="xs:string" lowerBound="0"/>
+		<property name="АдресГрузоотправителя" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property name="Алко" type="xs:boolean" lowerBound="0"/>
+		<property name="Возврат" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Менеджер" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Экспедитор" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_РасходнаяНакладная_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_РасходнаяНакладная_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentObject_РасходныйКассовыйОрдер">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="Валюта" type="xs:string" lowerBound="0"/>
+		<property name="ДенежнаяЯчейка" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КлассификацияОперации" type="xs:string" lowerBound="0"/>
+		<property name="КоррСчет" type="xs:string" lowerBound="0"/>
+		<property name="КурсВалютыДоговора" type="xs:decimal" lowerBound="0"/>
+		<property name="Основание" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПравилоРасчетаСумм" type="xs:string" lowerBound="0"/>
+		<property name="Приложение" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Выдать" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПоДоговору" type="xs:decimal" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СтатьяДвиженияДенежныхСредств" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокументОснованиеТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДокументОснование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ВТомЧисле" type="xs:string" lowerBound="0"/>
+		<property name="НеОтражатьВОФУ" type="xs:boolean" lowerBound="0"/>
+		<property name="НеВыгружатьВБУ" type="xs:boolean" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Касса" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КлассификаторДДС" type="xs:string" lowerBound="0"/>
+		<property name="Аналитика" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ТипАналитики" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0"/>
+		<property name="ПоДокументу" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject_СчетФактура">
+		<property name="Ref" type="xs:string" lowerBound="0"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Posted" type="xs:boolean" lowerBound="0"/>
+		<property name="ВидСчетаФактуры" type="xs:string" lowerBound="0"/>
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0"/>
+		<property name="Договор" type="xs:string" lowerBound="0"/>
+		<property name="СтруктурнаяЕдиница" type="xs:string"/>
+		<property name="НомерПлатежноРасчетногоДокумента" type="xs:string" lowerBound="0"/>
+		<property name="ДатаПлатежноРасчетногоДокумента" type="xs:date" lowerBound="0"/>
+		<property name="ДокОснование" type="xs:string" lowerBound="0"/>
+		<property name="ДокОснованиеТип" type="xs:string" lowerBound="0"/>
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="НомерИсправления" type="xs:decimal" lowerBound="0"/>
+		<property name="Исправление" type="xs:boolean"/>
+		<property name="ИсправляемыйСчетФактура" type="xs:string" lowerBound="0"/>
+		<property name="НомерИсправляемогоКорректировочногоДокумента" type="xs:string" lowerBound="0"/>
+		<property name="ДатаИсправляемогоКорректировочногоДокумента" type="xs:dateTime"/>
+		<property name="НомерИсходногоДокумента" type="xs:string" lowerBound="0"/>
+		<property name="ДатаИсходногоДокумента" type="xs:dateTime"/>
+		<property name="УчитыватьИсправлениеИсходногоДокумента" type="xs:boolean"/>
+		<property name="НомерИсправленияИсходногоДокумента" type="xs:string" lowerBound="0"/>
+		<property name="ДатаИсправленияИсходногоДокумента" type="xs:dateTime"/>
+		<property name="КодВидаОперации" type="xs:string" lowerBound="0"/>
+		<property name="СчетФактураНеВыставляется" type="xs:boolean"/>
+		<property name="Выставлен" type="xs:boolean"/>
+		<property name="ДатаВыставления" type="xs:dateTime"/>
+		<property name="КодСпособаВыставления" type="xs:decimal" lowerBound="0"/>
+		<property name="СчетФактураБезНДС" type="xs:boolean"/>
+		<property name="СуммаУвеличение" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаУменьшение" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСУвеличение" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСУменьшение" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="ТипДоговора" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ПечатнаяФорма" type="d3p1:ValueStorage"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ZОтчет_Выручка">
+		<property name="ККМ" type="xs:string" lowerBound="0"/>
+		<property name="Смена" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНал" type="xs:decimal" lowerBound="0"/>
+		<property name="СвободнаяСумма" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ZОтчет_Карты">
+		<property name="ТипКарты" type="xs:string" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНоминалов" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ZОтчет_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ZОтчет_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_АвансовыйОтчет_Авансы">
+		<property name="РКО" type="xs:string" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_АвансовыйОтчет_Состав">
+		<property name="ДатаДокументаРасхода" type="xs:dateTime" lowerBound="0"/>
+		<property name="НомерДокументаРасхода" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеДокументаРасхода" type="xs:string" lowerBound="0"/>
+		<property name="СуммаПоОтчету" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СтатьяДвиженияДенежныхСредств" type="xs:string" lowerBound="0"/>
+		<property name="КлассификаторДДС" type="xs:string" lowerBound="0"/>
+		<property name="ТипАналитики" type="xs:string" lowerBound="0"/>
+		<property name="Аналитика" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ВозвратнаяНакладнаяОтПокупателя_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСПродажи" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ВозвратнаяНакладнаяОтПокупателя_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_Инвентаризация_Документы">
+		<property name="Фирма" type="xs:string" lowerBound="0"/>
+		<property name="Склад" type="xs:string" lowerBound="0"/>
+		<property name="Оприходование" type="xs:boolean"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:DocumentTabularSectionRow_Инвентаризация_Состав" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="ОстаткиНоменклатуры" type="d3p1:DocumentTabularSectionRow_Инвентаризация_ОстаткиНоменклатуры" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_Инвентаризация_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_Инвентаризация_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_КорректировкаПоступления_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоДоКорректировки" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДоКорректировки" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСДоКорректировки" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДСДоИзменения" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_КорректировкаРеализации_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_КорректировкаРеализации_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоДоКорректировки" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДоКорректировки" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСДоКорректировки" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДСДоИзменения" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_КоррекцияЗапасов_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_КоррекцияЗапасов_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Продукция">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ОтчетПроизводстваЗаСмену_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ОтчетРеализатора_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_Перемещение_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_Перемещение_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ПриходнаяНакладная_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_ПриходнаяНакладная_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоПоДокументу" type="xs:decimal" lowerBound="0"/>
+		<property name="СчетУчета" type="xs:string" lowerBound="0"/>
+		<property name="Субконто1" type="xs:string" lowerBound="0"/>
+		<property name="Субконто2" type="xs:string" lowerBound="0"/>
+		<property name="Субконто3" type="xs:string" lowerBound="0"/>
+		<property name="Содержание" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_РасходнаяНакладная_ОстаткиНоменклатуры">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="Комитент" type="xs:string" lowerBound="0"/>
+		<property name="КомитентТип" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СебестоимостьНДСУпр" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДСПродажи" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow_РасходнаяНакладная_Состав">
+		<property name="Номенклатура" type="xs:string" lowerBound="0"/>
+		<property name="ЕдиницаИзмерения" type="xs:string" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="СтавкаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="Содержание" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ДополнительныеРеквизитыКонтрагентов">
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:InformationRegisterRecord_ДополнительныеРеквизитыКонтрагентов_Состав" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ДополнительныеРеквизитыКонтрагентов_Состав">
+		<property name="Контрагент" type="xs:string" lowerBound="0"/>
+		<property name="ТипКонтрагента" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеСвойства" type="xs:string" lowerBound="0"/>
+		<property name="КодСвойства" type="xs:string" lowerBound="0"/>
+		<property name="ЗначениеСвойства" type="xs:string" lowerBound="0"/>
+		<property name="ТипЗначенияСвойства" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ДополнительныеРеквизитыОрганизаций">
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:InformationRegisterRecord_ДополнительныеРеквизитыОрганизаций_Состав" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ДополнительныеРеквизитыОрганизаций_Состав">
+		<property name="Организация" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеСвойства" type="xs:string" lowerBound="0"/>
+		<property name="КодСвойства" type="xs:string" lowerBound="0"/>
+		<property name="ЗначениеСвойства" type="xs:string" lowerBound="0"/>
+		<property name="ТипЗначенияСвойства" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ДополнительныеРеквизитыСтруктурныхЕдиниц">
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:InformationRegisterRecord_ДополнительныеРеквизитыСтруктурныхЕдиниц_Состав" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ДополнительныеРеквизитыСтруктурныхЕдиниц_Состав">
+		<property name="СтруктурнаяЕдиница" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеСвойства" type="xs:string" lowerBound="0"/>
+		<property name="КодСвойства" type="xs:string" lowerBound="0"/>
+		<property name="ЗначениеСвойства" type="xs:string" lowerBound="0"/>
+		<property name="ТипЗначенияСвойства" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ОсновныеДоговоры">
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Фирма" type="xs:string"/>
+		<property name="СЕ" type="xs:string"/>
+		<property name="ТипДоговора" type="xs:string"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ПаспортныеДанныеФизЛиц">
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:InformationRegisterRecord_ПаспортныеДанныеФизЛиц_Состав" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ПаспортныеДанныеФизЛиц_Состав">
+		<property name="Period" type="xs:dateTime"/>
+		<property name="Физлицо" type="xs:string"/>
+		<property name="ВидДокумента" type="xs:string"/>
+		<property name="Серия" type="xs:string"/>
+		<property name="Номер" type="xs:string"/>
+		<property name="КемВыдан" type="xs:string"/>
+		<property name="ДатаВыдачи" type="xs:dateTime"/>
+		<property name="КодПодразделения" type="xs:string"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_УчетнаяПолитикаНалоговыйУчет">
+		<property xmlns:d3p1="http://apm-consult.ru/rsfinancials/rs" name="Состав" type="d3p1:InformationRegisterRecord_УчетнаяПолитикаНалоговыйУчет_Состав" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_УчетнаяПолитикаНалоговыйУчет_Состав">
+		<property name="Period" type="xs:dateTime"/>
+		<property name="Организация" type="xs:string"/>
+		<property name="СхемаНалогообложения" type="xs:string"/>
+		<property name="АвтоматическоеФормированиеСчетаФактуры" type="xs:boolean"/>
+		<property name="ПлательщикНДС" type="xs:boolean"/>
+	</objectType>
+	<objectType name="УдалениеОбъекта">
+		<property name="Ref" type="xs:string"/>
+		<property name="Тип" type="xs:string"/>
+	</objectType>
+</package>

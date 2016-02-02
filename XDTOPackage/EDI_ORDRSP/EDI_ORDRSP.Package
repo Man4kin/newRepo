@@ -1,0 +1,77 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://exite.com.ua/ordrsp">
+	<property name="HEAD">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" name="BUYER" type="d4p1:GLN"/>
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" name="SUPPLIER" type="d4p1:GLN"/>
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" name="DELIVERYPLACE" type="d4p1:GLN" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" name="INVOICEPARTNER" type="d4p1:GLN" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" name="SENDER" type="d4p1:GLN"/>
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" name="RECIPIENT" type="d4p1:GLN"/>
+			<property name="EDIINTERCHANGEID">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="14"/>
+			</property>
+			<property name="EDIMESSAGE" type="xs:string" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" ref="d4p1:POSITION" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="ORDRSP">
+		<typeDef xsi:type="ObjectType">
+			<property name="NUMBER">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="14"/>
+			</property>
+			<property name="DATE" type="xs:date"/>
+			<property name="TIME" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<pattern>[0-9]{2}:[0-9]{2}</pattern>
+				</typeDef>
+			</property>
+			<property name="ORDERNUMBER">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+			</property>
+			<property name="ORDERDATE" type="xs:date"/>
+			<property name="DELIVERYDATE" type="xs:date"/>
+			<property name="DELIVERYTIME" type="xs:anyType" lowerBound="0"/>
+			<property name="CURRENCY" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>EUR</enumeration>
+					<enumeration>USD</enumeration>
+					<enumeration>UAH</enumeration>
+					<enumeration>RUB</enumeration>
+					<enumeration>BYR</enumeration>
+					<enumeration>MDL</enumeration>
+					<enumeration>ATS</enumeration>
+					<enumeration>CHF</enumeration>
+					<enumeration>ITL</enumeration>
+					<enumeration>DEM</enumeration>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="http://exite.com.ua/ordrsp" ref="d4p1:HEAD"/>
+		</typeDef>
+	</property>
+	<property name="POSITION">
+		<typeDef xsi:type="ObjectType">
+			<property name="POSITIONNUMBER" type="xs:positiveInteger"/>
+			<property name="PRODUCT" type="xs:string"/>
+			<property name="PRODUCTIDBUYER" type="xs:string" lowerBound="0"/>
+			<property name="PRODUCTIDSUPPLIER" type="xs:string" lowerBound="0"/>
+			<property name="DESCRIPTION" type="xs:string" lowerBound="0"/>
+			<property name="PRICE" type="xs:decimal" lowerBound="0"/>
+			<property name="PRICEWITHVAT" type="xs:decimal" lowerBound="0"/>
+			<property name="VAT" type="xs:integer" lowerBound="0"/>
+			<property name="PRODUCTTYPE">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+					<enumeration>1</enumeration>
+					<enumeration>2</enumeration>
+					<enumeration>3</enumeration>
+				</typeDef>
+			</property>
+			<property name="ORDEREDQUANTITY" type="xs:decimal" lowerBound="0"/>
+			<property name="ACCEPTEDQUANTITY" type="xs:decimal" lowerBound="0"/>
+			<property name="INFO" type="xs:string" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="GLN" base="xs:positiveInteger" variety="Atomic" totalDigits="13"/>
+	<valueType name="GTIN" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{8}([0-9]{3}([0-9]{0,3}))?</pattern>
+	</valueType>
+</package>

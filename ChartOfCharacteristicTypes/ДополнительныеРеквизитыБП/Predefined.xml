@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems">
+	<Item id="f3989126-cf31-4e6a-a774-2b09d2942f58">
+		<Name>НоваяЦена</Name>
+		<Code>1    </Code>
+		<Description>Новая цена</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="a1ef7b34-f3bc-49e5-b8d8-647263276e83">
+				<Name>ВариантСозданияБП</Name>
+				<Code>1    </Code>
+				<Description>Вариант создания Бизнес процесса</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ВариантыСозданияБПНоваяЦена</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c30edede-ebe6-4100-b468-7892ca5b2ff1">
+				<Name>ВыгружатьАктивированныеЦены</Name>
+				<Code>3    </Code>
+				<Description>Выгружать активированные цены</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="67c84ca3-3db9-44a7-b9f2-4352a813b9d4">
+				<Name>МаксимальноеКоличествоТоваров</Name>
+				<Code>2    </Code>
+				<Description>Максимальное количество товаров</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>3</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

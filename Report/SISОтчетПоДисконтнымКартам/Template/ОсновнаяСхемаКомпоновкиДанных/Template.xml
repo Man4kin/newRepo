@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Транзакции</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЧеков</dataPath>
+			<field>КоличествоЧеков</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДК</dataPath>
+			<field>НомерДК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЧека</dataPath>
+			<field>СуммаЧека</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>EmployeeCode</dataPath>
+			<field>EmployeeCode</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PosCode</dataPath>
+			<field>PosCode</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PosName</dataPath>
+			<field>PosName</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница.[Код СЕ]</dataPath>
+			<field>StoreCode</field>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Смена</dataPath>
+			<field>Смена</field>
+			<useRestriction>
+				<condition>true</condition>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+				<order>true</order>
+			</attributeUseRestriction>
+			<presentationExpression>"ККМ:"+" "+строка(PosName)+", смена № "+строка(Смена.ShiftNo)</presentationExpression>
+			<orderExpression>
+				<dcscom:expression>PosCode</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+			<orderExpression>
+				<dcscom:expression>Смена.ShiftNo</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Чек</dataPath>
+			<field>Чек</field>
+			<useRestriction>
+				<condition>true</condition>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+				<order>true</order>
+			</attributeUseRestriction>
+			<presentationExpression>"№ чека ККМ: "+строка(Чек.ChequeNo)+"  Дата/Время: "+строка(Чек.CloseTime)</presentationExpression>
+			<orderExpression>
+				<dcscom:expression>PosCode</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+			<orderExpression>
+				<dcscom:expression>Чек.ChequeNo</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСкидки</dataPath>
+			<field>СуммаСкидки</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	sms_Store.StoreCode КАК StoreCode,
+	100000 * sms_Store.StoreCode + sms_POS.PosCode КАК PosCode,
+	sms_Employee.EmployeeCode КАК EmployeeCode,
+	sms_Shift.Ссылка КАК Смена,
+	sms_Cheque.Ссылка КАК Чек,
+	sms_Cheque.Amount КАК СуммаЧека,
+	sms_ChequeDiscountCard.DiscountValue КАК СуммаСкидки,
+	1 КАК КоличествоЧеков,
+	sms_ChequeDiscountCard.DiscountCardNumber КАК НомерДК,
+	sms_POS.Name КАК PosName
+ИЗ
+	ВнешнийИсточникДанных.SIS.Таблица.sms_Cheque КАК sms_Cheque
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.SIS.Таблица.sms_ChequeDiscountCard КАК sms_ChequeDiscountCard
+			ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.SIS.Таблица.sms_DiscountCard КАК sms_DiscountCard
+				ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.SIS.Таблица.sms_DiscountCardGroup КАК sms_DiscountCardGroup
+				ПО sms_DiscountCard.DiscountCardGroupUID = sms_DiscountCardGroup.Ссылка
+			ПО sms_ChequeDiscountCard.DiscountCardUID = sms_DiscountCard.Ссылка
+		ПО (sms_ChequeDiscountCard.ChequeUID = sms_Cheque.Ссылка)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.SIS.Таблица.sms_Shift КАК sms_Shift
+		ПО sms_Cheque.ShiftUID = sms_Shift.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.SIS.Таблица.sms_POS КАК sms_POS
+		ПО (sms_Shift.PosUID = sms_POS.Ссылка)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.SIS.Таблица.sms_Store КАК sms_Store
+		ПО (sms_POS.StoreUID = sms_Store.Ссылка)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.SIS.Таблица.sms_Employee КАК sms_Employee
+		ПО sms_Cheque.CashierUID = sms_Employee.Ссылка
+ГДЕ
+	sms_Cheque.CloseTime МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И sms_Shift.CloseTime ЕСТЬ НЕ NULL 
+	И sms_Cheque.CloseType = 0
+	И sms_Cheque.ChequeType = 0</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ККМ</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ККМ</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PosCode</dataPath>
+			<field>PosCode</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	100000 * ККМ.Владелец.Код + ККМ.Код КАК PosCode,
+	ККМ.Ссылка
+ИЗ
+	Справочник.ККМ КАК ККМ</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Кассир</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>EmoloyeeCode</dataPath>
+			<field>EmoloyeeCode</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Кассир</dataPath>
+			<field>Кассир</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПерсоналККМ.Код КАК EmoloyeeCode,
+	ПерсоналККМ.Ссылка КАК Кассир
+ИЗ
+	Справочник.ПерсоналККМ КАК ПерсоналККМ</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>СтруктурныеЕдиницы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>StoreCode</dataPath>
+			<field>StoreCode</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница</dataPath>
+			<field>СтруктурнаяЕдиница</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СтруктурныеЕдиницы.Код AS StoreCode,
+	СтруктурныеЕдиницы.Ссылка КАК СтруктурнаяЕдиница
+ИЗ
+	Справочник.СтруктурныеЕдиницы КАК СтруктурныеЕдиницы</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДисконтныеКарты</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДисконтнаяКарта</dataPath>
+			<field>ДисконтнаяКарта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДК</dataPath>
+			<field>НомерДК</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ДисконтныеКарты.Код AS НомерДК,
+	ДисконтныеКарты.Ссылка AS ДисконтнаяКарта
+ИЗ
+	Справочник.КредитныеКарты КАК ДисконтныеКарты
+//WHERE
+//	ДисконтныеКарты.ЭтоПрефикс = false
+//	and ДисконтныеКарты.ЭтоГруппа = false</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>Транзакции</sourceDataSet>
+		<destinationDataSet>СтруктурныеЕдиницы</destinationDataSet>
+		<sourceExpression>СтруктурнаяЕдиница.[Код СЕ]</sourceExpression>
+		<destinationExpression>StoreCode</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Транзакции</sourceDataSet>
+		<destinationDataSet>ККМ</destinationDataSet>
+		<sourceExpression>PosCode</sourceExpression>
+		<destinationExpression>PosCode</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Транзакции</sourceDataSet>
+		<destinationDataSet>ДисконтныеКарты</destinationDataSet>
+		<sourceExpression>НомерДК</sourceExpression>
+		<destinationExpression>НомерДК</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Транзакции</sourceDataSet>
+		<destinationDataSet>Кассир</destinationDataSet>
+		<sourceExpression>EmployeeCode</sourceExpression>
+		<destinationExpression>EmoloyeeCode</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>ПроцентСкидки</dataPath>
+		<expression>СуммаСкидки/(СуммаЧека + СуммаСкидки)*100</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент скидки</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Format</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоЧеков</dataPath>
+		<expression>Сумма(КоличествоЧеков)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЧека</dataPath>
+		<expression>Сумма(СуммаЧека)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентСкидки</dataPath>
+		<expression>ПроцентСкидки</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСкидки</dataPath>
+		<expression>Сумма(СуммаСкидки)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по дисконтным картам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЧеков</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентСкидки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаСкидки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаЧека</dcsset:field>
+				</dcsset:item>
+				<dcsset:userSettingID>9d6eb543-dd30-49cf-87f0-cea214dab1eb</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>a2539ab8-df9d-4718-92d1-e5db16230674</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>c94fa441-f3c0-4821-8474-219d87f554f4</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НомерДК</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>HorizontalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>DataParametersOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>FilterOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СтруктурнаяЕдиница</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>НомерДК</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsUserSettingID>36efa9ca-bc9d-4955-8b43-fbef1d4296e3</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа" id="10">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаExtendedTooltip" id="13"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="14"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Wrap>false</Wrap>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ТипОплаты" id="11">
+			<DataPath>Объект.ТипОплаты</DataPath>
+			<ContextMenu name="ТипОплатыКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ТипОплатыExtendedTooltip" id="16"/>
+		</InputField>
+		<Table name="ПрефиксыКарт" id="5">
+			<Representation>List</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>Объект.ПрефиксыКарт</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПрефиксыКартКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="ПрефиксыКартКоманднаяПанель" id="7"/>
+			<ExtendedTooltip name="ПрефиксыКартExtendedTooltip" id="17"/>
+			<SearchStringAddition name="ПрефиксыКартSearchString" id="18">
+				<Source>
+					<lf:elementId>5</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="ПрефиксыКартSearchStringContextMenu" id="19"/>
+				<ExtendedTooltip name="ПрефиксыКартSearchStringExtendedTooltip" id="20"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПрефиксыКартViewStatus" id="21">
+				<Source>
+					<lf:elementId>5</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="ПрефиксыКартViewStatusContextMenu" id="22"/>
+				<ExtendedTooltip name="ПрефиксыКартViewStatusExtendedTooltip" id="23"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПрефиксыКартSearchControl" id="24">
+				<Source>
+					<lf:elementId>5</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="ПрефиксыКартSearchControlContextMenu" id="25"/>
+				<ExtendedTooltip name="ПрефиксыКартSearchControlExtendedTooltip" id="26"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="Префикс" id="8">
+					<DataPath>Объект.ПрефиксыКарт.Префикс</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ПрефиксКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПрефиксExtendedTooltip" id="27"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КредитныеКарты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

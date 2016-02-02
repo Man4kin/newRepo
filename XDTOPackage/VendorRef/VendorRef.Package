@@ -1,0 +1,10 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/VendorRef">
+	<import namespace="http://www.oracle.com/retail/integration/payload/VendorOURef"/>
+	<property name="VendorRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorRef" name="supplier" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/VendorOURef" ref="d4p1:VendorOURef" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<valueType name="varchar210" base="xs:string" variety="Atomic" maxLength="10"/>
+</package>

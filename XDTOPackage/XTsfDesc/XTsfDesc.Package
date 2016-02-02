@@ -1,0 +1,41 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/XTsfDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="XTsfDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" name="tsf_no" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" name="from_loc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" name="from_loc" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" name="to_loc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" name="to_loc" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" lowerBound="0" name="delivery_date" type="d4p1:RIBDate"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="dept" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="routing_code" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="freight_code" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="tsf_type" type="d4p1:varchar26"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" ref="d4p1:XTsfDtl" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="status" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="user_id" type="d4p1:varchar230"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="comment_desc" type="d4p1:varchar22000"/>
+		</typeDef>
+	</property>
+	<property name="XTsfDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" name="tsf_qty" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="supp_pack_size" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="inv_status" type="d4p1:number2"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XTsfDesc" lowerBound="0" name="unit_cost" type="d4p1:number20_4"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:long" name="number10" totalDigits="10" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number12_4" totalDigits="12" variety="Atomic"/>
+	<valueType base="xs:int" name="number2" totalDigits="2" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number20_4" totalDigits="20" variety="Atomic"/>
+	<valueType base="xs:int" name="number4" totalDigits="4" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="10" name="varchar210" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="2000" name="varchar22000" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="25" name="varchar225" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="30" name="varchar230" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="6" name="varchar26" variety="Atomic"/>
+</package>

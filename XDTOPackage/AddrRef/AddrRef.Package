@@ -1,0 +1,8 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/AddrRef">
+	<property name="AddrRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/AddrRef" name="addr" type="d4p1:number6"/>
+		</typeDef>
+	</property>
+	<valueType name="number6" base="xs:integer" variety="Atomic" totalDigits="6"/>
+</package>

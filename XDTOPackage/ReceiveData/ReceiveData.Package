@@ -1,0 +1,13 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.sample-package.org">
+	<objectType name="СтрокаТаблицы">
+		<property name="Номер" type="xs:string"/>
+		<property name="Дата" type="xs:date"/>
+		<property name="КонтрагентНаименование" type="xs:string"/>
+		<property name="КонтрагентКод" type="xs:string"/>
+		<property name="СуммаИтого" type="xs:decimal"/>
+		<property name="СуммаНДСИтого" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Таблица">
+		<property xmlns:d3p1="http://www.sample-package.org" name="Состав" type="d3p1:СтрокаТаблицы" upperBound="-1"/>
+	</objectType>
+</package>

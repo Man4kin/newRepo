@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="БизнесПроцессОснованиеКонтрагент" id="2">
+			<DataPath>БизнесПроцесс.Основание.Контрагент</DataPath>
+			<ChoiceButton>false</ChoiceButton>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="БизнесПроцессОснованиеКонтрагентКонтекстноеМеню" id="3"/>
+			<ExtendedTooltip name="БизнесПроцессОснованиеКонтрагентExtendedTooltip" id="45"/>
+		</InputField>
+		<InputField name="БизнесПроцессОснование" id="6">
+			<DataPath>БизнесПроцесс.Основание</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="БизнесПроцессОснованиеКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="БизнесПроцессОснованиеExtendedTooltip" id="46"/>
+		</InputField>
+		<InputField name="БизнесПроцессОснованиеДокОснование" id="4">
+			<DataPath>БизнесПроцесс.Основание.ДокОснование</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="БизнесПроцессОснованиеДокОснованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="БизнесПроцессОснованиеДокОснованиеExtendedTooltip" id="47"/>
+		</InputField>
+		<UsualGroup name="ГруппаНесоответствие" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Несоответствие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа несоответствие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаНесоответствиеExtendedTooltip" id="48"/>
+			<ChildItems>
+				<Pages name="Страницы" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницыExtendedTooltip" id="49"/>
+					<ChildItems>
+						<Page name="ОповещениеОНесоответствииЦен" id="8">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По ценам</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оповещение о несоответствии цен</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ОповещениеОНесоответствииЦенExtendedTooltip" id="50"/>
+							<ChildItems>
+								<Table name="БизнесПроцессНесоответствиеПоЦенам" id="9">
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>БизнесПроцесс.НесоответствиеПоЦенам</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамКонтекстноеМеню" id="10"/>
+									<AutoCommandBar name="БизнесПроцессНесоответствиеПоЦенамКоманднаяПанель" id="11"/>
+									<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамExtendedTooltip" id="51"/>
+									<SearchStringAddition name="БизнесПроцессНесоответствиеПоЦенамSearchString" id="52">
+										<Source>
+											<lf:elementId>9</lf:elementId>
+											<lf:additionId>0</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамSearchStringContextMenu" id="53"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамSearchStringExtendedTooltip" id="54"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="БизнесПроцессНесоответствиеПоЦенамViewStatus" id="55">
+										<Source>
+											<lf:elementId>9</lf:elementId>
+											<lf:additionId>1</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамViewStatusContextMenu" id="56"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамViewStatusExtendedTooltip" id="57"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="БизнесПроцессНесоответствиеПоЦенамSearchControl" id="58">
+										<Source>
+											<lf:elementId>9</lf:elementId>
+											<lf:additionId>2</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамSearchControlContextMenu" id="59"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамSearchControlExtendedTooltip" id="60"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="БизнесПроцессНесоответствиеПоЦенамНомерСтроки" id="12">
+											<DataPath>БизнесПроцесс.НесоответствиеПоЦенам.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамНомерСтрокиКонтекстноеМеню" id="13"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамНомерСтрокиExtendedTooltip" id="61"/>
+										</LabelField>
+										<InputField name="БизнесПроцессНесоответствиеПоЦенамНоменклатура" id="14">
+											<DataPath>БизнесПроцесс.НесоответствиеПоЦенам.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамНоменклатураКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамНоменклатураExtendedTooltip" id="62"/>
+										</InputField>
+										<InputField name="БизнесПроцессНесоответствиеПоЦенамЦенаПрихода" id="16">
+											<DataPath>БизнесПроцесс.НесоответствиеПоЦенам.ЦенаПоставки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамЦенаПриходаКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамЦенаПриходаExtendedTooltip" id="63"/>
+										</InputField>
+										<InputField name="БизнесПроцессНесоответствиеПоЦенамЦенаЗаказа" id="18">
+											<DataPath>БизнесПроцесс.НесоответствиеПоЦенам.ЦенаЗаказа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоЦенамЦенаЗаказаКонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоЦенамЦенаЗаказаExtendedTooltip" id="64"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ОповещениеОНесоответствииКоличества" id="20">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По количеству</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оповещение о несоответствии количества</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ОповещениеОНесоответствииКоличестваExtendedTooltip" id="65"/>
+							<ChildItems>
+								<Table name="БизнесПроцессНесоответствиеПоКоличеству" id="21">
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>БизнесПроцесс.НесоответствиеПоКоличеству</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуКонтекстноеМеню" id="22"/>
+									<AutoCommandBar name="БизнесПроцессНесоответствиеПоКоличествуКоманднаяПанель" id="23"/>
+									<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуExtendedTooltip" id="66"/>
+									<SearchStringAddition name="БизнесПроцессНесоответствиеПоКоличествуSearchString" id="67">
+										<Source>
+											<lf:elementId>21</lf:elementId>
+											<lf:additionId>0</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуSearchStringContextMenu" id="68"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуSearchStringExtendedTooltip" id="69"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="БизнесПроцессНесоответствиеПоКоличествуViewStatus" id="70">
+										<Source>
+											<lf:elementId>21</lf:elementId>
+											<lf:additionId>1</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуViewStatusContextMenu" id="71"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуViewStatusExtendedTooltip" id="72"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="БизнесПроцессНесоответствиеПоКоличествуSearchControl" id="73">
+										<Source>
+											<lf:elementId>21</lf:elementId>
+											<lf:additionId>2</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуSearchControlContextMenu" id="74"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуSearchControlExtendedTooltip" id="75"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="БизнесПроцессНесоответствиеПоКоличествуНомерСтроки" id="24">
+											<DataPath>БизнесПроцесс.НесоответствиеПоКоличеству.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуНомерСтрокиКонтекстноеМеню" id="25"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуНомерСтрокиExtendedTooltip" id="76"/>
+										</LabelField>
+										<InputField name="БизнесПроцессНесоответствиеПоКоличествуНоменклатура" id="26">
+											<DataPath>БизнесПроцесс.НесоответствиеПоКоличеству.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуНоменклатураКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуНоменклатураExtendedTooltip" id="77"/>
+										</InputField>
+										<InputField name="БизнесПроцессНесоответствиеПоКоличествуЕдиницаИзмерения" id="32">
+											<DataPath>БизнесПроцесс.НесоответствиеПоКоличеству.ЕдиницаИзмерения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ед</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуЕдиницаИзмеренияКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуЕдиницаИзмеренияExtendedTooltip" id="78"/>
+										</InputField>
+										<InputField name="БизнесПроцессНесоответствиеПоКоличествуКоэффициент" id="34">
+											<DataPath>БизнесПроцесс.НесоответствиеПоКоличеству.Коэффициент</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>К</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>4</Width>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуКоэффициентКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуКоэффициентExtendedTooltip" id="79"/>
+										</InputField>
+										<InputField name="БизнесПроцессНесоответствиеПоКоличествуКоличествоПрихода" id="28">
+											<DataPath>БизнесПроцесс.НесоответствиеПоКоличеству.КоличествоПрихода</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуКоличествоПриходаКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуКоличествоПриходаExtendedTooltip" id="80"/>
+										</InputField>
+										<InputField name="БизнесПроцессНесоответствиеПоКоличествуКоличествоЗаказа" id="30">
+											<DataPath>БизнесПроцесс.НесоответствиеПоКоличеству.КоличествоЗаказа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоКоличествуКоличествоЗаказаКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоКоличествуКоличествоЗаказаExtendedTooltip" id="81"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ОповещениеОНесоответствииНоменклатуры" id="36">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По номенклатуре</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оповещение о несоответствии номенклатуры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ОповещениеОНесоответствииНоменклатурыExtendedTooltip" id="82"/>
+							<ChildItems>
+								<Table name="БизнесПроцессНесоответствиеПоНоменклатуре" id="37">
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>БизнесПроцесс.НесоответствиеПоНоменклатуре</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="БизнесПроцессНесоответствиеПоНоменклатуреКонтекстноеМеню" id="38"/>
+									<AutoCommandBar name="БизнесПроцессНесоответствиеПоНоменклатуреКоманднаяПанель" id="39"/>
+									<ExtendedTooltip name="БизнесПроцессНесоответствиеПоНоменклатуреExtendedTooltip" id="83"/>
+									<SearchStringAddition name="БизнесПроцессНесоответствиеПоНоменклатуреSearchString" id="84">
+										<Source>
+											<lf:elementId>37</lf:elementId>
+											<lf:additionId>0</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоНоменклатуреSearchStringContextMenu" id="85"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоНоменклатуреSearchStringExtendedTooltip" id="86"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="БизнесПроцессНесоответствиеПоНоменклатуреViewStatus" id="87">
+										<Source>
+											<lf:elementId>37</lf:elementId>
+											<lf:additionId>1</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоНоменклатуреViewStatusContextMenu" id="88"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоНоменклатуреViewStatusExtendedTooltip" id="89"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="БизнесПроцессНесоответствиеПоНоменклатуреSearchControl" id="90">
+										<Source>
+											<lf:elementId>37</lf:elementId>
+											<lf:additionId>2</lf:additionId>
+										</Source>
+										<ContextMenu name="БизнесПроцессНесоответствиеПоНоменклатуреSearchControlContextMenu" id="91"/>
+										<ExtendedTooltip name="БизнесПроцессНесоответствиеПоНоменклатуреSearchControlExtendedTooltip" id="92"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="БизнесПроцессНесоответствиеПоНоменклатуреНомерСтроки" id="40">
+											<DataPath>БизнесПроцесс.НесоответствиеПоНоменклатуре.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоНоменклатуреНомерСтрокиКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоНоменклатуреНомерСтрокиExtendedTooltip" id="93"/>
+										</LabelField>
+										<InputField name="БизнесПроцессНесоответствиеПоНоменклатуреНоменклатура" id="42">
+											<DataPath>БизнесПроцесс.НесоответствиеПоНоменклатуре.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БизнесПроцессНесоответствиеПоНоменклатуреНоменклатураКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="БизнесПроцессНесоответствиеПоНоменклатуреНоменклатураExtendedTooltip" id="94"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЗадачаОбъект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:TaskObject.ЗадачаИсполнителя</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="БизнесПроцесс" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бизнес процесс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:BusinessProcessObject.НесоответствиеПрихода</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Печать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Печать</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Task.ЗадачаИсполнителя.Command.Выполнено</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Form.Command.Печать</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

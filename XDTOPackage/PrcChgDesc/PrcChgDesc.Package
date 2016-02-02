@@ -1,0 +1,40 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/PrcChgDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="PrcChg">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="location" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="loc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="change_type" type="d4p1:varchar26"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" ref="d4p1:PrcChgDtl" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" ref="d4p1:PrcChgRef" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PrcChgDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" ref="d4p1:PrcChg" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PrcChgDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="unit_retail" type="d4p1:number20_4" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="new_uom" type="d4p1:varchar24" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="effective_date" type="d4p1:RIBDate" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="end_date" type="d4p1:RIBDate" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="PrcChgRef">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="change_id" type="d4p1:number15"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="promo_comp_id" type="d4p1:number10" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcChgDesc" name="promo_id" type="d4p1:number10" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number10" base="xs:long" variety="Atomic" totalDigits="10"/>
+	<valueType name="number15" base="xs:long" variety="Atomic" totalDigits="15"/>
+	<valueType name="number20_4" base="xs:decimal" variety="Atomic" totalDigits="20" fractionDigits="4"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+	<valueType name="varchar24" base="xs:string" variety="Atomic" maxLength="4"/>
+	<valueType name="varchar26" base="xs:string" variety="Atomic" maxLength="6"/>
+</package>

@@ -1,0 +1,289 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://exite.com.ua/orders">
+	<property name="CHARACTERISTIC">
+		<typeDef xsi:type="ObjectType">
+			<property name="DESCRIPTION" type="xs:string" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="CONDITION">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="TYPE" type="d4p1:condition-type"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="CALCULATIONSEQUENCE" type="d4p1:calculation-sequence" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="RATETYPE" type="d4p1:rate-type" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="PERCENTAGE" type="d4p1:percentage" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="AMOUNT" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="SPECIALSERVICES" type="d4p1:allowance-charge"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="RATEPERUNIT" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="UNITPRICEBASE" type="d4p1:price-basis" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="HEAD">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="SUPPLIER" type="d4p1:gln"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="BUYER" type="d4p1:gln"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="DELIVERYPLACE" type="d4p1:gln"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="SENDER" type="d4p1:mailbox"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="RECIPIENT" type="d4p1:mailbox"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="EDIINTERCHANGEID" type="d4p1:edi-interchange-id" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" ref="d4p1:POSITION" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="ORDER">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="DOCUMENTNAME" type="d4p1:order-type"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="NUMBER" type="d4p1:number"/>
+			<property name="DATE" type="xs:date"/>
+			<property name="DELIVERYDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="DELIVERYTIME" type="d4p1:time" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="CAMPAIGNNUMBER" type="d4p1:number" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="CURRENCY" type="d4p1:currency" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="VAT" type="d4p1:percentage" lowerBound="0"/>
+			<property name="INFO" type="xs:string" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" ref="d4p1:HEAD"/>
+		</typeDef>
+	</property>
+	<property name="POSITION">
+		<typeDef xsi:type="ObjectType">
+			<property name="POSITIONNUMBER" type="xs:positiveInteger"/>
+			<property name="PRODUCT" type="xs:string"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="PRODUCTIDSUPPLIER" type="d4p1:number" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="PRODUCTIDBUYER" type="d4p1:number" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="ORDEREDQUANTITY" type="d4p1:amount"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="QUANTITYOFCUINTU" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="ORDERUNIT" type="d4p1:measurement-unit" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="ORDERPRICE" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="PRICEWITHVAT" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" name="VAT" type="d4p1:percentage" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/orders" ref="d4p1:CHARACTERISTIC" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<valueType name="allowance-charge" base="xs:string" variety="Atomic">
+		<enumeration>AA</enumeration>
+		<enumeration>AAJ</enumeration>
+		<enumeration>AAM</enumeration>
+		<enumeration>AAX</enumeration>
+		<enumeration>ABH</enumeration>
+		<enumeration>ADO</enumeration>
+		<enumeration>ADP</enumeration>
+		<enumeration>ADS</enumeration>
+		<enumeration>AG</enumeration>
+		<enumeration>ASS</enumeration>
+		<enumeration>CAG</enumeration>
+		<enumeration>DDL</enumeration>
+		<enumeration>DI</enumeration>
+		<enumeration>EAA</enumeration>
+		<enumeration>FA</enumeration>
+		<enumeration>FC</enumeration>
+		<enumeration>FG</enumeration>
+		<enumeration>HD</enumeration>
+		<enumeration>IN</enumeration>
+		<enumeration>INT</enumeration>
+		<enumeration>IS</enumeration>
+		<enumeration>MB</enumeration>
+		<enumeration>MC</enumeration>
+		<enumeration>PAD</enumeration>
+		<enumeration>PAE</enumeration>
+		<enumeration>PAR</enumeration>
+		<enumeration>PI</enumeration>
+		<enumeration>PL</enumeration>
+		<enumeration>PN</enumeration>
+		<enumeration>QAA</enumeration>
+		<enumeration>QD</enumeration>
+		<enumeration>RAE</enumeration>
+		<enumeration>SER</enumeration>
+		<enumeration>SH</enumeration>
+		<enumeration>TAE</enumeration>
+		<enumeration>TD</enumeration>
+		<enumeration>TZ</enumeration>
+		<enumeration>VAB</enumeration>
+		<enumeration>WHE</enumeration>
+		<enumeration>X26</enumeration>
+		<enumeration>X28</enumeration>
+		<enumeration>XAA</enumeration>
+		<enumeration>ZZ1</enumeration>
+		<enumeration>ZZ3</enumeration>
+	</valueType>
+	<valueType name="amount" base="xs:decimal" variety="Atomic" minInclusive="0" totalDigits="10" fractionDigits="3"/>
+	<valueType name="calculation-sequence" base="xs:positiveInteger" variety="Atomic" minInclusive="1" maxExclusive="10"/>
+	<valueType name="condition-type" base="xs:string" variety="Atomic">
+		<enumeration>A</enumeration>
+		<enumeration>C</enumeration>
+	</valueType>
+	<valueType name="currency" base="xs:string" variety="Atomic">
+		<enumeration>ATS</enumeration>
+		<enumeration>CHF</enumeration>
+		<enumeration>DEM</enumeration>
+		<enumeration>EUR</enumeration>
+		<enumeration>ITL</enumeration>
+		<enumeration>UAH</enumeration>
+		<enumeration>RUB</enumeration>
+		<enumeration>USD</enumeration>
+		<enumeration>BYR</enumeration>
+		<enumeration>MDL</enumeration>
+	</valueType>
+	<valueType name="deliver-pickup" base="xs:string" variety="Atomic">
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+		<enumeration>3</enumeration>
+		<enumeration>4</enumeration>
+		<enumeration>5</enumeration>
+		<enumeration>6</enumeration>
+		<enumeration>10E</enumeration>
+	</valueType>
+	<valueType name="delivery-condition" base="xs:string" variety="Atomic">
+		<enumeration>01E</enumeration>
+		<enumeration>02E</enumeration>
+		<enumeration>03E</enumeration>
+		<enumeration>04E</enumeration>
+		<enumeration>CFR</enumeration>
+		<enumeration>CIF</enumeration>
+		<enumeration>CIP</enumeration>
+		<enumeration>CPT</enumeration>
+		<enumeration>DAF</enumeration>
+		<enumeration>DDP</enumeration>
+		<enumeration>DDU</enumeration>
+		<enumeration>DEQ</enumeration>
+		<enumeration>DES</enumeration>
+		<enumeration>EXW</enumeration>
+		<enumeration>FAS</enumeration>
+		<enumeration>FCA</enumeration>
+		<enumeration>FOA</enumeration>
+		<enumeration>FOB</enumeration>
+		<enumeration>FOR</enumeration>
+		<enumeration>RDN</enumeration>
+		<enumeration>RPD</enumeration>
+		<enumeration>SD</enumeration>
+	</valueType>
+	<valueType name="edi-interchange-id" base="xs:string" variety="Atomic" maxLength="14"/>
+	<valueType name="gln" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{8}([0-9]{3}([0-9]{0,3}))?</pattern>
+	</valueType>
+	<valueType name="info-code" base="xs:string" variety="Atomic">
+		<enumeration>AKT</enumeration>
+		<enumeration>BES</enumeration>
+		<enumeration>MAR</enumeration>
+		<enumeration>MUS</enumeration>
+		<enumeration>NOR</enumeration>
+		<enumeration>SAM</enumeration>
+		<enumeration>SON</enumeration>
+	</valueType>
+	<valueType name="mailbox" base="xs:string" variety="Atomic" maxLength="13"/>
+	<valueType name="measurement-unit" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">PTN</enumeration>
+		<enumeration>GRM</enumeration>
+		<enumeration>KGM</enumeration>
+		<enumeration>LTR</enumeration>
+		<enumeration>MMT</enumeration>
+		<enumeration>MTK</enumeration>
+		<enumeration>MTQ</enumeration>
+		<enumeration>MTR</enumeration>
+		<enumeration xsi:type="xs:string">MGM</enumeration>
+		<enumeration xsi:type="xs:string">MLT</enumeration>
+		<enumeration xsi:type="xs:string">MMQ</enumeration>
+		<enumeration>PCE</enumeration>
+		<enumeration>CT</enumeration>
+		<enumeration>BH</enumeration>
+		<enumeration>PF</enumeration>
+		<enumeration>PK</enumeration>
+	</valueType>
+	<valueType name="number" base="xs:string" variety="Atomic" maxLength="16"/>
+	<valueType name="order-type" base="xs:string" variety="Atomic">
+		<enumeration>220</enumeration>
+		<enumeration>224</enumeration>
+		<enumeration>22E</enumeration>
+		<enumeration>402</enumeration>
+	</valueType>
+	<valueType name="payment-type" base="xs:string" variety="Atomic">
+		<enumeration>CA</enumeration>
+		<enumeration>CC</enumeration>
+		<enumeration>CF</enumeration>
+		<enumeration>DF</enumeration>
+		<enumeration>MX</enumeration>
+		<enumeration>NC</enumeration>
+		<enumeration>PC</enumeration>
+		<enumeration>PO</enumeration>
+		<enumeration>PP</enumeration>
+		<enumeration>PU</enumeration>
+		<enumeration>RC</enumeration>
+		<enumeration>RF</enumeration>
+		<enumeration>RS</enumeration>
+	</valueType>
+	<valueType name="percentage" base="xs:decimal" variety="Atomic" totalDigits="4" fractionDigits="2"/>
+	<valueType name="price-basis" base="xs:positiveInteger" variety="Atomic" totalDigits="9"/>
+	<valueType name="rate-type" base="xs:positiveInteger" variety="Atomic" minInclusive="1" maxExclusive="3"/>
+	<valueType name="remaining-days" base="xs:positiveInteger" variety="Atomic" totalDigits="3"/>
+	<valueType name="time" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{2}:[0-9]{2}</pattern>
+	</valueType>
+	<valueType name="transport-means" base="xs:string" variety="Atomic">
+		<enumeration>1</enumeration>
+		<enumeration>101</enumeration>
+		<enumeration>10E</enumeration>
+		<enumeration>11E</enumeration>
+		<enumeration>12</enumeration>
+		<enumeration>12E</enumeration>
+		<enumeration>13E</enumeration>
+		<enumeration>14E</enumeration>
+		<enumeration>15E</enumeration>
+		<enumeration>16E</enumeration>
+		<enumeration>17E</enumeration>
+		<enumeration>18E</enumeration>
+		<enumeration>19E</enumeration>
+		<enumeration>20E</enumeration>
+		<enumeration>21</enumeration>
+		<enumeration>21E</enumeration>
+		<enumeration>22E</enumeration>
+		<enumeration>23</enumeration>
+		<enumeration>23E</enumeration>
+		<enumeration>24E</enumeration>
+		<enumeration>25</enumeration>
+		<enumeration>25E</enumeration>
+		<enumeration>26E</enumeration>
+		<enumeration>27E</enumeration>
+		<enumeration>28E</enumeration>
+		<enumeration>29E</enumeration>
+		<enumeration>30E</enumeration>
+		<enumeration>31</enumeration>
+		<enumeration>31E</enumeration>
+		<enumeration>32</enumeration>
+		<enumeration>32E</enumeration>
+		<enumeration>33E</enumeration>
+		<enumeration>34</enumeration>
+		<enumeration>34E</enumeration>
+		<enumeration>35</enumeration>
+		<enumeration>35E</enumeration>
+		<enumeration>36E</enumeration>
+		<enumeration>37E</enumeration>
+		<enumeration>38E</enumeration>
+		<enumeration>39E</enumeration>
+		<enumeration>41</enumeration>
+		<enumeration>42</enumeration>
+		<enumeration>43</enumeration>
+		<enumeration>51</enumeration>
+		<enumeration>52</enumeration>
+		<enumeration>53</enumeration>
+		<enumeration>54</enumeration>
+		<enumeration>55</enumeration>
+		<enumeration>56</enumeration>
+		<enumeration>97E</enumeration>
+		<enumeration>98E</enumeration>
+		<enumeration>99E</enumeration>
+		<enumeration>X01</enumeration>
+		<enumeration>X02</enumeration>
+		<enumeration>X09</enumeration>
+		<enumeration>X13</enumeration>
+	</valueType>
+	<valueType name="transport-route" base="xs:positiveInteger" variety="Atomic">
+		<enumeration>20</enumeration>
+	</valueType>
+	<valueType name="transport-type" base="xs:positiveInteger" variety="Atomic">
+		<enumeration>10</enumeration>
+		<enumeration>20</enumeration>
+		<enumeration>30</enumeration>
+		<enumeration>40</enumeration>
+		<enumeration>50</enumeration>
+		<enumeration>60</enumeration>
+		<enumeration>70</enumeration>
+		<enumeration>80</enumeration>
+		<enumeration>100</enumeration>
+	</valueType>
+</package>

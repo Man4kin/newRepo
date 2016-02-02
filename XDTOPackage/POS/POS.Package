@@ -1,0 +1,58 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://local/POS">
+	<objectType name="Товар_Данные">
+		<property name="Тип" type="xs:string"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="КодРод" type="xs:string" lowerBound="0"/>
+		<property name="ПКод" type="xs:string"/>
+		<property name="Наим" type="xs:string"/>
+		<property name="ПарамАкц" type="xs:string" lowerBound="0"/>
+		<property name="НазваниеВЧеке" type="xs:string" lowerBound="0"/>
+		<property name="ЕдИз" type="xs:string" lowerBound="0"/>
+		<property name="Ост" type="xs:string" lowerBound="0"/>
+		<property name="РасхЦена" type="xs:string" lowerBound="0"/>
+		<property name="Кратн" type="xs:string" lowerBound="0"/>
+		<property name="Порог" type="xs:string" lowerBound="0"/>
+		<property name="ДатаОкончАкц" type="xs:string" lowerBound="0"/>
+		<property name="ПостЦенаАкц" type="xs:string" lowerBound="0"/>
+		<property name="ПрихЦена" type="xs:string" lowerBound="0"/>
+		<property name="Весовой" type="xs:string" lowerBound="0"/>
+		<property name="СтопВр" type="xs:string" lowerBound="0"/>
+		<property name="МинЦена" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://local/POS" name="ШКод" type="d3p1:Товар_ШтрихКод" lowerBound="0" upperBound="100"/>
+		<property name="ГУИД" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Товар_ШтрихКод">
+		<property name="ШК" type="xs:string"/>
+		<property name="МножШК" type="xs:string"/>
+	</objectType>
+	<objectType name="ТоварыВPOS">
+		<property name="ДатаФормирования" type="xs:string"/>
+		<property name="СЕ" type="xs:string"/>
+		<property name="КоличествоЗаписей" type="xs:string"/>
+		<property xmlns:d3p1="http://local/POS" name="Тов" type="d3p1:Товар_Данные" upperBound="999999"/>
+	</objectType>
+	<objectType name="ZReport">
+		<property name="GUID" type="xs:string"/>
+		<property name="НПК" type="xs:string"/>
+		<property xmlns:d3p1="http://local/POS" name="Shift" type="d3p1:Shifts" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://local/POS" name="Payment" type="d3p1:Payments" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://local/POS" name="Sale" type="d3p1:Sales" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="Sales">
+		<property name="ItemUID" type="xs:string"/>
+		<property name="Quantity" type="xs:decimal"/>
+		<property name="Amount" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Shifts">
+		<property name="PosUID" type="xs:string"/>
+		<property name="CloseTime" type="xs:dateTime"/>
+		<property name="No" type="xs:integer"/>
+		<property name="Amount" type="xs:decimal"/>
+		<property name="AmountCash" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Payments">
+		<property name="Type" type="xs:string"/>
+		<property name="Amount" type="xs:decimal"/>
+		<property name="Nominal" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+</package>

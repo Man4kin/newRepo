@@ -1,0 +1,286 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://exite.com.ua/desadv">
+	<property name="DESADV">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="NUMBER" type="d4p1:number"/>
+			<property name="DATE" type="xs:date" lowerBound="0"/>
+			<property name="DELIVERYDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="DELIVERYTIME" type="d4p1:time" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="ORDERNUMBER" type="d4p1:number"/>
+			<property name="ORDERDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="DELIVERYNOTENUMBER" type="d4p1:number" lowerBound="0"/>
+			<property name="DELIVERYNOTEDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="SUPPLIERORDERNUMBER" type="d4p1:number" lowerBound="0"/>
+			<property name="SUPPLIERORDERDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="GROSSWEIGHT" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="GROSSVOLUME" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="CAMPAIGNNUMBER" type="d4p1:number" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" ref="d4p1:HEAD" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="HEAD">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="SUPPLIER" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="BUYER" type="d4p1:gln"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="DELIVERYPLACE" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="FINALRECIPIENT" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="ORDERPARTNER" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="LOGISTICPARTNER" type="d4p1:gln" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="SENDER" type="d4p1:mailbox" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="RECIPIENT" type="d4p1:mailbox" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="EDIINTERCHANGEID" type="d4p1:edi-interchange-id" lowerBound="0"/>
+			<property name="EDIMESSAGE" type="xs:string" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" ref="d4p1:PACKINGSEQUENCE" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PACKAGE">
+		<typeDef xsi:type="ObjectType">
+			<property name="SSCC" type="xs:anyType" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="PACKAGETYPE" type="d4p1:package-type"/>
+			<property name="PACKAGECOUNT" type="xs:positiveInteger" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="TYPENUMBER" type="d4p1:type-number" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="HANDLINGINFO" type="d4p1:handling-info" lowerBound="0"/>
+			<property name="LENGTH" type="xs:anyType" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="WIDTH" type="d4p1:length" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="HEIGHT" type="d4p1:length" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="GROSSWEIGHT" type="d4p1:amount" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="PACKINGSEQUENCE">
+		<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+			<property name="HIERARCHICALID" type="xs:positiveInteger"/>
+			<property name="HIERARCHICALPARENTID" type="xs:positiveInteger" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" ref="d4p1:PACKAGE" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" ref="d4p1:POSITION2PACKINGSEQUENCE" lowerBound="0" upperBound="-1"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" ref="d4p1:POSITION" lowerBound="0" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="POSITION">
+		<typeDef xsi:type="ObjectType">
+			<property name="POSITIONNUMBER" type="xs:positiveInteger"/>
+			<property name="PRODUCT" type="xs:string"/>
+			<property name="PRODUCTIDSUPPLIER" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="16"/>
+			</property>
+			<property name="PRODUCTIDBUYER" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="16"/>
+			</property>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="DELIVEREDQUANTITY" type="d4p1:amount"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="DELIVEREDUNIT" type="d4p1:measurement-unit" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="ORDEREDQUANTITY" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="ORDERUNIT" type="d4p1:measurement-unit" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="INVOICEDQUANTITY" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="INVOICEUNIT" type="d4p1:measurement-unit" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="CONSUMERUNITCOUNT" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="CONSUMERUNITCOUNTUNIT" type="d4p1:measurement-unit" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="AMOUNT" type="d4p1:amount" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="TAXRATE" type="d4p1:number" lowerBound="0"/>
+			<property name="BATCHNUMBER" type="xs:positiveInteger" lowerBound="0"/>
+			<property name="BESTBEFOREDATE" type="xs:date" lowerBound="0"/>
+			<property name="EXPIRYDATE" type="xs:date" lowerBound="0"/>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="COUNTRYORIGIN" type="d4p1:COUNTRY" lowerBound="0"/>
+			<property name="CUSTOMSTARIFFNUMBER" lowerBound="0">
+				<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="30"/>
+			</property>
+			<property xmlns:d4p1="http://exite.com.ua/desadv" name="PRICE" type="d4p1:amount" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<property name="POSITION2PACKINGSEQUENCE">
+		<typeDef xsi:type="ObjectType">
+			<property name="POSITIONNUMBER" type="xs:anyType"/>
+			<property name="DELIVERQUANTITY" type="xs:anyType"/>
+			<property name="INVOICEDQUANTITY" type="xs:anyType" lowerBound="0"/>
+			<property name="BESTBEFOREDATE" type="xs:date" lowerBound="0"/>
+			<property name="EXPIRYDATE" type="xs:date" lowerBound="0"/>
+			<property name="BATCHNUMBER" type="xs:positiveInteger" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="COUNTRY" base="xs:string" variety="Atomic">
+		<enumeration>UA</enumeration>
+		<enumeration>RU</enumeration>
+		<enumeration>BY</enumeration>
+		<enumeration>BE</enumeration>
+		<enumeration>BG</enumeration>
+		<enumeration>GB</enumeration>
+		<enumeration>HU</enumeration>
+		<enumeration>DE</enumeration>
+		<enumeration>AT</enumeration>
+		<enumeration>GR</enumeration>
+		<enumeration>GE</enumeration>
+		<enumeration>DK</enumeration>
+		<enumeration>EU</enumeration>
+		<enumeration>IL</enumeration>
+		<enumeration>IN</enumeration>
+		<enumeration>ID</enumeration>
+		<enumeration>IE</enumeration>
+		<enumeration>IS</enumeration>
+		<enumeration>ES</enumeration>
+		<enumeration>IT</enumeration>
+		<enumeration>KP</enumeration>
+		<enumeration>KZ</enumeration>
+		<enumeration>CN</enumeration>
+		<enumeration>LV</enumeration>
+		<enumeration>LT</enumeration>
+		<enumeration>MD</enumeration>
+		<enumeration>PL</enumeration>
+		<enumeration>RO</enumeration>
+		<enumeration>US</enumeration>
+		<enumeration>SK</enumeration>
+		<enumeration>SI</enumeration>
+		<enumeration>TR</enumeration>
+		<enumeration>UZ</enumeration>
+		<enumeration>FR</enumeration>
+		<enumeration>CZ</enumeration>
+		<enumeration>CH</enumeration>
+		<enumeration>SE</enumeration>
+		<enumeration>KR</enumeration>
+		<enumeration>JP</enumeration>
+	</valueType>
+	<valueType name="amount" base="xs:decimal" variety="Atomic" minInclusive="0" totalDigits="10" fractionDigits="3"/>
+	<valueType name="edi-interchange-id" base="xs:string" variety="Atomic" maxLength="14"/>
+	<valueType name="gln" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{8}([0-9]{3}([0-9]{0,3}))?</pattern>
+	</valueType>
+	<valueType name="handling-info" base="xs:string" variety="Atomic">
+		<enumeration>AVI</enumeration>
+		<enumeration>BIG</enumeration>
+		<enumeration>CRU</enumeration>
+		<enumeration>DAE</enumeration>
+		<enumeration>EAT</enumeration>
+		<enumeration>FTD</enumeration>
+		<enumeration>HEA</enumeration>
+		<enumeration>HGA</enumeration>
+		<enumeration>HWC</enumeration>
+		<enumeration>LYG</enumeration>
+		<enumeration>MOV</enumeration>
+		<enumeration>NWP</enumeration>
+		<enumeration>OHG</enumeration>
+		<enumeration>PAC</enumeration>
+		<enumeration>PER</enumeration>
+		<enumeration>PSC</enumeration>
+		<enumeration>RFG</enumeration>
+		<enumeration>RFL</enumeration>
+		<enumeration>RFS</enumeration>
+		<enumeration>RPB</enumeration>
+		<enumeration>SSN</enumeration>
+		<enumeration>STK</enumeration>
+		<enumeration>STR</enumeration>
+		<enumeration>UPR</enumeration>
+		<enumeration>UST</enumeration>
+		<enumeration>VAL</enumeration>
+	</valueType>
+	<valueType name="length" base="xs:positiveInteger" variety="Atomic" totalDigits="13"/>
+	<valueType name="mailbox" base="xs:string" variety="Atomic" maxLength="13"/>
+	<valueType name="measurement-unit" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">PTN</enumeration>
+		<enumeration>GRM</enumeration>
+		<enumeration>KGM</enumeration>
+		<enumeration>LTR</enumeration>
+		<enumeration>MMT</enumeration>
+		<enumeration>MTK</enumeration>
+		<enumeration>MTQ</enumeration>
+		<enumeration>MTR</enumeration>
+		<enumeration xsi:type="xs:string">MGM</enumeration>
+		<enumeration xsi:type="xs:string">MLT</enumeration>
+		<enumeration xsi:type="xs:string">MMQ</enumeration>
+		<enumeration>PCE</enumeration>
+		<enumeration xsi:type="xs:string">CT</enumeration>
+		<enumeration xsi:type="xs:string">BH</enumeration>
+		<enumeration xsi:type="xs:string">PF</enumeration>
+		<enumeration xsi:type="xs:string">PK</enumeration>
+	</valueType>
+	<valueType name="number" base="xs:string" variety="Atomic" maxLength="16"/>
+	<valueType name="package-type" base="xs:string" variety="Atomic">
+		<enumeration>200</enumeration>
+		<enumeration>201</enumeration>
+		<enumeration>203</enumeration>
+		<enumeration>204</enumeration>
+		<enumeration>8</enumeration>
+		<enumeration>9</enumeration>
+		<enumeration>BC</enumeration>
+		<enumeration>BN</enumeration>
+		<enumeration>CHB</enumeration>
+		<enumeration>CHC</enumeration>
+		<enumeration>CR</enumeration>
+		<enumeration>PK</enumeration>
+		<enumeration>PMA</enumeration>
+		<enumeration>PMB</enumeration>
+		<enumeration>RCA</enumeration>
+		<enumeration>ZZ1</enumeration>
+		<enumeration>ZZ2</enumeration>
+	</valueType>
+	<valueType name="sscc" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{18}</pattern>
+	</valueType>
+	<valueType name="time" base="xs:string" variety="Atomic">
+		<pattern>[0-9]{2}:[0-9]{2}</pattern>
+	</valueType>
+	<valueType name="transport-condition" base="xs:string" variety="Atomic">
+		<enumeration>1</enumeration>
+		<enumeration>101</enumeration>
+		<enumeration>10E</enumeration>
+		<enumeration>11E</enumeration>
+		<enumeration>12</enumeration>
+		<enumeration>12E</enumeration>
+		<enumeration>13E</enumeration>
+		<enumeration>14E</enumeration>
+		<enumeration>15E</enumeration>
+		<enumeration>16E</enumeration>
+		<enumeration>17E</enumeration>
+		<enumeration>18E</enumeration>
+		<enumeration>19E</enumeration>
+		<enumeration>20E</enumeration>
+		<enumeration>21</enumeration>
+		<enumeration>21E</enumeration>
+		<enumeration>22E</enumeration>
+		<enumeration>23</enumeration>
+		<enumeration>23E</enumeration>
+		<enumeration>24E</enumeration>
+		<enumeration>25</enumeration>
+		<enumeration>25E</enumeration>
+		<enumeration>26E</enumeration>
+		<enumeration>27E</enumeration>
+		<enumeration>28E</enumeration>
+		<enumeration>29E</enumeration>
+		<enumeration>30E</enumeration>
+		<enumeration>31</enumeration>
+		<enumeration>31E</enumeration>
+		<enumeration>32</enumeration>
+		<enumeration>32E</enumeration>
+		<enumeration>33E</enumeration>
+		<enumeration>34</enumeration>
+		<enumeration>34E</enumeration>
+		<enumeration>35</enumeration>
+		<enumeration>35E</enumeration>
+		<enumeration>36E</enumeration>
+		<enumeration>37E</enumeration>
+		<enumeration>38E</enumeration>
+		<enumeration>39E</enumeration>
+		<enumeration>41</enumeration>
+		<enumeration>42</enumeration>
+		<enumeration>43</enumeration>
+		<enumeration>51</enumeration>
+		<enumeration>52</enumeration>
+		<enumeration>53</enumeration>
+		<enumeration>54</enumeration>
+		<enumeration>55</enumeration>
+		<enumeration>56</enumeration>
+		<enumeration>97E</enumeration>
+		<enumeration>98E</enumeration>
+		<enumeration>99E</enumeration>
+		<enumeration>X01</enumeration>
+		<enumeration>X02</enumeration>
+		<enumeration>X14</enumeration>
+	</valueType>
+	<valueType name="transport-type" base="xs:string" variety="Atomic">
+		<enumeration>10</enumeration>
+		<enumeration>100</enumeration>
+		<enumeration>20</enumeration>
+		<enumeration>30</enumeration>
+		<enumeration>40</enumeration>
+		<enumeration>50</enumeration>
+		<enumeration>60</enumeration>
+		<enumeration>70</enumeration>
+		<enumeration>80</enumeration>
+	</valueType>
+	<valueType name="type-number" base="xs:string" variety="Atomic" maxLength="14"/>
+</package>

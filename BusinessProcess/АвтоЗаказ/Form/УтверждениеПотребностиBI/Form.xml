@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CommandSet>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Execute</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Activate</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="159">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="160"/>
+			<ChildItems>
+				<UsualGroup name="Группа3" id="157">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="158"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="7">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="8"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>ЗадачаОбъект.Number</DataPath>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<InputField name="Дата" id="4">
+									<DataPath>ЗадачаОбъект.Date</DataPath>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ОбъектФирма" id="172">
+							<DataPath>Объект.Фирма</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОбъектФирмаКонтекстноеМеню" id="173"/>
+							<ExtendedTooltip name="ОбъектФирмаРасширеннаяПодсказка" id="174"/>
+						</InputField>
+						<InputField name="ОбъектСклад" id="169">
+							<DataPath>Объект.Склад</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОбъектСкладКонтекстноеМеню" id="170"/>
+							<ExtendedTooltip name="ОбъектСкладРасширеннаяПодсказка" id="171"/>
+						</InputField>
+						<InputField name="ОбъектПоставщик" id="9">
+							<DataPath>Объект.Поставщик</DataPath>
+							<Enabled>false</Enabled>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="ОбъектПоставщикКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ОбъектПоставщикРасширеннаяПодсказка" id="11"/>
+						</InputField>
+						<UsualGroup name="Группа2" id="15">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="16"/>
+							<ChildItems>
+								<InputField name="ОбъектСрокПоставки" id="12">
+									<DataPath>Объект.СрокПоставки</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="ОбъектСрокПоставкиКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ОбъектСрокПоставкиРасширеннаяПодсказка" id="14"/>
+								</InputField>
+								<InputField name="ОбъектПериодРасчета" id="17">
+									<DataPath>Объект.ПериодРасчета</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="ОбъектПериодРасчетаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ОбъектПериодРасчетаРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<Button name="Обнулить" id="184">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Обнулить</CommandName>
+									<Parameter xsi:nil="true"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обнулить количество</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОбнулитьРасширеннаяПодсказка" id="185"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="161">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="162"/>
+					<ChildItems>
+						<InputField name="ОбъектДатаПоставкиОт" id="163">
+							<DataPath>Объект.ДатаПоставкиОт</DataPath>
+							<ContextMenu name="ОбъектДатаПоставкиОтКонтекстноеМеню" id="164"/>
+							<ExtendedTooltip name="ОбъектДатаПоставкиОтРасширеннаяПодсказка" id="165"/>
+						</InputField>
+						<InputField name="ОбъектДатаПоставкиДо" id="166">
+							<DataPath>Объект.ДатаПоставкиДо</DataPath>
+							<ContextMenu name="ОбъектДатаПоставкиДоКонтекстноеМеню" id="167"/>
+							<ExtendedTooltip name="ОбъектДатаПоставкиДоРасширеннаяПодсказка" id="168"/>
+						</InputField>
+						<InputField name="ОбъектВремяПоставки" id="154">
+							<DataPath>Объект.ВремяПоставки</DataPath>
+							<ContextMenu name="ОбъектВремяПоставкиКонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="ОбъектВремяПоставкиРасширеннаяПодсказка" id="156"/>
+						</InputField>
+						<InputField name="ОбъектIzh_ПредельноеВремяЗаказа" id="175">
+							<DataPath>Объект.Izh_ПредельноеВремяЗаказа</DataPath>
+							<ContextMenu name="ОбъектIzh_ПредельноеВремяЗаказаКонтекстноеМеню" id="176"/>
+							<ExtendedTooltip name="ОбъектIzh_ПредельноеВремяЗаказаРасширеннаяПодсказка" id="177"/>
+						</InputField>
+						<InputField name="Поле1" id="189">
+							<DataPath>ОбщаяСуммаЗаказа</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общая сумма заказа</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Поле1КонтекстноеМеню" id="190"/>
+							<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="191"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ОбъектСостав" id="20">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Состав</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОбъектСоставКонтекстноеМеню" id="21"/>
+			<AutoCommandBar name="ОбъектСоставКоманднаяПанель" id="22"/>
+			<ExtendedTooltip name="ОбъектСоставРасширеннаяПодсказка" id="23"/>
+			<SearchStringAddition name="ОбъектСоставСтрокаПоиска" id="24">
+				<Source>
+					<lf:elementId>20</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="ОбъектСоставСтрокаПоискаКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ОбъектСоставСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбъектСоставСостояниеПросмотра" id="29">
+				<Source>
+					<lf:elementId>20</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="ОбъектСоставСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ОбъектСоставСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбъектСоставУправлениеПоиском" id="34">
+				<Source>
+					<lf:elementId>20</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="ОбъектСоставУправлениеПоискомКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ОбъектСоставУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ОбъектСоставПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ОбъектСоставПередУдалением</Event>
+				<Event name="OnActivateRow">ОбъектСоставПриАктивизацииСтроки</Event>
+				<Event name="OnChange">ОбъектСоставПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ОбъектСоставНомерСтроки" id="39">
+					<DataPath>Объект.Состав.LineNumber</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="ОбъектСоставНомерСтрокиКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ОбъектСоставНомерСтрокиРасширеннаяПодсказка" id="41"/>
+				</LabelField>
+				<InputField name="ОбъектСоставКод" id="181">
+					<DataPath>Объект.Состав.Номенклатура.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставКодКонтекстноеМеню" id="182"/>
+					<ExtendedTooltip name="ОбъектСоставКодРасширеннаяПодсказка" id="183"/>
+				</InputField>
+				<InputField name="ОбъектСоставНоменклатура" id="42">
+					<DataPath>Объект.Состав.Номенклатура</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставНоменклатураКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ОбъектСоставНоменклатураРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="ОбъектСоставЕдиницаИзмерения" id="48">
+					<DataPath>Объект.Состав.ЕдиницаИзмерения</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед. Изм.</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>8</Width>
+					<ContextMenu name="ОбъектСоставЕдиницаИзмеренияКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ОбъектСоставЕдиницаИзмеренияРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="ОбъектСоставОстаток" id="63">
+					<DataPath>Объект.Состав.Остаток</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставОстатокКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ОбъектСоставОстатокРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="ОбъектСоставЦена" id="151">
+					<DataPath>Объект.Состав.Цена</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставЦенаКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="ОбъектСоставЦенаРасширеннаяПодсказка" id="153"/>
+				</InputField>
+				<InputField name="ОбъектСоставСумма" id="57">
+					<DataPath>Объект.Состав.Сумма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма заказа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставСуммаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ОбъектСоставСуммаРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="ОбъектСоставКоличество" id="45">
+					<DataPath>Объект.Состав.Количество</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество заказа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставКоличествоКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ОбъектСоставКоличествоРасширеннаяПодсказка" id="47"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ОбъектСоставПоСЕ" id="111">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СоставПоСЕ</DataPath>
+			<CommandSet>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОбъектСоставПоСЕКонтекстноеМеню" id="112"/>
+			<AutoCommandBar name="ОбъектСоставПоСЕКоманднаяПанель" id="113"/>
+			<ExtendedTooltip name="ОбъектСоставПоСЕРасширеннаяПодсказка" id="114"/>
+			<SearchStringAddition name="ОбъектСоставПоСЕСтрокаПоиска" id="115">
+				<Source>
+					<lf:elementId>111</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="ОбъектСоставПоСЕСтрокаПоискаКонтекстноеМеню" id="118"/>
+				<ExtendedTooltip name="ОбъектСоставПоСЕСтрокаПоискаРасширеннаяПодсказка" id="119"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбъектСоставПоСЕСостояниеПросмотра" id="120">
+				<Source>
+					<lf:elementId>111</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="ОбъектСоставПоСЕСостояниеПросмотраКонтекстноеМеню" id="123"/>
+				<ExtendedTooltip name="ОбъектСоставПоСЕСостояниеПросмотраРасширеннаяПодсказка" id="124"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбъектСоставПоСЕУправлениеПоиском" id="125">
+				<Source>
+					<lf:elementId>111</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="ОбъектСоставПоСЕУправлениеПоискомКонтекстноеМеню" id="128"/>
+				<ExtendedTooltip name="ОбъектСоставПоСЕУправлениеПоискомРасширеннаяПодсказка" id="129"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ОбъектСоставПоСЕСтруктурнаяЕдиница" id="148">
+					<DataPath>Объект.СоставПоСЕ.СтруктурнаяЕдиница</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставПоСЕСтруктурнаяЕдиницаКонтекстноеМеню" id="149"/>
+					<ExtendedTooltip name="ОбъектСоставПоСЕСтруктурнаяЕдиницаРасширеннаяПодсказка" id="150"/>
+				</InputField>
+				<InputField name="ОбъектСоставПоСЕСредниеПродажи" id="139">
+					<DataPath>Объект.СоставПоСЕ.СредниеПродажи</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставПоСЕСредниеПродажиКонтекстноеМеню" id="140"/>
+					<ExtendedTooltip name="ОбъектСоставПоСЕСредниеПродажиРасширеннаяПодсказка" id="141"/>
+				</InputField>
+				<InputField name="ОбъектСоставПоСЕОбщиеПродажи" id="192">
+					<DataPath>Объект.СоставПоСЕ.ОбщиеПродажи</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставПоСЕОбщиеПродажиКонтекстноеМеню" id="193"/>
+					<ExtendedTooltip name="ОбъектСоставПоСЕОбщиеПродажиРасширеннаяПодсказка" id="194"/>
+				</InputField>
+				<InputField name="ОбъектСоставПоСЕОстаток" id="136">
+					<DataPath>Объект.СоставПоСЕ.Остаток</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток с\м</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставПоСЕОстатокКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ОбъектСоставПоСЕОстатокРасширеннаяПодсказка" id="138"/>
+				</InputField>
+				<InputField name="ОбъектСоставПоСЕВПути" id="186">
+					<DataPath>Объект.СоставПоСЕ.ВПути</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектСоставПоСЕВПутиКонтекстноеМеню" id="187"/>
+					<ExtendedTooltip name="ОбъектСоставПоСЕВПутиРасширеннаяПодсказка" id="188"/>
+				</InputField>
+				<InputField name="ОбъектСоставПоСЕКоличество" id="178">
+					<DataPath>Объект.СоставПоСЕ.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<BackColor>#CCFFFF</BackColor>
+					<ContextMenu name="ОбъектСоставПоСЕКоличествоКонтекстноеМеню" id="179"/>
+					<ExtendedTooltip name="ОбъектСоставПоСЕКоличествоРасширеннаяПодсказка" id="180"/>
+					<Events>
+						<Event name="OnChange">ОбъектСоставПоСЕКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЗадачаОбъект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:TaskObject.ЗадачаИсполнителя</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Объект" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:BusinessProcessObject.АвтоЗаказ</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОбщаяСуммаЗаказа" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая сумма заказа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОбъектСостав</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Состав.ВидМатрицы</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Мягкий</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>BackColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#00FFFF</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОбъектСостав</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Состав.ПризнакМатрицыРЦ</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Сезонный</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>BackColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#10FF06</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Обнулить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнулить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнулить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обнулить</Action>
+		</Command>
+	</Commands>
+</Form>

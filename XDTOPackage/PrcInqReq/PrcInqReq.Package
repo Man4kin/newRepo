@@ -1,0 +1,19 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/PrcInqReq">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="PrcInqReq">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcInqReq" ref="d4p1:PrcInqReqDtl" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="PrcInqReqDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcInqReq" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcInqReq" name="location" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/PrcInqReq" name="location_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" name="pricing_date" type="d4p1:RIBDate" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number10" base="xs:long" variety="Atomic" totalDigits="10"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+</package>

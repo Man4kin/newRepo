@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаполнениеНаборщиков" id="34">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнениеНаборщиков</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаЗаполнениеНаборщиковExtendedTooltip" id="35"/>
+			</Button>
+			<Button name="ФормаПровереноКонтроллеромФРОВ" id="29">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПровереноКонтроллеромФРОВ</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаПровереноКонтроллеромФРОВExtendedTooltip" id="36"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ExternalEvent">ВнешнееСобытие</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="37"/>
+			<SearchStringAddition name="СписокSearchString" id="38">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокSearchStringContextMenu" id="39"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="41">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокViewStatusContextMenu" id="42"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="44">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокSearchControlContextMenu" id="45"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="46"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Дата" id="4">
+					<DataPath>Список.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="47"/>
+				</LabelField>
+				<LabelField name="Номер" id="6">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="48"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="8">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="КонтрагентExtendedTooltip" id="49"/>
+				</LabelField>
+				<LabelField name="Склад" id="10">
+					<DataPath>Список.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СкладExtendedTooltip" id="50"/>
+				</LabelField>
+				<LabelField name="Фирма" id="12">
+					<DataPath>Список.Фирма</DataPath>
+					<ContextMenu name="ФирмаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ФирмаExtendedTooltip" id="51"/>
+				</LabelField>
+				<LabelField name="СуммаИтого" id="16">
+					<DataPath>Список.СуммаИтого</DataPath>
+					<ContextMenu name="СуммаИтогоКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СуммаИтогоExtendedTooltip" id="52"/>
+				</LabelField>
+				<LabelField name="Автор" id="14">
+					<DataPath>Список.Автор</DataPath>
+					<ContextMenu name="АвторКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="АвторExtendedTooltip" id="53"/>
+				</LabelField>
+				<CheckBoxField name="Возврат" id="18">
+					<DataPath>Список.Возврат</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВозвратКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ВозвратExtendedTooltip" id="54"/>
+				</CheckBoxField>
+				<LabelField name="НомерRMS" id="20">
+					<DataPath>Список.НомерRMS</DataPath>
+					<ContextMenu name="НомерRMSКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НомерRMSExtendedTooltip" id="55"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаEDI" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа EDI</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа EDI</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаEDIExtendedTooltip" id="56"/>
+					<ChildItems>
+						<PictureField name="СтатусEDI" id="23">
+							<DataPath>Список.СтатусEDI</DataPath>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СостояниеОбменаДаннымиEDI</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="СтатусEDIКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="СтатусEDIExtendedTooltip" id="57"/>
+						</PictureField>
+						<LabelField name="ДатаИзменения" id="25">
+							<DataPath>Список.ДатаИзменения</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ДатаИзмененияКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ДатаИзмененияExtendedTooltip" id="58"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Ссылка" id="27">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="59"/>
+				</LabelField>
+				<CheckBoxField name="Проверено" id="30">
+					<DataPath>Список.Проверено</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПровереноКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ПровереноExtendedTooltip" id="60"/>
+				</CheckBoxField>
+				<LabelField name="КонтроллерФРОВ" id="32">
+					<DataPath>Список.КонтроллерФРОВ</DataPath>
+					<ContextMenu name="КонтроллерФРОВКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КонтроллерФРОВExtendedTooltip" id="61"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ОписаниеОшибки</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументРасходнаяНакладная.Ссылка,
+	ДокументРасходнаяНакладная.ВерсияДанных,
+	ДокументРасходнаяНакладная.ПометкаУдаления,
+	ДокументРасходнаяНакладная.Номер,
+	ДокументРасходнаяНакладная.Дата,
+	ДокументРасходнаяНакладная.Проведен,
+	ДокументРасходнаяНакладная.Фирма,
+	ДокументРасходнаяНакладная.Валюта,
+	ДокументРасходнаяНакладная.Курс,
+	ДокументРасходнаяНакладная.Контрагент,
+	ДокументРасходнаяНакладная.Склад,
+	ДокументРасходнаяНакладная.Автор,
+	ДокументРасходнаяНакладная.Основание,
+	ДокументРасходнаяНакладная.СтруктурнаяЕдиница,
+	ДокументРасходнаяНакладная.Грузополучатель,
+	ДокументРасходнаяНакладная.АдресДоставки,
+	ДокументРасходнаяНакладная.Грузоотправитель,
+	ДокументРасходнаяНакладная.ДокОснование,
+	ДокументРасходнаяНакладная.Комментарий,
+	ДокументРасходнаяНакладная.Возврат,
+	ДокументРасходнаяНакладная.Кратность,
+	ДокументРасходнаяНакладная.ТипДоговора,
+	ДокументРасходнаяНакладная.СуммаИтого,
+	ДокументРасходнаяНакладная.СуммаНДСИтого,
+	ДокументРасходнаяНакладная.Менеджер,
+	ДокументРасходнаяНакладная.Экспедитор,
+	ДокументРасходнаяНакладная.Контролер,
+	ДокументРасходнаяНакладная.Загружен,
+	ДокументРасходнаяНакладная.НомерRMS,
+	СтатусыEDI.Статус КАК СтатусEDI,
+	СтатусыEDI.ОписаниеОшибки,
+	СтатусыEDI.ДатаИзменения,
+	ВЫБОР
+		КОГДА Izh_ПроверенКонтроллеромФРОВСрезПоследних.Документ ЕСТЬ NULL 
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК Проверено,
+	Izh_ПроверенКонтроллеромФРОВСрезПоследних.Контроллер КАК КонтроллерФРОВ
+ИЗ
+	Документ.РасходнаяНакладная КАК ДокументРасходнаяНакладная
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыEDI КАК СтатусыEDI
+		ПО ДокументРасходнаяНакладная.Ссылка = СтатусыEDI.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Izh_ПроверенКонтроллеромФРОВ.СрезПоследних КАК Izh_ПроверенКонтроллеромФРОВСрезПоследних
+		ПО ДокументРасходнаяНакладная.Ссылка = Izh_ПроверенКонтроллеромФРОВСрезПоследних.Документ</QueryText>
+				<MainTable>Document.РасходнаяНакладная</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПровереноКонтроллеромФРОВ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверено контроллером ФРОВ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверено контроллером ФРОВ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПровереноКонтроллеромФРОВ</Action>
+		</Command>
+		<Command name="ЗаполнениеНаборщиков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнение наборщиков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнение наборщиков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПиктограммыПользователя10</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнениеНаборщиков</Action>
+		</Command>
+	</Commands>
+</Form>

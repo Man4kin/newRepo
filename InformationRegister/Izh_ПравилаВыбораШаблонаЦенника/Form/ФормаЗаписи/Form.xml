@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Приоритет" id="1">
+			<DataPath>Запись.Приоритет</DataPath>
+			<ContextMenu name="ПриоритетКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Представление" id="4">
+			<DataPath>Запись.Представление</DataPath>
+			<ContextMenu name="ПредставлениеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПредставлениеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ШаблонЦенника" id="10">
+			<DataPath>Запись.ШаблонЦенника</DataPath>
+			<ContextMenu name="ШаблонЦенникаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ШаблонЦенникаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<LabelDecoration name="ЗаголовокПравило" id="13">
+			<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;b&gt;Правило&lt;/&gt;: 
+Может содержать 2 струкутры:
+1. &lt;b&gt;СтруктураВходныхДанных.&lt;/&gt; Ключи: Номенклатура, Дата, ЦенаЗа100г(Тип Булево);
+2. &lt;b&gt;СтруктураАкционныйТовар&lt;/&gt;. Ключи: Номенклатура, ДатаНачала, ДатаОкончания, Цена, ТипПромо.
+Если Неопредленно, то по номенклатуре нет акций.
+
+&lt;b&gt;Возвращает&lt;/&gt;: Параметр Типа Булево.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЗаголовокПравилоКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ЗаголовокПравилоРасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
+		<InputField name="Правило" id="7">
+			<DataPath>Запись.Правило</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Width>50</Width>
+			<Height>10</Height>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ПравилоКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПравилоРасширеннаяПодсказка" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Izh_ПравилаВыбораШаблонаЦенника</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="24">
+			<DataPath>Объект.Owner</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ВладелецExtendedTooltip" id="30"/>
+		</InputField>
+		<UsualGroup name="ГруппаКодНаименование" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодНаименованиеExtendedTooltip" id="31"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="32"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Wrap>false</Wrap>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="33"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВидСклада" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вид склада</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вид склада</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВидСкладаExtendedTooltip" id="34"/>
+			<ChildItems>
+				<InputField name="ВидСклада" id="5">
+					<DataPath>Объект.ВидСклада</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ВидСкладаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ВидСкладаExtendedTooltip" id="35"/>
+					<Events>
+						<Event name="OnChange">ВидСкладаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидЗапасов" id="26">
+					<DataPath>Объект.ВидЗапасов</DataPath>
+					<ContextMenu name="ВидЗапасовКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ВидЗапасовExtendedTooltip" id="36"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаФлажков" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа флажков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа флажков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФлажковExtendedTooltip" id="37"/>
+			<ChildItems>
+				<CheckBoxField name="ОтрицательныеОстатки" id="7">
+					<DataPath>Объект.ОтрицательныеОстатки</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтрицательныеОстаткиКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОтрицательныеОстаткиExtendedTooltip" id="38"/>
+				</CheckBoxField>
+				<CheckBoxField name="Автопроизводство" id="28">
+					<DataPath>Объект.Автопроизводство</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АвтопроизводствоКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="АвтопроизводствоExtendedTooltip" id="39"/>
+				</CheckBoxField>
+				<InputField name="Площадь" id="19">
+					<DataPath>Объект.Площадь</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ПлощадьКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ПлощадьExtendedTooltip" id="40"/>
+				</InputField>
+				<InputField name="Телефон" id="9">
+					<DataPath>Объект.Телефон</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ТелефонКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ТелефонExtendedTooltip" id="41"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Склады</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Catalog.ПравилаАвтоЗаказов.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

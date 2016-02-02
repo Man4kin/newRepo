@@ -1,0 +1,64 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://1c-astor.ru/RS/ORDM">
+	<objectType name="ChartOfCharacteristicTypesObject_Сертификаты">
+		<property name="IsFolder" type="xs:boolean"/>
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Parent" type="xs:string"/>
+		<property name="Code" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="ValueType" type="xs:string"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord_ДанныеСертификатов">
+		<property name="Номенклатура" type="xs:string"/>
+		<property name="Сертификат" type="xs:string"/>
+		<property name="Значение" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Packets">
+		<property name="Packet" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="CatalogObject_ККМ">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Owner" type="xs:string"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Code" type="xs:decimal"/>
+	</objectType>
+	<objectType name="CatalogObject_Сертификаты">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="ДатаС" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаПо" type="xs:dateTime" lowerBound="0"/>
+		<property name="ОрганСертификации" type="xs:string"/>
+		<property name="Содержание" type="xs:string"/>
+		<property name="Производитель" type="xs:string"/>
+		<property name="Страна" type="xs:string"/>
+		<property name="Комментарий" type="xs:string"/>
+	</objectType>
+	<objectType name="CatalogObject_ПерсоналККМ">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Code" type="xs:string"/>
+		<property name="ФИО" type="xs:string"/>
+	</objectType>
+	<objectType name="CatalogObject_КредитныеКарты">
+		<property name="Ref" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Code" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Out1_PriceChange">
+		<property name="doc_num" type="xs:integer"/>
+		<property name="obj_type" type="xs:string" nillable="true"/>
+		<property name="obj_code" type="xs:integer"/>
+		<property name="doc_date" type="xs:date"/>
+		<property name="price_date" type="xs:dateTime"/>
+		<property name="mode" type="xs:string"/>
+		<property xmlns:d3p1="http://1c-astor.ru/RS/ORDM" name="price_list" type="d3p1:Out1_PriceChange_price_list" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="Out1_PriceChange_price_list">
+		<property name="price_sale" type="xs:decimal"/>
+		<property name="gds_code" type="xs:string" nillable="true"/>
+		<property name="corr_num_line"/>
+	</objectType>
+</package>

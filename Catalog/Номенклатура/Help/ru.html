@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link href="v8help://service_book/service_style" type="text/css" rel="stylesheet"></link><meta content="MSHTML 6.00.6001.18183" name="GENERATOR"></meta></head><body>
+<h1 class=""><font color="#000080">Справочник "Номенклатура"</font></h1>
+<h3 class=""><u>Общее</u></h3>
+<blockquote>
+<p class="Usual">Этот справочник является многоуровневым и предназначен для хранения номенклатуры:</p>
+<ul><ul><ul><li>
+<div class="">товаров</div>
+</li><li>
+<div class="">наборов</div>
+</li><li>
+<div class="">тары</div>
+</li><li>
+<div class="">собственной продукции</div>
+</li><li>
+<div class="">услуг</div></li></ul></ul></ul></blockquote>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="">Категории того, что это -  возвратная тара, материалы, продукция определяются в момент поступления номенклатуры на предприятие.<br>Данные из этого справочника используются в таких документах, как <a href="Document.ПриходнаяНакладная/Help">«Приходная накладная»,</a> <a href="Document.РасходнаяНакладная/Help">«Расходная накладная»</a> и т.д.<br></p></blockquote>
+<h3 class=""><u>Форма списка справочника</u></h3>
+<blockquote>
+<p class="">В форме списка справочника содержится следующая информация: </p>
+<ul><ul><ul><li>
+<div class=""><strong class="ControlElement">Код </strong></div>
+</li><li>
+<div class=""><strong><font color="#000040">Артикул</font></strong></div>
+</li><li>
+<div class=""><strong class="ControlElement">Наименование</strong></div>
+</li><li>
+<div class=""><strong><font color="#000040">Вид товара</font></strong></div>
+</li><li>
+<div class=""><strong class="ControlElement">Базовая единица измерения</strong></div></li></ul></ul></ul></blockquote>
+<h3 class=""><u>Форма элемента справочника</u></h3>
+<blockquote>
+<p class="">При добавлении нового элемента открывается вспомогательное окно <strong class="ControlElement">"Номенклатура".</strong><br>Сначала необходимо заполнить поле <strong class="ControlElement">"Наименование"</strong> , при этом <strong class="ControlElement">Код</strong> будет присвоен автоматически.<br>В поле <strong class="ControlElement">"Родитель"</strong> указывается группа товаров, которой будет подчинен данный элемент. <br><br>Окно содержит следующие вкладки: </p>
+<ul><ul><ul><li>
+<div class=""><strong class="ControlElement">Основное</strong></div>
+</li><li>
+<div class=""><strong><font color="#000040">Связи</font></strong></div>
+</li><li>
+<div class=""><strong><font color="#000040"><strong class="ControlElement">Дополнительные свойства и к</strong><strong class="ControlElement">атегории</strong></font></strong></div>
+</li><li>
+<div class="">Заказы</div>
+<div></div>
+</li><li>
+<div class=""><strong class="ControlElement">Прочее</strong></div></li></ul></ul></ul><strong class="ControlElement">
+<p><br></p></strong>В после <strong class="ControlElement">"Единицы измерения"</strong> надо указать базовую единицу измерения из  <a href="Catalog.КлассификаторЕдиницИзмерения/Help">"Классификатора единиц измерения"</a> .<br>Флаг <strong class="ControlElement">"Дробное количество при розничной продаже"</strong> ставится, если товар можно продавать в дробном количестве.<br></blockquote>
+<blockquote><strong class="ControlElement">
+<p>Вкладка</p></strong><font color="#000040"><strong>"Основное"</strong></font></blockquote>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="">На данной вкладке нужно заполнить следующие поля: </p></blockquote></blockquote>
+<ul><ul><ul><ul><ul><ul><li><font color="#000000"><strong>Артикул.</strong> Артикул товара, заполняется вручную.</font> 
+</li><li>
+<div class=""><strong class="ControlElement">Вид товара.</strong> Заполняется из выпадающего списка: товар, набор, тара, ингридиент, услуга.</div>
+</li><li>
+<div class=""><strong class="ControlElement">Тип товара.</strong> Штучный или весовой, выбирается из списка.</div>
+</li><li><font color="#000000"><strong>Ставка НДС.</strong> Численное значение ставки НДС, элемент справочника <a href="Catalog.СтавкиНДС/Help">"Ставки НДС".</a></font> 
+</li><li>
+<div class=""><strong class="ControlElement">Страна.</strong> Страна, из которой поступает импортный товар. Элемент справочника <a href="Catalog.КлассификаторСтранМира/Help">"Классификатор стран мира".</a></div>
+</li><li>
+<div class=""><strong class="ControlElement">Дополнительный учет.</strong> Заполняется из выпадающего списка: не вести, вести учет по характеристикам, вести учет по срокам годности.</div></li></ul></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p><font color="#000000"><font style="BACKGROUND-COLOR: #ccffff"><font color="#000000"><font style="BACKGROUND-COLOR: #ffffff">В табличной части вкладки, слева, после сохранения элемента автоматически подставляется базовая единица измерения. В дальнейшем здесь указываются дополнительные единицы измерения товара с коэффициентами пересчета в базовую единицу измерения.</font></font></font></font></p>
+<p><font color="#000000"><font style="BACKGROUND-COLOR: #ccffff"><font color="#000000"><font style="BACKGROUND-COLOR: #ffffff">В табличной части вкладки, справа, для возможных единиц измерения товара вводится штрих-код товара при помощи сканера штрих-кодов либо вручную.</font></font></font></font></p><font color="#000000"><font color="#000000"></font></font></blockquote><font color="#000000"><font color="#000000"><font color="#000040">
+<p dir="ltr" style="MARGIN-RIGHT: 0px"><font color="#000040"><strong>Вкладка<font color="#000000"> </font><font color="#000040">"Связи"</font></strong></font></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p dir="ltr" style="MARGIN-RIGHT: 0px"><font color="#000040"><font color="#000040">Вкладка содержит <strong>группы элементов справочника</strong>:</font></font></p></blockquote></font></font></font></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><ul><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Список аналогов.</strong> Список товаров, на которые можно произвести замену отсутствующего товара. Элемент справочника <strong class="ControlElement">"Номенклатура".</strong></div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Список сопутствующих товаров.</strong> Осуществляется подбор сопутствующих товаров из списка уже имеющихся товаров в справочнике <strong class="ControlElement">"Номенклатура"</strong>.<strong> </strong>Сопутствующими считаются те товары, которые чаще всего приобретаются одновременно с данным товаром.</div></li></ul></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px"><font color="#000000"><font color="#000000"><strong><font color="#000040">
+<p dir="ltr" style="MARGIN-RIGHT: 0px"></p></font></strong></font></font><font color="#000000"><font color="#000000"><strong><font color="#000040">Вкладка</font></strong> <font color="#000040"><strong>"Доп. свойства и категории"</strong></font></font></font></blockquote>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p dir="ltr" style="MARGIN-RIGHT: 0px"><font color="#000000"><font color="#000000">Вкладка заполняется при помощи справочников <a href="../id3219bcd2-2e13-4665-884a-7fd33b2521ce/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Свойства объектов"</a> и <a href="../id05aeb03b-d3c8-4cc8-9742-84d3195ac8c6/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Значения свойств".</a></font></font></p></blockquote>
+<p dir="ltr" style="MARGIN-RIGHT: 0px"><font color="#000000"><font color="#000000"><strong><font color="#000040">Вкладка</font></strong> <font color="#000040"><strong>"Заказы"</strong></font></font></font></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p dir="ltr" style="MARGIN-RIGHT: 0px"><font color="#000040"><font color="#000000"><font color="#000000"><font color="#000040"><font color="#000000"><font color="#000000"><font color="#000040">В</font>кладка включает в себя две </font></font>г</font>руппы элементов справочника:</font></font></font></p></blockquote></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><ul><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Основные параметры.</strong> В группе заполняются следующие реквизиты: </div>
+<ul><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Свойство.</strong> Колонка содержит основные параметры заказов.</div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Значение.</strong> Значения свойств заполняются пользователем из выпадающего списка.</div></li></ul></li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong>Параметры, зависящие от метода.  </strong><font color="#000000">Вкладка заполняется при помощи справочников </font><a href="../id3219bcd2-2e13-4665-884a-7fd33b2521ce/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Свойства объектов"</a><font color="#000000"> и </font><a href="../id05aeb03b-d3c8-4cc8-9742-84d3195ac8c6/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Значения свойств".</a></div></li></ul></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p dir="ltr"><font color="#000040"><strong>Вкладка</strong><font color="#000000"> </font><strong><font color="#000040">"Прочие"</font></strong></font></p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="" dir="ltr" style="MARGIN-RIGHT: 0px">На вкладке <strong><font color="#000040">"Прочие"</font></strong> заполняются следующие поля:</p></blockquote></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><ul><ul><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Вид номенклатуры.</strong> Элемент справочника <a href="../idn0">"Виды номенклатуры"</a> .</div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Вид материала</strong></div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Норма убыли розница</strong></div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Норма убыли опт.</strong></div>
+</li><li>
+<div class="" style="MARGIN-RIGHT: 0px"><strong class="ControlElement">Норма предпродажной подготовки.</strong></div></li></ul></ul></ul></ul></ul></ul></ul><blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+<p class="" dir="ltr" style="MARGIN-RIGHT: 0px"> </p></blockquote><font color="#000000"><font color="#000000"><strong><font color="#000040"></font></strong>
+<p dir="ltr"><br> </p></font></font></blockquote></body></html>

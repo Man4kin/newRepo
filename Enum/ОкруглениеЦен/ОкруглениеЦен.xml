@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Enum uuid="9005b5b5-8ba3-4644-ad6d-2e34f14a9d96">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ОкруглениеЦен" category="Ref">
+				<xr:TypeId>f1190545-a9e9-4e88-9747-c060f174b034</xr:TypeId>
+				<xr:ValueId>dfd7653c-f3e7-4b60-a2f2-36194a2ffde9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ОкруглениеЦен" category="Manager">
+				<xr:TypeId>1f461476-c92c-437d-bb58-0fa4d5d5dc5d</xr:TypeId>
+				<xr:ValueId>13ce8fb0-4cc1-4c94-a601-f497457a9204</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ОкруглениеЦен" category="List">
+				<xr:TypeId>7e11fe5c-5b55-4ab4-8fd3-b57d445e5d84</xr:TypeId>
+				<xr:ValueId>56bb2d79-053a-4339-8184-8e24e8c0c175</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОкруглениеЦен</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Округление цен</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Rounding of prices </v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="c9eaa390-b3b6-49c0-afab-17d713c04249">
+				<Properties>
+					<Name>Окр0_01</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>0.01</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>0.01</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до 1 копейки</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="aaf265f8-03e6-4e23-be42-3434fd9ebd7d">
+				<Properties>
+					<Name>Окр0_05</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>0.05</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>0.05</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до 5 копеек</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="71407375-3dfe-4e56-8584-d18a273b3650">
+				<Properties>
+					<Name>Окр0_1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>0.1</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>0.1</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до 10 копеек</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b4e730cc-f4c8-4c2f-a6ca-440258b533dd">
+				<Properties>
+					<Name>Окр0_5</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>0.5</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>0.5</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до 50 копеек</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="98104c94-9bb2-4cbd-8722-bd8d0ae89482">
+				<Properties>
+					<Name>Окр1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>1</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до рубля</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="368bbd5d-2362-4060-82a0-73dd11c7c0bc">
+				<Properties>
+					<Name>Окр5</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>5</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>5</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до 5 рублей</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="23fff958-c117-47c7-87dc-676ccf2e5b7f">
+				<Properties>
+					<Name>Окр10</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>10</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>10</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до 10 рублей</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a39e00aa-4116-4014-9482-74b2f0fe092b">
+				<Properties>
+					<Name>Окр100</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>100</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>100</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Округление до 100 рублей</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

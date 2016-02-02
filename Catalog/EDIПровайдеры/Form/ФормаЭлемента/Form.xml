@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаКод" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодExtendedTooltip" id="36"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="37"/>
+				</InputField>
+				<CheckBoxField name="Активный" id="12">
+					<DataPath>Объект.Активный</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктивныйКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="АктивныйExtendedTooltip" id="38"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="39"/>
+		</InputField>
+		<InputField name="ФорматEDI" id="5">
+			<DataPath>Объект.ФорматEDI</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ФорматEDIКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ФорматEDIExtendedTooltip" id="40"/>
+		</InputField>
+		<UsualGroup name="ГруппаПараметровПодключения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметров подключения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаПараметровПодключенияExtendedTooltip" id="41"/>
+			<ChildItems>
+				<InputField name="КаналОтправки" id="7">
+					<DataPath>Объект.КаналОтправки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КаналОтправкиКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КаналОтправкиExtendedTooltip" id="42"/>
+				</InputField>
+				<InputField name="КаналПриемки" id="9">
+					<DataPath>Объект.КаналПриемки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приемка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КаналПриемкиКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="КаналПриемкиExtendedTooltip" id="43"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа1" id="24">
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="44"/>
+			<ChildItems>
+				<Page name="ЕдИзм" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед изм</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед изм</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЕдИзмExtendedTooltip" id="45"/>
+					<ChildItems>
+						<Table name="ЕдиницыИзмерения" id="15">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЕдиницыИзмерения</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЕдиницыИзмеренияКонтекстноеМеню" id="16"/>
+							<AutoCommandBar name="ЕдиницыИзмеренияКоманднаяПанель" id="17"/>
+							<ExtendedTooltip name="ЕдиницыИзмеренияExtendedTooltip" id="46"/>
+							<SearchStringAddition name="ЕдиницыИзмеренияSearchString" id="47">
+								<Source>
+									<lf:elementId>15</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ЕдиницыИзмеренияSearchStringContextMenu" id="48"/>
+								<ExtendedTooltip name="ЕдиницыИзмеренияSearchStringExtendedTooltip" id="49"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЕдиницыИзмеренияViewStatus" id="50">
+								<Source>
+									<lf:elementId>15</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ЕдиницыИзмеренияViewStatusContextMenu" id="51"/>
+								<ExtendedTooltip name="ЕдиницыИзмеренияViewStatusExtendedTooltip" id="52"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЕдиницыИзмеренияSearchControl" id="53">
+								<Source>
+									<lf:elementId>15</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ЕдиницыИзмеренияSearchControlContextMenu" id="54"/>
+								<ExtendedTooltip name="ЕдиницыИзмеренияSearchControlExtendedTooltip" id="55"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ЕдиницыИзмеренияЕдиницаКлассификатора" id="20">
+									<DataPath>Объект.ЕдиницыИзмерения.ЕдиницаКлассификатора</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЕдиницыИзмеренияЕдиницаКлассификатораКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ЕдиницыИзмеренияЕдиницаКлассификатораExtendedTooltip" id="56"/>
+								</InputField>
+								<InputField name="ЕдиницыИзмеренияЕлиницаПровайдера" id="22">
+									<DataPath>Объект.ЕдиницыИзмерения.ЕдиницаПровайдера</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЕдиницыИзмеренияЕлиницаПровайдераКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ЕдиницыИзмеренияЕлиницаПровайдераExtendedTooltip" id="57"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ИмяФайла" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИмяФайлаExtendedTooltip" id="58"/>
+					<ChildItems>
+						<Table name="ИменаДокументов" id="27">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ИменаДокументов</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИменаДокументовКонтекстноеМеню" id="28"/>
+							<AutoCommandBar name="ИменаДокументовКоманднаяПанель" id="29"/>
+							<ExtendedTooltip name="ИменаДокументовExtendedTooltip" id="59"/>
+							<SearchStringAddition name="ИменаДокументовSearchString" id="60">
+								<Source>
+									<lf:elementId>27</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ИменаДокументовSearchStringContextMenu" id="61"/>
+								<ExtendedTooltip name="ИменаДокументовSearchStringExtendedTooltip" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИменаДокументовViewStatus" id="63">
+								<Source>
+									<lf:elementId>27</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ИменаДокументовViewStatusContextMenu" id="64"/>
+								<ExtendedTooltip name="ИменаДокументовViewStatusExtendedTooltip" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИменаДокументовSearchControl" id="66">
+								<Source>
+									<lf:elementId>27</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ИменаДокументовSearchControlContextMenu" id="67"/>
+								<ExtendedTooltip name="ИменаДокументовSearchControlExtendedTooltip" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИменаДокументовНомерСтроки" id="30">
+									<DataPath>Объект.ИменаДокументов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИменаДокументовНомерСтрокиКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ИменаДокументовНомерСтрокиExtendedTooltip" id="69"/>
+								</LabelField>
+								<InputField name="ИменаДокументовДокумент" id="32">
+									<DataPath>Объект.ИменаДокументов.Документ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИменаДокументовДокументКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ИменаДокументовДокументExtendedTooltip" id="70"/>
+								</InputField>
+								<InputField name="ИменаДокументовИмяФайла" id="34">
+									<DataPath>Объект.ИменаДокументов.ИмяФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИменаДокументовИмяФайлаКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ИменаДокументовИмяФайлаExtendedTooltip" id="71"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.EDIПровайдеры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.EDIПровайдерыПоставщиков.StandardCommand.OpenByValue.EDIПровайдер</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

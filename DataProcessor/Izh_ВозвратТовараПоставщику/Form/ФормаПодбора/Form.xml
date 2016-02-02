@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="СписокДокументов" id="1">
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>СписокДокументов</DataPath>
+			<RowPictureDataPath>СписокДокументов.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>UndoPosting</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Post</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокДокументовКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокДокументовКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокДокументовExtendedTooltip" id="50"/>
+			<SearchStringAddition name="СписокДокументовSearchString" id="51">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокДокументовSearchStringContextMenu" id="52"/>
+				<ExtendedTooltip name="СписокДокументовSearchStringExtendedTooltip" id="53"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокДокументовViewStatus" id="54">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокДокументовViewStatusContextMenu" id="55"/>
+				<ExtendedTooltip name="СписокДокументовViewStatusExtendedTooltip" id="56"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокДокументовSearchControl" id="57">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокДокументовSearchControlContextMenu" id="58"/>
+				<ExtendedTooltip name="СписокДокументовSearchControlExtendedTooltip" id="59"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ValueChoice">СписокДокументовВыбор1</Event>
+				<Event name="Selection">СписокДокументовВыбор</Event>
+				<Event name="ChoiceProcessing">СписокДокументовОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокДокументовДата" id="4">
+					<DataPath>СписокДокументов.Date</DataPath>
+					<ContextMenu name="СписокДокументовДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СписокДокументовДатаExtendedTooltip" id="60"/>
+				</LabelField>
+				<LabelField name="СписокДокументовНомер" id="6">
+					<DataPath>СписокДокументов.Number</DataPath>
+					<ContextMenu name="СписокДокументовНомерКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="СписокДокументовНомерExtendedTooltip" id="61"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКонтрагент" id="24">
+					<DataPath>СписокДокументов.Контрагент</DataPath>
+					<ContextMenu name="СписокДокументовКонтрагентКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СписокДокументовКонтрагентExtendedTooltip" id="62"/>
+				</LabelField>
+				<LabelField name="СписокДокументовСклад" id="34">
+					<DataPath>СписокДокументов.Склад</DataPath>
+					<ContextMenu name="СписокДокументовСкладКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СписокДокументовСкладExtendedTooltip" id="63"/>
+				</LabelField>
+				<LabelField name="СписокДокументовФирма" id="38">
+					<DataPath>СписокДокументов.Фирма</DataPath>
+					<ContextMenu name="СписокДокументовФирмаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СписокДокументовФирмаExtendedTooltip" id="64"/>
+				</LabelField>
+				<LabelField name="СписокДокументовАвтор" id="48">
+					<DataPath>СписокДокументов.Автор</DataPath>
+					<ContextMenu name="СписокДокументовАвторКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="СписокДокументовАвторExtendedTooltip" id="65"/>
+				</LabelField>
+				<LabelField name="СписокДокументовСтруктурнаяЕдиница" id="36">
+					<DataPath>СписокДокументов.СтруктурнаяЕдиница</DataPath>
+					<ContextMenu name="СписокДокументовСтруктурнаяЕдиницаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="СписокДокументовСтруктурнаяЕдиницаExtendedTooltip" id="66"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКомментарий" id="40">
+					<DataPath>СписокДокументов.Комментарий</DataPath>
+					<ContextMenu name="СписокДокументовКомментарийКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СписокДокументовКомментарийExtendedTooltip" id="67"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДокументов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументПриходнаяНакладная.Ссылка,
+	ДокументПриходнаяНакладная.ВерсияДанных,
+	ДокументПриходнаяНакладная.ПометкаУдаления,
+	ДокументПриходнаяНакладная.Номер,
+	ДокументПриходнаяНакладная.Дата,
+	ДокументПриходнаяНакладная.Проведен,
+	ДокументПриходнаяНакладная.Автор,
+	ДокументПриходнаяНакладная.БонуснаяПоставка,
+	ДокументПриходнаяНакладная.Валюта,
+	ДокументПриходнаяНакладная.Грузоотправитель,
+	ДокументПриходнаяНакладная.Грузополучатель,
+	ДокументПриходнаяНакладная.ДатаДокумента,
+	ДокументПриходнаяНакладная.ДатаСФ,
+	ДокументПриходнаяНакладная.ДокОснование,
+	ДокументПриходнаяНакладная.Контрагент,
+	ДокументПриходнаяНакладная.Курс,
+	ДокументПриходнаяНакладная.НомерДокумента,
+	ДокументПриходнаяНакладная.НомерСФ,
+	ДокументПриходнаяНакладная.Приемщик,
+	ДокументПриходнаяНакладная.Склад,
+	ДокументПриходнаяНакладная.СтруктурнаяЕдиница,
+	ДокументПриходнаяНакладная.Фирма,
+	ДокументПриходнаяНакладная.Комментарий,
+	ДокументПриходнаяНакладная.ТипДоговора,
+	ДокументПриходнаяНакладная.Кратность,
+	ДокументПриходнаяНакладная.СуммаИтого,
+	ДокументПриходнаяНакладная.СуммаНДСИтого,
+	ДокументПриходнаяНакладная.Контролер,
+	ДокументПриходнаяНакладная.ОбработанЦВД,
+	ДокументПриходнаяНакладная.Загружен,
+	ДокументПриходнаяНакладная.НомерRMS,
+	ДокументПриходнаяНакладная.Снабженец,
+	ДокументПриходнаяНакладная.EDIПровайдер,
+	ДокументПриходнаяНакладная.ДокАктПриемки,
+	ДокументПриходнаяНакладная.Состав,
+	ДокументПриходнаяНакладная.ОстаткиНоменклатуры,
+	ДокументПриходнаяНакладная.Грузчики,
+	ДокументПриходнаяНакладная.МоментВремени
+ИЗ
+	Документ.ПриходнаяНакладная КАК ДокументПриходнаяНакладная
+	где
+	ДокументПриходнаяНакладная.Контрагент ссылка справочник.структурныеединицы</QueryText>
+				<MainTable>Document.ПриходнаяНакладная</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

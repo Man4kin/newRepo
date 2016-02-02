@@ -1,0 +1,28 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc">
+	<property name="RcvUnitAdjDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" name="loc" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" name="loc_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" ref="d4p1:RcvUnitAdjDtl" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="RcvUnitAdjDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" name="po_nbr" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" lowerBound="0" name="asn_nbr" type="d4p1:varchar230"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" lowerBound="0" name="container_id" type="d4p1:varchar220"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" name="unit_qty" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" lowerBound="0" name="from_disposition" type="d4p1:varchar24"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RcvUnitAdjDesc" lowerBound="0" name="to_disposition" type="d4p1:varchar24"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:long" name="number10" totalDigits="10" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number12_4" totalDigits="12" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="10" name="varchar210" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="20" name="varchar220" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="25" name="varchar225" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="30" name="varchar230" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="4" name="varchar24" variety="Atomic"/>
+</package>

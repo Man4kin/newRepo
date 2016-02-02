@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 8.00.6001.18904"></meta></head><body>
+<h1><font color="#000080">Документ "Z-отчет"</font></h1>
+<h3><u>Общее</u></h3>
+<blockquote>
+<p><strong class="ControlElement">«Z-отчеты»</strong> предназначены для оформления операций, связанных с продажей в розницу товаров, как купленных, так и комиссионных, а также для оформления операций, связанных с возвратом товара.<br><strong class="ControlElement">«Z-отчет»</strong> используется для возврата ранее купленного товара, если возврат происходит в день покупки, во всех остальных случаях используется <a href="Document.ВозвратнаяНакладнаяОтПокупателя/Help">возвратная накладная <br></a>Документ <strong class="ControlElement">"Z-отчет"</strong>создается автоматически по результатам работы POS-терминала, либо заполняется кассиром или другим сотрудником вручную по сводным результатам продаж через кассу. <br><strong class="ControlElement">«Z-отчет»</strong> – товарный документ, предназначенный для оформления реализации следующих ценностей:</p>
+<ul><ul><ul><li>Товаров (весового или штучного) 
+</li><li>Наборов 
+</li><li>Продукции собственного производства 
+</li><li>Услуг 
+</li><li>Тары</li></ul></ul></ul></blockquote>
+<h3><u>Форма шапки документа</u></h3>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font color="#000040"><font color="#000000">При добавлении нового документа открывается окно </font><strong>"Zотчет"</strong><font color="#000000"> .<br></font><strong>Номер</strong></font>, <strong class="ControlElement">дата</strong> и <strong class="ControlElement">автор </strong>указываются в шапке документа автоматически.  <br>В <strong class="ControlElement">шапке</strong> документа  необходимо заполнить поле <strong class="ControlElement">"Фирма" </strong>(элемент справочника <a href="Catalog.Организации/Help">"Фирмы").</a> Указывается фирма, от лица которой ведутся взаиморасчеты.</p>
+<p>Флаг <strong class="ControlElement">«Запрет модификации системой SMS»</strong> устанавливается автоматически при загрузке данных о продажах из модуля SMS и запрещает перезапись документа в случае изменения  данных о продажах в модуле (например, осуществлялась повторная загрузка данных о продажах из кассовых комплексов в модуль SMS).</p>
+<p class="Important"><strong>Важно!</strong> Ввести документ можно как автоматически, так и вручную, используя бумажный документ <strong>Z-отчет</strong>, полученный на кассовом аппарате.</p>
+<p> </p></blockquote>
+<h3 dir="ltr"><u>Табличная часть документа</u></h3>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>В документе содержится две табличные части<strong>.</strong></p>
+<p>В первой табличной части необходимо заполнить следующие колонки: </p></blockquote>
+<ul><ul><ul><ul><ul><li>
+<div><strong class="ControlElement">ПОС.</strong> Кассовый комплекс, используемый при розничных продажах. Элемент справочника <a href="Catalog.ККМ/Help">"ККМ".</a> </div>
+</li><li>
+<div><strong class="ControlElement">Смена.</strong> Номер смены кассира. </div>
+</li><li>
+<div><strong class="ControlElement">Смена SMS.</strong> Заполняется автоматически в случае использования встроенного модуля SMS (Sales Management System) - системы управления продажами.</div>
+</li><li>
+<div><strong class="ControlElement">Дата смены.</strong> По умолчанию автоматически ставится текущая дата (можно редактировать вручную). </div>
+</li><li>
+<div><strong class="ControlElement">Сумма выручки.</strong> Сумма  по Z-отчету, заполняется вручную</div>
+</li><li>
+<div><strong class="ControlElement">В т.ч. наличных.  </strong>Сумма наличных денег, находящаяся в ККМ на момент снятия z-отчета.</div>
+</li><li>
+<div><strong class="ControlElement">Свободная сумма.</strong> Сумма денежных средств, которая не связана ни с какими конкретными проданными товарами. Свободная сумма обычно образуется в качестве платы за товары, поштучный учет которых на складах не ведется.<br><br>Вторая табличная часть содержит вкладки:</div></li></ul></ul><ul><ul><ul><ul><li>
+<div><strong class="ControlElement">Состав. </strong></div>
+</li><li>
+<div><strong class="ControlElement">Кредитные карты</strong></div>
+</li><li>
+<div><strong><font color="#000040">Оплата мобильной связи</font></strong></div></li></ul></ul></ul></ul></ul></ul></ul><blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><strong><font color="#000040">Вкладка</font></strong> <strong class="ControlElement">"<strong class="ControlElement">Состав</strong>".</strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>На данной вкладке необходимо заполнить следующие реквизиты: </p></blockquote>
+<ul dir="ltr"><ul><ul><ul><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong><font color="#000040">Номенклатура. </font></strong> Выбор товаров из справочника <a href="Catalog.Номенклатура/Help">"Номенклатура".</a> </div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Характеристика/партия.</strong> Заполняется из справочника <a href="Catalog.Номенклатура/Help">"Номенклатура"</a> в случае, если для данного товара ведется учет по дополнительным реквизитам.</div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Количество.</strong> Проданное количество согласно фискальным документам.</div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Единица измерения.</strong> Элемент справочника <a href="Catalog.ЕдиницыИзмерения/Help">"Единицы измерения".</a></div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong>Коэффициент </strong>пересчета единицы измерения товара в базовую. Заполняется автоматически.</div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Ставка НДС.</strong> Автоматически указывается ставка, указанная в карточке товара. Возможно редактирование при помощи справочника  <a href="Catalog.СтавкиНДС/Help">"Ставки НДС"</a>. </div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Сумма НДС.</strong> Рассчитывается автоматически.</div>
+</li><li><strong class="ControlElement">Сумма.</strong> Сумма продажи по фискальным документам. 
+</li><li><strong>Склад</strong>, с которого производится отгрузка (продажа) товара<strong>.</strong> Заполняется из списка <a href="Catalog.Склады/Help">складов</a>. 
+<div></div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Состав набора</strong>. Заполняется только для товаров с типом "набор" с помощью документа <a href="../id087d3442-65ce-45bb-b581-ece0dd0d4aa9/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">"Состав набора"</a> . </div></li></ul></ul></ul></ul><p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt" dir="ltr"><br><strong><font color="#000040">Вкладка</font></strong> <strong class="ControlElement">"<strong class="ControlElement">Кредитные карты</strong>".</strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt" dir="ltr">На данной вкладке необходимо заполнить следующие реквизиты: </p></blockquote></blockquote>
+<ul><ul><ul><ul><ul><ul><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Тип карты.</strong> Тип кредитной карты, по которой осуществлялась розничная продажа, например, Visa.  Элемент справочника <a href="Catalog.КредитныеКарты/Help">"Кредитные карты".</a></div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong class="ControlElement">Сумма.</strong> Сумма, оплаченная по кредитной карте. Заполняется вручную. </div></li></ul></ul></ul></ul></ul></ul><blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong><font color="#000040">Вкладка</font></strong> <strong class="ControlElement">"Оплата мобильной связи".</strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt">На данной вкладке заполняются следующие колонки:</p></blockquote></blockquote>
+<ul dir="ltr"><ul><ul><ul><ul><ul><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong>Мобильная связь/тип оплаты. </strong><font color="#000000">Здесь автоматически отображаются все виды мобильной связи (Би Лайн, МТС, Мегафон) и виды оплаты (оплата наличными и по кредитным картам). Кредитные карты, принимаемые к оплате, вводятся пользователем в справочник </font><a href="Catalog.КредитныеКарты/Help">"Кредитные карты"</a>.</div>
+</li><li>
+<div style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong>Сумма. </strong>Сумма оплаты мобильной связи.</div></li></ul></ul></ul></ul></ul></ul><blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt" dir="ltr"><strong><font color="#000040"></font></strong> </p>
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt" dir="ltr"><strong><font color="#000040"></font></strong> </p></blockquote>
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt" dir="ltr"><strong><font color="#000040"></font></strong> </p>
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt" dir="ltr"> </p>
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong><font color="#000040"></font></strong> </p>
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong><font color="#000040"></font></strong> </p>
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong><font color="#000040"></font></strong> </p>
+<p style="TEXT-ALIGN: justify; MARGIN: 0cm 0cm 0pt"><strong><font color="#000040"></font></strong> </p></blockquote></body></html>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Sequence uuid="25a270f3-2d7f-4d78-a513-f35476cbe315">
+		<InternalInfo>
+			<xr:GeneratedType name="SequenceRecord.Товары" category="Record">
+				<xr:TypeId>0288fb3e-dd01-4c54-a4ce-d21309fbc760</xr:TypeId>
+				<xr:ValueId>953bb42b-f861-4b9a-ad0f-9cbedd4f7fa9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceManager.Товары" category="Manager">
+				<xr:TypeId>93eb3574-32da-44fd-aa50-1d060bcacc02</xr:TypeId>
+				<xr:ValueId>f55c25c8-dfef-47b2-9d67-6f7584eed878</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceRecordSet.Товары" category="RecordSet">
+				<xr:TypeId>0c36732c-a7d6-40f2-99b2-27a7cbe1faab</xr:TypeId>
+				<xr:ValueId>4c21ef87-d713-4d71-860a-92a98cfc0a9b</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Товары</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товары</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<MoveBoundaryOnPosting>Move</MoveBoundaryOnPosting>
+			<Documents>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Zотчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратнаяНакладнаяОтПокупателя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ГотоваяПродукция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Инвентаризация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Комплектация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КоррекцияЗапасов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаТоваровМеждуФирмами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходнаяНакладная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаРеализации</xr:Item>
+			</Documents>
+			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстаткиНоменклатуры</xr:Item>
+			</RegisterRecords>
+			<DataLockControlMode>Managed</DataLockControlMode>
+		</Properties>
+		<ChildObjects/>
+	</Sequence>
+</MetaDataObject>

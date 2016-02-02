@@ -1,0 +1,1252 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Group>Horizontal</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="151">
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="152"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="149">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="150"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКодИНаименование" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа код и наименование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа код и наименование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКодИНаименованиеРасширеннаяПодсказка" id="70"/>
+							<ChildItems>
+								<InputField name="Код" id="1">
+									<DataPath>Объект.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="71"/>
+								</InputField>
+								<InputField name="Наименование" id="3">
+									<DataPath>Объект.Description</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="72"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПоставщик" id="57">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа поставщик</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа поставщик</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПоставщикРасширеннаяПодсказка" id="73"/>
+							<ChildItems>
+								<InputField name="Владелец" id="5">
+									<DataPath>Объект.Owner</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВладелецКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="74"/>
+									<Events>
+										<Event name="OnChange">ВладелецПриИзменении</Event>
+										<Event name="StartChoice">ВладелецНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="СкладПроизводства" id="58">
+									<DataPath>Объект.СкладПроизводства</DataPath>
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Склад</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СкладПроизводстваКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="СкладПроизводстваРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<LabelField name="КодПоставщика" id="142">
+									<DataPath>КодПоставщика</DataPath>
+									<ContextMenu name="КодПоставщикаКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="КодПоставщикаРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасписание" id="49">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расписание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расписание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасписаниеРасширеннаяПодсказка" id="76"/>
+							<ChildItems>
+								<InputField name="ПредставлениеРасписания" id="7">
+									<DataPath>Объект.ПредставлениеРасписания</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расписание</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ПредставлениеРасписанияКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ПредставлениеРасписанияРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<Button name="РедактированиеРасписания" id="50">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.РедактированиеРасписания</CommandName>
+									<Parameter xsi:nil="true"/>
+									<Picture>
+										<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="РедактированиеРасписанияРасширеннаяПодсказка" id="78"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<RadioButtonField name="Izh_ВариантРасчета" id="127">
+							<DataPath>Объект.Izh_ВариантРасчета</DataPath>
+							<TitleHeight>1</TitleHeight>
+							<RadioButtonType>RadioButtons</RadioButtonType>
+							<ItemHeight>1</ItemHeight>
+							<ColumnsCount>2</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>По темпу продаж</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>По данным продаж магазина</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="Izh_ВариантРасчетаКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="Izh_ВариантРасчетаРасширеннаяПодсказка" id="129"/>
+							<Events>
+								<Event name="OnChange">Izh_ВариантРасчетаПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаПоказателей" id="23">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа показателей</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа показателей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПоказателейРасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<InputField name="ПериодРасчета" id="9">
+									<DataPath>Объект.ПериодРасчета</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период расчета (дни)</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="ПериодРасчетаКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ПериодРасчетаРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="СрокПоставки" id="51">
+									<DataPath>Объект.СрокПоставки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срок поставки (дни)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="СрокПоставкиКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="СрокПоставкиРасширеннаяПодсказка" id="81"/>
+								</InputField>
+								<InputField name="КоэффициентЗаказа" id="11">
+									<DataPath>Объект.КоэффициентЗаказа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>К заказа</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="КоэффициентЗаказаКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="КоэффициентЗаказаРасширеннаяПодсказка" id="82"/>
+								</InputField>
+								<InputField name="ПроцентОкругления" id="53">
+									<DataPath>Объект.ПроцентОкругления</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>% округления</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПроцентОкругленияКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ПроцентОкругленияРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<CheckBoxField name="ПоПротоколу" id="65">
+									<DataPath>Объект.ПоПротоколу</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоПротоколуКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ПоПротоколуРасширеннаяПодсказка" id="84"/>
+									<Events>
+										<Event name="OnChange">ПоПротоколуПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Izh_ПредельноеВремяЗаказа" id="136">
+									<DataPath>Объект.Izh_ПредельноеВремяЗаказа</DataPath>
+									<ContextMenu name="Izh_ПредельноеВремяЗаказаКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="Izh_ПредельноеВремяЗаказаРасширеннаяПодсказка" id="138"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Izh_Менеджер" id="133">
+							<DataPath>Объект.Izh_Менеджер</DataPath>
+							<ContextMenu name="Izh_МенеджерКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="Izh_МенеджерРасширеннаяПодсказка" id="135"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="Группа_Страницы" id="145">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Группа_СтраницыРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<Page name="Группа_СтраницаСостав" id="147">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состав</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страница состав</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="Группа_СтраницаСоставРасширеннаяПодсказка" id="148"/>
+							<ChildItems>
+								<Table name="Состав" id="15">
+									<Representation>List</Representation>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.Состав</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СоставКонтекстноеМеню" id="16"/>
+									<AutoCommandBar name="СоставКоманднаяПанель" id="17">
+										<ChildItems>
+											<Popup name="СоставЗаполнение" id="63">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Заполнение</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Состав заполнение</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="СоставЗаполнениеРасширеннаяПодсказка" id="85"/>
+												<ChildItems>
+													<Button name="СоставЗаполнитьПоПротоколу" id="60">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьПоПротоколу</CommandName>
+														<Parameter xsi:nil="true"/>
+														<ExtendedTooltip name="СоставЗаполнитьПоПротоколуРасширеннаяПодсказка" id="86"/>
+													</Button>
+													<Button name="СоставЗаполнитьПоПризнакуМатрицы" id="64">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьПоПротоколуПризнакуМатрицы</CommandName>
+														<Parameter xsi:nil="true"/>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Заполнить по признаку матрицы</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="СоставЗаполнитьПоПризнакуМатрицыРасширеннаяПодсказка" id="87"/>
+													</Button>
+												</ChildItems>
+											</Popup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СоставРасширеннаяПодсказка" id="88"/>
+									<SearchStringAddition name="СоставСтрокаПоиска" id="89">
+										<Source>
+											<lf:elementId>15</lf:elementId>
+											<lf:additionId>0</lf:additionId>
+										</Source>
+										<ContextMenu name="СоставСтрокаПоискаКонтекстноеМеню" id="90"/>
+										<ExtendedTooltip name="СоставСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СоставСостояниеПросмотра" id="92">
+										<Source>
+											<lf:elementId>15</lf:elementId>
+											<lf:additionId>1</lf:additionId>
+										</Source>
+										<ContextMenu name="СоставСостояниеПросмотраКонтекстноеМеню" id="93"/>
+										<ExtendedTooltip name="СоставСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СоставУправлениеПоиском" id="95">
+										<Source>
+											<lf:elementId>15</lf:elementId>
+											<lf:additionId>2</lf:additionId>
+										</Source>
+										<ContextMenu name="СоставУправлениеПоискомКонтекстноеМеню" id="96"/>
+										<ExtendedTooltip name="СоставУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">СоставПередНачаломДобавления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СоставНомерСтроки" id="18">
+											<DataPath>Объект.Состав.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СоставНомерСтрокиКонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="СоставНомерСтрокиРасширеннаяПодсказка" id="98"/>
+										</LabelField>
+										<LabelField name="СоставНоменклатураКод" id="67">
+											<DataPath>Объект.Состав.Номенклатура.Code</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>6</Width>
+											<ContextMenu name="СоставНоменклатураКодКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="СоставНоменклатураКодРасширеннаяПодсказка" id="99"/>
+										</LabelField>
+										<InputField name="СоставНоменклатура" id="20">
+											<DataPath>Объект.Состав.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СоставНоменклатураКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="СоставНоменклатураРасширеннаяПодсказка" id="100"/>
+										</InputField>
+										<InputField name="СоставВидМатрицы" id="61">
+											<DataPath>Объект.Состав.ВидМатрицы</DataPath>
+											<Visible>false</Visible>
+											<Enabled>false</Enabled>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СоставВидМатрицыКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="СоставВидМатрицыРасширеннаяПодсказка" id="101"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="ГруппаПодбор" id="24">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подбор</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подбор</v8:content>
+										</v8:item>
+									</ToolTip>
+									<VerticalStretch>true</VerticalStretch>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодборРасширеннаяПодсказка" id="102"/>
+									<ChildItems>
+										<InputField name="СписокНомеклатуры" id="55">
+											<DataPath>СписокНомеклатуры</DataPath>
+											<ContextMenu name="СписокНомеклатурыКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="СписокНомеклатурыРасширеннаяПодсказка" id="103"/>
+											<Events>
+												<Event name="OnChange">СписокНомеклатурыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Table name="ПодборНоменклатуры" id="25">
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ПодборНоменклатуры</DataPath>
+											<RowPictureDataPath>ПодборНоменклатуры.Картинка</RowPictureDataPath>
+											<RowsPicture>
+												<xr:Ref>CommonPicture.ЭлементыИГруппы</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</RowsPicture>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period xsi:type="v8:StandardPeriod">
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>false</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ПодборНоменклатурыКонтекстноеМеню" id="26"/>
+											<AutoCommandBar name="ПодборНоменклатурыКоманднаяПанель" id="27">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<ButtonGroup name="ПодборНоменклатурыГруппаРежимПросмотра" id="33">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Подбор номенклатуры группа режим просмотра</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Подбор номенклатуры группа режим просмотра</v8:content>
+															</v8:item>
+														</ToolTip>
+														<ExtendedTooltip name="ПодборНоменклатурыГруппаРежимПросмотраРасширеннаяПодсказка" id="104"/>
+														<ChildItems>
+															<Button name="ПодборНоменклатурыСписок" id="34">
+																<Type>CommandBarButton</Type>
+																<OnlyInAllActions>true</OnlyInAllActions>
+																<CommandName>Form.Command.Список</CommandName>
+																<Parameter xsi:nil="true"/>
+																<ExtendedTooltip name="ПодборНоменклатурыСписокРасширеннаяПодсказка" id="105"/>
+															</Button>
+															<Button name="ПодборНоменклатурыИерархическийСписок" id="35">
+																<Type>CommandBarButton</Type>
+																<OnlyInAllActions>true</OnlyInAllActions>
+																<CommandName>Form.Command.Иерархия</CommandName>
+																<Parameter xsi:nil="true"/>
+																<ExtendedTooltip name="ПодборНоменклатурыИерархическийСписокРасширеннаяПодсказка" id="106"/>
+															</Button>
+															<Button name="ПодборНоменклатурыДерево" id="36">
+																<Type>CommandBarButton</Type>
+																<OnlyInAllActions>true</OnlyInAllActions>
+																<CommandName>Form.Command.Дерево</CommandName>
+																<Parameter xsi:nil="true"/>
+																<ExtendedTooltip name="ПодборНоменклатурыДеревоРасширеннаяПодсказка" id="107"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<Button name="кнГруппы" id="37">
+														<Type>CommandBarButton</Type>
+														<Check>true</Check>
+														<CommandName>Form.Command.ПоказатьГруппыВПодборе</CommandName>
+														<Parameter xsi:nil="true"/>
+														<ExtendedTooltip name="кнГруппыРасширеннаяПодсказка" id="108"/>
+													</Button>
+													<ButtonGroup name="ПодборНоменклатурыГруппаПоиск" id="38">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Подбор номенклатуры группа поиск</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Подбор номенклатуры группа поиск</v8:content>
+															</v8:item>
+														</ToolTip>
+														<ExtendedTooltip name="ПодборНоменклатурыГруппаПоискРасширеннаяПодсказка" id="109"/>
+														<ChildItems>
+															<Button name="ПодборНоменклатурыНайти" id="39">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ПодборНоменклатуры.StandardCommand.Find</CommandName>
+																<Parameter xsi:nil="true"/>
+																<ExtendedTooltip name="ПодборНоменклатурыНайтиРасширеннаяПодсказка" id="110"/>
+															</Button>
+															<Button name="ПодборНоменклатурыОтменитьПоиск" id="40">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ПодборНоменклатуры.StandardCommand.CancelSearch</CommandName>
+																<Parameter xsi:nil="true"/>
+																<ExtendedTooltip name="ПодборНоменклатурыОтменитьПоискРасширеннаяПодсказка" id="111"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<Button name="ПодборНоменклатурыНастройкаСписка" id="41">
+														<Type>CommandBarButton</Type>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ПодборНоменклатуры.StandardCommand.ListSettings</CommandName>
+														<Parameter xsi:nil="true"/>
+														<ExtendedTooltip name="ПодборНоменклатурыНастройкаСпискаРасширеннаяПодсказка" id="112"/>
+													</Button>
+													<Button name="ПодборЗакрыть" id="42">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.ПодборЗакрыть</CommandName>
+														<Parameter xsi:nil="true"/>
+														<Picture>
+															<xr:Ref>StdPicture.Close</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Закрыть</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ПодборЗакрытьРасширеннаяПодсказка" id="113"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПодборНоменклатурыРасширеннаяПодсказка" id="114"/>
+											<SearchStringAddition name="ПодборНоменклатурыСтрокаПоиска" id="115">
+												<Source>
+													<lf:elementId>25</lf:elementId>
+													<lf:additionId>0</lf:additionId>
+												</Source>
+												<ContextMenu name="ПодборНоменклатурыСтрокаПоискаКонтекстноеМеню" id="116"/>
+												<ExtendedTooltip name="ПодборНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="117"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПодборНоменклатурыСостояниеПросмотра" id="118">
+												<Source>
+													<lf:elementId>25</lf:elementId>
+													<lf:additionId>1</lf:additionId>
+												</Source>
+												<ContextMenu name="ПодборНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="119"/>
+												<ExtendedTooltip name="ПодборНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="120"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПодборНоменклатурыУправлениеПоиском" id="121">
+												<Source>
+													<lf:elementId>25</lf:elementId>
+													<lf:additionId>2</lf:additionId>
+												</Source>
+												<ContextMenu name="ПодборНоменклатурыУправлениеПоискомКонтекстноеМеню" id="122"/>
+												<ExtendedTooltip name="ПодборНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="123"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">ПодборНоменклатурыВыбор</Event>
+											</Events>
+											<ChildItems>
+												<ColumnGroup name="ПодборНоменклатурыГруппаКодИНаименование" id="28">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подбор номенклатуры группа код и наименование</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подбор номенклатуры группа код и наименование</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<ExtendedTooltip name="ПодборНоменклатурыГруппаКодИНаименованиеРасширеннаяПодсказка" id="124"/>
+													<ChildItems>
+														<LabelField name="ПодборНоменклатурыНаименование" id="45">
+															<DataPath>ПодборНоменклатуры.Description</DataPath>
+															<ContextMenu name="ПодборНоменклатурыНаименованиеКонтекстноеМеню" id="46"/>
+															<ExtendedTooltip name="ПодборНоменклатурыНаименованиеРасширеннаяПодсказка" id="125"/>
+														</LabelField>
+														<LabelField name="ПодборНоменклатурыКод" id="43">
+															<DataPath>ПодборНоменклатуры.Code</DataPath>
+															<ContextMenu name="ПодборНоменклатурыКодКонтекстноеМеню" id="44"/>
+															<ExtendedTooltip name="ПодборНоменклатурыКодРасширеннаяПодсказка" id="126"/>
+														</LabelField>
+													</ChildItems>
+												</ColumnGroup>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="Группа_НастройкаАвтозаказаПоСтруктурнымЕдиницам" id="153">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Структурные единицы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка автозаказа по структурным единицам</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="Группа_НастройкаАвтозаказаПоСтруктурнымЕдиницамРасширеннаяПодсказка" id="154"/>
+							<ChildItems>
+								<Table name="СписокАвтоЗаказаПоСтруктурнымЕдиницам" id="155">
+									<Representation>List</Representation>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокАвтоЗаказаПоСтруктурнымЕдиницам</DataPath>
+									<RowPictureDataPath>СписокАвтоЗаказаПоСтруктурнымЕдиницам.DefaultPicture</RowPictureDataPath>
+									<AutoRefresh>true</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period xsi:type="v8:StandardPeriod">
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокАвтоЗаказаПоСтруктурнымЕдиницамКонтекстноеМеню" id="156"/>
+									<AutoCommandBar name="СписокАвтоЗаказаПоСтруктурнымЕдиницамКоманднаяПанель" id="157"/>
+									<ExtendedTooltip name="СписокАвтоЗаказаПоСтруктурнымЕдиницамРасширеннаяПодсказка" id="158"/>
+									<SearchStringAddition name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСтрокаПоиска" id="159">
+										<Source>
+											<lf:elementId>155</lf:elementId>
+											<lf:additionId>0</lf:additionId>
+										</Source>
+										<ContextMenu name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСтрокаПоискаКонтекстноеМеню" id="162"/>
+										<ExtendedTooltip name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСтрокаПоискаРасширеннаяПодсказка" id="163"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСостояниеПросмотра" id="164">
+										<Source>
+											<lf:elementId>155</lf:elementId>
+											<lf:additionId>1</lf:additionId>
+										</Source>
+										<ContextMenu name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСостояниеПросмотраКонтекстноеМеню" id="167"/>
+										<ExtendedTooltip name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСостояниеПросмотраРасширеннаяПодсказка" id="168"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокАвтоЗаказаПоСтруктурнымЕдиницамУправлениеПоиском" id="169">
+										<Source>
+											<lf:elementId>155</lf:elementId>
+											<lf:additionId>2</lf:additionId>
+										</Source>
+										<ContextMenu name="СписокАвтоЗаказаПоСтруктурнымЕдиницамУправлениеПоискомКонтекстноеМеню" id="172"/>
+										<ExtendedTooltip name="СписокАвтоЗаказаПоСтруктурнымЕдиницамУправлениеПоискомРасширеннаяПодсказка" id="173"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">СписокАвтоЗаказаПоСтруктурнымЕдиницамПередНачаломДобавления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСтруктурнаяЕдиница" id="177">
+											<DataPath>СписокАвтоЗаказаПоСтруктурнымЕдиницам.СтруктурнаяЕдиница</DataPath>
+											<ContextMenu name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСтруктурнаяЕдиницаКонтекстноеМеню" id="178"/>
+											<ExtendedTooltip name="СписокАвтоЗаказаПоСтруктурнымЕдиницамСтруктурнаяЕдиницаРасширеннаяПодсказка" id="179"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+								<Table name="СписокСтруктурныхЕдиниц" id="180">
+									<Visible>false</Visible>
+									<CommandBarLocation>None</CommandBarLocation>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>СписокСтруктурныхЕдиниц</DataPath>
+									<RowPictureDataPath>СписокСтруктурныхЕдиниц.DefaultPicture</RowPictureDataPath>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period xsi:type="v8:StandardPeriod">
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокСтруктурныхЕдиницКонтекстноеМеню" id="181"/>
+									<AutoCommandBar name="СписокСтруктурныхЕдиницКоманднаяПанель" id="182"/>
+									<ExtendedTooltip name="СписокСтруктурныхЕдиницРасширеннаяПодсказка" id="183"/>
+									<SearchStringAddition name="СписокСтруктурныхЕдиницСтрокаПоиска" id="184">
+										<Source>
+											<lf:elementId>180</lf:elementId>
+											<lf:additionId>0</lf:additionId>
+										</Source>
+										<ContextMenu name="СписокСтруктурныхЕдиницСтрокаПоискаКонтекстноеМеню" id="187"/>
+										<ExtendedTooltip name="СписокСтруктурныхЕдиницСтрокаПоискаРасширеннаяПодсказка" id="188"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокСтруктурныхЕдиницСостояниеПросмотра" id="189">
+										<Source>
+											<lf:elementId>180</lf:elementId>
+											<lf:additionId>1</lf:additionId>
+										</Source>
+										<ContextMenu name="СписокСтруктурныхЕдиницСостояниеПросмотраКонтекстноеМеню" id="192"/>
+										<ExtendedTooltip name="СписокСтруктурныхЕдиницСостояниеПросмотраРасширеннаяПодсказка" id="193"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокСтруктурныхЕдиницУправлениеПоиском" id="194">
+										<Source>
+											<lf:elementId>180</lf:elementId>
+											<lf:additionId>2</lf:additionId>
+										</Source>
+										<ContextMenu name="СписокСтруктурныхЕдиницУправлениеПоискомКонтекстноеМеню" id="197"/>
+										<ExtendedTooltip name="СписокСтруктурныхЕдиницУправлениеПоискомРасширеннаяПодсказка" id="198"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">СписокСтруктурныхЕдиницВыбор</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокСтруктурныхЕдиницНаименование" id="199">
+											<DataPath>СписокСтруктурныхЕдиниц.Description</DataPath>
+											<ContextMenu name="СписокСтруктурныхЕдиницНаименованиеКонтекстноеМеню" id="200"/>
+											<ExtendedTooltip name="СписокСтруктурныхЕдиницНаименованиеРасширеннаяПодсказка" id="201"/>
+										</LabelField>
+										<LabelField name="СписокСтруктурныхЕдиницСсылка" id="202">
+											<DataPath>СписокСтруктурныхЕдиниц.Ref</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="СписокСтруктурныхЕдиницСсылкаКонтекстноеМеню" id="203"/>
+											<ExtendedTooltip name="СписокСтруктурныхЕдиницСсылкаРасширеннаяПодсказка" id="204"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПравилаАвтоЗаказов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РасписаниеНаФорме" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание на форме</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПодборНоменклатуры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ПодборНоменклатуры.Номенклатура</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СписокНоменклатуры.Код,
+	СписокНоменклатуры.Наименование,
+	НоменклатураКонтрагентаСрезПоследних.Цена КАК Цена,
+	СписокНоменклатуры.Группа,
+	ВЫБОР
+		КОГДА СписокНоменклатуры.ПометкаУдаления
+			ТОГДА ВЫБОР
+					КОГДА СписокНоменклатуры.Группа = 0
+						ТОГДА 2
+					ИНАЧЕ 3
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА СписокНоменклатуры.Группа = 0
+					ТОГДА 0
+				ИНАЧЕ 1
+			КОНЕЦ
+	КОНЕЦ КАК Картинка,
+	СписокНоменклатуры.Ссылка КАК Номенклатура
+ИЗ
+	Справочник.Номенклатура КАК СписокНоменклатуры
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НоменклатураКонтрагента КАК НоменклатураКонтрагентаСрезПоследних
+		ПО СписокНоменклатуры.Ссылка = НоменклатураКонтрагентаСрезПоследних.Номенклатура
+			И (НоменклатураКонтрагентаСрезПоследних.Контрагент = &amp;Контрагент)
+ГДЕ
+	ВЫБОР
+			КОГДА СписокНоменклатуры.Группа = 0
+				ТОГДА СписокНоменклатуры.Заказываемый
+						И СписокНоменклатуры.Ссылка В
+							(ВЫБРАТЬ
+								НоменклатураКонтрагентаСрезПоследних.Номенклатура
+							ИЗ
+								РегистрСведений.НоменклатураКонтрагента КАК НоменклатураКонтрагентаСрезПоследних
+							ГДЕ
+								НоменклатураКонтрагентаСрезПоследних.Контрагент = &amp;Контрагент
+							И (НоменклатураКонтрагентаСрезПоследних.ДатаПрекращенияПоставок &gt; &amp;ДатаДокумента
+							ИЛИ НоменклатураКонтрагентаСрезПоследних.ДатаПрекращенияПоставок = ДатаВремя(1,1,1)))
+						//{БредовЮГ 2014-11-23 Наряд №000134613
+						//И СписокНоменклатуры.Ссылка В
+						//	(ВЫБРАТЬ
+						//		СтатусыНоменклатуры.Номенклатура
+						//	ИЗ
+						//		РегистрСведений.СтатусыНоменклатуры КАК СтатусыНоменклатуры
+						//	ГДЕ
+						//		СтатусыНоменклатуры.СтруктурнаяЕдиница В ИЕРАРХИИ (&amp;СтруктурнаяЕдиница)
+						//		И СтатусыНоменклатуры.Статус = ЗНАЧЕНИЕ(перечисление.статусытоваров.активный))
+						//БредовЮГ 2014-11-23 Наряд №000134613}
+						И ВЫБОР
+							КОГДА &amp;СписокТоваров = ЗНАЧЕНИЕ(Справочник.СпискиНоменклатуры.ПустаяСсылка)
+								ТОГДА ИСТИНА
+							ИНАЧЕ СписокНоменклатуры.Ссылка В
+									(ВЫБРАТЬ
+										СпискиНоменклатурыСостав.Номенклатура
+									ИЗ
+										Справочник.СпискиНоменклатуры.Состав КАК СпискиНоменклатурыСостав
+									ГДЕ
+										СпискиНоменклатурыСостав.Ссылка = &amp;СписокТоваров)
+						КОНЕЦ
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ</QueryText>
+				<MainTable>Catalog.Номенклатура</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокНомеклатуры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список номеклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СпискиНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Номенклатура" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодПоставщика" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код поставщика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокАвтоЗаказаПоСтруктурнымЕдиницам" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список авто заказа по структурным единицам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.АвтоЗаказПоСтруктурнымЕдиницам</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСтруктурныхЕдиниц" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список структурных единиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.СтруктурныеЕдиницы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Дерево" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeTree</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Дерево</Action>
+		</Command>
+		<Command name="Иерархия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Иерархия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Иерархия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeHierarchicalList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Иерархия</Action>
+		</Command>
+		<Command name="ПодборЗакрыть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборЗакрыть</Action>
+		</Command>
+		<Command name="ПодборОткрыть" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор открыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборОткрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПоказатьГруппыВПодборе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПоказатьГруппы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать группы в подборе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.РабочийКаталогПоУмолчанию</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьГруппыВПодборе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Список" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Список</Action>
+		</Command>
+		<Command name="РедактированиеРасписания" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактирование расписания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактирование расписания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РедактированиеРасписания</Action>
+		</Command>
+		<Command name="ЗаполнитьПоПротоколу" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по протоколу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по протоколу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПротоколу</Action>
+		</Command>
+		<Command name="ЗаполнитьПоПротоколуПризнакуМатрицы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по протоколу признаку матрицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по протоколу признаку матрицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПротоколу</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.АвтоЗаказПоСтруктурнымЕдиницам.StandardCommand.OpenByValue.Правило</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.АдминистрированиеБД">false</xr:Value>
+					<xr:Value name="Role.АдминистрированиеСети">false</xr:Value>
+					<xr:Value name="Role.ВыводНаПринтерФайлБуферОбмена">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеБазовойНСИ">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеZОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВариантовОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВозвратовОтПокупателя">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеИнвентаризаций">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеКассовыхДокументов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОтчетовРеализатора">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПерепродажиМеждуФирмами">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПланируемыхПоставок">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПриходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПроизводственныхДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРасходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеСкладскихДокументов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРассылокОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЗапускAutomation">false</xr:Value>
+					<xr:Value name="Role.ЗапускВебКлиента">false</xr:Value>
+					<xr:Value name="Role.ЗапускВнешнегоСоединения">false</xr:Value>
+					<xr:Value name="Role.ЗапускТолстогоКлиента">false</xr:Value>
+					<xr:Value name="Role.ЗапускТонкогоКлиента">false</xr:Value>
+					<xr:Value name="Role.ИзменениеМакетовПечатныхФорм">false</xr:Value>
+					<xr:Value name="Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеВариантовОтчетов">false</xr:Value>
+					<xr:Value name="Role.БазовыеПрава">false</xr:Value>
+					<xr:Value name="Role.ПросмотрДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеУчетныхЗаписейЭлектроннойПочты">false</xr:Value>
+					<xr:Value name="Role.ПросмотрСебестоимости">false</xr:Value>
+					<xr:Value name="Role.РаботаСТорговымОборудованием">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВозвратныхНакладныхОтПокупателя">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДенежныхДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗетОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИВыполнениеЗаданий">false</xr:Value>
+					<xr:Value name="Role.НеОперативноеПроведение">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИнвентаризаций">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПодключаемогоОборудования">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПриходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПроизводственныхДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеРасходныхНакладных">false</xr:Value>
+					<xr:Value name="Role.ЦВД">false</xr:Value>
+					<xr:Value name="Role.ОператорПриходаВыписки">false</xr:Value>
+					<xr:Value name="Role.ОператорПриходаВыписки_Алко">false</xr:Value>
+					<xr:Value name="Role.МенеджерРЦ">false</xr:Value>
+					<xr:Value name="Role.Экономист">false</xr:Value>
+					<xr:Value name="Role.Бухгалтер">false</xr:Value>
+					<xr:Value name="Role.СпециалистМОП">false</xr:Value>
+					<xr:Value name="Role.КатегорийныйМенеджер">false</xr:Value>
+					<xr:Value name="Role.КонтроллерРевизор">false</xr:Value>
+					<xr:Value name="Role.Сертификатчик">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСкладскихДокументовИОтчетов">false</xr:Value>
+					<xr:Value name="Role.ОбновлениеКонфигурацииБазыДанных">false</xr:Value>
+					<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+					<xr:Value name="Role.ПросмотрЖурналаРегистрации">false</xr:Value>
+					<xr:Value name="Role.СохранениеДанныхПользователя">false</xr:Value>
+					<xr:Value name="Role.ПросмотрБазовойНСИ">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеВебСервисов">false</xr:Value>
+					<xr:Value name="Role.ЗапускРегламентныхЗаданий">false</xr:Value>
+					<xr:Value name="e42c55d4-a1b9-48c9-9f9b-63e402f5710d">false</xr:Value>
+					<xr:Value name="0db37ea7-8c90-4575-876c-026b425b5c09">false</xr:Value>
+					<xr:Value name="38a52cc0-d7f8-4660-903c-68c52d5fb0a8">false</xr:Value>
+					<xr:Value name="8098f380-05ab-4143-80e6-e3c6ad0b885c">false</xr:Value>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.ПравилаАвтоЗаказов.Command.ОткрытьРасписание</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

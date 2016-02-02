@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Адресация</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>Horizontal</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<ButtonGroup name="КоманднаяПанельСписка" id="8">
+				<CommandSource>1:02023637-7868-4a5f-8576-835a76e0c9ba</CommandSource>
+				<ExtendedTooltip name="КоманднаяПанельСпискаExtendedTooltip" id="43"/>
+			</ButtonGroup>
+			<ButtonGroup name="КоманднаяПанельФормы" id="9">
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="КоманднаяПанельФормыExtendedTooltip" id="44"/>
+				<ChildItems>
+					<Button name="СохранитьИЗакрыть" id="38">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.Сохранить</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СохранитьИЗакрытьExtendedTooltip" id="45"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСЕИЗаданныеРоли" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа СЕИЗаданные роли</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа СЕИЗаданные роли</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСЕИЗаданныеРолиExtendedTooltip" id="46"/>
+			<ChildItems>
+				<InputField name="СтруктурнаяЕдиница" id="40">
+					<DataPath>СтруктурнаяЕдиница</DataPath>
+					<ContextMenu name="СтруктурнаяЕдиницаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СтруктурнаяЕдиницаExtendedTooltip" id="47"/>
+					<Events>
+						<Event name="OnChange">СтруктурнаяЕдиницаПриИзменении</Event>
+						<Event name="StartChoice">СтруктурнаяЕдиницаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<Table name="ЗаданныеРоли" id="10">
+					<Representation>Tree</Representation>
+					<CommandBarLocation>Top</CommandBarLocation>
+					<SkipOnInput>false</SkipOnInput>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<InitialTreeView>ExpandTopLevel</InitialTreeView>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ЗаданныеРоли</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="ЗаданныеРолиКонтекстноеМеню" id="11"/>
+					<AutoCommandBar name="ЗаданныеРолиКоманднаяПанель" id="12"/>
+					<ExtendedTooltip name="ЗаданныеРолиExtendedTooltip" id="48"/>
+					<SearchStringAddition name="ЗаданныеРолиSearchString" id="49">
+						<Source>
+							<lf:elementId>10</lf:elementId>
+							<lf:additionId>0</lf:additionId>
+						</Source>
+						<ContextMenu name="ЗаданныеРолиSearchStringContextMenu" id="50"/>
+						<ExtendedTooltip name="ЗаданныеРолиSearchStringExtendedTooltip" id="51"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЗаданныеРолиViewStatus" id="52">
+						<Source>
+							<lf:elementId>10</lf:elementId>
+							<lf:additionId>1</lf:additionId>
+						</Source>
+						<ContextMenu name="ЗаданныеРолиViewStatusContextMenu" id="53"/>
+						<ExtendedTooltip name="ЗаданныеРолиViewStatusExtendedTooltip" id="54"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЗаданныеРолиSearchControl" id="55">
+						<Source>
+							<lf:elementId>10</lf:elementId>
+							<lf:additionId>2</lf:additionId>
+						</Source>
+						<ContextMenu name="ЗаданныеРолиSearchControlContextMenu" id="56"/>
+						<ExtendedTooltip name="ЗаданныеРолиSearchControlExtendedTooltip" id="57"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeDeleteRow">ЗаданныеРолиПередУдалением</Event>
+						<Event name="OnActivateRow">ЗаданныеРолиПриАктивизацииСтроки</Event>
+						<Event name="Drag">ЗаданныеРолиПеретаскивание</Event>
+						<Event name="AfterDeleteRow">ЗаданныеРолиПослеУдаления</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="Объект" id="13">
+							<DataPath>ЗаданныеРоли.Объект</DataPath>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ОбъектКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ОбъектExtendedTooltip" id="58"/>
+						</InputField>
+						<InputField name="Заменитель" id="15">
+							<DataPath>ЗаданныеРоли.Заменитель</DataPath>
+							<Visible>false</Visible>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ЗаменительКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ЗаменительExtendedTooltip" id="59"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСотрудникиИРоли" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сотрудники и роли</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сотрудники и роли</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСотрудникиИРолиExtendedTooltip" id="60"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСотрудники" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сотрудники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСотрудникиExtendedTooltip" id="61"/>
+					<ChildItems>
+						<Table name="Сотрудники" id="18">
+							<CommandBarLocation>Top</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<Height>6</Height>
+							<Header>false</Header>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<DataPath>Сотрудники</DataPath>
+							<RowPictureDataPath>Сотрудники.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period xsi:type="v8:StandardPeriod">
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СотрудникиКонтекстноеМеню" id="19"/>
+							<AutoCommandBar name="СотрудникиКоманднаяПанель" id="20">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="Добавить" id="39">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Command.Добавить</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ДобавитьExtendedTooltip" id="62"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СотрудникиExtendedTooltip" id="63"/>
+							<SearchStringAddition name="СотрудникиSearchString" id="64">
+								<Source>
+									<lf:elementId>18</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="СотрудникиSearchStringContextMenu" id="65"/>
+								<ExtendedTooltip name="СотрудникиSearchStringExtendedTooltip" id="66"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СотрудникиViewStatus" id="67">
+								<Source>
+									<lf:elementId>18</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="СотрудникиViewStatusContextMenu" id="68"/>
+								<ExtendedTooltip name="СотрудникиViewStatusExtendedTooltip" id="69"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СотрудникиSearchControl" id="70">
+								<Source>
+									<lf:elementId>18</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="СотрудникиSearchControlContextMenu" id="71"/>
+								<ExtendedTooltip name="СотрудникиSearchControlExtendedTooltip" id="72"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="Наименование" id="21">
+									<DataPath>Сотрудники.ПользовательRef</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="НаименованиеExtendedTooltip" id="73"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСписокРолей" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функциональные обязанности</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список ролей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСписокРолейExtendedTooltip" id="74"/>
+					<ChildItems>
+						<Table name="СписокРолей" id="29">
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<Height>7</Height>
+							<Header>false</Header>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<DataPath>СписокРолей</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="СписокРолейКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="СписокРолейКоманднаяПанель" id="31"/>
+							<ExtendedTooltip name="СписокРолейExtendedTooltip" id="75"/>
+							<SearchStringAddition name="СписокРолейSearchString" id="76">
+								<Source>
+									<lf:elementId>29</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="СписокРолейSearchStringContextMenu" id="77"/>
+								<ExtendedTooltip name="СписокРолейSearchStringExtendedTooltip" id="78"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокРолейViewStatus" id="79">
+								<Source>
+									<lf:elementId>29</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="СписокРолейViewStatusContextMenu" id="80"/>
+								<ExtendedTooltip name="СписокРолейViewStatusExtendedTooltip" id="81"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокРолейSearchControl" id="82">
+								<Source>
+									<lf:elementId>29</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="СписокРолейSearchControlContextMenu" id="83"/>
+								<ExtendedTooltip name="СписокРолейSearchControlExtendedTooltip" id="84"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="Наименование1" id="32">
+									<DataPath>СписокРолей.Value</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Функциональная обязанность</v8:content>
+										</v8:item>
+									</Title>
+									<Wrap>false</Wrap>
+									<ContextMenu name="Наименование1КонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="Наименование1ExtendedTooltip" id="85"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЗаданныеРоли" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заданные роли</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФункциональныеОбязанности</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Заменитель" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заменитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пассивный" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пассивный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Временный" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Временный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Сотрудники" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>2/25</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ПользователиСтруктурныхЕдиниц.Пользователь.Ссылка
+ИЗ
+	РегистрСведений.ПользователиСтруктурныхЕдиниц КАК ПользователиСтруктурныхЕдиниц
+ГДЕ
+	ПользователиСтруктурныхЕдиниц.СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокРолей" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ролей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ФункциональныеОбязанности</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="СтруктурнаяЕдиница" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структурная единица</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрытьВыполнить</Action>
+		</Command>
+		<Command name="Добавить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Back</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВыполнить</Action>
+		</Command>
+	</Commands>
+</Form>

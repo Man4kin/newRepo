@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="UDA_ID" id="1">
+			<DataPath>Объект.UDA_ID</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="UDA_IDКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="UDA_IDExtendedTooltip" id="23"/>
+		</InputField>
+		<InputField name="UDA_DESC" id="3">
+			<DataPath>Объект.UDA_DESC</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="UDA_DESCКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="UDA_DESCExtendedTooltip" id="24"/>
+		</InputField>
+		<InputField name="MODULE" id="5">
+			<DataPath>Объект.MODULE</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="MODULEКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="MODULEExtendedTooltip" id="25"/>
+		</InputField>
+		<InputField name="DISPLAY_TYPE" id="7">
+			<DataPath>Объект.DISPLAY_TYPE</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DISPLAY_TYPEКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="DISPLAY_TYPEExtendedTooltip" id="26"/>
+		</InputField>
+		<InputField name="DATA_TYPE" id="9">
+			<DataPath>Объект.DATA_TYPE</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DATA_TYPEКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="DATA_TYPEExtendedTooltip" id="27"/>
+		</InputField>
+		<InputField name="DATA_LENGTH" id="11">
+			<DataPath>Объект.DATA_LENGTH</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DATA_LENGTHКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="DATA_LENGTHExtendedTooltip" id="28"/>
+		</InputField>
+		<InputField name="SINGLE_VALUE_IND" id="13">
+			<DataPath>Объект.SINGLE_VALUE_IND</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="SINGLE_VALUE_INDКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="SINGLE_VALUE_INDExtendedTooltip" id="29"/>
+		</InputField>
+		<InputField name="FILTER_ORG_ID" id="15">
+			<DataPath>Объект.FILTER_ORG_ID</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="FILTER_ORG_IDКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="FILTER_ORG_IDExtendedTooltip" id="30"/>
+		</InputField>
+		<InputField name="FILTER_MERCH_ID" id="17">
+			<DataPath>Объект.FILTER_MERCH_ID</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="FILTER_MERCH_IDКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="FILTER_MERCH_IDExtendedTooltip" id="31"/>
+		</InputField>
+		<InputField name="FILTER_MERCH_ID_CLASS" id="19">
+			<DataPath>Объект.FILTER_MERCH_ID_CLASS</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="FILTER_MERCH_ID_CLASSКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="FILTER_MERCH_ID_CLASSExtendedTooltip" id="32"/>
+		</InputField>
+		<InputField name="FILTER_MERCH_ID_SUBCLASS" id="21">
+			<DataPath>Объект.FILTER_MERCH_ID_SUBCLASS</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="FILTER_MERCH_ID_SUBCLASSКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="FILTER_MERCH_ID_SUBCLASSExtendedTooltip" id="33"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataSourceTableObject.RMS.RMS13_UDA</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

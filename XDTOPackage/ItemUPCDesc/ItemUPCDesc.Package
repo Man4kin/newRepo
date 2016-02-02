@@ -1,0 +1,16 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/ItemUPCDesc">
+	<property name="ItemUPCDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUPCDesc" name="item_id" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUPCDesc" name="item_parent" type="d4p1:varchar225" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUPCDesc" name="primary_ref_item_ind" type="d4p1:varchar21" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUPCDesc" name="format_id" type="d4p1:varchar21" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUPCDesc" name="prefix" type="d4p1:number2" lowerBound="0"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/ItemUPCDesc" name="item_number_type" type="d4p1:varchar26" lowerBound="0"/>
+		</typeDef>
+	</property>
+	<valueType name="number2" base="xs:integer" variety="Atomic" totalDigits="2"/>
+	<valueType name="varchar21" base="xs:string" variety="Atomic" maxLength="1"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+	<valueType name="varchar26" base="xs:string" variety="Atomic" maxLength="6"/>
+</package>

@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СреднийЗапас</dataPath>
+			<field>СреднийЗапас</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средний запас</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СреднийЗапасСумма</dataPath>
+			<field>СреднийЗапасСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средний запас сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоДней</dataPath>
+			<field>КоличествоДней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество дней</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапасРасход</dataPath>
+			<field>ЗапасРасход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапасРасходСумма</dataPath>
+			<field>ЗапасРасходСумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсновнойПоставщик</dataPath>
+			<field>ОсновнойПоставщик</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<item xsi:type="DataSetObject">
+			<name>НаборДанных3</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Номенклатура</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СреднийЗапас</dataPath>
+				<field>СреднийЗапас</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средний запас</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>18</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СреднийЗапасСумма</dataPath>
+				<field>СреднийЗапасСумма</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средний запас сумма</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>18</v8:Digits>
+						<v8:FractionDigits>2</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоДней</dataPath>
+				<field>КоличествоДней</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество дней</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОсновнойПоставщик</dataPath>
+				<field>ОсновнойПоставщик</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основной поставщик</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</valueType>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<objectName>тзСреднийЗапас</objectName>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>НаборДанных2</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗапасРасход</dataPath>
+				<field>ЗапасРасход</field>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>18</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗапасРасходСумма</dataPath>
+				<field>ЗапасРасходСумма</field>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>18</v8:Digits>
+						<v8:FractionDigits>2</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МестоХранения</dataPath>
+				<field>МестоХранения</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОсновнойПоставщик</dataPath>
+				<field>ОсновнойПоставщик</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основной поставщик</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</valueType>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ	
+	НоменклатураКонтрагента.Номенклатура КАК Номенклатура,
+	МАКСИМУМ(НоменклатураКонтрагента.Контрагент) КАК Контрагент
+ПОМЕСТИТЬ ВТНоменклатураКонтрагента 
+ИЗ
+	РегистрСведений.НоменклатураКонтрагента КАК НоменклатураКонтрагента
+ГДЕ
+	НоменклатураКонтрагента.ОсновнойПоставщик  
+СГРУППИРОВАТЬ ПО 
+	НоменклатураКонтрагента.Номенклатура;
+
+///////////////////////////////////////////////////////////////////////////	
+	
+ВЫБРАТЬ
+	ОстаткиНоменклатуры.Номенклатура,
+	СУММА(ВЫБОР
+			КОГДА ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ВозвратОтПокупателя)
+					ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(перечисление.КодыОпераций.ПерепродажаВозвратОтПокупателя)
+					ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПерепродажаПоступлениеТоваров)
+					ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПеремещениеПриход)
+				ТОГДА -1 * ОстаткиНоменклатуры.Количество
+			ИНАЧЕ ОстаткиНоменклатуры.Количество
+		КОНЕЦ) КАК ЗапасРасход,
+	СУММА(ВЫБОР
+			КОГДА ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ВозвратОтПокупателя)
+					ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(перечисление.КодыОпераций.ПерепродажаВозвратОтПокупателя)
+					ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПерепродажаПоступлениеТоваров)
+					ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПеремещениеПриход)
+				ТОГДА -1 * ОстаткиНоменклатуры.СуммаУпр
+			ИНАЧЕ ОстаткиНоменклатуры.СуммаУпр
+		КОНЕЦ) КАК ЗапасРасходСумма,
+	ВТНоменклатураКонтрагента.Контрагент КАК ОсновнойПоставщик
+ИЗ
+	РегистрНакопления.ОстаткиНоменклатуры КАК ОстаткиНоменклатуры
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТНоменклатураКонтрагента
+		ПО ОстаткиНоменклатуры.Номенклатура = ВТНоменклатураКонтрагента.Номенклатура
+ГДЕ
+	(ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПродажаОпт)
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(перечисление.КодыОпераций.ПродажаРозница)
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПерепродажаПродажаОпт)
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ВозвратОтПокупателя)
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(перечисление.КодыОпераций.ПерепродажаВозвратОтПокупателя)
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.КорректировкаРеализации)
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КОдыОпераций.ПерепродажаПоступлениеТоваров)
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПеремещениеРасход)
+				И ОстаткиНоменклатуры.Регистратор ССЫЛКА Документ.РасходнаяНакладная
+			ИЛИ ОстаткиНоменклатуры.КодОперации = ЗНАЧЕНИЕ(Перечисление.КодыОпераций.ПеремещениеПриход)
+				И ОстаткиНоменклатуры.Регистратор ССЫЛКА Документ.ПриходнаяНакладная)
+	И ОстаткиНоменклатуры.Период &gt;= &amp;НачалоПериода
+	И ОстаткиНоменклатуры.Период &lt;= &amp;КонецПериода
+{ГДЕ
+	ОстаткиНоменклатуры.МестоХранения.*}
+
+СГРУППИРОВАТЬ ПО
+	ОстаткиНоменклатуры.Номенклатура,
+	ОстаткиНоменклатуры.МестоХранения,
+	ВТНоменклатураКонтрагента.Контрагент</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>КоэффиицентОборачиваемости</dataPath>
+		<expression>ВЫбор когда СреднийЗапас = 0 тогда 0 иначе ЗапасРасход/СреднийЗапас конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффиицент оборачиваемости</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Format</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=18; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоэффиицентОборачиваемостиСумма</dataPath>
+		<expression>ВЫбор когда СреднийЗапасСумма = 0 тогда 0 иначе ЗапасРасходсумма/СреднийЗапассумма конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коэффиицент оборачиваемости сумма</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Format</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=18; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Оборачиваемость</dataPath>
+		<expression>Выбор когда ВЫбор когда СреднийЗапас = 0 тогда 0 иначе ЗапасРасход/СреднийЗапас конец = 0 тогда 0 иначе КоличествоДней/ВЫбор когда СреднийЗапас = 0 тогда 0 иначе ЗапасРасход/СреднийЗапас конец Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Оборачиваемость</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Format</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=18; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОборачиваемостьСумма</dataPath>
+		<expression>Выбор когда ВЫбор когда СреднийЗапасСумма = 0 тогда 0 иначе ЗапасРасходСумма/СреднийЗапасСумма конец = 0 тогда 0 иначе КоличествоДней/ВЫбор когда СреднийЗапасСумма = 0 тогда 0 иначе ЗапасРасходСумма/СреднийЗапасСумма конец Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Оборачиваемость сумма</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Format</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=18; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>ЗапасРасход</dataPath>
+		<expression>Сумма(ЗапасРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗапасРасходСумма</dataPath>
+		<expression>Сумма(ЗапасРасходСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СреднийЗапасСумма</dataPath>
+		<expression>Сумма(СреднийЗапасСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СреднийЗапас</dataPath>
+		<expression>Сумма(СреднийЗапас)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоэффиицентОборачиваемости</dataPath>
+		<expression>ВЫбор когда Сумма(СреднийЗапас )= 0 тогда 0 иначе Сумма(ЗапасРасход)/Сумма(СреднийЗапас) конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоэффиицентОборачиваемостиСумма</dataPath>
+		<expression>ВЫбор когда Сумма(СреднийЗапасСумма )= 0 тогда 0 иначе Сумма(ЗапасРасходСумма)/Сумма(СреднийЗапасСумма) конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Оборачиваемость</dataPath>
+		<expression>Выбор когда ВЫбор когда Сумма(СреднийЗапас) = 0 тогда 0 иначе СУмма(ЗапасРасход)/Сумма(СреднийЗапас) конец = 0 тогда 0 иначе Максимум(КоличествоДней)/ВЫбор когда Сумма(СреднийЗапас) = 0 тогда 0 иначе Сумма(ЗапасРасход)/Сумма(СреднийЗапас) конец Конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОборачиваемостьСумма</dataPath>
+		<expression>Выбор когда ВЫбор когда Сумма(СреднийЗапасСумма) = 0 тогда 0 иначе Сумма(ЗапасРасходСумма)/Сумма(СреднийЗапасСумма) конец = 0 тогда 0 иначе Максимум(КоличествоДней)/ВЫбор когда Сумма(СреднийЗапасСумма) = 0 тогда 0 иначе Сумма(ЗапасРасходСумма)/Сумма(СреднийЗапасСумма) конец Конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоДней</dataPath>
+		<expression>Максимум(КоличествоДней)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОсновнойПоставщик</dataPath>
+		<expression>Максимум(ОсновнойПоставщик)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ОборачиваемостьКоличество</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Оборачиваемость (количество)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СреднийЗапас</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗапасРасход</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоэффиицентОборачиваемости</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Оборачиваемость</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>f111de46-1f78-4d9c-8b1d-433d917bbd4c</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>4220030c-b155-4510-9d38-cb52974bca44</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>01faca6a-68ea-4cc4-b5d4-8b223fca4d46</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Title</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оборачиваемость (количество)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Hierarchy</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ОборачиваемостьСумма</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Оборачиваемость (сумма)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СреднийЗапасСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗапасРасходСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоэффиицентОборачиваемостиСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОборачиваемостьСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОсновнойПоставщик</dcsset:field>
+				</dcsset:item>
+				<dcsset:userSettingID>a9e69138-1318-40f3-a08d-e9df29c3fb0f</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>f111de46-1f78-4d9c-8b1d-433d917bbd4c</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>c6a1e0d1-d9e3-4070-9726-95056e46de81</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>45b30929-5ecc-4d97-b5cb-dccb200a313a</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Title</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оборачиваемость (суммы)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Hierarchy</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

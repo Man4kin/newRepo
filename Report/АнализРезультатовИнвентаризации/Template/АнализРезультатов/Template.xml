@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вес</dataPath>
+			<field>Вес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаВеса</dataPath>
+			<field>ЕдиницаВеса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоИзлишка</dataPath>
+			<field>КоличествоИзлишка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНедостачи</dataPath>
+			<field>КоличествоНедостачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоУчет</dataPath>
+			<field>КоличествоУчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комитент</dataPath>
+			<field>Комитент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаИзлишка</dataPath>
+			<field>СуммаИзлишка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаИзлишкаУпр</dataPath>
+			<field>СуммаИзлишкаУпр</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНедостачи</dataPath>
+			<field>СуммаНедостачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНедостачиУпр</dataPath>
+			<field>СуммаНедостачиУпр</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фирма</dataPath>
+			<field>Фирма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаИзлишка</dataPath>
+			<field>ЦенаИзлишка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаИзлишкаУпр</dataPath>
+			<field>ЦенаИзлишкаУпр</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаУпр</dataPath>
+			<field>СуммаУпр</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаУчет</dataPath>
+			<field>СуммаУчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаУчетУпр</dataPath>
+			<field>СуммаУчетУпр</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРазница</dataPath>
+			<field>КоличествоРазница</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРазница</dataPath>
+			<field>СуммаРазница</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРазницаУпр</dataPath>
+			<field>СуммаРазницаУпр</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеполныеДанныеПоФирмам</dataPath>
+			<field>НеполныеДанныеПоФирмам</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ИнвентаризацияСостав.Номенклатура,
+	СоставПоФирмам.ЕдиницаИзмерения,
+	СоставПоФирмам.Количество КАК Количество,
+	СоставПоФирмам.ЦенаИзлишка,
+	СоставПоФирмам.КоличествоУчет КАК КоличествоУчет,
+	СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет КАК КоличествоРазница,
+	ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) КАК СуммаУчет,
+	ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) КАК СуммаУчетУпр,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) &gt; 0
+				ТОГДА ВЫБОР
+						КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &gt; 0
+							ТОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) + СоставПоФирмам.ЦенаИзлишка * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) / ОстаткиНоменклатурыОстатки.КоличествоОстаток * СоставПоФирмам.Количество
+					КОНЕЦ
+			ИНАЧЕ СоставПоФирмам.ЦенаИзлишка * СоставПоФирмам.Количество
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК Сумма,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) &gt; 0
+				ТОГДА ВЫБОР
+						КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &gt; 0
+							ТОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) + СоставПоФирмам.ЦенаИзлишкаУпр * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) / ОстаткиНоменклатурыОстатки.КоличествоОстаток * СоставПоФирмам.Количество
+					КОНЕЦ
+			ИНАЧЕ СоставПоФирмам.ЦенаИзлишкаУпр * СоставПоФирмам.Количество
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаУпр,
+	СоставПоФирмам.Вес,
+	СоставПоФирмам.ЕдиницаВеса,
+	СоставПоФирмам.ЦенаИзлишкаУпр,
+	ИнвентаризацияСостав.Склад,
+	СоставПоФирмам.Фирма,
+	ВЫБОР
+		КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &gt; 0
+			ТОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоИзлишка,
+	ВЫБОР
+		КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &lt; 0
+			ТОГДА -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоНедостачи,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &gt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) &gt; 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишка * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) + СоставПоФирмам.ЦенаИзлишка * СоставПоФирмам.Количество
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) &lt; 0
+				ТОГДА -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаИзлишка,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &gt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) &gt; 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишкаУпр * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) + СоставПоФирмам.ЦенаИзлишкаУпр * СоставПоФирмам.Количество
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) &lt; 0
+				ТОГДА -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаИзлишкаУпр,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &lt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) = 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишка * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) / ОстаткиНоменклатурыОстатки.КоличествоОстаток * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) &gt; 0
+				ТОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаНедостачи,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &lt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) = 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишкаУпр * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) / ОстаткиНоменклатурыОстатки.КоличествоОстаток * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) &gt; 0
+				ТОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаНедостачиУпр,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &gt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) &gt; 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишка * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) + СоставПоФирмам.ЦенаИзлишка * СоставПоФирмам.Количество
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) &lt; 0
+				ТОГДА -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ - ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &lt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) = 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишка * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) / ОстаткиНоменклатурыОстатки.КоличествоОстаток * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0) &gt; 0
+				ТОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаРазница,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &gt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) &gt; 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишкаУпр * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) + СоставПоФирмам.ЦенаИзлишкаУпр * СоставПоФирмам.Количество
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) &lt; 0
+				ТОГДА -1 * ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ - ВЫБОР
+			КОГДА СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет &lt; 0
+				ТОГДА ВЫБОР
+						КОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.КоличествоОстаток, 0) = 0
+							ТОГДА СоставПоФирмам.ЦенаИзлишкаУпр * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+						ИНАЧЕ ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) / ОстаткиНоменклатурыОстатки.КоличествоОстаток * -1 * (СоставПоФирмам.Количество - СоставПоФирмам.КоличествоУчет)
+					КОНЕЦ
+			КОГДА СоставПоФирмам.Количество = 0
+					И ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0) &gt; 0
+				ТОГДА ЕСТЬNULL(ОстаткиНоменклатурыОстатки.СуммаУпрОстаток, 0)
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК СуммаРазницаУпр,
+	ВЫБОР
+		КОГДА ИнвентаризацияСостав.Количество &lt;&gt; ЕСТЬNULL(СоставПоФирмамСГруппировкой.Количество, 0)
+				ИЛИ ИнвентаризацияСостав.КоличествоУчет &lt;&gt; ЕСТЬNULL(СоставПоФирмамСГруппировкой.КоличествоУчет, 0)
+				ИЛИ СоставПоФирмам.Фирма = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+				ИЛИ СоставПоФирмам.Количество &gt; СоставПоФирмам.КоличествоУчет
+					И (НЕ СоставПоФирмам.ЦенаИзлишка &gt; 0
+						ИЛИ НЕ СоставПоФирмам.ЦенаИзлишкаУпр &gt; 0)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеполныеДанныеПоФирмам
+ИЗ
+	Документ.Инвентаризация.Состав КАК ИнвентаризацияСостав
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.Инвентаризация.СоставПоФирмам КАК СоставПоФирмам
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиНоменклатуры.Остатки(
+					&amp;Период,
+					Номенклатура В
+						(ВЫБРАТЬ
+							ИнвентаризацияСоставПоФирмам.Номенклатура
+						ИЗ
+							Документ.Инвентаризация.СоставПоФирмам КАК ИнвентаризацияСоставПоФирмам
+						ГДЕ
+							ИнвентаризацияСоставПоФирмам.Ссылка = &amp;Ссылка)) КАК ОстаткиНоменклатурыОстатки
+			ПО СоставПоФирмам.Номенклатура = ОстаткиНоменклатурыОстатки.Номенклатура
+				И СоставПоФирмам.Фирма = ОстаткиНоменклатурыОстатки.Фирма
+				И СоставПоФирмам.Склад = ОстаткиНоменклатурыОстатки.МестоХранения
+		ПО ИнвентаризацияСостав.Номенклатура = СоставПоФирмам.Номенклатура
+			И ИнвентаризацияСостав.Склад = СоставПоФирмам.Склад
+			И ИнвентаризацияСостав.Ссылка = СоставПоФирмам.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ИнвентаризацияСоставПоФирмам.Номенклатура КАК Номенклатура,
+			ИнвентаризацияСоставПоФирмам.Склад КАК Склад,
+			СУММА(ИнвентаризацияСоставПоФирмам.Количество) КАК Количество,
+			СУММА(ИнвентаризацияСоставПоФирмам.КоличествоУчет) КАК КоличествоУчет
+		ИЗ
+			Документ.Инвентаризация.СоставПоФирмам КАК ИнвентаризацияСоставПоФирмам
+		ГДЕ
+			ИнвентаризацияСоставПоФирмам.Ссылка = &amp;Ссылка
+		
+		СГРУППИРОВАТЬ ПО
+			ИнвентаризацияСоставПоФирмам.Номенклатура,
+			ИнвентаризацияСоставПоФирмам.Склад) КАК СоставПоФирмамСГруппировкой
+		ПО ИнвентаризацияСостав.Номенклатура = СоставПоФирмамСГруппировкой.Номенклатура
+			И ИнвентаризацияСостав.Склад = СоставПоФирмамСГруппировкой.Склад
+ГДЕ
+	ИнвентаризацияСостав.Ссылка = &amp;Ссылка</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоИзлишка</dataPath>
+		<expression>Сумма(КоличествоИзлишка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНедостачи</dataPath>
+		<expression>Сумма(КоличествоНедостачи)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоУчет</dataPath>
+		<expression>Сумма(КоличествоУчет)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаИзлишка</dataPath>
+		<expression>Сумма(СуммаИзлишка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаИзлишкаУпр</dataPath>
+		<expression>Сумма(СуммаИзлишкаУпр)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНедостачи</dataPath>
+		<expression>Сумма(СуммаНедостачи)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНедостачиУпр</dataPath>
+		<expression>Сумма(СуммаНедостачиУпр)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕдиницаВеса</dataPath>
+		<expression>Максимум(ЕдиницаВеса)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЕдиницаИзмерения</dataPath>
+		<expression>Максимум(ЕдиницаИзмерения)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>Вес</dataPath>
+		<expression>Максимум(Вес)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаИзлишка</dataPath>
+		<expression>Максимум(ЦенаИзлишка)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаИзлишкаУпр</dataPath>
+		<expression>Максимум(ЦенаИзлишкаУпр)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаУпр</dataPath>
+		<expression>Сумма(СуммаУпр)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаУчет</dataPath>
+		<expression>Сумма(СуммаУчет)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаУчетУпр</dataPath>
+		<expression>Сумма(СуммаУчетУпр)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРазница</dataPath>
+		<expression>Сумма(КоличествоРазница)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРазница</dataPath>
+		<expression>Сумма(СуммаРазница)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРазницаУпр</dataPath>
+		<expression>Сумма(СуммаРазницаУпр)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.Инвентаризация</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Фирма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Склад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>НеполныеДанныеПоФирмам</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоУчет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоИзлишка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоНедостачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоРазница</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаУпр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаУчет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаУчетУпр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаИзлишка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаИзлишкаУпр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНедостачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНедостачиУпр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаРазница</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаРазницаУпр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Вес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕдиницаВеса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаИзлишка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаИзлишкаУпр</dcsset:field>
+				</dcsset:item>
+				<dcsset:userSettingID>6b20a025-cc4d-4d6c-8145-c853d639bab1</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>4f013264-936f-4bce-9ee8-17f3b3a7b5d1</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>555b277c-d761-4531-9196-d1ce8c1cd41d</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Фирма</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>b3e2f36f-043c-4465-8c31-129705ab9aad</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:userSettingID>4f2f4e9d-1e13-47db-8cea-f104d0470ea2</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:userSettingID>a84c8910-8d06-4d3f-9225-fb862fe96c1c</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">НеполныеДанныеПоФирмам</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>BackColor</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+			</dcsset:item>
+			<dcsset:itemsUserSettingID>0ccd3638-6fa1-4aab-a9da-de0015156a06</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

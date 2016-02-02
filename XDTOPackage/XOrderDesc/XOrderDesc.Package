@@ -1,0 +1,52 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/XOrderDesc">
+	<import namespace="http://www.oracle.com/retail/integration/payload/RIBDate"/>
+	<property name="XOrderDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" name="order_no" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" name="supplier" type="d4p1:varchar210"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="currency_code" type="d4p1:varchar23"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="terms" type="d4p1:varchar215"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" lowerBound="0" name="not_before_date" type="d4p1:RIBDate"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" lowerBound="0" name="not_after_date" type="d4p1:RIBDate"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" lowerBound="0" name="otb_eow_date" type="d4p1:RIBDate"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="dept" type="d4p1:number4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="status" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="exchange_rate" type="d4p1:number20_10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="include_on_ord_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/RIBDate" lowerBound="0" name="written_date" type="d4p1:RIBDate"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" ref="d4p1:XOrderDtl" upperBound="-1"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="orig_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="edi_po_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="pre_mark_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="user_id" type="d4p1:varchar230"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="comment_desc" type="d4p1:varchar22000"/>
+		</typeDef>
+	</property>
+	<property name="XOrderDtl">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" name="location" type="d4p1:number10"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="unit_cost" type="d4p1:number20_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="ref_item" type="d4p1:varchar225"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="origin_country_id" type="d4p1:varchar23"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="supp_pack_size" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" name="qty_ordered" type="d4p1:number12_4"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" name="location_type" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="cancel_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/XOrderDesc" lowerBound="0" name="reinstate_ind" type="d4p1:varchar21"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:long" name="number10" totalDigits="10" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="10" name="number12_10" totalDigits="12" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number12_4" totalDigits="12" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="10" name="number20_10" totalDigits="20" variety="Atomic"/>
+	<valueType base="xs:decimal" fractionDigits="4" name="number20_4" totalDigits="20" variety="Atomic"/>
+	<valueType base="xs:int" name="number4" totalDigits="4" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="10" name="varchar210" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="15" name="varchar215" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="2000" name="varchar22000" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="25" name="varchar225" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="3" name="varchar23" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="30" name="varchar230" variety="Atomic"/>
+</package>

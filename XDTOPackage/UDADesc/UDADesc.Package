@@ -1,0 +1,23 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/payload/UDADesc">
+	<property name="UDADesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" name="uda_id" type="d4p1:number5"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" name="uda_desc" type="d4p1:varchar2120"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" name="module" type="d4p1:varchar220"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" name="display_type" type="d4p1:varchar22"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" lowerBound="0" name="data_type" type="d4p1:varchar212"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" lowerBound="0" name="data_length" type="d4p1:number3"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" lowerBound="0" name="single_value_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" lowerBound="0" name="host_ind" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" lowerBound="0" name="carton_group" type="d4p1:varchar21"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/payload/UDADesc" lowerBound="0" name="combinability" type="d4p1:varchar21"/>
+		</typeDef>
+	</property>
+	<valueType base="xs:int" name="number3" totalDigits="3" variety="Atomic"/>
+	<valueType base="xs:int" name="number5" totalDigits="5" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="1" name="varchar21" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="12" name="varchar212" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="120" name="varchar2120" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="2" name="varchar22" variety="Atomic"/>
+	<valueType base="xs:string" maxLength="20" name="varchar220" variety="Atomic"/>
+</package>

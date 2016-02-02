@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Enabled>false</Enabled>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="Номенклатура" id="3">
+			<DataPath>Запись.Номенклатура</DataPath>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НоменклатураExtendedTooltip" id="20"/>
+		</InputField>
+		<InputField name="ЕдиницаИзмерения" id="5">
+			<DataPath>Запись.ЕдиницаИзмерения</DataPath>
+			<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ЕдиницаИзмеренияExtendedTooltip" id="21"/>
+		</InputField>
+		<InputField name="ID" id="7">
+			<DataPath>Запись.ID</DataPath>
+			<ContextMenu name="IDКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="IDExtendedTooltip" id="22"/>
+		</InputField>
+		<InputField name="Цена" id="9">
+			<DataPath>Запись.Цена</DataPath>
+			<ContextMenu name="ЦенаКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ЦенаExtendedTooltip" id="23"/>
+		</InputField>
+		<InputField name="Валюта" id="11">
+			<DataPath>Запись.Валюта</DataPath>
+			<ContextMenu name="ВалютаКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ВалютаExtendedTooltip" id="24"/>
+		</InputField>
+		<InputField name="Количество" id="13">
+			<DataPath>Запись.Количество</DataPath>
+			<ContextMenu name="КоличествоКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КоличествоExtendedTooltip" id="25"/>
+		</InputField>
+		<InputField name="IDВосстановления" id="15">
+			<DataPath>Запись.IDВосстановления</DataPath>
+			<ContextMenu name="IDВосстановленияКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="IDВосстановленияExtendedTooltip" id="26"/>
+		</InputField>
+		<CheckBoxField name="АктивностьЗаписи" id="17">
+			<DataPath>Запись.АктивностьЗаписи</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АктивностьЗаписиКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="АктивностьЗаписиExtendedTooltip" id="27"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ЦеныНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

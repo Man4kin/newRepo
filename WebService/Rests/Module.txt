@@ -1,0 +1,12 @@
+﻿
+Функция SendData(Package)
+	Результат=Izh_ОбменДаннымиRests.Получение(Package);
+	Возврат Результат;
+КонецФункции
+
+
+Функция ReceiveRegisterRecords(Package)
+	Результат=Izh_ОбменДаннымиRests.ОбработкаЗапроса_ReceiveRegisterRecords(Package);
+	Возврат Результат;
+КонецФункции
+

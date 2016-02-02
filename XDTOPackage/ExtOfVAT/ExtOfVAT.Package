@@ -1,0 +1,16 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.oracle.com/retail/integration/custom/bo/ExtOfVATDesc/v1">
+	<property name="ExtOfVATDesc">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/custom/bo/ExtOfVATDesc/v1" ref="d4p1:ExtOfVATItem" upperBound="-1"/>
+		</typeDef>
+	</property>
+	<property name="ExtOfVATItem">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/custom/bo/ExtOfVATDesc/v1" name="item" type="d4p1:varchar225"/>
+			<property name="active_date" type="xs:dateTime"/>
+			<property xmlns:d4p1="http://www.oracle.com/retail/integration/custom/bo/ExtOfVATDesc/v1" name="vat_rate" type="d4p1:number20_10"/>
+		</typeDef>
+	</property>
+	<valueType name="number20_10" base="xs:decimal" variety="Atomic" totalDigits="20" fractionDigits="10"/>
+	<valueType name="varchar225" base="xs:string" variety="Atomic" maxLength="25"/>
+</package>
